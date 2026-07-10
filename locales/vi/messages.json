@@ -1,0 +1,482 @@
+{
+  "action_menu_activate_current_tab": {
+    "description": "Activate on current tab shortcut in the action menu",
+    "message": "Cho phép dùng trên trang này"
+  },
+  "action_menu_all_options": {
+    "description": "All options link in the action menu",
+    "message": "Tất cả tùy chọn"
+  },
+  "action_menu_configure_mailvelope": {
+    "description": "Configure Mailvelope label in the action menu",
+    "message": "<0>Thiết lập Secure Mail</0> để bắt đầu."
+  },
+  "action_menu_dashboard_description": {
+    "description": "Dashboard description in the action menu",
+    "message": "Hiển thị tất cả tùy chọn cấu hình."
+  },
+  "action_menu_dashboard_label": {
+    "description": "Dashboard label in the action menu",
+    "message": "Bảng điều khiển"
+  },
+  "action_menu_file_encryption_description": {
+    "description": "File encryption description in the action menu",
+    "message": "Mã hóa một hoặc nhiều tệp."
+  },
+  "action_menu_file_encryption_label": {
+    "description": "File encryption label in the action menu",
+    "message": "Mã hóa tệp"
+  },
+  "action_menu_help": {
+    "description": "Online help shortcut.",
+    "message": "Trợ giúp"
+  },
+  "action_menu_keyring_description": {
+    "description": "Keyring description in the action menu",
+    "message": "Quản lý khóa công khai và khóa bí mật."
+  },
+  "action_menu_keyring_label": {
+    "description": "Keyring label in the action menu",
+    "message": "Quản lý khóa (Keyring)"
+  },
+  "action_menu_primary_menu_aria_label": {
+    "description": "Accessibility, aria label of the primary menu",
+    "message": "Menu chính Secure Mail"
+  },
+  "action_menu_reload_extension_scripts": {
+    "description": "Reload extension scripts shortcut in the action menu",
+    "message": "Tải lại Secure Mail"
+  },
+  "action_menu_review_security_logs_description": {
+    "description": "Review security logs description in the action menu",
+    "message": "Xem lại các thao tác liên quan đến bảo mật."
+  },
+  "action_menu_review_security_logs_label": {
+    "description": "Review security logs label in the action menu",
+    "message": "Nhật ký bảo mật"
+  },
+  "action_menu_setup_menu_aria_label": {
+    "description": "Accessibility, aria label of the setup menu",
+    "message": "Menu thiết lập Secure Mail"
+  },
+  "action_menu_setup_start_label": {
+    "description": "Start button label",
+    "message": "Bắt đầu"
+  },
+  "alert_header_error": {
+    "description": "Alert header of category error.",
+    "message": "Lỗi!"
+  },
+  "alert_header_success": {
+    "description": "Alert header of category success.",
+    "message": "Thành công!"
+  },
+  "alert_header_warning": {
+    "description": "Alert header of category warning.",
+    "message": "Cảnh báo!"
+  },
+  "dashboard_link_encrypt_decrypt_files": {
+    "description": "Dashboard encrypt decrypt files link",
+    "message": "Mã hóa / giải mã tệp"
+  },
+  "dashboard_link_manage_domains": {
+    "description": "Dashboard manage domains link",
+    "message": "Quản lý trang được phép"
+  },
+  "dashboard_link_manage_keys": {
+    "description": "Dashboard manage keys link",
+    "message": "Quản lý khóa"
+  },
+  "dashboard_link_view_security_log": {
+    "description": "Dashboard view security logs link",
+    "message": "Xem nhật ký bảo mật"
+  },
+  "decrypt_home": {
+    "description": "File/text decrypting navigation: Home.",
+    "message": "Giải mã"
+  },
+  "dialog_no_btn": {
+    "description": "Dialog no button label",
+    "message": "Không"
+  },
+  "dialog_no_button": {
+    "description": "Dialog button no",
+    "message": "Bỏ qua"
+  },
+  "dialog_yes_btn": {
+    "description": "Dialog yes button label",
+    "message": "Có"
+  },
+  "encrypt_home": {
+    "description": "File/text encrypting navigation: Home.",
+    "message": "Mã hóa"
+  },
+  "ext_description": {
+    "description": "Description of the extension.",
+    "message": "Tiện ích mã hóa email nội bộ cho Gmail (mã hóa đầu-cuối PGP). Chỉ dùng nội bộ, phi thương mại."
+  },
+  "ext_name": {
+    "description": "Name of the extension.",
+    "message": "Secure Mail"
+  },
+  "form_back": {
+    "description": "Back form button.",
+    "message": "Quay lại"
+  },
+  "form_cancel": {
+    "description": "Cancel form button.",
+    "message": "Hủy"
+  },
+  "form_confirm": {
+    "description": "Confirm form button.",
+    "message": "Xác nhận"
+  },
+  "form_import": {
+    "description": "Import form button.",
+    "message": "Nhập"
+  },
+  "form_ok": {
+    "description": "Ok form button.",
+    "message": "OK"
+  },
+  "form_save": {
+    "description": "Save form button.",
+    "message": "Lưu"
+  },
+  "gnupg_connection": {
+    "description": "Header that shows that GnuPG is available on the system.",
+    "message": "Kết nối GnuPG"
+  },
+  "key_gen_advanced_btn": {
+    "description": "Advanced key generation settings.",
+    "message": "Nâng cao"
+  },
+  "key_gen_error": {
+    "description": "Key generation error message",
+    "message": "Lỗi khi tạo khóa."
+  },
+  "key_gen_experimental": {
+    "description": "A key algorithm is flagged as experimental",
+    "message": "thử nghiệm"
+  },
+  "key_gen_expiration": {
+    "description": "Key expiration date",
+    "message": "Ngày hết hạn khóa"
+  },
+  "key_gen_future_default": {
+    "description": "Key generation algorithm, the future supported standard.",
+    "message": "Mặc định tương lai"
+  },
+  "key_gen_generate": {
+    "description": "Key generate button label",
+    "message": "Tạo khóa"
+  },
+  "key_gen_invalid_email": {
+    "description": "Error message.",
+    "message": "Địa chỉ email không hợp lệ"
+  },
+  "key_gen_key_size": {
+    "description": "Advanced key generation settings: Key size",
+    "message": "Độ dài khóa"
+  },
+  "key_gen_name_help": {
+    "description": "Help text for name field.",
+    "message": "Họ tên đầy đủ của chủ khóa"
+  },
+  "key_gen_pwd": {
+    "description": "Label for passphrase input field",
+    "message": "Nhập mật khẩu (passphrase)"
+  },
+  "key_gen_pwd_empty": {
+    "description": "Passphrase input field status",
+    "message": "Chưa nhập mật khẩu"
+  },
+  "key_gen_pwd_reenter": {
+    "description": "Label for passphrase input field",
+    "message": "Nhập lại mật khẩu"
+  },
+  "key_gen_pwd_unequal": {
+    "description": "Passphrase input field status",
+    "message": "Mật khẩu không khớp"
+  },
+  "key_gen_success": {
+    "description": "Key generation success message",
+    "message": "Khóa mới đã được tạo và thêm vào chùm khóa của bạn"
+  },
+  "key_gen_upload": {
+    "description": "Upload key to Mailvelope key server checkbox",
+    "message": "Tải khóa công khai lên máy chủ khóa công khai bên ngoài (không bắt buộc — quy trình nội bộ: gửi khóa công khai cho quản trị viên)"
+  },
+  "key_gen_wait_header": {
+    "description": "Wait dialog header",
+    "message": "Đang tạo khóa..."
+  },
+  "key_gen_wait_info": {
+    "description": "Wait dialog info message",
+    "message": "Vui lòng chờ, việc tạo khóa có thể mất vài phút tùy độ dài khóa và cấu hình máy."
+  },
+  "key_import_default_description": {
+    "description": "Key import dialog description.",
+    "message": "Sau khi xác nhận, khóa này sẽ được thêm vào chùm khóa cục bộ:"
+  },
+  "key_import_default_description_plural": {
+    "description": "Key import dialog description.",
+    "message": "Sau khi xác nhận, các khóa này sẽ được thêm vào chùm khóa cục bộ:"
+  },
+  "key_import_error": {
+    "description": "Import error alert.",
+    "message": "Lỗi nhập khóa."
+  },
+  "key_import_exception": {
+    "description": "Import error alert.",
+    "message": "Đã xảy ra lỗi khi xử lý khóa"
+  },
+  "key_import_file_label": {
+    "description": "File selection label.",
+    "message": "Chọn tệp"
+  },
+  "key_import_from_text_btn": {
+    "description": "Import keys from clipboard button label on key import page.",
+    "message": "Nhập khóa từ clipboard"
+  },
+  "key_import_from_text_label": {
+    "description": "Import keys from clipboard textarea label on key import page.",
+    "message": "Văn bản từ clipboard"
+  },
+  "key_import_invalid_text": {
+    "description": "Import error alert.",
+    "message": "Không tìm thấy nội dung khóa hợp lệ"
+  },
+  "keybackup_backup_description": {
+    "description": "A hint about the importance of a private key backup.",
+    "message": "Bản sao lưu giúp khôi phục email mã hóa nếu bạn mất thiết bị, cài lại trình duyệt hoặc gỡ tiện ích. Nếu mất khóa bí mật và không có bản sao lưu, email đã mã hóa trước đó có thể không đọc lại được."
+  },
+  "keybackup_backup_store_location": {
+    "description": "A hint how to store the key.",
+    "message": "Lưu tệp này ở nơi an toàn — ví dụ USB cất riêng hoặc trình quản lý mật khẩu. Không chia sẻ khóa bí mật với bất kỳ ai, kể cả quản trị viên."
+  },
+  "keybackup_dialog_headline": {
+    "description": "Title of the dialog recommending a private key backup after key creation.",
+    "message": "Sao lưu khóa bí mật của bạn"
+  },
+  "keybackup_done_button": {
+    "description": "Button that closes the backup dialog after the file is downloaded.",
+    "message": "Hoàn tất"
+  },
+  "keybackup_keep_safe_headline": {
+    "description": "Heading shown after the backup download has been started.",
+    "message": "Giữ bản sao lưu an toàn"
+  },
+  "keybackup_keep_safe_text": {
+    "description": "Guidance shown after the backup download has been started.",
+    "message": "Sau khi lưu tệp, hãy chuyển nó đến nơi an toàn và giữ bí mật. Bạn sẽ cần nó để khôi phục email mã hóa nếu mất quyền truy cập."
+  },
+  "keybackup_load_error": {
+    "description": "Shown when the key could not be loaded to prepare the backup file.",
+    "message": "Không chuẩn bị được bản sao lưu. Bạn có thể xuất khóa sau trong mục Quản lý khóa."
+  },
+  "keybackup_save_button": {
+    "description": "Primary button that downloads the private key backup file.",
+    "message": "Lưu bản sao lưu"
+  },
+  "keygrid_algorithm": {
+    "description": "Public-key algorithm of a PGP key.",
+    "message": "Thuật toán"
+  },
+  "keygrid_default_label": {
+    "description": "Label for the default key",
+    "message": "Mặc định"
+  },
+  "keygrid_key_not_expire": {
+    "description": "Expiration date of a PGP key not set.",
+    "message": "Khóa này không hết hạn"
+  },
+  "keygrid_user_email": {
+    "description": "Email address in User ID of a PGP key.",
+    "message": "Email"
+  },
+  "keygrid_user_name": {
+    "description": "Name in User ID of a PGP key.",
+    "message": "Họ tên"
+  },
+  "keyring_available_settings": {
+    "description": "Text introducing the availability of further settings.",
+    "message": "Xem các cài đặt khả dụng tại:"
+  },
+  "keyring_confirm_keys": {
+    "description": "Tab of keyring to import keys.",
+    "message": "Xác nhận khóa cần nhập"
+  },
+  "keyring_header": {
+    "description": "Header of the key ring.",
+    "message": "Quản lý khóa"
+  },
+  "keyring_import_description": {
+    "description": "Description of key import for import tab of keyring import.",
+    "message": "Bạn có thể thêm khóa từ tệp hoặc từ văn bản trong clipboard."
+  },
+  "keyring_import_search_description": {
+    "description": "Description of key search for search tab of keyring import.",
+    "message": "Tìm khóa công khai để thêm vào chùm khóa. Secure Mail sẽ quét các danh bạ khóa và gợi ý khóa công khai phù hợp nhất."
+  },
+  "keyring_setup_generate_key": {
+    "description": "Generate key",
+    "message": "Tạo khóa"
+  },
+  "keyring_setup_generate_key_explanation": {
+    "description": "Generate key",
+    "message": "Nếu bạn dùng tiện ích lần đầu và chưa có cặp khóa, hãy tạo một cặp khóa ngay."
+  },
+  "keyring_setup_import_key": {
+    "description": "Import key",
+    "message": "Nhập khóa"
+  },
+  "keyring_setup_import_key_explanation": {
+    "description": "Import key",
+    "message": "Bạn đã có cặp khóa trên thiết bị khác? Hãy xuất cặp khóa từ thiết bị đó rồi nhập vào đây."
+  },
+  "keyring_setup_no_keypair": {
+    "description": "Setup text if no keypair available",
+    "message": "Cần có cặp khóa để mã hóa và giải mã thư, cũng như để trao đổi thư mã hóa đầu-cuối với đồng nghiệp."
+  },
+  "keyring_setup_no_keypair_heading": {
+    "description": "Setup heading if no keypair available",
+    "message": "Chùm khóa này chưa có cặp khóa."
+  },
+  "learn_more_link": {
+    "description": "Text of a link to a learn-more resource",
+    "message": "Tìm hiểu thêm"
+  },
+  "nameaddrinput_error_email_exists": {
+    "description": "Error message for email input field.",
+    "message": "Địa chỉ email này đã được sử dụng"
+  },
+  "nameaddrinput_error_name_empty": {
+    "description": "Error message for name input field.",
+    "message": "Vui lòng nhập họ tên"
+  },
+  "onboarding_create_key_hint": {
+    "description": "A hint for create new key screen",
+    "message": "Tạo cặp khóa PGP mới để mã hóa email của bạn. Lưu ý: không chia sẻ khóa bí mật (private key) với bất kỳ ai, kể cả quản trị viên."
+  },
+  "onboarding_faq_backup": {
+    "description": "FAQ question: How can I export or backup my keypair?",
+    "message": "Làm sao để xuất hoặc sao lưu cặp khóa?"
+  },
+  "onboarding_faq_export_keys": {
+    "description": "FAQ question: How do I export keys?",
+    "message": "Làm sao để xuất khóa?"
+  },
+  "onboarding_faq_forget_password": {
+    "description": "FAQ question: What if I forget my password?",
+    "message": "Nếu tôi quên mật khẩu thì sao?"
+  },
+  "onboarding_faq_should_upload_key": {
+    "description": "FAQ question: Should I upload my key to the key server?",
+    "message": "Tôi có nên tải khóa lên máy chủ khóa công khai không?"
+  },
+  "onboarding_faq_title": {
+    "description": "FAQ card title in onboarding",
+    "message": "Câu hỏi thường gặp"
+  },
+  "onboarding_faq_what_is_key": {
+    "description": "FAQ question: What is a key",
+    "message": "Khóa Secure Mail là gì?"
+  },
+  "onboarding_faq_where_key_stored": {
+    "description": "FAQ question: Where are my keys stored?",
+    "message": "Khóa của tôi được lưu ở đâu?"
+  },
+  "onboarding_gnupg_alternative": {
+    "description": "Text introducing GnuPG as an alternative to generating or importing a key in onboarding",
+    "message": "Bạn có thể kết nối Secure Mail với bản cài đặt GnuPG sẵn có thay vì tạo hoặc nhập khóa tại đây."
+  },
+  "onboarding_gnupg_alternative_heading": {
+    "description": "Heading for the GnuPG alternative footer in onboarding",
+    "message": "Đã dùng GnuPG?"
+  },
+  "onboarding_import_key_hint": {
+    "description": "A hint for import key screen",
+    "message": "Chọn tệp chứa cặp khóa PGP sẵn có của bạn hoặc dán khóa từ clipboard."
+  },
+  "onboarding_setup_alert": {
+    "description": "Setup alert message in onboarding",
+    "message": "Tiếp theo, hãy thiết lập khóa. Việc này mất khoảng 5 phút. Lưu ý: quản trị viên chỉ quản lý khóa công khai (public key) và fingerprint, không giữ khóa bí mật của bạn."
+  },
+  "onboarding_skip": {
+    "description": "Skip button in onboarding",
+    "message": "Bỏ qua"
+  },
+  "onboarding_success_alert": {
+    "description": "Success alert message in onboarding success screen",
+    "message": "Bạn có thể tìm thấy Secure Mail trong menu tiện ích ở góc trên bên phải trình duyệt."
+  },
+  "onboarding_success_alert_alt": {
+    "description": "Alt text for the extension menu location image on the success screen",
+    "message": "Vị trí menu tiện ích"
+  },
+  "onboarding_success_created_key_text": {
+    "description": "Instructions for users who created a new key",
+    "message": "Nếu bạn đã tải khóa lên máy chủ khóa, hãy kiểm tra hộp thư để xác minh địa chỉ email.\nQuan trọng: hãy sao lưu khóa bí mật ngay (Quản lý khóa > Xuất). Nếu mất khóa bí mật và không có bản sao lưu, email đã mã hóa trước đó có thể không đọc lại được."
+  },
+  "onboarding_success_created_key_title": {
+    "description": "Title for created key section on success screen",
+    "message": "Xác minh và sao lưu khóa"
+  },
+  "onboarding_success_help_others": {
+    "description": "Help link label on success screen (other providers)",
+    "message": "Tài liệu nội bộ khác"
+  },
+  "onboarding_success_imported_key_text": {
+    "description": "Instructions for users who imported an existing key",
+    "message": "Mở Gmail và soạn thử một thư mã hóa.\nLưu ý: chỉ email được soạn và gửi qua cửa sổ mã hóa của tiện ích mới được xem là đã mã hóa."
+  },
+  "onboarding_success_imported_key_title": {
+    "description": "Title for imported key section on success screen",
+    "message": "Sẵn sàng gửi email mã hóa"
+  },
+  "onboarding_success_message": {
+    "description": "Success message in onboarding completion screen",
+    "message": "Secure Mail đã sẵn sàng."
+  },
+  "onboarding_success_need_help": {
+    "description": "Need help section title",
+    "message": "Trợ giúp & tài nguyên"
+  },
+  "onboarding_success_title": {
+    "description": "Success title in onboarding completion screen",
+    "message": "Thiết lập hoàn tất"
+  },
+  "onboarding_welcome_title": {
+    "description": "Welcome title in onboarding",
+    "message": "Chào mừng đến với Secure Mail"
+  },
+  "options_docu": {
+    "description": "Options navigation: Documentation.",
+    "message": "Tài liệu"
+  },
+  "options_home": {
+    "description": "Options navigation: Home.",
+    "message": "Tùy chọn"
+  },
+  "options_title": {
+    "description": "Title of options page.",
+    "message": "Secure Mail — Tùy chọn"
+  },
+  "footer_copyright": {
+    "description": "Copyright line shown in the app footer",
+    "message": "Copyright © Tracy Tran"
+  },
+  "footer_notice": {
+    "description": "Footer notice pointing to third-party license file",
+    "message": "Secure Mail — bản nội bộ, phi thương mại. Giấy phép bên thứ ba: THIRD_PARTY_NOTICES.md"
+  },
+  "onboarding_success_help_user_guide": {
+    "description": "Help link label",
+    "message": "Hướng dẫn sử dụng Gmail"
+  },
+  "onboarding_success_help_install": {
+    "description": "Help link label",
+    "message": "Hướng dẫn cài đặt"
+  }
+}

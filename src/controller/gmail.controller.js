@@ -1,0 +1,247 @@
+/**
+ * Copyright (C) 2019 Mailvelope GmbH
+ * Licensed under the GNU Affero General Public License version 3
+ */
+
+import mvelo from '../lib/lib-mvelo';
+import {getUUID, mapError, MvError} from '../lib/util';
+import {ERROR_GMAIL_ACCOUNT_MISMATCH, ERROR_GMAIL_AUTH_CANCELLED} from '../lib/constants';
+import * as l10n from '../lib/l10n';
+import * as gmail from '../modules/gmail';
+import {SubController} from './sub.controller';
+import {formatAddress, parseAddress, parseAddressList} from '../lib/email';
+import {setAppDataSlot} from '../controller/sub.controller';
+
+export default class GmailController extends SubController {
+  constructor(port) {
+    super(port);
+    this.state = {
+      userInfo: null,
+      threadId: null
+    };
+    this.peerType = 'gmailController';
+    this.authorizationRequest = null;
+    // register event handlers
+    this.on('open-editor', this.onOpenEditor);
+    this.on('secure-button', this.onSecureBtn);
+  }
+
+  activateComponent() {
+    mvelo.tabs.activate({id: this.tabId});
+  }
+
+  async onOpenEditor(options) {
+    await this.createPeer('editorController');
+    if (await this.peers.editorController.getPopup()) {
+      await this.peers.editorController.activateComponent();
+      return;
+    }
+    options.recipientsTo ||= [];
+    options.recipientsCc ||= [];
+    this.openEditor(options);
+  }
+
+  /**
+   * Opens a new editor control and gets the recipients to encrypt plaintext
+   * input to their public keys.
+   * @param  {String} options.text   The plaintext input to encrypt
+   */
+  openEditor(options) {
+    this.setState({userInfo: options.userInfo, threadId: options.threadId});
+    this.peers.editorController.openEditor({
+      integration: true,
+      predefinedText: options.text,
+      quotedMail: options.quotedMail,
+      quotedMailIndent: options.quotedMailIndent === undefined ? true : options.quotedMailIndent,
+      quotedMailHeader: options.quotedMailHeader,
+      subject: options.subject,
+      recipients: {
+        to: options.recipientsTo.map(email => ({email})),
+        cc: options.recipientsCc.map(email => ({email}))
+      },
+      userInfo: options.userInfo,
+      attachments: options.attachments,
+      keepAttachments: options.keepAttachments
+    });
+  }
+
+  async encryptedMessage({armored, encFiles, subject, to, cc}) {
+    // send email via GMAIL api
+    this.peers.editorController.ports.editor.emit('send-mail-in-progress');
+    const userEmail = this.state.userInfo.email;
+    const toFormatted = to.map(({name, email}) => formatAddress(email, name));
+    const ccFormatted = cc.map(({name, email}) => formatAddress(email, name));
+    const mail = gmail.buildMail({message: armored, attachments: encFiles, subject, sender: userEmail, to: toFormatted, cc: ccFormatted});
+    const accessToken = await this.peers.editorController.getAccessToken();
+    const sendOptions = {
+      email: userEmail,
+      message: mail,
+      accessToken
+    };
+    if (this.state.threadId) {
+      sendOptions.threadId = this.state.threadId;
+    }
+    try {
+      await gmail.sendMessageMeta(sendOptions);
+      this.peers.editorController.ports.editor.emit('show-notification', {
+        message: l10n.get('gmail_integration_sent_success'),
+        type: 'success',
+        autoHide: true,
+        hideDelay: 2000,
+        closeOnHide: true,
+        dismissable: false
+      });
+    } catch (error) {
+      this.peers.editorController.ports.editor.emit('error-message', {
+        error: Object.assign(mapError(error), {
+          autoHide: false,
+          dismissable: true
+        })
+      });
+    }
+    await this.removePeer('editorController');
+  }
+
+  async encryptError(error) {
+    if (error.code == 'EDITOR_DIALOG_CANCEL') {
+      await this.removePeer('editorController');
+      return;
+    }
+    this.peers.editorController.ports.editor.emit('error-message', {
+      error: Object.assign(mapError(error), {
+        autoHide: false,
+        dismissable: false
+      })
+    });
+  }
+
+  async onSecureBtn({type, msgId, all, userInfo}) {
+    try {
+      const accessToken = await this.getAccessToken(userInfo);
+      const userEmail = userInfo.email;
+      const {threadId, internalDate, payload} = await gmail.getMessage({msgId, email: userEmail, accessToken});
+      const messageText = await gmail.extractMailBody({payload, userEmail, msgId, accessToken});
+      let subject = gmail.extractMailHeader(payload, 'Subject');
+      const {email: sender, name: senderName} = parseAddress(gmail.extractMailHeader(payload, 'From'));
+
+      const recipientsTo = [];
+      const recipientsCc = [];
+      const toList = parseAddressList(gmail.extractMailHeader(payload, 'To'));
+      const ccList = parseAddressList(gmail.extractMailHeader(payload, 'Cc'));
+      let attachments = [];
+      let quotedMailHeader;
+      if (type === 'reply') {
+        subject = `Re: ${subject}`;
+        recipientsTo.push(sender);
+        if (all) {
+          for (const {email} of toList) {
+            if (email !== sender && email !== userEmail) {
+              recipientsTo.push(email);
+            }
+          }
+          for (const {email} of ccList) {
+            if (email !== sender && email !== userEmail) {
+              recipientsCc.push(email);
+            }
+          }
+        }
+        quotedMailHeader = l10n.get('gmail_integration_quoted_mail_header_reply', [l10n.localizeDateTime(new Date(parseInt(internalDate, 10)), {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit'}), `${senderName} <${sender}>`.trim()]);
+      } else {
+        subject = `Fwd: ${subject}`;
+        quotedMailHeader = l10n.get('gmail_integration_quoted_mail_header_forward', [`${senderName} <${sender}>`.trim(), l10n.localizeDateTime(new Date(parseInt(internalDate, 10)), {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit'}), subject, toList.map(({name, email}) => `${name} <${email}>`.trim()).join(', ')]);
+        if (ccList.length) {
+          quotedMailHeader += `\n${l10n.get('editor_label_copy_recipient')}: ${ccList.map(({name, email}) => `${name} <${email}>`.trim()).join(', ')}`;
+        }
+        quotedMailHeader += '\n';
+        attachments = await gmail.getMailAttachments({payload, userEmail, msgId, accessToken});
+      }
+      const options = {
+        userInfo,
+        subject,
+        recipientsTo,
+        recipientsCc,
+        threadId,
+        quotedMailHeader,
+        quotedMail: messageText || '',
+        quotedMailIndent: type === 'reply',
+        attachments,
+        keepAttachments: type !== 'reply'
+      };
+      this.onOpenEditor(options);
+    } catch (error) {
+      console.log(`Gmail API error: ${error.message}`);
+    }
+  }
+
+  /**
+   * Get access token
+   * @param  {String} email
+   * @param  {Array}  scopes
+   * @param  {Function} beforeAuth - called before new authorization request is started
+   * @param  {Function} afterAuth - called after successful authorization request
+   * @return {String}
+   */
+  async getAccessToken({email, legacyGsuite, scopes = [gmail.GMAIL_SCOPE_READONLY, gmail.GMAIL_SCOPE_SEND], beforeAuth, afterAuth} = {}) {
+    const accessToken = await this.checkAuthorization({email, scopes});
+    if (accessToken) {
+      await this.checkLicense({email, legacyGsuite});
+      return accessToken;
+    }
+    if (beforeAuth) {
+      beforeAuth();
+    }
+    this.openAuthorizeDialog({email, legacyGsuite, scopes});
+    return new Promise((resolve, reject) => this.authorizationRequest = {resolve, reject, afterAuth});
+  }
+
+  async onAuthorize({email, legacyGsuite, scopes, forcePicker = false}) {
+    try {
+      const accessToken = await gmail.authorize(email, legacyGsuite, scopes, {forcePicker});
+      await this.checkLicense({email, legacyGsuite});
+      this.activateComponent();
+      if (this.authorizationRequest?.afterAuth) {
+        this.authorizationRequest.afterAuth();
+      }
+      this.authorizationRequest?.resolve(accessToken);
+    } catch (e) {
+      // Mismatch is recoverable via the in-modal retry, so keep the pending
+      // authorizationRequest open. Reject only on terminal errors.
+      if (e.code !== ERROR_GMAIL_ACCOUNT_MISMATCH) {
+        this.authorizationRequest?.reject(e);
+      }
+      throw e;
+    }
+  }
+
+  cancelAuthorization() {
+    if (this.authorizationRequest) {
+      this.authorizationRequest.reject(new MvError('Authorization cancelled by user.', ERROR_GMAIL_AUTH_CANCELLED));
+      this.authorizationRequest = null;
+    }
+  }
+
+  checkAuthorization({email, scopes = [gmail.GMAIL_SCOPE_READONLY, gmail.GMAIL_SCOPE_SEND]}) {
+    return gmail.getAccessToken({email, scopes});
+  }
+
+  async checkLicense(userInfo) {
+    try {
+      await gmail.checkLicense(userInfo);
+    } catch (e) {
+      const slotId = getUUID();
+      setAppDataSlot(slotId, {email: userInfo.email});
+      await mvelo.tabs.loadAppTab(`?slotId=${slotId}#/settings/provider/license`);
+      throw e;
+    }
+  }
+
+  async openAuthorizeDialog({email, legacyGsuite, scopes}) {
+    const activeTab = await mvelo.tabs.getActive();
+    if (activeTab) {
+      this.tabId = activeTab.id;
+    }
+    const slotId = getUUID();
+    setAppDataSlot(slotId, {email, legacyGsuite, scopes, gmailCtrlId: this.id});
+    await mvelo.tabs.loadAppTab(`?slotId=${slotId}#/settings/provider/auth`);
+  }
+}

@@ -1,0 +1,1595 @@
+{
+  "action_menu_activate_current_tab": {
+    "message": "Autorizar este domínio"
+  },
+  "action_menu_all_options": {
+    "message": "Todas as opções"
+  },
+  "action_menu_configure_mailvelope": {
+    "message": "<0>Configurar Mailvelope</0>para começar!"
+  },
+  "action_menu_dashboard_description": {
+    "message": "Mostrar todas as opções de configuração."
+  },
+  "action_menu_dashboard_label": {
+    "message": "P. Comando"
+  },
+  "action_menu_file_encryption_description": {
+    "message": "Cifrar um ou vários arquivos"
+  },
+  "action_menu_file_encryption_label": {
+    "message": "Criptografia de arquivo"
+  },
+  "action_menu_help": {
+    "message": "Ajuda"
+  },
+  "action_menu_keyring_description": {
+    "message": "Gerenciar chaves públicas e privadas"
+  },
+  "action_menu_keyring_label": {
+    "message": "Chaveiro"
+  },
+  "action_menu_primary_menu_aria_label": {
+    "message": "Menu primário do Mailvelope"
+  },
+  "action_menu_reload_extension_scripts": {
+    "message": "Recarregar Mailvelope"
+  },
+  "action_menu_review_security_logs_description": {
+    "message": "Revisar ações do usuário relevantes para segurança."
+  },
+  "action_menu_review_security_logs_label": {
+    "message": "Registro de Segurança"
+  },
+  "action_menu_setup_menu_aria_label": {
+    "message": "Menu de configuração do Mailvelope"
+  },
+  "action_menu_setup_start_label": {
+    "message": "Vamos iniciar!"
+  },
+  "alert_header_error": {
+    "message": "Erro!"
+  },
+  "alert_header_important": {
+    "message": "Importante!"
+  },
+  "alert_header_notice": {
+    "message": "Por favor, observe:"
+  },
+  "alert_header_success": {
+    "message": "Sucesso!"
+  },
+  "alert_header_warning": {
+    "message": "Aviso!"
+  },
+  "alert_invalid_domainmatchpattern_warning": {
+    "message": "O padrão de correspondência do domínio é [*]host.dominio.tld.[:porta]."
+  },
+  "alert_no_domainmatchpattern_warning": {
+    "message": "Pelo menos um padrão de correspondência de domínio é necessário."
+  },
+  "analytics_consent_description": {
+    "message": "Compartilhe informações analíticas agregadas e anônimas com Mailvelope"
+  },
+  "analytics_consent_disabled_tooltip": {
+    "message": "Você só pode optar por receber análises após a instalação e somente se for selecionado aleatoriamente."
+  },
+  "analytics_consent_interstitial_Btn_Learn_More": {
+    "message": "Saiba Mais"
+  },
+  "analytics_consent_interstitial_Faq": {
+    "message": "Leia mais sobre as métricas do Mailvelope em nossas Perguntas Frequentes."
+  },
+  "analytics_consent_interstitial_We_Collect_Minimal_Data": {
+    "message": "O Mailvelope contabiliza os passos que o aproximam do uso do seu serviço de e-mail. Ele não registra cada movimento que você faz."
+  },
+  "analytics_consent_interstitial_We_Collect_Minimal_Data_Title": {
+    "message": "Coletamos dados mínimos"
+  },
+  "analytics_consent_interstitial_We_Respect_your_Choice": {
+    "message": "Se você optar por não contribuir, nada será registrado. Se optar por contribuir, você pode mudar de ideia a qualquer momento, desativando-o nas configurações."
+  },
+  "analytics_consent_interstitial_We_Respect_your_Choice_Title": {
+    "message": "Nós respeitamos sua escolha"
+  },
+  "analytics_consent_interstitial_Your_Privacy_is_Preserved_Pt1": {
+    "message": "Usos do Mailvelope"
+  },
+  "analytics_consent_interstitial_Your_Privacy_is_Preserved_Pt2": {
+    "message": "que armazena dados com segurança sem conectá-los a informações identificáveis. Além disso, seu endereço IP não é registrado nem processado."
+  },
+  "analytics_consent_interstitial_Your_Privacy_is_Preserved_Title": {
+    "message": "Sua privacidade é preservada"
+  },
+  "analytics_consent_interstitial_learn_more": {
+    "message": "Aprenda como as métricas são seguras"
+  },
+  "analytics_consent_interstitial_message": {
+    "message": "O Mailvelope está solicitando que 1% dos novos usuários contribuam com métricas anônimas. Se você concordar, o Mailvelope registrará as etapas bem-sucedidas da sua jornada de integração. Você contribuirá?"
+  },
+  "analytics_interstitial_header": {
+    "message": "Ajude-nos a melhorar?"
+  },
+  "auth_domain_api_label": {
+    "message": "Permitir API"
+  },
+  "auth_domain_description": {
+    "message": "27\nVocê gostaria de permitir o uso do Mailvelope para o domínio $1?"
+  },
+  "auth_domain_headline": {
+    "message": "Autorizar domínio"
+  },
+  "button_analyticsconsent_modal": {
+    "message": "Continuar"
+  },
+  "change_link": {
+    "message": "Trocar"
+  },
+  "cleartext_read_error": {
+    "message": "Não foi possível ler esta mensagem em texto puro: $1"
+  },
+  "dashboard_link_encrypt_decrypt_files": {
+    "message": "Cifrar"
+  },
+  "dashboard_link_manage_domains": {
+    "message": "Domínios autorizados"
+  },
+  "dashboard_link_manage_keys": {
+    "message": "Gerenciar chaves"
+  },
+  "dashboard_link_view_security_log": {
+    "message": "Registros de segurança"
+  },
+  "decrypt_att_frame_help_text": {
+    "message": "Clique aqui para visualizar a mensagem"
+  },
+  "decrypt_cleartext_warning": {
+    "message": "O texto a seguir não foi cifrado."
+  },
+  "decrypt_decrypted_files_label": {
+    "message": "Arquivos decifrados."
+  },
+  "decrypt_digital_signature": {
+    "message": "Assinado"
+  },
+  "decrypt_digital_signature_failure": {
+    "message": "Assinatura inválida"
+  },
+  "decrypt_digital_signature_inconsistent": {
+    "message": "Assinaturas inconsistentes: mensagem e arquivo não assinados com a mesma chave"
+  },
+  "decrypt_digital_signature_missing": {
+    "message": "Assinatura faltando"
+  },
+  "decrypt_digital_signature_null": {
+    "message": "Assinatura desconhecida"
+  },
+  "decrypt_digital_signature_null_info": {
+    "message": "Chave com a assinatura de ID $1 não encontrada."
+  },
+  "decrypt_digital_signature_null_info_short": {
+    "message": "Chave não encontrada"
+  },
+  "decrypt_digital_signature_sender_mismatch": {
+    "message": "Incompatibilidade de endereço do remetente"
+  },
+  "decrypt_digital_signature_sender_mismatch_tooltip": {
+    "message": "Esta mensagem contém uma assinatura digital, mas foi detectada uma incompatibilidade. A mensagem foi enviada de um endereço de e-mail que não corresponde à chave pública do signatário."
+  },
+  "decrypt_digital_signature_uncertain_sender": {
+    "message": "Identidade do remetente incerta"
+  },
+  "decrypt_file_error_header": {
+    "message": "Não é possível descriptografar o arquivo $1."
+  },
+  "decrypt_frame_help_text": {
+    "message": "Clique para decifrar"
+  },
+  "decrypt_header": {
+    "message": "Decifrar dados"
+  },
+  "decrypt_header_success": {
+    "message": "Decifração bem sucedida"
+  },
+  "decrypt_home": {
+    "message": "Decriptar"
+  },
+  "decrypt_open_viewer_btn_title": {
+    "message": "Abrir no visualizador do Mailvelope"
+  },
+  "decrypt_show_message_btn": {
+    "message": "Mostrar mensagem"
+  },
+  "decrypt_text_area_label": {
+    "message": "Texto para cifrar"
+  },
+  "decrypt_text_decryption_btn": {
+    "message": "Você também deseja descifrar um texto?"
+  },
+  "decrypt_text_error_header": {
+    "message": "Não é possível decifrar o texto."
+  },
+  "dialog_cancel_btn": {
+    "message": "Cancelar"
+  },
+  "dialog_no_btn": {
+    "message": "Não"
+  },
+  "dialog_no_button": {
+    "message": "Ignorar"
+  },
+  "dialog_popup_close": {
+    "message": "Fechar"
+  },
+  "dialog_save_btn": {
+    "message": "Salvar"
+  },
+  "dialog_yes_btn": {
+    "message": "Sim"
+  },
+  "editor_blur_warn": {
+    "message": "Atençao: O editor de texto perdeu o foco"
+  },
+  "editor_encrypt_button": {
+    "message": "Criptografar"
+  },
+  "editor_error_header": {
+    "message": "Erro"
+  },
+  "editor_extra_key_checkbox": {
+    "message": "Adicionar chave extra"
+  },
+  "editor_extra_key_help": {
+    "message": "O e-mail será cifrado com esta chave adicional"
+  },
+  "editor_header": {
+    "message": "Compor e-mail seguro"
+  },
+  "editor_key_auto_sign": {
+    "message": "Você gostaria de assinar todos os seus e-mails"
+  },
+  "editor_key_auto_sign_link": {
+    "message": "Altere as configurações aqui"
+  },
+  "editor_key_has_extra_msg": {
+    "message": "O e-mail será cifrado com a chave alternativa inserida abaixo."
+  },
+  "editor_key_no_sign_option": {
+    "message": "Não assinado"
+  },
+  "editor_key_not_found": {
+    "message": "Chave não encontrada"
+  },
+  "editor_key_not_found_msg": {
+    "message": "Todos os destinatários precisam de uma chave PGP para criptografar. Porém, você ainda pode assinar a mensagem. "
+  },
+  "editor_label_attachments": {
+    "message": "Anexos"
+  },
+  "editor_label_copy_recipient": {
+    "message": "Cc"
+  },
+  "editor_label_message": {
+    "message": "Mensagem"
+  },
+  "editor_label_recipient": {
+    "message": "Destinatário"
+  },
+  "editor_label_subject": {
+    "message": "Assunto"
+  },
+  "editor_remove_upload": {
+    "message": "Remover"
+  },
+  "editor_sign_button": {
+    "message": " Apenas Assinar"
+  },
+  "encrypt_change_signer_dialog_signer_label": {
+    "message": "Selecionar assinatura"
+  },
+  "encrypt_change_signer_dialog_title": {
+    "message": "Alterar assinatura"
+  },
+  "encrypt_download_all_button": {
+    "message": "Baixar todos"
+  },
+  "encrypt_encrypted_files_label": {
+    "message": "Arquivos cifrados"
+  },
+  "encrypt_encrypted_for_label": {
+    "message": "Cifrado para"
+  },
+  "encrypt_error": {
+    "message": "Não foi possível criptografar esta mensagem: $1"
+  },
+  "encrypt_file_error_header": {
+    "message": "Não é possível cifrar o arquivo $1"
+  },
+  "encrypt_frame_btn_label": {
+    "message": "Escrever e-mail seguro"
+  },
+  "encrypt_header": {
+    "message": "Cifrar dados"
+  },
+  "encrypt_header_success": {
+    "message": "Cifração bem sucedida"
+  },
+  "encrypt_home": {
+    "message": "Encriptar"
+  },
+  "encrypt_no_signer_info": {
+    "message": "Os dados cifrados não estão assinados"
+  },
+  "encrypt_remove_signer_btn": {
+    "message": "Remover a assinatura"
+  },
+  "encrypt_signed_as_label": {
+    "message": "Assinado por"
+  },
+  "encrypt_signer_info": {
+    "message": "Os dados cifrados são assinados com sua chave ($1)"
+  },
+  "encrypt_text_encryption_btn": {
+    "message": "Você também quer cifrar um texto?"
+  },
+  "encrypt_text_error_header": {
+    "message": "Não é possível cifrar o texto."
+  },
+  "encrypt_upload_file_warning_too_big": {
+    "message": "Um dos arquivos é grande demais."
+  },
+  "ext_description": {
+    "message": "Proteja suas conversas por email e anexos no Gmail, Nextcloud, Outlook e mais com criptografia de ponta a ponta com PGP."
+  },
+  "ext_name": {
+    "message": "Mailvelope - Proteja seu email com PGP"
+  },
+  "feature_banner_new_security_background_btn": {
+    "message": "Personalizar agora"
+  },
+  "feature_banner_new_security_background_text": {
+    "message": "Torne o Mailvelope ainda mais seguro personalizando seu histórico de segurança."
+  },
+  "file_invalid_signed": {
+    "message": "Assinatura inválida"
+  },
+  "file_not_signed": {
+    "message": "Arquivo não assinado"
+  },
+  "file_read_error": {
+    "message": "Não foi possível descriptografar este arquivo: $1"
+  },
+  "file_signed": {
+    "message": "Arquivo assinado por $1"
+  },
+  "form_back": {
+    "message": "Volta"
+  },
+  "form_cancel": {
+    "message": "Cancelar"
+  },
+  "form_confirm": {
+    "message": "Confirmar"
+  },
+  "form_definition_error_signature_invalid": {
+    "message": "A assinatura do formulário não é válida."
+  },
+  "form_destination": {
+    "message": "Destino"
+  },
+  "form_destination_default": {
+    "message": "Os dados cifrados serão retornados à página."
+  },
+  "form_import": {
+    "message": "Importar"
+  },
+  "form_loading": {
+    "message": "Carregando formulário"
+  },
+  "form_no": {
+    "message": "Não"
+  },
+  "form_ok": {
+    "message": "Ok"
+  },
+  "form_recipient": {
+    "message": "Destinatário"
+  },
+  "form_save": {
+    "message": "Salvar"
+  },
+  "form_sign_error_no_default_key": {
+    "message": "Nenhuma chave privada está disponível no chaveiro para assinar o conteúdo do formulário. Por favor, importe ou crie um."
+  },
+  "form_submit": {
+    "message": "Enviar"
+  },
+  "form_yes": {
+    "message": "Sim"
+  },
+  "general_default_key_always": {
+    "message": "Sempre adicione minha chave padrão à lista de destinatários. (Isso permite descriptografar e-mails enviados)"
+  },
+  "general_default_key_auto_sign": {
+    "message": "Assine todas as mensagens enviadas."
+  },
+  "general_gnupg_check_availability": {
+    "message": "Nos permite verificar a disponibilidade"
+  },
+  "general_gnupg_installed_question": {
+    "message": "Você tem o GnuPG instalado? Caso contrário, <0>Baixe aqui</0>. Para verificar a disponibilidade novamente, <1>Reinicie o Mailvelope</1>. Se tiver certeza de que ele está instalado, siga <2>este wiki</2> para verificar se ele foi configurado corretamente."
+  },
+  "general_gnupg_not_available": {
+    "message": "GnuPG não está disponível"
+  },
+  "general_gnupg_prefer": {
+    "message": "Você prefere usar GnuPG?"
+  },
+  "general_openpgp_current": {
+    "message": "Você está usando atualmente"
+  },
+  "general_openpgp_prefer": {
+    "message": "Qual back-end de criptografia você prefere?"
+  },
+  "general_openpgp_preferences": {
+    "message": "Preferências OpenPGP"
+  },
+  "general_prefer_gnupg_note": {
+    "message": "Nota: as chaves públicas são sincronizadas entre os chaveiros disponíveis. Dependendo da disponibilidade das chaves privadas, o Mailvelope pode substituir a configuração da biblioteca de criptografia preferencial."
+  },
+  "gmail_integration_auth_error_download": {
+    "message": "Mailvelope não está autorizado a baixar anexos. Você precisa conceder ao Mailvelope acesso à API do Gmail para usar esta função."
+  },
+  "gmail_integration_auth_error_send": {
+    "message": "O Mailvelope não está autorizado a enviar e-mails. Você precisa conceder ao Mailvelope acesso à API do Gmail para usar esta função."
+  },
+  "gmail_integration_quoted_mail_header_forward": {
+    "message": "---------- Mensagem encaminhada ---------\nDe: $1\nData: $2Assunto: $3Para: $4"
+  },
+  "gmail_integration_quoted_mail_header_reply": {
+    "message": "Em $1, $2 escreveu:"
+  },
+  "gmail_integration_sent_success": {
+    "message": "O e-mail foi enviado com sucesso."
+  },
+  "gnupg_connection": {
+    "message": "Conexão GnuPG"
+  },
+  "gnupg_error_unusable_pub_key": {
+    "message": "Verifique se as seguintes chaves públicas estão disponíveis em seu chaveiro GnuPG e se são válidas:\n$1"
+  },
+  "header_analyticsconsent_modal": {
+    "message": "Obrigado pela ajuda!"
+  },
+  "import_frame_help_text": {
+    "message": "Clique para importar a chave"
+  },
+  "key_default_active_btn_title": {
+    "message": "A chave definida como chave padrão"
+  },
+  "key_default_disabled_btn_title": {
+    "message": "A Chave não é válida para operações de criptografia e assinatura"
+  },
+  "key_default_inactive_btn_title": {
+    "message": "Definir a chave com chave padrão"
+  },
+  "key_export_btn": {
+    "message": "Exportar"
+  },
+  "key_export_btn_title": {
+    "message": "Exportar chave"
+  },
+  "key_export_create_file": {
+    "message": "Salvar"
+  },
+  "key_export_dialog_copy_to_clipboard": {
+    "message": "Copiar para área de transferência"
+  },
+  "key_export_dialog_question": {
+    "message": "Qual chave você gostaria de exportar?"
+  },
+  "key_export_dialog_title": {
+    "message": "Exportar chave"
+  },
+  "key_export_filename": {
+    "message": "Nome do arquivo"
+  },
+  "key_export_warning_private": {
+    "message": "Este arquivo também contém chaves privadas. Mantenha o arquivo em um lugar seguro e não compartilhe com ninguém."
+  },
+  "key_gen_advanced_btn": {
+    "message": "Avançado"
+  },
+  "key_gen_demail": {
+    "message": "Endereço De-Mail"
+  },
+  "key_gen_error": {
+    "message": "Erro durante a geração da chave."
+  },
+  "key_gen_experimental": {
+    "message": "experimental"
+  },
+  "key_gen_expiration": {
+    "message": "Data de validade da chave"
+  },
+  "key_gen_future_default": {
+    "message": "Padrão futuro"
+  },
+  "key_gen_generate": {
+    "message": "Gerar"
+  },
+  "key_gen_invalid_email": {
+    "message": "Endereço de email inválido"
+  },
+  "key_gen_key_size": {
+    "message": "Tamanho da chave"
+  },
+  "key_gen_name_help": {
+    "message": "Nome completo do proprietário da chave"
+  },
+  "key_gen_pwd": {
+    "message": "Inserir Senha"
+  },
+  "key_gen_pwd_empty": {
+    "message": "O campo de senha está vazio"
+  },
+  "key_gen_pwd_reenter": {
+    "message": "Re-inserir Senha"
+  },
+  "key_gen_pwd_unequal": {
+    "message": "As senhas não condizem"
+  },
+  "key_gen_success": {
+    "message": "Nova chave gerada e importada no chaveiro"
+  },
+  "key_gen_upload": {
+    "message": "Subir chave pública para o servidor de chaves do Mailvelope (pode ser deletada a qualquer momento)"
+  },
+  "key_gen_wait_header": {
+    "message": "Geração de chave em andamento..."
+  },
+  "key_gen_wait_info": {
+    "message": "Por favor aguarde, a geração de chaves pode levar vários minutos dependendo de fatores como o tamanho da chave."
+  },
+  "key_import_bulk_success": {
+    "message": "Chaves importadas/atualizadas com sucesso."
+  },
+  "key_import_contacts_import_btn": {
+    "message": "Importar chaves"
+  },
+  "key_import_default_description": {
+    "message": "Após a confirmação, esta chave é transferida para o chaveiro local:"
+  },
+  "key_import_default_description_plural": {
+    "message": "Após confirmação, essas chaves são transferidas para o chaveiro local:"
+  },
+  "key_import_default_headline": {
+    "message": "Confirmar chave"
+  },
+  "key_import_error": {
+    "message": "Importar Erro."
+  },
+  "key_import_error_no_uid": {
+    "message": "Não foi encontrado ID de usuário válido na chave $1"
+  },
+  "key_import_exception": {
+    "message": "Um erro ocorreu durante o processamento de chaves"
+  },
+  "key_import_file_label": {
+    "message": "Selecionar arquivos"
+  },
+  "key_import_from_text_btn": {
+    "message": "Importa chave da área de transferência"
+  },
+  "key_import_from_text_label": {
+    "message": "Texto da área de transferência"
+  },
+  "key_import_invalid_text": {
+    "message": "Nenhum texto chave válido encontrado"
+  },
+  "key_import_invalidated_description": {
+    "message": "Aviso: a chave para este contato expirou. A comunicação criptografada com $1 não é mais possível. Você precisa obter a chave atual deste contato"
+  },
+  "key_import_number_of_failed": {
+    "message": "Não foi possível importar uma chave devido a erros"
+  },
+  "key_import_number_of_failed_plural": {
+    "message": "$1 não foi possível importar as chaves devido a erros"
+  },
+  "key_import_private_exists": {
+    "message": "A parte da chave privada combina com a chave pública existente $1 do usuário $2 importado no chaveiro"
+  },
+  "key_import_private_read": {
+    "message": "Não é possível ler uma chave privada: $1"
+  },
+  "key_import_private_success": {
+    "message": "Chave privada $1 do usuário $2 importada ao chaveiro"
+  },
+  "key_import_private_update": {
+    "message": "Chave privada $1 do usuário $2 atualizada"
+  },
+  "key_import_public_read": {
+    "message": "Não é possível ler uma chave pública: $1"
+  },
+  "key_import_public_success": {
+    "message": "Chave pública $1 do usuário $2 importada ao chaveiro"
+  },
+  "key_import_public_update": {
+    "message": "Chave pública $1 do usuário $2 atualizada"
+  },
+  "key_import_rotation_add": {
+    "message": "Adicionar ao chaveiro"
+  },
+  "key_import_rotation_cancel": {
+    "message": "Agora não"
+  },
+  "key_import_rotation_description": {
+    "message": "Se você continuar usando a chave antiga, o remetente poderá não conseguir descriptografar suas mensagens. Se tiver alguma suspeita, peça ao remetente para confirmar a alteração em outro canal de comunicação. Você poderá adicionar ou remover a chave posteriormente."
+  },
+  "key_import_rotation_headline": {
+    "message": "O remetente assinou esta mensagem com uma nova chave."
+  },
+  "key_import_search_btn": {
+    "message": "Procurar"
+  },
+  "key_import_search_disabled": {
+    "message": "Pesquisa desativada."
+  },
+  "key_import_search_disabled_descr": {
+    "message": "Ative pelo menos uma fonte de chave nas configurações."
+  },
+  "key_import_search_found": {
+    "message": "Chave encontrada em:"
+  },
+  "key_import_search_found_modified": {
+    "message": "última modificação em:"
+  },
+  "key_import_search_found_source": {
+    "message": "Fonte:"
+  },
+  "key_import_search_invalid": {
+    "message": "Insira um endereço de e-mail válido, ID de chave (16 dígitos) ou impressão digital (40 dígitos)"
+  },
+  "key_import_search_not_found": {
+    "message": "A chave não está disponível em nenhum dos diretórios de chaves pesquisados."
+  },
+  "key_import_search_not_found_header": {
+    "message": "Nenhuma chave encontrada."
+  },
+  "key_import_search_ph": {
+    "message": "Endereço de e-mail / ID da chave / Impressão digital"
+  },
+  "key_import_too_big": {
+    "message": "O texto da chave que você tentou importar é muito longo. Tente fazer isso com partes menores. "
+  },
+  "key_import_unable": {
+    "message": "Não é possível importar uma chave devido à exceção: $1"
+  },
+  "key_keyserver_mod": {
+    "message": "Os dados principais no servidor de chaves do Mailvelope não estão mais atualizados."
+  },
+  "key_keyserver_not": {
+    "message": "A chave não está sincronizada com o servidor de chaves do Mailvelope."
+  },
+  "key_keyserver_remove": {
+    "message": "Um e-mail de confirmação foi enviado a todos os IDs de usuário para remoção final do servidor de chaves do Mailvelope."
+  },
+  "key_keyserver_remove_btn": {
+    "message": "Remover todos os IDs de usuário"
+  },
+  "key_keyserver_resend_btn": {
+    "message": "Reenviar"
+  },
+  "key_keyserver_sync": {
+    "message": "Os dados principais no servidor de chaves do Mailvelope estão atualizados."
+  },
+  "key_keyserver_update": {
+    "message": "Os dados principais foram atualizados no servidor de chaves do Mailvelope."
+  },
+  "key_keyserver_update_btn": {
+    "message": "Atualizar"
+  },
+  "key_keyserver_upload": {
+    "message": "Para sincronizar a chave com o servidor de chaves do Mailvelope, um e-mail de confirmação foi enviado a todos os IDs de usuário."
+  },
+  "key_keyserver_upload_btn": {
+    "message": "Sincronizar"
+  },
+  "key_recovery_failed": {
+    "message": "Recuperando chave a partir de backup que falhou."
+  },
+  "key_remove_btn": {
+    "message": "Remover"
+  },
+  "key_remove_btn_title": {
+    "message": "Remova a chave do chaveiro"
+  },
+  "key_remove_dialog_title": {
+    "message": "Remover chave"
+  },
+  "key_revoke_btn": {
+    "message": "Revogar"
+  },
+  "key_revoke_btn_title": {
+    "message": "Revogar chave"
+  },
+  "key_revoke_dialog_confirm": {
+    "message": "Você ainda gostaria de revogar a chave?"
+  },
+  "key_revoke_dialog_description": {
+    "message": "Com a revogação, a chave permanece permanentemente inutilizável."
+  },
+  "key_revoke_dialog_title": {
+    "message": "Revogar chave"
+  },
+  "key_set_as_default": {
+    "message": "Definir como padrão"
+  },
+  "keybackup_failed": {
+    "message": "Criação do Backup da chave falhou."
+  },
+  "keybackup_restore_dialog_button": {
+    "message": "Restaurar backup"
+  },
+  "keybackup_restore_dialog_description": {
+    "message": "Crie uma nova planilha de recuperação aqui se:"
+  },
+  "keybackup_restore_dialog_headline": {
+    "message": "Recomendação: Crie um backup"
+  },
+  "keybackup_restore_dialog_list_1": {
+    "message": "Você perdeu a ficha de recuperação."
+  },
+  "keybackup_restore_dialog_list_2": {
+    "message": "Uma nova ficha de recuperação tem que ser criada por razões de segurança."
+  },
+  "keybackup_setup_dialog_button": {
+    "message": "Criar um backup"
+  },
+  "keybackup_setup_dialog_description": {
+    "message": "A cópia de segurança é necessária para garantir que a sua comunicação criptografada é:"
+  },
+  "keybackup_setup_dialog_headline": {
+    "message": "Recomendação: Backup de configuração"
+  },
+  "keybackup_setup_dialog_list_1": {
+    "message": "Para restaurá-lo em caso de perda de dados"
+  },
+  "keybackup_setup_dialog_list_2": {
+    "message": "Para transferi-lo para outros dispositivos"
+  },
+  "keybackup_waiting_description": {
+    "message": "Um documento com seu código de recuperação está sendo preparado."
+  },
+  "keybackup_waiting_headline": {
+    "message": "Criando backup!"
+  },
+  "keydetails_change_exp_date_dialog_note": {
+    "message": "A data de expiração também é alterada para todas as subchaves. Subchaves inválidas ou que já expiraram permanecem inalteradas."
+  },
+  "keydetails_change_exp_date_dialog_title": {
+    "message": "Alterar data de validade"
+  },
+  "keydetails_change_pwd_dialog_old": {
+    "message": "Senha antiga"
+  },
+  "keydetails_change_pwd_dialog_title": {
+    "message": "Mudar Senha"
+  },
+  "keydetails_creation_date": {
+    "message": "Criada"
+  },
+  "keydetails_expiration_date": {
+    "message": "Expira"
+  },
+  "keydetails_key_not_expire": {
+    "message": "nunca"
+  },
+  "keydetails_password": {
+    "message": "Senha"
+  },
+  "keydetails_title": {
+    "message": "Detalhes da chave"
+  },
+  "keygen_dialog_password_error_length": {
+    "message": "A senha requer pelo menos $1 caracteres"
+  },
+  "keygen_dialog_prolog": {
+    "message": "Atribua uma senha para sua chave para proteger sua comunicação criptografada:"
+  },
+  "keygen_waiting_description": {
+    "message": "Este processo pode levar vários minutos. Seu navegador pode ficar sem resposta. Aguarde."
+  },
+  "keygen_waiting_headline": {
+    "message": "Configuração da comunicação criptografada"
+  },
+  "keygrid_algorithm": {
+    "message": "Algoritmo"
+  },
+  "keygrid_all_keys": {
+    "message": "Tudo"
+  },
+  "keygrid_creation_date_short": {
+    "message": "Criada"
+  },
+  "keygrid_default_key": {
+    "message": "Chave padrão"
+  },
+  "keygrid_default_label": {
+    "message": "Padrão"
+  },
+  "keygrid_delete_confirmation": {
+    "message": "Tem certeza de que deseja remover esta chave?"
+  },
+  "keygrid_export": {
+    "message": "Exportar"
+  },
+  "keygrid_export_title": {
+    "message": "Exportar todas as chaves nesta lista para o arquivo"
+  },
+  "keygrid_generate_title": {
+    "message": "Gerar uma chave"
+  },
+  "keygrid_import_search_title": {
+    "message": "Pesquisar chaves públicas em fontes externas"
+  },
+  "keygrid_import_title": {
+    "message": "Importar uma chave"
+  },
+  "keygrid_invalid_userid": {
+    "message": "ID de usuário inválido"
+  },
+  "keygrid_key_fingerprint": {
+    "message": "Impressão Digital PGP"
+  },
+  "keygrid_key_length": {
+    "message": "Comprimento"
+  },
+  "keygrid_key_not_expire": {
+    "message": "A chave não expira"
+  },
+  "keygrid_keyid": {
+    "message": "Identificação de chave"
+  },
+  "keygrid_primary_key": {
+    "message": "Chave principal"
+  },
+  "keygrid_public_keys": {
+    "message": "Chaves públicas"
+  },
+  "keygrid_refresh": {
+    "message": "Recarregar"
+  },
+  "keygrid_refresh_title": {
+    "message": "Recarregue o chaveiro"
+  },
+  "keygrid_signer_unknown": {
+    "message": "Signatário desconhecido"
+  },
+  "keygrid_sort_type": {
+    "message": "Filtro"
+  },
+  "keygrid_status_expired": {
+    "message": "expirado"
+  },
+  "keygrid_status_invalid": {
+    "message": "inválida"
+  },
+  "keygrid_status_revoked": {
+    "message": "revogada"
+  },
+  "keygrid_status_valid": {
+    "message": "válida"
+  },
+  "keygrid_subkey": {
+    "message": "Subchave"
+  },
+  "keygrid_user_email": {
+    "message": "Email"
+  },
+  "keygrid_user_name": {
+    "message": "Nome"
+  },
+  "keygrid_user_primary": {
+    "message": "Primária"
+  },
+  "keygrid_userid_signatures": {
+    "message": "Assinaturas"
+  },
+  "keygrid_validity_status": {
+    "message": "Estado"
+  },
+  "keyring_available_settings": {
+    "message": "Veja as configurações disponíveis em:"
+  },
+  "keyring_backup": {
+    "message": "Backup de chaveiro"
+  },
+  "keyring_confirm_deletion": {
+    "message": "Deseja excluir o chaveiro com ID: $1?"
+  },
+  "keyring_confirm_keys": {
+    "message": "Confirme a chave para importar"
+  },
+  "keyring_confirm_keys_plural": {
+    "message": "Confirme as chaves $1 para importar"
+  },
+  "keyring_generate_key": {
+    "message": "Gerar chave"
+  },
+  "keyring_header": {
+    "message": "Gerenciamento de Chave"
+  },
+  "keyring_import_description": {
+    "message": "Você pode adicionar chaves como arquivo ou como texto da área de transferência."
+  },
+  "keyring_import_keys": {
+    "message": "Importar Chaves"
+  },
+  "keyring_import_search_description": {
+    "message": "Encontre chaves públicas para adicionar ao seu chaveiro. O Mailvelope verifica vários diretórios de chaves e sugere a chave pública com maior probabilidade de ser usada."
+  },
+  "keyring_main": {
+    "message": "Chaveiro Principal"
+  },
+  "keyring_private": {
+    "message": "Privada"
+  },
+  "keyring_public": {
+    "message": "Pública"
+  },
+  "keyring_public_private": {
+    "message": "Pares de chaves"
+  },
+  "keyring_remove_dialog_title": {
+    "message": "Excluir chaveiro"
+  },
+  "keyring_setup": {
+    "message": "Configuração"
+  },
+  "keyring_setup_generate_key": {
+    "message": "Gerar chave"
+  },
+  "keyring_setup_generate_key_explanation": {
+    "message": "Se você estiver usando esta extensão pela primeira vez e você ainda não tem um par de chaves, por favor gere uma chave agora."
+  },
+  "keyring_setup_import_key": {
+    "message": "Importar chave"
+  },
+  "keyring_setup_import_key_explanation": {
+    "message": "Você já tem um par de chaves em outro dispositivo? Você pode importar suas chaves existentes. Basta exportar o par de chaves em seu outro dispositivo e importá-lo aqui."
+  },
+  "keyring_setup_no_keypair": {
+    "message": "Um par de chaves é necessário para criptografar e descriptografar mensagens, assim como para convidar seus contatos para uma comunicação de criptografia fim-a-fim."
+  },
+  "keyring_setup_no_keypair_heading": {
+    "message": "Este chaveiro ainda não contém um par de chaves."
+  },
+  "keyserver_additionals_label": {
+    "message": "Fontes-chave adicionais"
+  },
+  "keyserver_autocrypt_lookup": {
+    "message": "Use chaves dos cabeçalhos Autocrypt de e-mails recebidos"
+  },
+  "keyserver_key_binding_header": {
+    "message": "Detecção de Chave"
+  },
+  "keyserver_key_binding_label": {
+    "message": "Determina a chave atual dos contatos e executa a seleção da chave automaticamente"
+  },
+  "keyserver_oks_lookup": {
+    "message": "Pesquisar automaticamente chaves em <0>keys.openpgp.org</0>"
+  },
+  "keyserver_tofu_lookup": {
+    "message": "Use o servidor de chaves Mailvelope"
+  },
+  "keyserver_verifying_servers": {
+    "message": "Servidor de chaves com verificação de e-mail"
+  },
+  "keyserver_wkd_lookup": {
+    "message": "Chaves de consulta do provedor de e-mail dos destinatários (Diretório de chaves da Web)"
+  },
+  "keyusers_add_btn": {
+    "message": "Adicionar novo"
+  },
+  "keyusers_add_btn_title": {
+    "message": "Adicionar um novo ID de usuário"
+  },
+  "keyusers_keyserver": {
+    "message": "Servidor de Chaves"
+  },
+  "keyusers_keyserver_not": {
+    "message": "não sincronizado"
+  },
+  "keyusers_keyserver_sync": {
+    "message": "sincronizado"
+  },
+  "keyusers_keyserver_unverified": {
+    "message": "não verificado"
+  },
+  "keyusers_title": {
+    "message": "IDs de usuário atribuídos"
+  },
+  "learn_more_link": {
+    "message": "Aprenda mais"
+  },
+  "message_no_keys": {
+    "message": "Nenhuma chave privada encontrada para esta mensagem. Identificações de chave privada necessários: $1"
+  },
+  "message_read_error": {
+    "message": "Não foi possível descriptografar esta mensagem: $1"
+  },
+  "nameaddrinput_error_email_exists": {
+    "message": "O endereço de e-mail já está em uso"
+  },
+  "nameaddrinput_error_name_empty": {
+    "message": "Por favor insira um nome"
+  },
+  "notification_text_copy_to_clipboard": {
+    "message": "O texto foi copiado para a área de transferência."
+  },
+  "options_docu": {
+    "message": "Documentação"
+  },
+  "options_home": {
+    "message": "Opções"
+  },
+  "options_title": {
+    "message": "Opções do Mailvelope"
+  },
+  "paragraph_analyticsconsent_modal": {
+    "message": "Você pode cancelar a qualquer momento nas configurações."
+  },
+  "preferred": {
+    "message": "Preferencial"
+  },
+  "provider_gmail_auth": {
+    "message": "Autorizações"
+  },
+  "provider_gmail_auth_cancel_btn": {
+    "message": "Cancelar autorização"
+  },
+  "provider_gmail_auth_readonly": {
+    "message": "ler e-mail"
+  },
+  "provider_gmail_auth_send": {
+    "message": "enviar email"
+  },
+  "provider_gmail_auth_table_title": {
+    "message": "Autorizações da API do Google"
+  },
+  "provider_gmail_dialog_auth_google_signin": {
+    "message": "Entrar com o Google"
+  },
+  "provider_gmail_dialog_auth_intro": {
+    "message": "Para usar a integração do Gmail para <0></0>, as seguintes permissões devem ser concedidas ao Mailvelope:"
+  },
+  "provider_gmail_dialog_auth_outro": {
+    "message": "Ao clicar no botão de login, uma janela de autorização do Google será aberta. Selecione sua conta do Gmail para o endereço de e-mail <0></0> e siga as instruções."
+  },
+  "provider_gmail_dialog_description": {
+    "message": "Usar a API do Gmail amplia a funcionalidade do Mailvelope com o Gmail e simplifica o envio e a leitura de e-mails e anexos criptografados."
+  },
+  "provider_gmail_dialog_privacy_policy": {
+    "message": "Por favor, leia nossa Política de Privacidade"
+  },
+  "provider_gmail_dialog_title": {
+    "message": "Usando a API do Gmail"
+  },
+  "provider_gmail_integration": {
+    "message": "Integração da API do Gmail"
+  },
+  "provider_gmail_integration_info": {
+    "message": "O Mailvelope requer permissões adicionais para acessar a API do Gmail. Assim que usar as funções de criptografia do Mailvelope no Gmail, você será guiado por um processo de autorização. Para isso, você precisa fazer login na sua conta do Google."
+  },
+  "provider_gmail_integration_warning": {
+    "message": "O Gmail não está autorizado com o padrão de pesquisa <0></0>. Verifique as configurações em <1></1>."
+  },
+  "provider_gmail_licensing_dialog_business_btn_info": {
+    "message": "Comunicando-se com segurança com organizações em todo o mundo"
+  },
+  "provider_gmail_licensing_dialog_business_btn_price_info": {
+    "message": "por usuário/mês"
+  },
+  "provider_gmail_licensing_dialog_deactivate_btn": {
+    "message": "Continuar sem a API do Gmail"
+  },
+  "provider_gmail_licensing_dialog_para_2": {
+    "message": "Você pode continuar a usar o Mailvelope com o Gmail gratuitamente, mas <0>com a API, seu fluxo de trabalho</0> para escrever e ler e-mails criptografados e seus anexos será <1>muito mais rápido e fácil</1>."
+  },
+  "provider_gmail_licensing_dialog_para_3": {
+    "message": "Teste o Mailvelope Business com a API do Gmail ativada <0>14 dias grátis</0>:"
+  },
+  "provider_gmail_licensing_dialog_test_btn": {
+    "message": "Teste a API do Gmail gratuitamente"
+  },
+  "provider_gmail_licensing_dialog_title": {
+    "message": "Licença comercial Mailvelope necessária"
+  },
+  "provider_gmail_licensing_table_title": {
+    "message": "Licença Mailvelope"
+  },
+  "provider_gmail_secure_forward_btn": {
+    "message": "Encaminhamento seguro"
+  },
+  "provider_gmail_secure_replyAll_btn": {
+    "message": "Resposta segura a todos"
+  },
+  "provider_gmail_secure_reply_btn": {
+    "message": "Resposta segura"
+  },
+  "pwd_dialog_cache_pwd": {
+    "message": "Lembrar senha temporariamente"
+  },
+  "pwd_dialog_cancel": {
+    "message": "O desbloqueio de chave foi cancelado"
+  },
+  "pwd_dialog_header": {
+    "message": "Digite a senha da chave"
+  },
+  "pwd_dialog_reason_add_user": {
+    "message": "Digite sua senha principal para criar o ID do usuário."
+  },
+  "pwd_dialog_reason_create_backup": {
+    "message": "Por favor, entre com a senha da sua chave para criar um backup. "
+  },
+  "pwd_dialog_reason_create_draft": {
+    "message": "Digite a senha da chave para salvar o rascunho."
+  },
+  "pwd_dialog_reason_decrypt": {
+    "message": "Digite a senha da chave para descriptografar esta mensagem."
+  },
+  "pwd_dialog_reason_editor": {
+    "message": "Por favor, entre com a senha da sua chave para atualizar as configurações para uma comunicação criptografada."
+  },
+  "pwd_dialog_reason_revoke": {
+    "message": "Digite sua senha para revogar esta chave."
+  },
+  "pwd_dialog_reason_revoke_user": {
+    "message": "Digite sua senha principal para revogar o ID do usuário."
+  },
+  "pwd_dialog_reason_set_exdate": {
+    "message": "Digite sua senha principal para definir uma nova data de expiração para a chave."
+  },
+  "pwd_dialog_reason_sign": {
+    "message": "Digite a senha da chave para assinar esta mensagem."
+  },
+  "pwd_dialog_wrong_pwd": {
+    "message": "Senha incorreta"
+  },
+  "recovery_sheet_backup_data": {
+    "message": "Backup dos seus dados"
+  },
+  "recovery_sheet_backup_local": {
+    "message": "Se você quiser salvar seus dados exclusivamente localmente no seu computador, você encontrará essa opção nas configurações de comunicação criptografada da sua conta $1. "
+  },
+  "recovery_sheet_backup_server": {
+    "message": "Para fazer backup dos dados importantes para a comunicação criptografada (por exemplo, senha da chave), os dados serão salvos criptografados em nossos servidores de US$ 1 pelo nosso parceiro de segurança Mailvelope."
+  },
+  "recovery_sheet_be_aware": {
+    "message": "Por favor, fique ciente"
+  },
+  "recovery_sheet_check_settings": {
+    "message": "Por favor, verifique as configurações em sua conta abaixo:"
+  },
+  "recovery_sheet_creation_date": {
+    "message": "Data de criação:"
+  },
+  "recovery_sheet_data_lost": {
+    "message": "Sem um backup, suas mensagens criptografadas não podem ser descriptografadas novamente no caso de você perder sua senha de chave ou no caso de um dispositivo defeituoso ou problemas com a extensão do navegador!"
+  },
+  "recovery_sheet_encryption_note": {
+    "message": "Dicas para comunicação criptografada com $1"
+  },
+  "recovery_sheet_enter_code": {
+    "message": "Para a instalação em outros computadores, digite o código de recuperação nas configurações abaixo:"
+  },
+  "recovery_sheet_explain_pgp": {
+    "message": "A comunicação criptografada com $1 é um procedimento baseado em PGP. Ele permite enviar e-mails criptografados e, ao mesmo tempo, garante que somente você e o destinatário possam lê-los."
+  },
+  "recovery_sheet_extension_problems": {
+    "message": "devido a problemas com a extensão do navegador"
+  },
+  "recovery_sheet_forgot_password": {
+    "message": "Porque você esqueceu a senha para a sua chave"
+  },
+  "recovery_sheet_further_info": {
+    "message": "Você pode encontrar mais informações e opções de configuração em sua conta de $1 em"
+  },
+  "recovery_sheet_header": {
+    "message": "Informação importante!"
+  },
+  "recovery_sheet_in_general": {
+    "message": "De modo geral, é importante"
+  },
+  "recovery_sheet_invite_contacts": {
+    "message": "Nas configurações de comunicação criptografada da sua conta $1, você tem a possibilidade de convidar contatos adicionais para usar a comunicação criptografada via PGP. Contatos que já foram convidados com sucesso podem ser reconhecidos pelo ícone de cadeado ao lado do endereço de e-mail. "
+  },
+  "recovery_sheet_keep_safe": {
+    "message": "Guarde uma cópia impressa deste documento em um local seguro e certifique-se que ninguém mais tenha acesso ao código de recuperação."
+  },
+  "recovery_sheet_key_server": {
+    "message": "Outros usuários de $1 que utilizam o procedimento PGP do GMX podem ser encontrados diretamente em um diretório central na sua conta $1. Se você não quiser ter nenhuma entrada neste diretório, desative esta função nas configurações da sua conta $1."
+  },
+  "recovery_sheet_mobile_devices": {
+    "message": "Em dispositivos móveis"
+  },
+  "recovery_sheet_not_working": {
+    "message": "Se sua comunicação criptografada não está mais funcionando, ex.:"
+  },
+  "recovery_sheet_other_computer": {
+    "message": "Em um computador diferente"
+  },
+  "recovery_sheet_other_contacts": {
+    "message": "Comunicação criptografada com outros contatos"
+  },
+  "recovery_sheet_other_devices": {
+    "message": "Comunicação criptografada em outros dispositivos"
+  },
+  "recovery_sheet_other_devices_setup": {
+    "message": "Configuração da comunicação criptografada em outros dispositivos"
+  },
+  "recovery_sheet_other_problems": {
+    "message": "por outras razões"
+  },
+  "recovery_sheet_pgp_compat": {
+    "message": "Você pode se comunicar de forma segura com outros contatos se eles também estão usando comunicação criptografada (PGP)."
+  },
+  "recovery_sheet_print_block": {
+    "message": "Por favor, guarde este documento em um lugar seguro!"
+  },
+  "recovery_sheet_print_button": {
+    "message": "Imprimir"
+  },
+  "recovery_sheet_print_notice": {
+    "message": "Por favor, imprima este documento e armazene-o em um lugar seguro!"
+  },
+  "recovery_sheet_provider_communication": {
+    "message": "Comunicação criptografada"
+  },
+  "recovery_sheet_provider_inbox": {
+    "message": "Caixa de entrada"
+  },
+  "recovery_sheet_provider_security": {
+    "message": "Segurança"
+  },
+  "recovery_sheet_provider_settings": {
+    "message": "Configurações"
+  },
+  "recovery_sheet_qr_code": {
+    "message": "Digitalize o QR Code com o seu dispositivo móvel."
+  },
+  "recovery_sheet_recommendation": {
+    "message": "Recomendação"
+  },
+  "recovery_sheet_recover_data": {
+    "message": "Recuperando dados"
+  },
+  "recovery_sheet_recovery_code": {
+    "message": "Código de recuperação"
+  },
+  "recovery_sheet_subtitle_receipt": {
+    "message": "Folha de recuperação para comunicação criptografada"
+  },
+  "recovery_sheet_subtitle_recover": {
+    "message": "Recuperar comunicação criptografada"
+  },
+  "recovery_sheet_trusted_contacts": {
+    "message": "Com contatos GMX você pode ter certeza que os usuários exibidos são de fato usuários válidos. Você deveria, no entanto, sempre verificar a identidade do contatos com um endereço de email de outro provedor de email."
+  },
+  "recovery_sheet_unknown_third": {
+    "message": "Apenas configure a comunicação criptografada em dispositivos seguros que não podem ser acessados por estranhos."
+  },
+  "recovery_sheet_unlock_backup": {
+    "message": "O backup de seus dados só pode ser descriptografado com a ajuda do código de recuperação nesta ficha de recuperação."
+  },
+  "reload_tab": {
+    "message": "Recarregue as páginas correspondentes para que as configurações entrem em vigor."
+  },
+  "restore_backup_dialog_button": {
+    "message": "Confirmar"
+  },
+  "restore_backup_dialog_headline": {
+    "message": "Por favor, insira seu código de recuperação:"
+  },
+  "restore_password_dialog_button": {
+    "message": "Mostrar"
+  },
+  "restore_password_dialog_headline": {
+    "message": "Sua senha de chave:"
+  },
+  "security_background_color_text": {
+    "message": "2. Agora escolha uma cor que você goste"
+  },
+  "security_background_icons_text": {
+    "message": "1. Escolha um ícone que você goste"
+  },
+  "security_background_text": {
+    "message": "Seu histórico de segurança é exibido em cada e-mail criptografado. Para torná-lo realmente seguro, você deve personalizá-lo. É assim que você garante que ninguém consiga reconstruir a interface do Mailvelope para acessar seus dados pessoais."
+  },
+  "security_cache_header": {
+    "message": "Lembrar das senhas nesta sessão do navegador?"
+  },
+  "security_cache_help": {
+    "message": "Deve ser um número entre 1-999"
+  },
+  "security_cache_off": {
+    "message": "Não."
+  },
+  "security_cache_on": {
+    "message": "Sim, manter na memória por"
+  },
+  "security_cache_time": {
+    "message": "minutos."
+  },
+  "security_display_decrypted": {
+    "message": "Onde são decifradas as mensagens exibidas?"
+  },
+  "security_display_inline": {
+    "message": "Na página do provedor de email"
+  },
+  "security_display_popup": {
+    "message": "Em uma janela separada do Mailvelope"
+  },
+  "security_hide_armored_head": {
+    "message": "Ocultar a versão e o comentário do Mailvelope em mensagens PGP."
+  },
+  "security_log_action": {
+    "message": "Ação"
+  },
+  "security_log_add_attachment": {
+    "message": "Botão de adicionar anexo clicado"
+  },
+  "security_log_attachment_download": {
+    "message": "Anexo baixado"
+  },
+  "security_log_backup_create": {
+    "message": "Clique para criar o backup"
+  },
+  "security_log_backup_restore": {
+    "message": "Clique para restaurar o backup"
+  },
+  "security_log_decrypt_ui": {
+    "message": "Decriptar"
+  },
+  "security_log_decryption_operation": {
+    "message": "A mensagem foi decifrada com: $1"
+  },
+  "security_log_dialog_cancel": {
+    "message": "Clique para cancelar na janela"
+  },
+  "security_log_dialog_encrypt": {
+    "message": "Clique para criptografar na janela"
+  },
+  "security_log_dialog_ok": {
+    "message": "Clique para confirmar na janela"
+  },
+  "security_log_dialog_sign": {
+    "message": "Clique para assinar na janela"
+  },
+  "security_log_editor": {
+    "message": "Editor de Mailvelope"
+  },
+  "security_log_email_viewer": {
+    "message": "Email PGP descriptografado"
+  },
+  "security_log_encrypt_form": {
+    "message": "Criptografar formulário"
+  },
+  "security_log_encrypt_ui": {
+    "message": "Encriptar"
+  },
+  "security_log_encryption_operation": {
+    "message": "A mensagem foi criptografada para: $1"
+  },
+  "security_log_import_dialog": {
+    "message": "Importar Diálogo"
+  },
+  "security_log_key_backup": {
+    "message": "Backup da chave"
+  },
+  "security_log_key_generator": {
+    "message": "Gerador de Chaves"
+  },
+  "security_log_password_click": {
+    "message": "Clique na janela de senha"
+  },
+  "security_log_password_dialog": {
+    "message": "Senha de Diálogo"
+  },
+  "security_log_password_input": {
+    "message": "Inserção na janela de senha"
+  },
+  "security_log_remove_attachment": {
+    "message": "Anexo removido"
+  },
+  "security_log_restore_backup_click": {
+    "message": "Clique na janela de restauração de backup"
+  },
+  "security_log_sign_operation": {
+    "message": "A mensagem foi assinada com a chave: $1"
+  },
+  "security_log_source": {
+    "message": "Fonte"
+  },
+  "security_log_text": {
+    "message": "O registo de segurança mostra as ações do usuário em componentes integrados do Mailvelope."
+  },
+  "security_log_textarea_click": {
+    "message": "Clique na área de texto"
+  },
+  "security_log_textarea_input": {
+    "message": "Inserção na área de texto"
+  },
+  "security_log_textarea_select": {
+    "message": "Seleção na área de texto"
+  },
+  "security_log_timestamp": {
+    "message": "Marca temporal"
+  },
+  "security_log_viewer": {
+    "message": "Visualizador de Mailvelope"
+  },
+  "security_openpgp_header": {
+    "message": "Configurações do OpenPGP"
+  },
+  "settings_analytics": {
+    "message": "Análises"
+  },
+  "settings_general": {
+    "message": "Geral"
+  },
+  "settings_keyserver": {
+    "message": "Diretórios principais"
+  },
+  "settings_provider": {
+    "message": "API do Gmail"
+  },
+  "settings_security": {
+    "message": "Segurança"
+  },
+  "settings_security_background": {
+    "message": "Segurança de Fundo"
+  },
+  "settings_security_log": {
+    "message": "Registro de segurança"
+  },
+  "settings_watchlist": {
+    "message": "Domínios Autorizados"
+  },
+  "sign_dialog_header": {
+    "message": "Assinar a mensagem como:"
+  },
+  "sign_error": {
+    "message": "Não foi possível assinar esta mensagem: $1"
+  },
+  "signer_unknown": {
+    "message": "Desconhecido"
+  },
+  "text_decrypt_button": {
+    "message": "Decriptar"
+  },
+  "upload_attachment": {
+    "message": "Adicionar arquivo"
+  },
+  "upload_drop": {
+    "message": "Solte o arquivo nesta área para anexá-lo"
+  },
+  "upload_help": {
+    "message": "Arraste o arquivo para esta janela ou"
+  },
+  "upload_quota_exceeded_warning": {
+    "message": "Tamanho de anexo permitido:"
+  },
+  "upload_quota_warning_headline": {
+    "message": "O anexo é grande demais"
+  },
+  "user_create_btn": {
+    "message": "Criar"
+  },
+  "user_create_title": {
+    "message": "Criar ID de usuário"
+  },
+  "user_keyserver_not": {
+    "message": "O ID do usuário não está sincronizado com o servidor de chaves do Mailvelope."
+  },
+  "user_keyserver_remove": {
+    "message": "Para remoção final do servidor de chaves Mailvelope, um e-mail de confirmação foi enviado para $1."
+  },
+  "user_keyserver_remove_btn": {
+    "message": "Remover ID do usuário"
+  },
+  "user_keyserver_resend_confirmation_btn": {
+    "message": "Reenviar confirmação"
+  },
+  "user_keyserver_sync": {
+    "message": "O ID do usuário é sincronizado com o servidor de chaves do Mailvelope."
+  },
+  "user_keyserver_unverified": {
+    "message": "Confirme o ID do usuário para sincronizá-lo com o servidor de chaves do Mailvelope."
+  },
+  "user_keyserver_upload": {
+    "message": "Para sincronizar com o servidor de chaves do Mailvelope, um e-mail de confirmação foi enviado para $1."
+  },
+  "user_remove_btn": {
+    "message": "Remover"
+  },
+  "user_remove_btn_title": {
+    "message": "Remover ID do usuário"
+  },
+  "user_remove_dialog_confirmation": {
+    "message": "Deseja remover este ID de usuário da sua chave?"
+  },
+  "user_remove_dialog_keyserver_warning": {
+    "message": "O ID do usuário também é removido do servidor de chaves do Mailvelope."
+  },
+  "user_remove_dialog_title": {
+    "message": "Remover ID do usuário"
+  },
+  "user_revoke_btn": {
+    "message": "Revogar"
+  },
+  "user_revoke_btn_title": {
+    "message": "Revogar ID do usuário"
+  },
+  "user_revoke_dialog_confirmation": {
+    "message": "Você ainda gostaria de revogar?"
+  },
+  "user_revoke_dialog_description": {
+    "message": "Após a revogação, o ID do usuário desta chave permanecerá permanentemente inutilizável."
+  },
+  "user_revoke_dialog_title": {
+    "message": "Revogar ID do usuário"
+  },
+  "user_title": {
+    "message": "ID do usuário"
+  },
+  "usersignatures_title": {
+    "message": "Verificações"
+  },
+  "verify_error": {
+    "message": "Não foi possível verificar esta mensagem: $1"
+  },
+  "verify_frame_help_text": {
+    "message": "Clique para verificar a assinatura"
+  },
+  "waiting_dialog_decryption_failed": {
+    "message": "A descriptografia falhou."
+  },
+  "watchlist_command_create": {
+    "message": "Adicionar novas informações"
+  },
+  "watchlist_delete_confirmation": {
+    "message": "Você realmente deseja remover este site da lista de domínios autorizados?"
+  },
+  "watchlist_expose_api": {
+    "message": "API"
+  },
+  "watchlist_record_title": {
+    "message": "Domínio Autorizado"
+  },
+  "watchlist_remove_dialog_title": {
+    "message": "Remover domínio"
+  },
+  "watchlist_title_active": {
+    "message": "Ativo"
+  },
+  "watchlist_title_frame": {
+    "message": "Padrão de domínio"
+  },
+  "watchlist_title_https_only": {
+    "message": "Somente HTTPS"
+  },
+  "watchlist_title_scan": {
+    "message": "Ativo"
+  },
+  "watchlist_title_site": {
+    "message": "Site"
+  },
+  "word_or": {
+    "message": "ou"
+  },
+  "wrong_restore_code": {
+    "message": "Código de recuperação inválido"
+  }
+}

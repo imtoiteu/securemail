@@ -1,0 +1,13 @@
+.keyring-setup-card {
+  transition: box-shadow 0.3s ease;
+  min-height: 280px;
+
+  .card-img-top {
+    border: 1px solid rgba(227, 0, 72, 0.25);
+    min-height: 200px;
+  }
+
+  .card-body {
+    min-height: 200px;
+  }
+}

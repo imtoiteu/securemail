@@ -1,0 +1,1595 @@
+{
+  "action_menu_activate_current_tab": {
+    "message": "اسمح لهذا النطاق"
+  },
+  "action_menu_all_options": {
+    "message": "كل الخيارات"
+  },
+  "action_menu_configure_mailvelope": {
+    "message": "‫<0>هيءْ Mailvelope </0>للبدء !‬"
+  },
+  "action_menu_dashboard_description": {
+    "message": "عرض كل خيارات التهيئة."
+  },
+  "action_menu_dashboard_label": {
+    "message": "لوحة التحكم"
+  },
+  "action_menu_file_encryption_description": {
+    "message": "تعمية ملف أو عدة ملفات."
+  },
+  "action_menu_file_encryption_label": {
+    "message": "تعمية الملفات"
+  },
+  "action_menu_help": {
+    "message": "المساعدة"
+  },
+  "action_menu_keyring_description": {
+    "message": "إدارة المفاتيح العمومية والخاصة."
+  },
+  "action_menu_keyring_label": {
+    "message": "مستودع المفاتيح"
+  },
+  "action_menu_primary_menu_aria_label": {
+    "message": "قائمة Mailvelope الأوَّلية"
+  },
+  "action_menu_reload_extension_scripts": {
+    "message": "أنعش Mailvelope"
+  },
+  "action_menu_review_security_logs_description": {
+    "message": "راجع إجراءات المستخدم المتعلقة بالأمان."
+  },
+  "action_menu_review_security_logs_label": {
+    "message": "سجل الأمان"
+  },
+  "action_menu_setup_menu_aria_label": {
+    "message": "قائمة إعداد Mailvelope"
+  },
+  "action_menu_setup_start_label": {
+    "message": "لنبدأ !‏"
+  },
+  "alert_header_error": {
+    "message": "خطأ !"
+  },
+  "alert_header_important": {
+    "message": "مهم !"
+  },
+  "alert_header_notice": {
+    "message": "يُرجى الملاحظة :"
+  },
+  "alert_header_success": {
+    "message": "نجَح !"
+  },
+  "alert_header_warning": {
+    "message": "تحذير !"
+  },
+  "alert_invalid_domainmatchpattern_warning": {
+    "message": "يطابق اسم النطاق النمط ‪[*.]host.name.tld[:port]‬"
+  },
+  "alert_no_domainmatchpattern_warning": {
+    "message": "يجب أن يتوفر نمط تطابق نطاق واحد على الأقل,"
+  },
+  "analytics_consent_description": {
+    "message": "مشاركة بيانات استخدام التطبيق بشكل آمن مع Mailvelope"
+  },
+  "analytics_consent_disabled_tooltip": {
+    "message": "يُمكنك الاشتراك في التحليلات فقط عند التثبيت وفقط إذا اخترت عشوائياً."
+  },
+  "analytics_consent_interstitial_Btn_Learn_More": {
+    "message": "إعرف/ي أكثر"
+  },
+  "analytics_consent_interstitial_Faq": {
+    "message": "لمعرفة المزيد عن مقاييس Mailvelope يرجى زيارة صفحة الأسئلة الشائعة."
+  },
+  "analytics_consent_interstitial_We_Collect_Minimal_Data": {
+    "message": "يُحصي Mailvelope الخطوات التي تؤهلك لاستخدامه بواسطة بريدك الإلكتروني ولكنه لا يسجل كل خطوة تتخذها."
+  },
+  "analytics_consent_interstitial_We_Collect_Minimal_Data_Title": {
+    "message": "نجمع الحد الأدنى من البيانات"
+  },
+  "analytics_consent_interstitial_We_Respect_your_Choice": {
+    "message": "إذا اخترت عدم المساهمة، لن يُسجَّل أي شيء ، أما إذا اخترت المساهمة، فبوسعك تغيير رأيك في أي وقت وذلك بإلغاء اشتراكك عبر الإعدادات."
+  },
+  "analytics_consent_interstitial_We_Respect_your_Choice_Title": {
+    "message": "نحترم خيارك"
+  },
+  "analytics_consent_interstitial_Your_Privacy_is_Preserved_Pt1": {
+    "message": "يستخدم Mailvelope "
+  },
+  "analytics_consent_interstitial_Your_Privacy_is_Preserved_Pt2": {
+    "message": "التي تخزن البيانات بشكل آمن دون ربطها بمعلومات قابلة للتحديد. علاوة على ذلك، لا يتم تسجيل عنوانك ال IP أو تشغيله."
+  },
+  "analytics_consent_interstitial_Your_Privacy_is_Preserved_Title": {
+    "message": "خصوصيتك بأمان"
+  },
+  "analytics_consent_interstitial_learn_more": {
+    "message": "تعلم كيف تكون المقاييس آمنة"
+  },
+  "analytics_consent_interstitial_message": {
+    "message": "يطلب Mailvelope من 1٪ من مستخدميه ومستخدماته الجدد المساهمة في تسجيل مقاييس مجهولة المصدر. إذا وافقت، سوف يسجّل Mailvelope خطواتك الناجحة في رحلتك التأهيلية. هل ستساهم (ين)؟"
+  },
+  "analytics_interstitial_header": {
+    "message": "ساعدنا لنتحسّن!"
+  },
+  "auth_domain_api_label": {
+    "message": "السماح لواجهة برمجة التطبيقات"
+  },
+  "auth_domain_description": {
+    "message": "هل تود السماح باستخدام Mailvelope مع النطاق  $1 ؟"
+  },
+  "auth_domain_headline": {
+    "message": "السماح للنطاق"
+  },
+  "button_analyticsconsent_modal": {
+    "message": "استمرار"
+  },
+  "change_link": {
+    "message": "تغيير"
+  },
+  "cleartext_read_error": {
+    "message": "لم يتمكن من قراءة هذا النص الصِّرف للرسالة : $1"
+  },
+  "dashboard_link_encrypt_decrypt_files": {
+    "message": "‮التعمية"
+  },
+  "dashboard_link_manage_domains": {
+    "message": "النطاقات المسموحة"
+  },
+  "dashboard_link_manage_keys": {
+    "message": "إدارة المفاتيح"
+  },
+  "dashboard_link_view_security_log": {
+    "message": "سجلات الأمان"
+  },
+  "decrypt_att_frame_help_text": {
+    "message": "اضغط هنا لعرض الرسالة"
+  },
+  "decrypt_cleartext_warning": {
+    "message": "إن النص التالي غير مُعمَّى."
+  },
+  "decrypt_decrypted_files_label": {
+    "message": "الملفات التي فُكَّت تعميتها"
+  },
+  "decrypt_digital_signature": {
+    "message": "مُوقَّع"
+  },
+  "decrypt_digital_signature_failure": {
+    "message": "التوقيع باطل"
+  },
+  "decrypt_digital_signature_inconsistent": {
+    "message": "تواقيع غير متناسقة: لم يتم توقيع الرسالة والملف بنفس المفتاح"
+  },
+  "decrypt_digital_signature_missing": {
+    "message": "التوقيع مفقود"
+  },
+  "decrypt_digital_signature_null": {
+    "message": "التوقيع مجهول"
+  },
+  "decrypt_digital_signature_null_info": {
+    "message": "لم يعثر على مفتاح ذو المُعرِّف  $1."
+  },
+  "decrypt_digital_signature_null_info_short": {
+    "message": "لم يعثر على المفتاح."
+  },
+  "decrypt_digital_signature_sender_mismatch": {
+    "message": "عنوان المرسل غير متطابق"
+  },
+  "decrypt_digital_signature_sender_mismatch_tooltip": {
+    "message": "تحتوي هذه الرسالة على توقيع رقمي، ولكن تم اكتشاف عدم تطابق. تم إرسال الرسالة من عنوان بريد إلكتروني لا يتطابق مع المفتاح العمومي للموقِّع."
+  },
+  "decrypt_digital_signature_uncertain_sender": {
+    "message": "هوية المرسل غير مؤكدة"
+  },
+  "decrypt_file_error_header": {
+    "message": "فك تعمية الملف $1 غير ممكن."
+  },
+  "decrypt_frame_help_text": {
+    "message": "اضغط لفك التعمية."
+  },
+  "decrypt_header": {
+    "message": "فك تعمية البيانات"
+  },
+  "decrypt_header_success": {
+    "message": "فُكَّت التعمية بنجاح"
+  },
+  "decrypt_home": {
+    "message": "فك التعمية"
+  },
+  "decrypt_open_viewer_btn_title": {
+    "message": "افتح في عارض Mailvelope"
+  },
+  "decrypt_show_message_btn": {
+    "message": "أظهر الرسالة"
+  },
+  "decrypt_text_area_label": {
+    "message": "النص المراد فك تعميته"
+  },
+  "decrypt_text_decryption_btn": {
+    "message": "هل تود أيضا فك تعمية نص ؟"
+  },
+  "decrypt_text_error_header": {
+    "message": "فك تعمية النص غير ممكنة."
+  },
+  "dialog_cancel_btn": {
+    "message": "إلغاء"
+  },
+  "dialog_no_btn": {
+    "message": "‮لا"
+  },
+  "dialog_no_button": {
+    "message": "تخطي"
+  },
+  "dialog_popup_close": {
+    "message": "أَغلِق"
+  },
+  "dialog_save_btn": {
+    "message": "حفظ"
+  },
+  "dialog_yes_btn": {
+    "message": "‮نعم"
+  },
+  "editor_blur_warn": {
+    "message": "تحذير : محرر النصوص فقد التركيز عليه."
+  },
+  "editor_encrypt_button": {
+    "message": "عَمِّ"
+  },
+  "editor_error_header": {
+    "message": "خطأ"
+  },
+  "editor_extra_key_checkbox": {
+    "message": "إضافة مفتاح إضافي"
+  },
+  "editor_extra_key_help": {
+    "message": "سوف تُعمَّى الرسالة الإلكترونية بواسطة هذا المفتاح الإضافي"
+  },
+  "editor_header": {
+    "message": "اكتب رسالة إلكترونية محمية"
+  },
+  "editor_key_auto_sign": {
+    "message": "هل تود توقيع كل رسائلك ؟"
+  },
+  "editor_key_auto_sign_link": {
+    "message": "عدِّل الإعدادات هنا"
+  },
+  "editor_key_has_extra_msg": {
+    "message": "سوف تُعمَّى الرسالة الإلكترونية بواسطة المفتاح البديل الذي أدخلت أسفله."
+  },
+  "editor_key_no_sign_option": {
+    "message": "غير موقع"
+  },
+  "editor_key_not_found": {
+    "message": "مفتاح غير موجود!"
+  },
+  "editor_key_not_found_msg": {
+    "message": "جميع المتلقين يحتاجون إلى مفتاح PGP للتشفير. بإمكانك توقيع الرسالة بالرغم من ذلك."
+  },
+  "editor_label_attachments": {
+    "message": "المرفقات"
+  },
+  "editor_label_copy_recipient": {
+    "message": "نسخة إلى"
+  },
+  "editor_label_message": {
+    "message": "الرسالة"
+  },
+  "editor_label_recipient": {
+    "message": "المتلقّي"
+  },
+  "editor_label_subject": {
+    "message": "الموضوع"
+  },
+  "editor_remove_upload": {
+    "message": "إزالة"
+  },
+  "editor_sign_button": {
+    "message": "وقّع فقط"
+  },
+  "encrypt_change_signer_dialog_signer_label": {
+    "message": "حدد التوقيع"
+  },
+  "encrypt_change_signer_dialog_title": {
+    "message": "عدِّل التوقيع"
+  },
+  "encrypt_download_all_button": {
+    "message": "نزِّل الكل"
+  },
+  "encrypt_encrypted_files_label": {
+    "message": "الملفات المعماة"
+  },
+  "encrypt_encrypted_for_label": {
+    "message": "مُعمَّى لأجل"
+  },
+  "encrypt_error": {
+    "message": "لم يتمكن من تعمية هذه الرسالة : $1"
+  },
+  "encrypt_file_error_header": {
+    "message": "لا يمكن تعمية الملف  $1."
+  },
+  "encrypt_frame_btn_label": {
+    "message": "أكتب رسالة آمنة"
+  },
+  "encrypt_header": {
+    "message": "عمِّ البيانات"
+  },
+  "encrypt_header_success": {
+    "message": "نجحت التعمية"
+  },
+  "encrypt_home": {
+    "message": "تعمية"
+  },
+  "encrypt_no_signer_info": {
+    "message": "البيانات المعماة غير موقعة"
+  },
+  "encrypt_remove_signer_btn": {
+    "message": "أزل التوقيع"
+  },
+  "encrypt_signed_as_label": {
+    "message": "موقع من طرف"
+  },
+  "encrypt_signer_info": {
+    "message": "إن البيانات المُعمَّاة موقعة بواسطة مفتاحك ($1)"
+  },
+  "encrypt_text_encryption_btn": {
+    "message": "هل تود تعمية نص ؟"
+  },
+  "encrypt_text_error_header": {
+    "message": "تعمية النص غير ممكنة."
+  },
+  "encrypt_upload_file_warning_too_big": {
+    "message": "أحد الملفات كبير جداً."
+  },
+  "ext_description": {
+    "message": "احمِ (ي) محادثاتك ومرفقاتك الإلكترونية على Gmail و Nextcloud و Outlook وغيرها بواسطة برمجية PGP ونظام التعمية من الطرف للطرف."
+  },
+  "ext_name": {
+    "message": "Mailvelope - احمِ (ي) بريدك الإلكتروني بواسطة برمجية PGP"
+  },
+  "feature_banner_new_security_background_btn": {
+    "message": "خصص الآن"
+  },
+  "feature_banner_new_security_background_text": {
+    "message": "‫اجعل Mailvelope أكثر أمانا عبر تخصيص خلفية الأمن لديك.‬"
+  },
+  "file_invalid_signed": {
+    "message": "التوقيع باطل"
+  },
+  "file_not_signed": {
+    "message": "الملف غير موقع"
+  },
+  "file_read_error": {
+    "message": "لم يتمكن من فك تعمية الملف :  $1"
+  },
+  "file_signed": {
+    "message": "وُقِّع الملف من طرف  $1\n"
+  },
+  "form_back": {
+    "message": "الرجوع"
+  },
+  "form_cancel": {
+    "message": "إلغاء"
+  },
+  "form_confirm": {
+    "message": "تأكيد"
+  },
+  "form_definition_error_signature_invalid": {
+    "message": "توقيع الاستمارة باطل."
+  },
+  "form_destination": {
+    "message": "اتجاه"
+  },
+  "form_destination_default": {
+    "message": "سيتم إرجاع البيانات المعماة إلى الصفحة."
+  },
+  "form_import": {
+    "message": "استيراد"
+  },
+  "form_loading": {
+    "message": "الاستمارة قيد التنزيل"
+  },
+  "form_no": {
+    "message": "لا"
+  },
+  "form_ok": {
+    "message": "موافق"
+  },
+  "form_recipient": {
+    "message": "المتلقّي"
+  },
+  "form_save": {
+    "message": "حفظ"
+  },
+  "form_sign_error_no_default_key": {
+    "message": "لم يعثر على أي مفتاح خاص في المستودع لكي يوقع به محتوى الاستمارة. يُرجى استيراده أو إنشاؤه."
+  },
+  "form_submit": {
+    "message": "ارسال"
+  },
+  "form_yes": {
+    "message": "نعم"
+  },
+  "general_default_key_always": {
+    "message": "أضف دوما مفتاحي الافتراضي إلى قائمة المستلمين. (هذا الإجراء سيمكنك من فك تعمية رسائلك المرسَلة)"
+  },
+  "general_default_key_auto_sign": {
+    "message": "وقِّع كل الرسائل الصادرة."
+  },
+  "general_gnupg_check_availability": {
+    "message": "اسمح لنا بالتحقق من وجوده"
+  },
+  "general_gnupg_installed_question": {
+    "message": "هل GnuPG مثبت لديك؟ إذا لم يكن كذلك، اضغط على هذا الرابط لتنزيله. للتحقق من توفره مرة أخرى أعد (أعيدي) تشغيل Mailvelope. يُرجى الاطلاع على هذا الويكي للتأكد من تنصيب GnuPG بشكلٍ صحيح."
+  },
+  "general_gnupg_not_available": {
+    "message": "GnuPG غير متاح"
+  },
+  "general_gnupg_prefer": {
+    "message": "هل تفضل استخدام GnuPG ؟"
+  },
+  "general_openpgp_current": {
+    "message": "إنك تستخدم حاليا "
+  },
+  "general_openpgp_prefer": {
+    "message": "ما هي أداة التعمية التي تفضل ؟"
+  },
+  "general_openpgp_preferences": {
+    "message": "خيارات OpenPGP"
+  },
+  "general_prefer_gnupg_note": {
+    "message": "ملاحظة : كل المفاتيح العمومية تتزامن مع مستودع المفاتيح المتاح. يمكن لـ Mailvelope استخدام إعدادات أخرى لمكتبة التعمية المفضلة، وذلك حسب المفاتيح الخاصة المتاحة له."
+  },
+  "gmail_integration_auth_error_download": {
+    "message": "ليس لـ Mailvelope الصلاحية لتنزيل المرفقات. يجب عليك منح Mailvelope حق الوصول إلى واجهة برمجة تطبيقات Gmail لاستخدام هذه الوظيفة."
+  },
+  "gmail_integration_auth_error_send": {
+    "message": "ليس لـ Mailvelope الصلاحية لإرسال الرسائل الإلكترونية. يجب عليك منح Mailvelope حق الوصول إلى واجهة برمجة تطبيقات Gmail لاستخدام هذه الوظيفة."
+  },
+  "gmail_integration_quoted_mail_header_forward": {
+    "message": "---------- رسالة مُوجَّهة --------\nمن :  $1\nالتاريخ :  $2\nالموضوع :  $3\nإلى :  $4"
+  },
+  "gmail_integration_quoted_mail_header_reply": {
+    "message": "في  $1، كتب  $2 :"
+  },
+  "gmail_integration_sent_success": {
+    "message": "أُرسِلت الرسالة الإلكترونية بنجاح."
+  },
+  "gnupg_connection": {
+    "message": "اتصال GnuPG "
+  },
+  "gnupg_error_unusable_pub_key": {
+    "message": "يُرجى التحقق من أن المفاتيح العمومية التالية متاحة في مستودع مفاتيح GnuPG وأنها صالحة : $1"
+  },
+  "header_analyticsconsent_modal": {
+    "message": "شكرا لك على المساعدة !"
+  },
+  "import_frame_help_text": {
+    "message": "اضغط لاستيراد المفتاح"
+  },
+  "key_default_active_btn_title": {
+    "message": "تم تحديد المفتاح كافتراضي"
+  },
+  "key_default_disabled_btn_title": {
+    "message": "المفتاح غير صالح لعمليات التعمية والتوقيع"
+  },
+  "key_default_inactive_btn_title": {
+    "message": "تحديد كمفتاح افتراضي"
+  },
+  "key_export_btn": {
+    "message": "تصدير"
+  },
+  "key_export_btn_title": {
+    "message": "صَدِّر المفتاح"
+  },
+  "key_export_create_file": {
+    "message": "حفظ"
+  },
+  "key_export_dialog_copy_to_clipboard": {
+    "message": "نسخ إلى الحافظة"
+  },
+  "key_export_dialog_question": {
+    "message": "ما هو المفتاح الذي تود تصديره ؟"
+  },
+  "key_export_dialog_title": {
+    "message": "صَدِّر المفتاح"
+  },
+  "key_export_filename": {
+    "message": "‮اسم الملف"
+  },
+  "key_export_warning_private": {
+    "message": "إن هذا الملف يحوي مفاتيح خاصة. احفظ الملف في مكان آمن ولا تشاركه مع الآخرين."
+  },
+  "key_gen_advanced_btn": {
+    "message": "متقدم"
+  },
+  "key_gen_demail": {
+    "message": "عنوان De-Mail"
+  },
+  "key_gen_error": {
+    "message": "حدث خطأ خلال توليد المفتاح."
+  },
+  "key_gen_experimental": {
+    "message": "تجريبي"
+  },
+  "key_gen_expiration": {
+    "message": "تاريخ إنتهاء صلاحية المفتاح"
+  },
+  "key_gen_future_default": {
+    "message": "الافتراضي مستقبلا"
+  },
+  "key_gen_generate": {
+    "message": "توليد"
+  },
+  "key_gen_invalid_email": {
+    "message": "عنوان بريد إلكتروني غير صحيح"
+  },
+  "key_gen_key_size": {
+    "message": "طول المفتاح"
+  },
+  "key_gen_name_help": {
+    "message": "الاسم الكامل لمالك المفتاح"
+  },
+  "key_gen_pwd": {
+    "message": "أَدخِل كلمة السر"
+  },
+  "key_gen_pwd_empty": {
+    "message": "حقل كلمة السر فارغ"
+  },
+  "key_gen_pwd_reenter": {
+    "message": "أَعِد إدخال كلمة السر"
+  },
+  "key_gen_pwd_unequal": {
+    "message": "كلمات السر غير متطابقة"
+  },
+  "key_gen_success": {
+    "message": "لقد أنشئ مفتاح جديد وتم إستيراده إلى حافظة المفاتيح"
+  },
+  "key_gen_upload": {
+    "message": "حمِّل المفتاح العام إلى خادم Mailvelope (يمكن حذفه في أي وقت)"
+  },
+  "key_gen_wait_header": {
+    "message": "يجري توليد المفاتيح..."
+  },
+  "key_gen_wait_info": {
+    "message": "الرجاء الإنتظار، توليد المفتاح يمكن أن يستغرق عدة دقائق وهو مرتبط بعدة عوامل مختلفة، مثل حجم المفتاح."
+  },
+  "key_import_bulk_success": {
+    "message": "تم استيراد وتحديث المفاتيح بنجاح."
+  },
+  "key_import_contacts_import_btn": {
+    "message": "استيراد المفاتيح"
+  },
+  "key_import_default_description": {
+    "message": "بعد التأكيد، سوف يُنقَل هذا المفتاح إلى مستودع المفاتيح المحلي :"
+  },
+  "key_import_default_description_plural": {
+    "message": "بعد التأكيد، سوف تُنقَل هذه المفاتيح إلى المستودع المحلي للمفاتيح :"
+  },
+  "key_import_default_headline": {
+    "message": "تأكيد المفتاح"
+  },
+  "key_import_error": {
+    "message": "حدث خطأ في الاستيراد."
+  },
+  "key_import_error_no_uid": {
+    "message": "لم يعثر على مُعرِّف المستخدم في المفتاح  $1"
+  },
+  "key_import_exception": {
+    "message": "حدث خطأ أثناء معالجة المفاتيح"
+  },
+  "key_import_file_label": {
+    "message": "حدد الملفات"
+  },
+  "key_import_from_text_btn": {
+    "message": "استورد المفتاح من الحافظة"
+  },
+  "key_import_from_text_label": {
+    "message": "نص من الحافظة"
+  },
+  "key_import_invalid_text": {
+    "message": "لم يعثر على نص صحيح للمفتاح"
+  },
+  "key_import_invalidated_description": {
+    "message": "تحذير : لقد انتهت صلاحية مفتاح جهة الاتصال هذه. لن يصبح ممكنا بعد ذلك الاتصال المُعمَّى مع $1. يلزمك الحصول على المفتاح الحالي لجهة الاتصال هذه."
+  },
+  "key_import_number_of_failed": {
+    "message": "لم يتمكن من استيراد المفتاح بسبب أخطاء."
+  },
+  "key_import_number_of_failed_plural": {
+    "message": "لم يتمكن من استيراد $1 مفاتيح بسبب أخطاء."
+  },
+  "key_import_private_exists": {
+    "message": "تم استيراد الجزء الخاص من المفتاح، الموافق للمفتاح العمومي الموجود $1 للمستخدم $2، نحو مستودع المفاتيح."
+  },
+  "key_import_private_read": {
+    "message": "تعذر قراءة مفتاح خاص: $1"
+  },
+  "key_import_private_success": {
+    "message": "المفتاح الخاص $1 للمستخدم $2 تم استيراده إلى حافظة المفاتيح"
+  },
+  "key_import_private_update": {
+    "message": "المفتاح الخاص المحدث $1 للمستخدم $2"
+  },
+  "key_import_public_read": {
+    "message": "تعذر قراءة مفتاح عام: $1"
+  },
+  "key_import_public_success": {
+    "message": "المفتاح العام $1 للمستخدم $2 تم استيراده إلى حافظة المفاتيح"
+  },
+  "key_import_public_update": {
+    "message": "المفتاح العام المحدث $1 للمستخدم $2"
+  },
+  "key_import_rotation_add": {
+    "message": "إضافة إلى مستودع المفاتيح"
+  },
+  "key_import_rotation_cancel": {
+    "message": "في وقت آخر"
+  },
+  "key_import_rotation_description": {
+    "message": "لن يتمكن المرسل من فك تعمية رسائلك إذا استمررت في استخدام المفتاح القديم. إذا ساورك شك ما، يُرجى التواصل مع المرسل لكي يؤكد لك التغيير عبر قناة اتصال أخرى. يمكنك بعدها إضافة أو إزالة المفتاح لاحقا."
+  },
+  "key_import_rotation_headline": {
+    "message": "لقد وقَّع المرسل هذه الرسالة بواسطة مفتاح جديد."
+  },
+  "key_import_search_btn": {
+    "message": "بحث"
+  },
+  "key_import_search_disabled": {
+    "message": "بحث مُعطَّل."
+  },
+  "key_import_search_disabled_descr": {
+    "message": "يُرجى تفعيل مصدر واحد للمفاتيح على الأقل في الإعدادات."
+  },
+  "key_import_search_found": {
+    "message": "عُثر على مفتاح في :"
+  },
+  "key_import_search_found_modified": {
+    "message": "آخر تعديل :"
+  },
+  "key_import_search_found_source": {
+    "message": "المصدر :"
+  },
+  "key_import_search_invalid": {
+    "message": "يُرجى إدخال عنوان بريد إلكتروني صحيح، أو مُعرِّف المفتاح (مُكوَّن من 16 رقما) أو البصمة (40 رقما)"
+  },
+  "key_import_search_not_found": {
+    "message": "لم يجد أي مفتاح في أي من مجلدات البحث عن المفاتيح."
+  },
+  "key_import_search_not_found_header": {
+    "message": "لم يعثر على أي مفتاح."
+  },
+  "key_import_search_ph": {
+    "message": "عنوان البريد الإلكتروني / مُعرِّف المفتاح / البصمة"
+  },
+  "key_import_too_big": {
+    "message": "نص المفتاح الذي تحاول استيراده أكبر من أن تجري معالجته. حاول القيام بذلك بأجزاء أصغر."
+  },
+  "key_import_unable": {
+    "message": "غير قادر على إستيراد مفتاح بسبب استثناء: $1"
+  },
+  "key_keyserver_mod": {
+    "message": "إن بيانات المفتاح في خادم مفاتيح Mailvelope لم تعد مُحدَّثة."
+  },
+  "key_keyserver_not": {
+    "message": "إن المفتاح ليس متزامنا مع خادم مفاتيح Mailvelope."
+  },
+  "key_keyserver_remove": {
+    "message": "لقد أُرسلَت رسالة تأكيد إلى كل مُعرِّفات المستخدمين للإزالة النهائية من خادم مفاتيح Mailvelope."
+  },
+  "key_keyserver_remove_btn": {
+    "message": "أزل كل مُعرِّفات المستخدمين"
+  },
+  "key_keyserver_resend_btn": {
+    "message": "أعِد الإرسال"
+  },
+  "key_keyserver_sync": {
+    "message": "إن بيانات المفتاح في خادم مفاتيح Mailvelope لم مُحدَّثة."
+  },
+  "key_keyserver_update": {
+    "message": "لقد تم تحديث بيانات المفتاح في خادم مفاتيح Mailvelope."
+  },
+  "key_keyserver_update_btn": {
+    "message": "تحديث"
+  },
+  "key_keyserver_upload": {
+    "message": "لقد أُرسلَت رسالة تأكيد إلى جميع مُعرٍّفات المستخدمين، لمزامنة المفتاح مع خادم مفاتيح Mailvelope."
+  },
+  "key_keyserver_upload_btn": {
+    "message": "مزامنة"
+  },
+  "key_recovery_failed": {
+    "message": "فشلت استعادة المفتاح من النسخ الاحتياطي."
+  },
+  "key_remove_btn": {
+    "message": "حذف"
+  },
+  "key_remove_btn_title": {
+    "message": "أزل المفتاح من مستودع المفاتيح"
+  },
+  "key_remove_dialog_title": {
+    "message": "أزل المفتاح"
+  },
+  "key_revoke_btn": {
+    "message": "أبطِلْ"
+  },
+  "key_revoke_btn_title": {
+    "message": "أبطِل المفتاح"
+  },
+  "key_revoke_dialog_confirm": {
+    "message": "هل تود حقا إبطال المفتاح ؟"
+  },
+  "key_revoke_dialog_description": {
+    "message": "سيصبح المفتاح غير قابل للاستخدام إلى الأبد إذا أبطلته."
+  },
+  "key_revoke_dialog_title": {
+    "message": "أبطِل المفتاح"
+  },
+  "key_set_as_default": {
+    "message": "حدد كافتراضي"
+  },
+  "keybackup_failed": {
+    "message": "إنشاء نسخة احتياطية من المفتاح فشل."
+  },
+  "keybackup_restore_dialog_button": {
+    "message": "إسترجاع النسخة الإحتياطية"
+  },
+  "keybackup_restore_dialog_description": {
+    "message": "إنشاء ورقة جديدة للاستعادة هنا إذا :"
+  },
+  "keybackup_restore_dialog_headline": {
+    "message": "توصية : إنشاء نسخة احتياطية"
+  },
+  "keybackup_restore_dialog_list_1": {
+    "message": "لقد ضاعت ورقة استعادتك."
+  },
+  "keybackup_restore_dialog_list_2": {
+    "message": "تعين عليك إنشاء ورقة استعادة جديدة لأسباب أمنية."
+  },
+  "keybackup_setup_dialog_button": {
+    "message": "أنشيءْ نسخة احتياط"
+  },
+  "keybackup_setup_dialog_description": {
+    "message": "النسخة الاحتياطية مطلوبة لضمان أن تواصلك المُعمَّى هو :"
+  },
+  "keybackup_setup_dialog_headline": {
+    "message": "توصية : قم بإعداد نسخة احتياطية"
+  },
+  "keybackup_setup_dialog_list_1": {
+    "message": "لأجل استعادتها إذا فقدت البيانات"
+  },
+  "keybackup_setup_dialog_list_2": {
+    "message": "لأجل نقلها إلى أجهزة أخرى"
+  },
+  "keybackup_waiting_description": {
+    "message": "يجري حاليا إعداد ملف برمز الاستعادة"
+  },
+  "keybackup_waiting_headline": {
+    "message": "إنشاء نسخة احتياطية!"
+  },
+  "keydetails_change_exp_date_dialog_note": {
+    "message": "لقد تغير تاريخ انتهاء الصلاحية لجميع المفاتيح الفرعية. لن تتأثر المفاتيح الفرعية الباطلة والمفاتيح التي انتهت صلاحيتها."
+  },
+  "keydetails_change_exp_date_dialog_title": {
+    "message": "عدِّل تاريخ انتهاء الصلاحية"
+  },
+  "keydetails_change_pwd_dialog_old": {
+    "message": "كلمة المرور القديمة"
+  },
+  "keydetails_change_pwd_dialog_title": {
+    "message": "تغيير كلمة السر"
+  },
+  "keydetails_creation_date": {
+    "message": "أُنشيء"
+  },
+  "keydetails_expiration_date": {
+    "message": "انتهاء الصلاحية"
+  },
+  "keydetails_key_not_expire": {
+    "message": "أبدا"
+  },
+  "keydetails_password": {
+    "message": "‮كلمة السّر"
+  },
+  "keydetails_title": {
+    "message": "تفاصيل المفتاح "
+  },
+  "keygen_dialog_password_error_length": {
+    "message": "كلمة السر يجب أن تتكون من  $1 حروف على الأقل"
+  },
+  "keygen_dialog_prolog": {
+    "message": "يُرجى تعيين كلمة السر لمفتاحك لأجل حماية اتصالاتك المُعمَّاة :"
+  },
+  "keygen_waiting_description": {
+    "message": "قد تتطلب العملية بعض دقائق. يُحتمل أن يتوقف متصفحك مؤقتا عن العمل، يُرجى منحه بعض الوقت."
+  },
+  "keygen_waiting_headline": {
+    "message": "إعداد تواصل مشفر"
+  },
+  "keygrid_algorithm": {
+    "message": "الخوارزمية"
+  },
+  "keygrid_all_keys": {
+    "message": "الكل"
+  },
+  "keygrid_creation_date_short": {
+    "message": "أٌنشِيء"
+  },
+  "keygrid_default_key": {
+    "message": "المفتاح الافتراضي"
+  },
+  "keygrid_default_label": {
+    "message": "‮المبدئيّ"
+  },
+  "keygrid_delete_confirmation": {
+    "message": "هل تريد حقا حذف هذا المفتاح ؟"
+  },
+  "keygrid_export": {
+    "message": "تصدير"
+  },
+  "keygrid_export_title": {
+    "message": "تصدير كل المفاتيح من هذه القائمة إلى ملف"
+  },
+  "keygrid_generate_title": {
+    "message": "ولِّد مفتاحا"
+  },
+  "keygrid_import_search_title": {
+    "message": "البحث عن المفاتيح العلنية في مصادر خارجية"
+  },
+  "keygrid_import_title": {
+    "message": "استورد مفتاحا"
+  },
+  "keygrid_invalid_userid": {
+    "message": "مُعرِّف المستخدم باطل"
+  },
+  "keygrid_key_fingerprint": {
+    "message": "بصمة PGP"
+  },
+  "keygrid_key_length": {
+    "message": "الطول"
+  },
+  "keygrid_key_not_expire": {
+    "message": "لا تنتهي صلاحية هذا المفتاح"
+  },
+  "keygrid_keyid": {
+    "message": "مُعرِّف المفتاح"
+  },
+  "keygrid_primary_key": {
+    "message": "المفتاح الرئيسي"
+  },
+  "keygrid_public_keys": {
+    "message": "المفاتيح العلنية"
+  },
+  "keygrid_refresh": {
+    "message": "تحديث"
+  },
+  "keygrid_refresh_title": {
+    "message": "أنعش مستودع المفاتيح"
+  },
+  "keygrid_signer_unknown": {
+    "message": "الموقعين الغير معروفين"
+  },
+  "keygrid_sort_type": {
+    "message": "المُرشِّحات"
+  },
+  "keygrid_status_expired": {
+    "message": "منتهي الصلاحية"
+  },
+  "keygrid_status_invalid": {
+    "message": "غير صالح"
+  },
+  "keygrid_status_revoked": {
+    "message": "ملغاة"
+  },
+  "keygrid_status_valid": {
+    "message": "صالح"
+  },
+  "keygrid_subkey": {
+    "message": "المفتاح الفرعي"
+  },
+  "keygrid_user_email": {
+    "message": "البريد الإلكتروني"
+  },
+  "keygrid_user_name": {
+    "message": "الإسم"
+  },
+  "keygrid_user_primary": {
+    "message": "الأولي"
+  },
+  "keygrid_userid_signatures": {
+    "message": "التوقيعات"
+  },
+  "keygrid_validity_status": {
+    "message": "الحالة"
+  },
+  "keyring_available_settings": {
+    "message": "يُرجى الاطلاع على الإعدادات المتاحة في :"
+  },
+  "keyring_backup": {
+    "message": "نسخ احتياطي لمستودع المفاتيح"
+  },
+  "keyring_confirm_deletion": {
+    "message": "هل تريد حذف مستودع المفاتيح ذو المُعرِّف : $1 ؟"
+  },
+  "keyring_confirm_keys": {
+    "message": "تأكيد المفتاح المراد استيراده"
+  },
+  "keyring_confirm_keys_plural": {
+    "message": "تأكيد $1 مفاتيح المراد استيرادها"
+  },
+  "keyring_generate_key": {
+    "message": "توليد المفاتيح"
+  },
+  "keyring_header": {
+    "message": "إدارة المفاتيح"
+  },
+  "keyring_import_description": {
+    "message": "يمكنك إضافة المفاتيح إما على شكل ملفات أو كنصوص انطلاقا من الحافظة."
+  },
+  "keyring_import_keys": {
+    "message": "استيراد المفاتيح"
+  },
+  "keyring_import_search_description": {
+    "message": "يمكن البحث عن المفاتيح العلنية المراد إضافتها إلى مستوع مفاتيحك. يقوم Mailvelope بإجراء البحث في عدة مجلدات للمفاتيح ثم يقترح عليك المفتاح العلني الأكثر ملائمة للاستخدام."
+  },
+  "keyring_main": {
+    "message": "مستودع المفاتيح الأساسي"
+  },
+  "keyring_private": {
+    "message": "خاص"
+  },
+  "keyring_public": {
+    "message": "عمومي"
+  },
+  "keyring_public_private": {
+    "message": "أزواج المفاتيح"
+  },
+  "keyring_remove_dialog_title": {
+    "message": "احذف مستودع المفاتيح"
+  },
+  "keyring_setup": {
+    "message": "الإعداد"
+  },
+  "keyring_setup_generate_key": {
+    "message": "توليد المفاتيح"
+  },
+  "keyring_setup_generate_key_explanation": {
+    "message": "إذا كنت تستخدم هذه الإضافة للمرة الأولى، وإذا لم يكن لديك زوج مفاتيح، يرجى إنشاء واحد الآن."
+  },
+  "keyring_setup_import_key": {
+    "message": "إستيراد مفتاح"
+  },
+  "keyring_setup_import_key_explanation": {
+    "message": "هل لديك زوج مفاتيح على جهازٍ آخر؟ يمكنك إستيراد مفاتيحك الموجودة. فقط قم بتصدير زوج المفاتيح من الجهاز الآخر ثم قم بإستيرادهما هنا."
+  },
+  "keyring_setup_no_keypair": {
+    "message": "من الضروري وجود مفتاحَين لتعمية الرسائل وفك تعميتها، وكذا دعوة جهات اتصالك للتواصل من طرف إلى طرف بشكل مُعمَّى."
+  },
+  "keyring_setup_no_keypair_heading": {
+    "message": "حافظة المفاتيح هذه لا تتضمن حتى الآن زوج مفاتيح."
+  },
+  "keyserver_additionals_label": {
+    "message": "مصادر إضافية للمفاتيح"
+  },
+  "keyserver_autocrypt_lookup": {
+    "message": "استخدم المفاتيح انطلاقا من ترويسات Autocrypt بالنسبة للرسائل الإلكترونية الواردة."
+  },
+  "keyserver_key_binding_header": {
+    "message": "كشاف مفتاح"
+  },
+  "keyserver_key_binding_label": {
+    "message": "تحديد المفاتيح الحالية لجهات الاتصال ثم تنفيذ اختيار المفاتيح تلقائيا"
+  },
+  "keyserver_oks_lookup": {
+    "message": "البحث تلقائيا عن المفاتيح في <0>keys.openpgp.org</0>"
+  },
+  "keyserver_tofu_lookup": {
+    "message": "استخدم خادم المفاتيح Mailvelope"
+  },
+  "keyserver_verifying_servers": {
+    "message": "التحقق من خادم المفاتيح بواسطة رسالة إلكترونية"
+  },
+  "keyserver_wkd_lookup": {
+    "message": "طلب المفاتيح من مزود البريد الإلكتروني للمُستلِمين (دليل المفاتيح)"
+  },
+  "keyusers_add_btn": {
+    "message": "أضف"
+  },
+  "keyusers_add_btn_title": {
+    "message": "أضف مُعرِّف مستخدم جديد"
+  },
+  "keyusers_keyserver": {
+    "message": "خادم المفاتيح"
+  },
+  "keyusers_keyserver_not": {
+    "message": "غير مُزامَن"
+  },
+  "keyusers_keyserver_sync": {
+    "message": "مُزامَن"
+  },
+  "keyusers_keyserver_unverified": {
+    "message": "غير متحقق منه"
+  },
+  "keyusers_title": {
+    "message": "مُعرِّفات المستخدمين المخصصة لهم"
+  },
+  "learn_more_link": {
+    "message": "أعرف أكثر"
+  },
+  "message_no_keys": {
+    "message": "لم يجد المفتاح السري في هذه الرسالة. مُعرِّفات المفاتيح السرية المطلوبة : $1"
+  },
+  "message_read_error": {
+    "message": "لم يتمكن من فك تشفير هذه الرسالة: $1"
+  },
+  "nameaddrinput_error_email_exists": {
+    "message": "عنوان البريد الإلكتروني مستعمل مسبقا"
+  },
+  "nameaddrinput_error_name_empty": {
+    "message": "يُرجى إدخال اسم"
+  },
+  "notification_text_copy_to_clipboard": {
+    "message": "حُفظ النص في الحافظة."
+  },
+  "options_docu": {
+    "message": "الدليل"
+  },
+  "options_home": {
+    "message": "خيارات"
+  },
+  "options_title": {
+    "message": "خيارات Mailvelope"
+  },
+  "paragraph_analyticsconsent_modal": {
+    "message": "يمكنك الانسحاب في أي وقت من الاعدادات"
+  },
+  "preferred": {
+    "message": "تم تفضيل"
+  },
+  "provider_gmail_auth": {
+    "message": "التصريحات"
+  },
+  "provider_gmail_auth_cancel_btn": {
+    "message": "ألغ التصريح"
+  },
+  "provider_gmail_auth_readonly": {
+    "message": "اقرأ الرسالة"
+  },
+  "provider_gmail_auth_send": {
+    "message": "أرسل الرسالة"
+  },
+  "provider_gmail_auth_table_title": {
+    "message": "صلاحيات واجهة برمجة تطبيقات Google"
+  },
+  "provider_gmail_dialog_auth_google_signin": {
+    "message": "لِج بواسطة Google"
+  },
+  "provider_gmail_dialog_auth_intro": {
+    "message": "لاستخدام اندماج Gmail بالنسبة لـ <0></0>، يجب منح Mailvelope هذه الصلاحيات :"
+  },
+  "provider_gmail_dialog_auth_outro": {
+    "message": "إذا ضغطت على زر الولوج، ستظهر نافذة تصريح استخدام خدمات Google، عليك بتحديد حساب Gmail بالنسبة عنوان البريد الإلكتروني <0></0> ثم اتباع التعليمات."
+  },
+  "provider_gmail_dialog_description": {
+    "message": "استخدم واجهة برمجة تطبيقات Gmail لتمديد وظائف Mailvelope بواسطة Gmail والتي تسهِّل إرسال وقراءة الرسائل الإلكترونية والمرفقات المُعمَّاة."
+  },
+  "provider_gmail_dialog_privacy_policy": {
+    "message": "يُرجى الاطلاع على سياسة خصوصيتنا"
+  },
+  "provider_gmail_dialog_title": {
+    "message": "باستخدام واجهة برمجة تطبيقات Gmail"
+  },
+  "provider_gmail_integration": {
+    "message": "اندماج واجهة برمجة تطبيقات Gmail"
+  },
+  "provider_gmail_integration_info": {
+    "message": "يحتاج Mailvelope لصلاحيات إضافية للوصول إلى واجهة برمجة تطبيقات Gmail. سيتم إرشادك لذلك عبر عملية الحصول على التصريح، طالما تستخدم وظائف تعمية Mailvelope في Gmail. يتطلب منك هذا الأمر الولوج إلى حسابك في Google."
+  },
+  "provider_gmail_integration_warning": {
+    "message": "غير مسموع لـ Gmail بواسطة نمط البحث هذا <0></0>. يُرجى التحقق من الإعدادات في <1></1>."
+  },
+  "provider_gmail_licensing_dialog_business_btn_info": {
+    "message": "التواصل بأمان عالميا مع المنظمات"
+  },
+  "provider_gmail_licensing_dialog_business_btn_price_info": {
+    "message": "مستخدم كل شهر"
+  },
+  "provider_gmail_licensing_dialog_deactivate_btn": {
+    "message": "الاستمرار بدون واجهة برمجة تطبيقات Gmail"
+  },
+  "provider_gmail_licensing_dialog_para_2": {
+    "message": "يمكنك الاستمرار في الاستخدام المجاني لـ Mailvelope مع Gmail، لكن بوجود <0>واجهة برمجة تطبيقاتك، سيكون سير عملك</0><1>أسرع وأيسر</1> عند كتابة أو قراءة رسائلك ومرفقاتك المُعمَّاة."
+  },
+  "provider_gmail_licensing_dialog_para_3": {
+    "message": "اختبار Mailvelope للأعمال لمدة<0>14 يوما مجانا</0>، باستخدام واجهة برمجة تطبيقات Gmail :"
+  },
+  "provider_gmail_licensing_dialog_test_btn": {
+    "message": "اختبار واجهة برمجة تطبيقات Gmail مجانا"
+  },
+  "provider_gmail_licensing_dialog_title": {
+    "message": "ترخيص استخدام Mailvelope للأعمال ضروري"
+  },
+  "provider_gmail_licensing_table_title": {
+    "message": "ترخيص Mailvelope"
+  },
+  "provider_gmail_secure_forward_btn": {
+    "message": "تمرير آمن"
+  },
+  "provider_gmail_secure_replyAll_btn": {
+    "message": "رد آمن للجميع"
+  },
+  "provider_gmail_secure_reply_btn": {
+    "message": "رد آمن"
+  },
+  "pwd_dialog_cache_pwd": {
+    "message": "تذكر كلمة السر مؤقتا"
+  },
+  "pwd_dialog_cancel": {
+    "message": "تم إلغاء فتح قفل المفاتيح."
+  },
+  "pwd_dialog_header": {
+    "message": "أدخل كلمة سر المفتاح"
+  },
+  "pwd_dialog_reason_add_user": {
+    "message": "يُرجى إدخال كلمة سر مفتاحك لإنشاء مُعرِّف المستخدم."
+  },
+  "pwd_dialog_reason_create_backup": {
+    "message": "الرجاء إدخال كلمة السر الخاصة بمفتاحك لإنشاء ورقة إستعادة."
+  },
+  "pwd_dialog_reason_create_draft": {
+    "message": "أدخل كلمة سر المفتاح لحفظ المسودة."
+  },
+  "pwd_dialog_reason_decrypt": {
+    "message": "الرجاء إدخال كلمة السر الخاصة بمفتاحك لفك تشفير هذه الرسالة."
+  },
+  "pwd_dialog_reason_editor": {
+    "message": "الرجاء إدخال كلمة السر الخاصة بمفتاحك لتحديث إعدادات الاتصالات المشفرة."
+  },
+  "pwd_dialog_reason_revoke": {
+    "message": "يُرجى إدخال كلمة السر لإبطال هذا المفتاح."
+  },
+  "pwd_dialog_reason_revoke_user": {
+    "message": "يُرجى إدخال كلمة السر لإبطال مُعرِّف المستخدم."
+  },
+  "pwd_dialog_reason_set_exdate": {
+    "message": "يُرجى إدخال كلمة السر لتحديد تاريخ جديد لانتهاء الصلاحية لهذا المفتاح."
+  },
+  "pwd_dialog_reason_sign": {
+    "message": "الرجاء إدخال كلمة السر الخاصة بمفتاحك لتوقيع هذه الرسالة."
+  },
+  "pwd_dialog_wrong_pwd": {
+    "message": "كلمة السر غير صحيحة"
+  },
+  "recovery_sheet_backup_data": {
+    "message": "نسخة احتياطية من بياناتك"
+  },
+  "recovery_sheet_backup_local": {
+    "message": "إن شئت حفظ بياناتك محليا بشكل حصري في حاسوبك، يمكنك العثور على هذا الخيار في إعدادات الاتصالات المُعمَّاة لحسابك $1."
+  },
+  "recovery_sheet_backup_server": {
+    "message": "للحفظ الاحتياطي للبيانات المهمة للاتصالات المُعمَّاة (مثلا، كلمة سر المفتاح)، ستُحفَظ تلك البيانات بشكل مُعمَّى في $1 خوادمنا بواسطة شركاء أمان Mailvelope."
+  },
+  "recovery_sheet_be_aware": {
+    "message": "الرجاء كن على علم"
+  },
+  "recovery_sheet_check_settings": {
+    "message": "يُرجى التحقق من إعدادات حسابك في :"
+  },
+  "recovery_sheet_creation_date": {
+    "message": "تاريخ الإنشاء:"
+  },
+  "recovery_sheet_data_lost": {
+    "message": "من دون نسخ احتياطي، لن يتم فك تعمية الرسائل المُعمَّاة مرة أخرى في حال ضياع كلمة سرك أو في حال وقوع خلل في عتادك أو في حال وقوع مشاكل مع امتداد متصفحك !"
+  },
+  "recovery_sheet_encryption_note": {
+    "message": "اقتراحات الاتصالات المُعمَّاة مع $1"
+  },
+  "recovery_sheet_enter_code": {
+    "message": "للتثبيت على حواسب أخرى، أدخل رمز الاستعادة في الإعدادات فوق : "
+  },
+  "recovery_sheet_explain_pgp": {
+    "message": "إن اتصال المُعمَّى مع $1 يوافق الإجراءات المعتمدة على PGP. إنها تمكّنك من إرسال الرسائل الإلكترونية المُعمَّاة، وفي نفس الوقت، تضمن لك ولمتلقي الرسالة القدرة على قراءتها."
+  },
+  "recovery_sheet_extension_problems": {
+    "message": "بسبب مشاكل في إضافات المتصفح"
+  },
+  "recovery_sheet_forgot_password": {
+    "message": "لأنك نسيت كلمة السر الخاصة بمفتاحك"
+  },
+  "recovery_sheet_further_info": {
+    "message": "يمكنك العثور على المزيد من خيارات المعلومات والإعدادات في حسابك $1 هنا"
+  },
+  "recovery_sheet_header": {
+    "message": "معلومات مهمة!"
+  },
+  "recovery_sheet_in_general": {
+    "message": "بشكل عام، مهم"
+  },
+  "recovery_sheet_invite_contacts": {
+    "message": "في إعدادات اتصالاتك المُعمَّاة في حسابك $1، لديك إمكانية دعوة جهات اتصال إضافية لاستخدام الاتصال المُعمَّى بواسطة PGP. يمكن التعرف على جهات الاتصال التي تمت دعوتها بالفعل بنجاح من خلال رمز القفل الموجود بجوار عنوان البريد الإلكتروني."
+  },
+  "recovery_sheet_keep_safe": {
+    "message": "اخزن طباعة لهذه الوثيقة في مكان آمن ثم تأكد من عدم وجود أي شخص لديه إمكانية الوصول لوضع الاستعادة."
+  },
+  "recovery_sheet_key_server": {
+    "message": "يمكن العثور على $1 مستخدمين آخرين، الذين يستخدمون إجراءات PGP الخاصة بـ GMX مباشرة في دليل مركزي في حسابك $1. إذا كنت لا تريد أن يكون لديك أي مُدخلات في هذا الدليل، يُرجى إلغاء تنشيط هذه الوظيفة في إعدادات حسابك $1."
+  },
+  "recovery_sheet_mobile_devices": {
+    "message": "على الهواتف المحمولة"
+  },
+  "recovery_sheet_not_working": {
+    "message": "إذا لم تعد تعمل اتصالاتك المُعمَّاة، مثلا :"
+  },
+  "recovery_sheet_other_computer": {
+    "message": "على كمبيوتر آخر"
+  },
+  "recovery_sheet_other_contacts": {
+    "message": "الإتصالات المشفرة مع جهات إتصال أخرى"
+  },
+  "recovery_sheet_other_devices": {
+    "message": "الإتصالات المشفرة على أجهزة أخرى"
+  },
+  "recovery_sheet_other_devices_setup": {
+    "message": "إعداد اتصال مشفر على أجهزة أخرى"
+  },
+  "recovery_sheet_other_problems": {
+    "message": "لأسباب أخرى"
+  },
+  "recovery_sheet_pgp_compat": {
+    "message": "يمكنك التواصل بشكل آمن مع جهات إتصال أخرى إذا كانوا أيضاً يستخدمون الاتصالات المشفرة (PGP)."
+  },
+  "recovery_sheet_print_block": {
+    "message": "الرجاء تخزين هذه الوثيقة في مكان آمن!"
+  },
+  "recovery_sheet_print_button": {
+    "message": "إطبع"
+  },
+  "recovery_sheet_print_notice": {
+    "message": "الرجاء طباعة هذه الوثيقة وتخزينها في مكان آمن!"
+  },
+  "recovery_sheet_provider_communication": {
+    "message": "إتصالات مشفرة"
+  },
+  "recovery_sheet_provider_inbox": {
+    "message": "البريد الوارد"
+  },
+  "recovery_sheet_provider_security": {
+    "message": "الأمان"
+  },
+  "recovery_sheet_provider_settings": {
+    "message": "الإعدادات"
+  },
+  "recovery_sheet_qr_code": {
+    "message": "إمسح رمز الباركود بواسطة هاتفك المحمول."
+  },
+  "recovery_sheet_recommendation": {
+    "message": "توصية"
+  },
+  "recovery_sheet_recover_data": {
+    "message": "إستعادة البيانات"
+  },
+  "recovery_sheet_recovery_code": {
+    "message": "رمز الإستعادة"
+  },
+  "recovery_sheet_subtitle_receipt": {
+    "message": "ورقة الإستعادة للاتصال المشفر"
+  },
+  "recovery_sheet_subtitle_recover": {
+    "message": "إستعادة الإتصالات المشفرة"
+  },
+  "recovery_sheet_trusted_contacts": {
+    "message": "مع جهات اتصالك في GMX، يمكنك التأكد من أن المستخدمين المعروضين هم في الواقع مستخدمون حقيقيون. ومع ذلك، يجب عليك دائما التحقق من هوية جهات الاتصال، وذلك باستخدام عنوان بريد إلكتروني من مزود بريد إلكتروني آخر."
+  },
+  "recovery_sheet_unknown_third": {
+    "message": "قم فقط بتنصيب التواصل المشفر على الأجهزة الآمنة التي لا يمكن الوصول إليها من قبل الغرباء."
+  },
+  "recovery_sheet_unlock_backup": {
+    "message": "النسخ الاحتياطي لبياناتك الخاصة يمكن فقط فك تشفيره بمساعدة رمز الاسترداد الموجود على ورقة الاسترداد هذه."
+  },
+  "reload_tab": {
+    "message": "يرجى إعادة تحميل الصفحات الحالية حتى تدخل الإعدادات حيز التنفيذ."
+  },
+  "restore_backup_dialog_button": {
+    "message": "أكِّد"
+  },
+  "restore_backup_dialog_headline": {
+    "message": "يُرجى إدخال رمز الاستعادة :"
+  },
+  "restore_password_dialog_button": {
+    "message": "اعرض"
+  },
+  "restore_password_dialog_headline": {
+    "message": "كلمة سر مفتاحك :"
+  },
+  "security_background_color_text": {
+    "message": "2. الآن اختر اللون الذي تحبه"
+  },
+  "security_background_icons_text": {
+    "message": "1. اختر الأيقونة التي تحبها"
+  },
+  "security_background_text": {
+    "message": "يتم عرض خلفيتك الأمنية وراء كل بريد إلكتروني مُعمَّى. لجعلها آمنة حقا، يجب عليك تخصيصها. هذه هي الطريقة التي تضمن بها عدم تمكن أي شخص من إعادة بناء واجهة Mailvelope للوصول إلى بياناتك الشخصية."
+  },
+  "security_cache_header": {
+    "message": "تذكر كلمات السر لجلسة التصفح هذه."
+  },
+  "security_cache_help": {
+    "message": "يجب أن يكون العدد ضمن نطاق 1-999"
+  },
+  "security_cache_off": {
+    "message": "لا."
+  },
+  "security_cache_on": {
+    "message": "نعم، احفظ في الذاكرة لمدة"
+  },
+  "security_cache_time": {
+    "message": "دقائق"
+  },
+  "security_display_decrypted": {
+    "message": "أين تُعرَض الرسائل التي فُكَّت تعميتها ؟"
+  },
+  "security_display_inline": {
+    "message": "في صفحة مزود البريد الإلكتروني."
+  },
+  "security_display_popup": {
+    "message": "في نافذة Mailvelope المنبثقة."
+  },
+  "security_hide_armored_head": {
+    "message": "اخفِ إصدار وتعليق Mailvelope في الرسائل PGP."
+  },
+  "security_log_action": {
+    "message": "نشاط"
+  },
+  "security_log_add_attachment": {
+    "message": "إضافة زر المرفقات المنقور عليه"
+  },
+  "security_log_attachment_download": {
+    "message": "نُزِّلت المرفق"
+  },
+  "security_log_backup_create": {
+    "message": "اضغط لإنشاء نسخة احتياطية"
+  },
+  "security_log_backup_restore": {
+    "message": "اضغط لاستعادة نسخة احتياطية."
+  },
+  "security_log_decrypt_ui": {
+    "message": "فك التعمية"
+  },
+  "security_log_decryption_operation": {
+    "message": "فُكّت تعمية الرسالة بواسطة :  $1"
+  },
+  "security_log_dialog_cancel": {
+    "message": "اضغط على إلغاء في مربع الحوار"
+  },
+  "security_log_dialog_encrypt": {
+    "message": "اضغط على عمِّ في مربع الحوار"
+  },
+  "security_log_dialog_ok": {
+    "message": "اضغط على أكِّد"
+  },
+  "security_log_dialog_sign": {
+    "message": "اضغط للولوج إلى مربع الحوار"
+  },
+  "security_log_editor": {
+    "message": "محرر Mailvelope"
+  },
+  "security_log_email_viewer": {
+    "message": "الرسالة بعد فك التعمية"
+  },
+  "security_log_encrypt_form": {
+    "message": "عمِّ الاستمارة"
+  },
+  "security_log_encrypt_ui": {
+    "message": "تعمية"
+  },
+  "security_log_encryption_operation": {
+    "message": "لقد عُمِّيت الرسالة لـ : $1"
+  },
+  "security_log_import_dialog": {
+    "message": "مربح حوار استيراد المفاتيح"
+  },
+  "security_log_key_backup": {
+    "message": "نسخ المفتاح احتياطيا"
+  },
+  "security_log_key_generator": {
+    "message": "مولِّد المفاتيح"
+  },
+  "security_log_password_click": {
+    "message": "اضغط على مربع حوار كلمة السر"
+  },
+  "security_log_password_dialog": {
+    "message": "مربع حوار كلمة السر"
+  },
+  "security_log_password_input": {
+    "message": "أدخل في مربع الحوار كلمة السر"
+  },
+  "security_log_remove_attachment": {
+    "message": "أُزيل المرفق"
+  },
+  "security_log_restore_backup_click": {
+    "message": "اضغط على مربع حوار استعادة نسخة الاحتياط"
+  },
+  "security_log_sign_operation": {
+    "message": "وُقعت الرسالة بواسطة المفتاح :  $1"
+  },
+  "security_log_source": {
+    "message": "المصدر"
+  },
+  "security_log_text": {
+    "message": "يظهر سجل الأمان نشاط المستخدم في جميع مكونات Mailvelope."
+  },
+  "security_log_textarea_click": {
+    "message": "اضغط داخل خانة النص"
+  },
+  "security_log_textarea_input": {
+    "message": "اكتب في خانة النصوص"
+  },
+  "security_log_textarea_select": {
+    "message": "التحديد في خانة النصوص"
+  },
+  "security_log_timestamp": {
+    "message": "التوقيت الزمني"
+  },
+  "security_log_viewer": {
+    "message": "عارض Mailvelope"
+  },
+  "security_openpgp_header": {
+    "message": "إعدادات  OpenPGP"
+  },
+  "settings_analytics": {
+    "message": "إحصائيات"
+  },
+  "settings_general": {
+    "message": "عام"
+  },
+  "settings_keyserver": {
+    "message": "مجلدات المفاتيح"
+  },
+  "settings_provider": {
+    "message": "واجهة برمجة تطبيقات Gmail"
+  },
+  "settings_security": {
+    "message": "الأمان"
+  },
+  "settings_security_background": {
+    "message": "خلفية الأمان"
+  },
+  "settings_security_log": {
+    "message": "سجل الأمان"
+  },
+  "settings_watchlist": {
+    "message": "النطاقات المأذون له"
+  },
+  "sign_dialog_header": {
+    "message": "وقع الرسالة الكترونيا بصفة:"
+  },
+  "sign_error": {
+    "message": "لم يتمكن من توقيع هذه الرسالة :  $1"
+  },
+  "signer_unknown": {
+    "message": "غير معروف"
+  },
+  "text_decrypt_button": {
+    "message": "فك التعمية"
+  },
+  "upload_attachment": {
+    "message": "اضف ملف"
+  },
+  "upload_drop": {
+    "message": "ألقِ الملف في هذه المساحة لإرفاقه"
+  },
+  "upload_help": {
+    "message": "اسحب الملف إلى هذه النافذة أو"
+  },
+  "upload_quota_exceeded_warning": {
+    "message": "حجم المرفق المسموح به:"
+  },
+  "upload_quota_warning_headline": {
+    "message": "المرفق كبير جدًا"
+  },
+  "user_create_btn": {
+    "message": "إنشاء"
+  },
+  "user_create_title": {
+    "message": "أنشيء معرِّف المستخدم"
+  },
+  "user_keyserver_not": {
+    "message": "معرِّف المستخدم غير متزامن مع خادم مفاتيح Mailvelope"
+  },
+  "user_keyserver_remove": {
+    "message": "لقد أُرسِلت رسالة تأكيد إلى  $1 للإزالة النهائية من خادم مفاتيح Mailvelope."
+  },
+  "user_keyserver_remove_btn": {
+    "message": "أزل معرِّف المستخدم"
+  },
+  "user_keyserver_resend_confirmation_btn": {
+    "message": "أعد إرسال التأكيد"
+  },
+  "user_keyserver_sync": {
+    "message": "تمت مزامنة مُعرِّف المستخدم مع خادم مفاتيح Mailvelope."
+  },
+  "user_keyserver_unverified": {
+    "message": "يُرجى تأكيد معرِّف المستخدم لمزامنته مع خادم مفاتيح Mailvelope."
+  },
+  "user_keyserver_upload": {
+    "message": "لقد تم إرسال رسالة تأكيد إلى $1 للمزامنة مع خادم مفاتيح Mailvelope."
+  },
+  "user_remove_btn": {
+    "message": "حذف"
+  },
+  "user_remove_btn_title": {
+    "message": "أزل معرِّف المستخدم"
+  },
+  "user_remove_dialog_confirmation": {
+    "message": "ألديك الرغبة في إزالة مُعرِّف هذا المستخدم من مفتاحك ؟"
+  },
+  "user_remove_dialog_keyserver_warning": {
+    "message": "لقد أُزيل مُعرٍّف المستخدم أيضا من خادم مفاتيح Mailvelope."
+  },
+  "user_remove_dialog_title": {
+    "message": "أزل معرِّف المستخدم"
+  },
+  "user_revoke_btn": {
+    "message": "أبطِلْ"
+  },
+  "user_revoke_btn_title": {
+    "message": "أبطِلْ معرِّف المستخدم"
+  },
+  "user_revoke_dialog_confirmation": {
+    "message": "هل تود رغم ذلك إبطاله ؟"
+  },
+  "user_revoke_dialog_description": {
+    "message": "بعد الإبطال، سيصبح معرِّف المستخدم لهذا المفتاح غير قابل للاستخدام بشكل نهائي."
+  },
+  "user_revoke_dialog_title": {
+    "message": "أبطِلْ معرِّف المستخدم"
+  },
+  "user_title": {
+    "message": "معرِّف المستخدم"
+  },
+  "usersignatures_title": {
+    "message": "صحة التوقيعات"
+  },
+  "verify_error": {
+    "message": "لم يتمكن من التحقق من هذه الرسالة : $1"
+  },
+  "verify_frame_help_text": {
+    "message": "اضغط للتحقق من التوقيع"
+  },
+  "waiting_dialog_decryption_failed": {
+    "message": "فشل فك التعمية."
+  },
+  "watchlist_command_create": {
+    "message": "إضافة إدخال جديد"
+  },
+  "watchlist_delete_confirmation": {
+    "message": "هل ترغب/ين حقّا في إزالة هذا الموقع من قائمة النطاقات المسموح بها؟"
+  },
+  "watchlist_expose_api": {
+    "message": "API"
+  },
+  "watchlist_record_title": {
+    "message": "النطاق المصرح به"
+  },
+  "watchlist_remove_dialog_title": {
+    "message": "أزل النطاق"
+  },
+  "watchlist_title_active": {
+    "message": "مفعل"
+  },
+  "watchlist_title_frame": {
+    "message": "نمط النطاق"
+  },
+  "watchlist_title_https_only": {
+    "message": "HTTPS فقط"
+  },
+  "watchlist_title_scan": {
+    "message": "مُفعَّل"
+  },
+  "watchlist_title_site": {
+    "message": "الموقع"
+  },
+  "word_or": {
+    "message": "أو"
+  },
+  "wrong_restore_code": {
+    "message": "رمز الاسترجاع غير صالح"
+  }
+}

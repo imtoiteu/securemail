@@ -1,0 +1,116 @@
+# =====================================================
+# Mailvelope Browser Extension - .gitignore
+# =====================================================
+
+# ─────────────────────────────────────────────────────
+# Dependencies
+# ─────────────────────────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ─────────────────────────────────────────────────────
+# Build & Distribution
+# ─────────────────────────────────────────────────────
+/build/
+/dist/
+/coverage/
+/tmp/
+apidoc/
+.build/
+
+# Extension packaging
+*.crx
+*.xpi
+*.zip
+
+# ─────────────────────────────────────────────────────
+# Development Tools & Cache
+# ─────────────────────────────────────────────────────
+.eslintcache
+.sass-cache/
+*.css.map
+
+# ─────────────────────────────────────────────────────
+# Certificates & Security
+# ─────────────────────────────────────────────────────
+.build-tools/crx_signing.pem
+cert/
+*.pem
+*.key
+
+# ─────────────────────────────────────────────────────
+# Fonts & Licensed Assets
+# ─────────────────────────────────────────────────────
+/src/res/fonts/TypeMates/
+src/res/styles/fonts.css
+
+# ─────────────────────────────────────────────────────
+# IDE & Editor Files
+# ─────────────────────────────────────────────────────
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Visual Studio Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Cursor
+.cursor/
+
+# JetBrains IDEs
+.idea/
+*.iml
+
+# ─────────────────────────────────────────────────────
+# Operating System Files
+# ─────────────────────────────────────────────────────
+
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+
+# Windows
+Thumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ─────────────────────────────────────────────────────
+# Runtime & Config
+# ─────────────────────────────────────────────────────
+.env*
+.npmrc
+
+# ─────────────────────────────────────────────────────
+# AI & Development Assistants
+# ─────────────────────────────────────────────────────
+.claude/
+.mcp.json
+CLAUDE.md
+
+# ─────────────────────────────────────────────────────
+# Logs & Temporary Files
+# ─────────────────────────────────────────────────────
+logs/
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+/releases/

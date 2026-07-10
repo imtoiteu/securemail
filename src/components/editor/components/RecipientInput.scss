@@ -1,0 +1,160 @@
+@import "../../../res/styles/_required";
+
+// Get spacer value from bootstrap
+$sp-1: map-get($spacers, 1);
+
+.recipients-input {
+  padding: 0 $sp-1 $sp-1 0; // mirror to tags and input margins
+  position: relative; // for the dropdown
+  height: initial; // input should be stretchable
+
+  &:focus-within {
+    // copy of `@mixin form-control-focus` from bootstrap
+    // @see node_modules\bootstrap\scss\mixins\_forms.scss
+    color: $input-focus-color;
+    background-color: $input-focus-bg;
+    border-color: $input-focus-border-color;
+    outline: 0;
+    // Avoid using mixin so we can pass custom focus shadow properly
+    @if $enable-shadows {
+      box-shadow: $input-box-shadow, $input-focus-box-shadow;
+    } @else {
+      box-shadow: $input-focus-box-shadow;
+    }
+  }
+
+  .tag-selected-list {
+    /* The layout has to be stretchable because the input should take all the space left */
+    .tag-wrapper {
+      margin: $sp-1 0 0 $sp-1; // mirror to .recipients-input padding
+
+      .tag-remove {
+        /* Reset button styles */
+        padding: 0;
+        border: none;
+        background: none;
+        font-weight: 700;
+        font-size: 16px;
+        margin-left: 8px;
+      }
+
+      &::before {
+        font: normal normal normal 14px/1 'MailvelopeIcons';
+        line-height: 1;
+      }
+    }
+
+    @each $color, $value in $theme-colors {
+      .badge-#{$color} {
+        @include alert-variant(theme-color-level($color, $alert-bg-level), theme-color-level($color, $alert-border-level), theme-color($color));
+      }
+
+      .badge-#{$color} .tag-remove {
+        color: theme-color($color);
+      }
+    }
+
+    .badge-success::before {
+      content: "\e90f \00a0";
+    }
+
+    .badge-danger::before {
+      content: "\e909 \00a0";
+    }
+
+    .badge-pending {
+      background-color: $gray-100;
+      border-color: $gray-300;
+      color: $gray-700;
+      animation: badge-pending-pulse 1.6s ease-in-out infinite;
+    }
+
+    .badge-pending .tag-remove {
+      color: $gray-700;
+    }
+
+    .badge-pending::before {
+      // Glyph only — trailing whitespace would offset the rotation pivot from the icon's optical center.
+      content: "\e90e";
+      display: inline-block;
+      margin-right: 0.4em;
+      animation: badge-pending-spin 2s linear infinite;
+      transform-origin: center;
+    }
+
+    @keyframes badge-pending-spin {
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes badge-pending-pulse {
+      0%, 100% { opacity: 1; }
+      50%      { opacity: 0.65; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .badge-pending,
+      .badge-pending::before { animation: none; }
+      .badge-pending { opacity: 0.85; }
+    }
+  }
+
+  .tag-input-wrapper {
+    /* match bage layout */
+    padding: $badge-padding-y 0; 
+    margin: $sp-1 0 0 $sp-1; // mirror to .recipients-input padding
+
+    .tag-input-field {
+      width: 100%;
+      min-width: 12rem;
+
+      /* remove styles and layout from this element */
+      border: 0;
+      outline: none;
+
+      /* match the font styles */
+      font-size: inherit;
+      line-height: inherit;
+
+      ::-ms-clear {
+        display: none;
+      }
+    }
+  }
+
+  .suggestions {
+    width: 100%;
+    overflow-x: auto;
+
+    ul {
+      /* Reset `ul`s padding */
+      margin: 0px;
+      padding: 0px;
+    }
+
+    li {
+      // copy from `ng-tags-input.css` (legacy Angular component)
+      font:16px "Helvetica Neue",Helvetica,Arial,sans-serif;
+      color: black;
+      padding:5px 10px;
+      cursor:pointer;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+
+    /* `react-tags` does not set the focus state on keyboard navigation */
+    li.active-suggestion {
+      // copy from `ng-tags-input.css` (legacy Angular component)
+      color: #262626;
+      background-color: #f5f5f5;
+    }
+
+    /* Text highlighted by search */
+    li mark {
+      padding: 0px;
+      text-decoration: none;
+      background: none;
+      font-weight: 600;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "source": {
+    "include": ["src/client-API"],
+    "includePattern": "\\.js$"
+  },
+  "opts": {
+    "destination": "build/doc",
+    "template": "node_modules/clean-jsdoc-theme",
+    "recurse": true,
+    "theme_opts": {
+      "default_theme": "dark",
+      "title": "<a href=\"index.html\" class=\"sidebar-title sidebar-title-anchor\">Mailvelope API</a>",
+      "homepageTitle": "Mailvelope Client-API",
+      "menu": [
+        {
+          "title": "Mailvelope",
+          "link": "https://www.mailvelope.com",
+          "target": "_blank"
+        },
+        {
+          "title": "GitHub",
+          "link": "https://github.com/mailvelope/mailvelope",
+          "target": "_blank"
+        }
+      ],
+      "meta": [
+        {
+          "name": "description",
+          "content": "Mailvelope client-API reference for partner integrations."
+        }
+      ],
+      "footer": "© 2014-2026 Mailvelope GmbH",
+      "search": true,
+      "sections": [
+        "Classes",
+        "Modules",
+        "Externals",
+        "Events",
+        "Namespaces",
+        "Mixins",
+        "Interfaces",
+        "Global"
+      ],
+      "displayModuleHeader": true
+    }
+  },
+  "tags": {
+    "allowUnknownTags": ["element", "customElement", "slot", "attr"]
+  },
+  "plugins": ["plugins/markdown"],
+  "markdown": {
+    "parser": "gfm",
+    "hardwrap": true
+  },
+  "templates": {
+    "default": {
+      "outputSourceFiles": true
+    }
+  }
+}

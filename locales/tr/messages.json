@@ -1,0 +1,1601 @@
+{
+  "action_menu_activate_current_tab": {
+    "message": "Bu etki alanına izin ver"
+  },
+  "action_menu_all_options": {
+    "message": "Tüm seçenekler"
+  },
+  "action_menu_configure_mailvelope": {
+    "message": "Başlamak için <0>Mailvelope uygulamasını yapılandırın</0>!"
+  },
+  "action_menu_dashboard_description": {
+    "message": "Tüm yapılandırma ayarlarını görüntüler."
+  },
+  "action_menu_dashboard_label": {
+    "message": "Pano"
+  },
+  "action_menu_file_encryption_description": {
+    "message": "Bir ya da bir kaç dosyayı şifreler."
+  },
+  "action_menu_file_encryption_label": {
+    "message": "Dosya şifreleme"
+  },
+  "action_menu_help": {
+    "message": "Yardım"
+  },
+  "action_menu_keyring_description": {
+    "message": "Herkese açık ve kişisel anahtarları yönetir."
+  },
+  "action_menu_keyring_label": {
+    "message": "Anahtarlık"
+  },
+  "action_menu_primary_menu_aria_label": {
+    "message": "Mailvelope ana menüsü"
+  },
+  "action_menu_reload_extension_scripts": {
+    "message": "Mailvelope uygulamasını yeniden yükle"
+  },
+  "action_menu_review_security_logs_description": {
+    "message": "Güvenlik ile ilgili kullanıcı işlemlerini görüntüler."
+  },
+  "action_menu_review_security_logs_label": {
+    "message": "Güvenlik günlüğü"
+  },
+  "action_menu_setup_menu_aria_label": {
+    "message": "Mailvelope kurulum menüsü"
+  },
+  "action_menu_setup_start_label": {
+    "message": "Haydi başlayalım!"
+  },
+  "alert_header_error": {
+    "message": "Hata!"
+  },
+  "alert_header_important": {
+    "message": "Önemli!"
+  },
+  "alert_header_notice": {
+    "message": "Lütfen unutmayın:"
+  },
+  "alert_header_success": {
+    "message": "Tamam!"
+  },
+  "alert_header_warning": {
+    "message": "Uyarı!"
+  },
+  "alert_invalid_domainmatchpattern_warning": {
+    "message": "Etki alanı eşleşme kalıbı [*.]host.name.tld[:port] şeklindedir."
+  },
+  "alert_no_domainmatchpattern_warning": {
+    "message": "En az bir etki alanı eşleşme kalıbı gereklidir."
+  },
+  "analytics_consent_description": {
+    "message": "Toplanmış ve anonimleştirilmiş istatistik bilgilerini Mailvelope ile paylaş"
+  },
+  "analytics_consent_disabled_tooltip": {
+    "message": "İstatistiklere yalnızca kurulum sırasında ve yalnızca rastgele seçildiğinde katılabilirsiniz."
+  },
+  "analytics_consent_interstitial_Btn_Learn_More": {
+    "message": "Ayrıntılı bilgi alın"
+  },
+  "analytics_consent_interstitial_Faq": {
+    "message": "Mailvelope ölçümleri hakkında ayrıntılı bilgiyi SSS bölümümüzde bulabilirsiniz."
+  },
+  "analytics_consent_interstitial_We_Collect_Minimal_Data": {
+    "message": "Mailvelope, e-posta hizmetinizle kullanmaya yaklaşmanızı sağlayan adımları sayar. Yaptığınız her hareketi kaydetmez."
+  },
+  "analytics_consent_interstitial_We_Collect_Minimal_Data_Title": {
+    "message": "Olabilecek en az veriyi toplarız"
+  },
+  "analytics_consent_interstitial_We_Respect_your_Choice": {
+    "message": "Katkıda bulunmamayı seçerseniz, hiçbir şey kaydedilmez. Katkıda bulunmayı seçerseniz, ayarı değiştirerek istediğiniz zaman ayrılabilirsiniz."
+  },
+  "analytics_consent_interstitial_We_Respect_your_Choice_Title": {
+    "message": "Tercihinize saygı duyuyoruz"
+  },
+  "analytics_consent_interstitial_Your_Privacy_is_Preserved_Pt1": {
+    "message": "Mailvelope şunu kullanarak"
+  },
+  "analytics_consent_interstitial_Your_Privacy_is_Preserved_Pt2": {
+    "message": "verileri tanımlanabilir bilgilere bağlamadan güvenli bir şekilde saklar. Ayrıca, IP adresiniz kaydedilmez veya işlenmez."
+  },
+  "analytics_consent_interstitial_Your_Privacy_is_Preserved_Title": {
+    "message": "Gizliliğiniz korunur"
+  },
+  "analytics_consent_interstitial_learn_more": {
+    "message": "Ölçümlerin ne kadar güvenli olduğunu öğrenin"
+  },
+  "analytics_consent_interstitial_message": {
+    "message": "Mailvelope yeni kullanıcıların %1 kadarının anonim ölçümlere katkıda bulunmalarını istiyor. Katkıda bulunmayı seçerseniz, Mailvelope katılım yolculuğunuzdaki başarılı adımları kaydedecek. Katkıda bulunmak ister misiniz?"
+  },
+  "analytics_interstitial_header": {
+    "message": "Gelişmemize yardımcı olmak ister misiniz?"
+  },
+  "auth_domain_api_label": {
+    "message": "API uygulamasına izin ver"
+  },
+  "auth_domain_description": {
+    "message": "$1 etki alanının Mailvelope ile kullanmasına izin vermek istiyor musunuz?"
+  },
+  "auth_domain_headline": {
+    "message": "Etki alanına izin ver"
+  },
+  "button_analyticsconsent_modal": {
+    "message": "İlerle"
+  },
+  "change_link": {
+    "message": "Değiştir"
+  },
+  "cleartext_read_error": {
+    "message": "Şu açık metin iletisi okunamadı: $1"
+  },
+  "dashboard_link_encrypt_decrypt_files": {
+    "message": "Şİfreleme"
+  },
+  "dashboard_link_manage_domains": {
+    "message": "İzin verilmiş etki alanları"
+  },
+  "dashboard_link_manage_keys": {
+    "message": "Anahtar yönetimi"
+  },
+  "dashboard_link_view_security_log": {
+    "message": "Güvenlik günlükleri"
+  },
+  "decrypt_att_frame_help_text": {
+    "message": "İletiyi görüntülemek için buraya tıklayın"
+  },
+  "decrypt_cleartext_warning": {
+    "message": "Şu metin şifrelenmedi."
+  },
+  "decrypt_decrypted_files_label": {
+    "message": "Şifresi çözülmüş dosyalar"
+  },
+  "decrypt_digital_signature": {
+    "message": "İmzalanmış"
+  },
+  "decrypt_digital_signature_failure": {
+    "message": "İmza geçersiz"
+  },
+  "decrypt_digital_signature_inconsistent": {
+    "message": "İmzalar tutarsız: İleti ve dosya aynı anahtar ile imzalanmamış"
+  },
+  "decrypt_digital_signature_missing": {
+    "message": "İmza eksik"
+  },
+  "decrypt_digital_signature_null": {
+    "message": "İmza bilinmiyor"
+  },
+  "decrypt_digital_signature_null_info": {
+    "message": "$1 kimlikli anahtar bulunamadı."
+  },
+  "decrypt_digital_signature_null_info_short": {
+    "message": "Anahtar bulunamadı."
+  },
+  "decrypt_digital_signature_sender_mismatch": {
+    "message": "Gönderici adresi uyuşmazlığı"
+  },
+  "decrypt_digital_signature_sender_mismatch_tooltip": {
+    "message": "Bu iletide bir dijital imza var, ancak bir uyuşmazlık var. İleti, imzalayanın herkese açık anahtarıyla eşleşmeyen bir e-posta adresinden gönderilmiş."
+  },
+  "decrypt_digital_signature_uncertain_sender": {
+    "message": "Göndericinin kimliği kesin değil"
+  },
+  "decrypt_file_error_header": {
+    "message": "$1 dosyasının şifresi çözülemiyor."
+  },
+  "decrypt_frame_help_text": {
+    "message": "Şifreyi çözmek için tıklayın"
+  },
+  "decrypt_header": {
+    "message": "Verilerin şifresini çöz"
+  },
+  "decrypt_header_success": {
+    "message": "Şifre çözüldü"
+  },
+  "decrypt_home": {
+    "message": "Şifreyi çöz"
+  },
+  "decrypt_open_viewer_btn_title": {
+    "message": "Mailvelope görüntüleyicide aç"
+  },
+  "decrypt_show_message_btn": {
+    "message": "İletiyi görüntüle"
+  },
+  "decrypt_text_area_label": {
+    "message": "Şifresi çözülecek metin"
+  },
+  "decrypt_text_decryption_btn": {
+    "message": "Ayrıca bir metnin de şifresini çözmek ister misiniz?"
+  },
+  "decrypt_text_error_header": {
+    "message": "Metnin şifresi çözülemiyor."
+  },
+  "dialog_cancel_btn": {
+    "message": "İptal"
+  },
+  "dialog_no_btn": {
+    "message": "Hayır"
+  },
+  "dialog_no_button": {
+    "message": "Atla"
+  },
+  "dialog_popup_close": {
+    "message": "Kapat"
+  },
+  "dialog_save_btn": {
+    "message": "Kaydet"
+  },
+  "dialog_yes_btn": {
+    "message": "Evet"
+  },
+  "editor_blur_warn": {
+    "message": "Uyarı: Metin düzenleyici odağı kaybetti."
+  },
+  "editor_encrypt_button": {
+    "message": "Şifrele"
+  },
+  "editor_error_header": {
+    "message": "Hata"
+  },
+  "editor_extra_key_checkbox": {
+    "message": "Ek anahtar ekle"
+  },
+  "editor_extra_key_help": {
+    "message": "E-posta bu ek anahtar ile şifrelenecek"
+  },
+  "editor_header": {
+    "message": "Güvenli e-posta oluştur"
+  },
+  "editor_key_auto_sign": {
+    "message": "Tüm e-postalarım imzalansın"
+  },
+  "editor_key_auto_sign_link": {
+    "message": "Ayarları buradan değiştirin"
+  },
+  "editor_key_has_extra_msg": {
+    "message": "E-posta aşağıya yazılmış alternatif anahtar ile şifrelenecek."
+  },
+  "editor_key_no_sign_option": {
+    "message": "İmzalanmamış"
+  },
+  "editor_key_not_found": {
+    "message": "Anahtar bulunamadı!"
+  },
+  "editor_key_not_found_msg": {
+    "message": "Şifreleme için tüm alıcıların bir PGP anahtarı olmalıdır. Gene de iletiyi imzalayabilirsiniz."
+  },
+  "editor_label_attachments": {
+    "message": "Ek dosyalar"
+  },
+  "editor_label_copy_recipient": {
+    "message": "Kopya"
+  },
+  "editor_label_message": {
+    "message": "İleti"
+  },
+  "editor_label_recipient": {
+    "message": "Alıcı"
+  },
+  "editor_label_subject": {
+    "message": "Konu"
+  },
+  "editor_remove_upload": {
+    "message": "Kaldır"
+  },
+  "editor_sign_button": {
+    "message": "Yalnızca imzala"
+  },
+  "encrypt_change_signer_dialog_signer_label": {
+    "message": "İmzayı seçin"
+  },
+  "encrypt_change_signer_dialog_title": {
+    "message": "İmzayı değiştir"
+  },
+  "encrypt_download_all_button": {
+    "message": "Tümünü indir"
+  },
+  "encrypt_encrypted_files_label": {
+    "message": "Şifrelenmiş dosyalar"
+  },
+  "encrypt_encrypted_for_label": {
+    "message": "Şunun için şifrelenmiş"
+  },
+  "encrypt_error": {
+    "message": "Bu ileti şifrelenemedi: $1"
+  },
+  "encrypt_file_error_header": {
+    "message": "$1 dosyası şifrelenemiyor."
+  },
+  "encrypt_frame_btn_label": {
+    "message": "Güvenli e-posta oluştur"
+  },
+  "encrypt_header": {
+    "message": "Verileri şifrele"
+  },
+  "encrypt_header_success": {
+    "message": "Şifrelendi"
+  },
+  "encrypt_home": {
+    "message": "Şifrele"
+  },
+  "encrypt_no_signer_info": {
+    "message": "Şifrelenmiş veriler imzalanmamış"
+  },
+  "encrypt_remove_signer_btn": {
+    "message": "İmzayı kaldır"
+  },
+  "encrypt_signed_as_label": {
+    "message": "İmzalayan"
+  },
+  "encrypt_signer_info": {
+    "message": "Şifrelenmiş veriler anahtarınız ($1) ile imzalandı"
+  },
+  "encrypt_text_encryption_btn": {
+    "message": "Ayrıca bir metni de şifrelemek ister misiniz?"
+  },
+  "encrypt_text_error_header": {
+    "message": "Metin şifrelenemiyor."
+  },
+  "encrypt_upload_file_warning_too_big": {
+    "message": "Dosyalardan biri çok büyük."
+  },
+  "ext_description": {
+    "message": "E-posta yazışmalarınızı ve ek dosyalarınızı Gmail, Nextcloud, Outlook ve diğer platformlarda PGP ve uçtan uca şifreleme ile koruyun."
+  },
+  "ext_name": {
+    "message": "Mailvelope - PGP ile e-postanızı koruyun"
+  },
+  "feature_banner_new_security_background_btn": {
+    "message": "Şimdi kişiselleştir"
+  },
+  "feature_banner_new_security_background_text": {
+    "message": "Güvenlik arka planınızı kişiselleştirerek Mailvelope uygulamasını daha da güvenli hale getirebilirsiniz."
+  },
+  "file_invalid_signed": {
+    "message": "İmza geçersiz"
+  },
+  "file_not_signed": {
+    "message": "Dosya imzalanmadı"
+  },
+  "file_read_error": {
+    "message": "Şu dosyanın şifresi çözülemedi: $1"
+  },
+  "file_signed": {
+    "message": "Dosya $1 tarafından imzalanmış"
+  },
+  "form_back": {
+    "message": "Geri"
+  },
+  "form_cancel": {
+    "message": "İptal"
+  },
+  "form_confirm": {
+    "message": "Onayla"
+  },
+  "form_definition_error_signature_invalid": {
+    "message": "Form imzası geçersiz."
+  },
+  "form_destination": {
+    "message": "Hedef"
+  },
+  "form_destination_default": {
+    "message": "Şifrelenmiş veriler sayfaya geri getirilecek. "
+  },
+  "form_import": {
+    "message": "İçe aktar"
+  },
+  "form_loading": {
+    "message": "Form yükleniyor"
+  },
+  "form_no": {
+    "message": "Hayır"
+  },
+  "form_ok": {
+    "message": "Tamam"
+  },
+  "form_recipient": {
+    "message": "Alıcı"
+  },
+  "form_save": {
+    "message": "Kaydet"
+  },
+  "form_sign_error_no_default_key": {
+    "message": "Anahtarlıkta form içeriğini imzalayacak bir kişisel anahtar bulunamadı. Lütfen var olan bir kişisel anahtarı içe aktarın ya da yeni bir tane oluşturun."
+  },
+  "form_submit": {
+    "message": "Gönder"
+  },
+  "form_yes": {
+    "message": "Evet"
+  },
+  "general_default_key_always": {
+    "message": "Varsayılan anahtarım her zaman alıcı listesine eklensin (Böylece gönderilmiş e-postaların şifresini çözebilirsiniz). "
+  },
+  "general_default_key_auto_sign": {
+    "message": "Giden iletilerin tümü imzalansın."
+  },
+  "general_gnupg_check_availability": {
+    "message": "Kullanılabilirliği denetlememize izin verin"
+  },
+  "general_gnupg_installed_question": {
+    "message": "GnuPG kurdunuz mu? Kurmadıysanız <0>buradan indirebilirsiniz</0>. Yeniden kullanılabilirliğini denetlemek için <1>Mailvelope uygulamasını yeniden başlatın</1>. Kurulduğundan eminseniz, lütfen düzgün ayarlandığından emin olmak için <2>bu wiki sayfasına</2>bakabilirsiniz."
+  },
+  "general_gnupg_not_available": {
+    "message": "GnuPG kullanılamıyor"
+  },
+  "general_gnupg_prefer": {
+    "message": "GnuPG kullanmak ister misiniz?"
+  },
+  "general_openpgp_current": {
+    "message": "Şu anda kullandığınız"
+  },
+  "general_openpgp_prefer": {
+    "message": "Hangi arka plan şifreleme alt yapısını kullanmak istersiniz?"
+  },
+  "general_openpgp_preferences": {
+    "message": "OpenPGP ayarları"
+  },
+  "general_prefer_gnupg_note": {
+    "message": "Not: Herkese açık anahtarlar kullanılabilen anahtarlıklar üzerinde eşitlenir. Kişisel anahtarlarınızın kullanılabilirliğine göre Mailvelope yeğlenen şifreleme kitaplığı ayarlarını değiştirebilir."
+  },
+  "gmail_integration_auth_error_download": {
+    "message": "Mailvelope uygulamasına ek dosyaları indirme izni verilmemiş. Bu özelliği kullanabilmek için Gmail API uygulamasına Mailvelope erişimi izni vermelisiniz."
+  },
+  "gmail_integration_auth_error_send": {
+    "message": "Mailvelope uygulamasına e-posta gönderme izni verilmemiş. Bu özelliği kullanabilmek için Gmail API uygulamasına Mailvelope erişimi izni vermelisiniz."
+  },
+  "gmail_integration_quoted_mail_header_forward": {
+    "message": "---------- Yönlendirilmiş ileti ---------\nKimden: $1\nTarih: $2\nKonu: $3\nKime: $4"
+  },
+  "gmail_integration_quoted_mail_header_reply": {
+    "message": "$1 tarihinde, $2 şunu yazmış:"
+  },
+  "gmail_integration_sent_success": {
+    "message": "E-posta gönderildi."
+  },
+  "gnupg_connection": {
+    "message": "GnuPG bağlantısı"
+  },
+  "gnupg_error_unusable_pub_key": {
+    "message": "Lütfen şu herkese açık anahtarların GnuPG anahtarlığınızda bulunduğundan ve geçerli olduğundan emin olun: $1"
+  },
+  "header_analyticsconsent_modal": {
+    "message": "Yardımcı olduğunuz için teşekkürler!"
+  },
+  "import_frame_help_text": {
+    "message": "Anahtarı içe aktarmak için tıklayın"
+  },
+  "key_default_active_btn_title": {
+    "message": "Anahtar varsayılan anahtar olarak atandı"
+  },
+  "key_default_disabled_btn_title": {
+    "message": "Anahtar şifreleme ve imzalama işlemleri için geçerli değil"
+  },
+  "key_default_inactive_btn_title": {
+    "message": "Anahtarı varsayılan olarak ata"
+  },
+  "key_export_btn": {
+    "message": "Dışa aktar"
+  },
+  "key_export_btn_title": {
+    "message": "Anahtarı dışa aktar"
+  },
+  "key_export_create_file": {
+    "message": "Kaydet"
+  },
+  "key_export_dialog_copy_to_clipboard": {
+    "message": "Panoya kopyala"
+  },
+  "key_export_dialog_question": {
+    "message": "Hangi anahtarı dışa aktarmak istiyorsunuz?"
+  },
+  "key_export_dialog_title": {
+    "message": "Anahtarı dışa aktar"
+  },
+  "key_export_filename": {
+    "message": "Dosya adı"
+  },
+  "key_export_warning_private": {
+    "message": "Bu dosyada kişisel anahtarlar da bulunur. Dosyayı güvenli bir yerde saklayın ve hiç  kimse ile paylaşmayın."
+  },
+  "key_gen_advanced_btn": {
+    "message": "Gelişmiş"
+  },
+  "key_gen_demail": {
+    "message": "De-Mail adresi"
+  },
+  "key_gen_error": {
+    "message": "Anahtar oluşturulurken sorun çıktı."
+  },
+  "key_gen_experimental": {
+    "message": "deneme aşamasında"
+  },
+  "key_gen_expiration": {
+    "message": "Anahtar son kullanma tarihi"
+  },
+  "key_gen_future_default": {
+    "message": "Gelecek varsayılan"
+  },
+  "key_gen_generate": {
+    "message": "Üret"
+  },
+  "key_gen_invalid_email": {
+    "message": "E-posta adresi geçersiz"
+  },
+  "key_gen_key_size": {
+    "message": "Anahtar boyutu"
+  },
+  "key_gen_name_help": {
+    "message": "Anahtar sahibinin tam adı"
+  },
+  "key_gen_pwd": {
+    "message": "Parolayı yazın"
+  },
+  "key_gen_pwd_empty": {
+    "message": "Parola alanı boş"
+  },
+  "key_gen_pwd_reenter": {
+    "message": "Parolayı yeniden yazın"
+  },
+  "key_gen_pwd_unequal": {
+    "message": "Parola ile onayı aynı değil"
+  },
+  "key_gen_success": {
+    "message": "Yeni anahtar üretildi ve anahtarlığa eklendi"
+  },
+  "key_gen_upload": {
+    "message": "Herkese açık anahtarı Mailvelope Anahtar Sunucusuna yükleyin (istendiği zaman silinebilir)"
+  },
+  "key_gen_wait_header": {
+    "message": "Anahtar üretiliyor..."
+  },
+  "key_gen_wait_info": {
+    "message": "Lütfen bekleyin. Anahtarın üretilmesi anahtar boyutu gibi değişik etmenlere göre bir kaç dakika sürebilir."
+  },
+  "key_import_bulk_success": {
+    "message": "Anahtarlar içe aktarıldı ya da güncellendi."
+  },
+  "key_import_contacts_import_btn": {
+    "message": "Anahtarları içe aktar"
+  },
+  "key_import_default_description": {
+    "message": "Onaylandıktan sonra bu anahtar yerel anahtarlığa aktarılacak:"
+  },
+  "key_import_default_description_plural": {
+    "message": "Onaylandıktan sonra bu anahtarlar yerel anahtarlığa aktarılacak:"
+  },
+  "key_import_default_headline": {
+    "message": "Anahtarı onayla"
+  },
+  "key_import_error": {
+    "message": "İçe aktarma sorunu."
+  },
+  "key_import_error_no_uid": {
+    "message": "$1 anahtarında geçerli bir kullanıcı kimliği bulunamadı"
+  },
+  "key_import_exception": {
+    "message": "Anahtarlar işlenirken bir sorun çıktı"
+  },
+  "key_import_file_label": {
+    "message": "Dosyaları seçin"
+  },
+  "key_import_from_text_btn": {
+    "message": "Anahtarı panodan içe aktar"
+  },
+  "key_import_from_text_label": {
+    "message": "Panodan metin"
+  },
+  "key_import_invalid_text": {
+    "message": "Geçerli bir anahtar metni bulunamadı"
+  },
+  "key_import_invalidated_description": {
+    "message": "Uyarı: Bu kişinin anahtarının kullanım süresi dolmuş. Bu nedenle artık $1 ile şifrelenmiş iletişim kurulamaz. Bu kişinin geçerli anahtarını almanız gerekir."
+  },
+  "key_import_number_of_failed": {
+    "message": "Bir anahtar bazı sorunlar nedeniyle içe aktarılamadı."
+  },
+  "key_import_number_of_failed_plural": {
+    "message": "$1 anahtar bazı sorunlar nedeniyle içe aktarılamadı."
+  },
+  "key_import_private_exists": {
+    "message": "$2 kullanıcısının $1 var olan herkese açık anahtarı ile eşleşen kişisel anahtar bölümü  anahtarlık içine aktarıldı"
+  },
+  "key_import_private_read": {
+    "message": "Kişisel anahtar okunurken sorun çıktı: $1"
+  },
+  "key_import_private_success": {
+    "message": "$2 kullanıcısının $1 kişisel anahtarı anahtarlık içine aktarıldı"
+  },
+  "key_import_private_update": {
+    "message": "$2 kullanıcısının $1 kişisel anahtarı güncellendi"
+  },
+  "key_import_public_read": {
+    "message": "Herkese açık anahtar okunamadı: $1"
+  },
+  "key_import_public_success": {
+    "message": "$2 kullanıcısının $1 herkese açık anahtarı anahtarlık içine aktarıldı"
+  },
+  "key_import_public_update": {
+    "message": "$2 kullanıcısının $1 herkese açık anahtarı güncellendi"
+  },
+  "key_import_rotation_add": {
+    "message": "Anahtarlığa ekle"
+  },
+  "key_import_rotation_cancel": {
+    "message": "Şimdi değil"
+  },
+  "key_import_rotation_description": {
+    "message": "Eski anahtarı kullanmaya devam ederseniz, gönderici iletilerinizin şifresini çözemeyebilir. Şüpheniz varsa, göndericiden değişikliği başka bir iletişim kanalı kullanarak onaylamasını isteyin. Anahtarı daha sonra ekleyebilir veya kaldırabilirsiniz."
+  },
+  "key_import_rotation_headline": {
+    "message": "Gönderici bu iletiyi yeni bir anahtar ile imzaladı."
+  },
+  "key_import_search_btn": {
+    "message": "Ara"
+  },
+  "key_import_search_disabled": {
+    "message": "Arama devre dışı"
+  },
+  "key_import_search_disabled_descr": {
+    "message": "Ayarlardan en az bir anahtar kaynağını etkinleştirin."
+  },
+  "key_import_search_found": {
+    "message": "Anahtar şurada bulundu:"
+  },
+  "key_import_search_found_modified": {
+    "message": "son değişiklik:"
+  },
+  "key_import_search_found_source": {
+    "message": "Kaynak:"
+  },
+  "key_import_search_invalid": {
+    "message": "Geçerli bir e-posta adresi, anahtar kimliği (16 rakam) ya da parmak izi (40 rakam) yazın"
+  },
+  "key_import_search_not_found": {
+    "message": "Anahtar, aranan anahtar dizinlerinin hiç birinde bulunamadı."
+  },
+  "key_import_search_not_found_header": {
+    "message": "Herhangi bir anahtar bulunamadı."
+  },
+  "key_import_search_ph": {
+    "message": "E-posta adresi / Anahtar kimliği / Parmak izi"
+  },
+  "key_import_too_big": {
+    "message": "İçe aktarmak istediğiniz anahtar metni işlenemeyecek kadar uzun. Bu işlemi daha küçük metin parçaları ile yapmayı deneyin."
+  },
+  "key_import_unable": {
+    "message": "Bir sorun nedeniyle bir anahtar içe aktarılamadı: $1"
+  },
+  "key_keyserver_mod": {
+    "message": "Mailvelope anahtar sunucusu üzerindeki anahtar verileri artık güncel değil."
+  },
+  "key_keyserver_not": {
+    "message": "Anahtar Mailvelope anahtar sunucusu ile eşitlenmemiş."
+  },
+  "key_keyserver_remove": {
+    "message": "Mailvelope anahtar sunucusundan tüm kullanıcı kimliklerine son silme onayı için bir e-posta gönderildi. "
+  },
+  "key_keyserver_remove_btn": {
+    "message": "Tüm kullanıcı kimliklerini sil"
+  },
+  "key_keyserver_resend_btn": {
+    "message": "Yeniden gönder"
+  },
+  "key_keyserver_sync": {
+    "message": "Mailvelope anahtar sunucusu üzerindeki anahtar verileri güncel."
+  },
+  "key_keyserver_update": {
+    "message": "Mailvelope anahtar sunucusu üzerindeki anahtar verileri güncellenmiş."
+  },
+  "key_keyserver_update_btn": {
+    "message": "Güncelle"
+  },
+  "key_keyserver_upload": {
+    "message": "Anahtarın Mailvelope anahtar sunucusu ile eşitlenmesi için tüm kullanıcı kimliklerine bir onay e-postası gönderildi."
+  },
+  "key_keyserver_upload_btn": {
+    "message": "Eşitle"
+  },
+  "key_recovery_failed": {
+    "message": "Anahtar yedekten geri yüklenemedi."
+  },
+  "key_remove_btn": {
+    "message": "Sil"
+  },
+  "key_remove_btn_title": {
+    "message": "Anahtarı anahtarlıktan sil"
+  },
+  "key_remove_dialog_title": {
+    "message": "Anahtarı sil"
+  },
+  "key_revoke_btn": {
+    "message": "Geçersiz kıl"
+  },
+  "key_revoke_btn_title": {
+    "message": "Anahtarı geçersiz kıl"
+  },
+  "key_revoke_dialog_confirm": {
+    "message": "Anahtarı geçersiz kılmak istediğinize emin misiniz?"
+  },
+  "key_revoke_dialog_description": {
+    "message": "Geçersiz kılınan anahtarlar bir daha kullanılamaz."
+  },
+  "key_revoke_dialog_title": {
+    "message": "Anahtarı geçersiz kıl"
+  },
+  "key_set_as_default": {
+    "message": "Varsayılan olarak ata"
+  },
+  "keybackup_failed": {
+    "message": "Anahtar yedeği oluşturulamadı."
+  },
+  "keybackup_restore_dialog_button": {
+    "message": "Yedeği geri yükle"
+  },
+  "keybackup_restore_dialog_description": {
+    "message": "Şu durumda buradan yeni bir kurtarma sayfası hazırlayın:"
+  },
+  "keybackup_restore_dialog_headline": {
+    "message": "Önerilen: Bir yedek oluşturun"
+  },
+  "keybackup_restore_dialog_list_1": {
+    "message": "Kurtarma sayfasını kaybettiyseniz."
+  },
+  "keybackup_restore_dialog_list_2": {
+    "message": "Güvenlik nedeniyle yeni bir kurtarma sayfası oluşturmalısınız."
+  },
+  "keybackup_setup_dialog_button": {
+    "message": "Bir yedek oluşturun"
+  },
+  "keybackup_setup_dialog_description": {
+    "message": "Yedekleme ile şifrelenmiş iletişiminiz için şundan emin olunur:"
+  },
+  "keybackup_setup_dialog_headline": {
+    "message": "Öneri: Bir yedek kurulumu yapın"
+  },
+  "keybackup_setup_dialog_list_1": {
+    "message": "Veri kaybı olması durumunda geri yükleyebilmek için"
+  },
+  "keybackup_setup_dialog_list_2": {
+    "message": "Başka aygıtlara aktarmak için"
+  },
+  "keybackup_waiting_description": {
+    "message": "Kurtarma kodunuzun bulunduğu bir belge hazırlanıyor."
+  },
+  "keybackup_waiting_headline": {
+    "message": "Yedek oluşturuluyor!"
+  },
+  "keydetails_change_exp_date_dialog_note": {
+    "message": "Tüm alt anahtarların da son kullanma tarihi değiştirildi. Geçersiz alt anahtarlar ya da süresi zaten dolmuş olan alt anahtarlar bu değişiklikten etkilenmez."
+  },
+  "keydetails_change_exp_date_dialog_title": {
+    "message": "Son kullanma tarihini değiştir"
+  },
+  "keydetails_change_pwd_dialog_old": {
+    "message": "Eski parola"
+  },
+  "keydetails_change_pwd_dialog_title": {
+    "message": "Parolayı değiştir"
+  },
+  "keydetails_creation_date": {
+    "message": "Oluşturulma"
+  },
+  "keydetails_expiration_date": {
+    "message": "Son kullanma"
+  },
+  "keydetails_key_not_expire": {
+    "message": "asla"
+  },
+  "keydetails_password": {
+    "message": "Parola"
+  },
+  "keydetails_title": {
+    "message": "Anahtar ayrıntıları"
+  },
+  "keygen_dialog_password_error_length": {
+    "message": "Parola en az $1 karakter uzunluğunda olmalıdır"
+  },
+  "keygen_dialog_prolog": {
+    "message": "Lütfen şifrelenmiş iletişiminizi korumak için anahtarınıza bir parola atayın:"
+  },
+  "keygen_waiting_description": {
+    "message": "Bu işlem birkaç dakika sürebilir. Bu sırada tarayıcınız yanıt vermeyi durdurabilir. Lütfen sabırla bekleyin."
+  },
+  "keygen_waiting_headline": {
+    "message": "Şifrelenmiş iletişim kuruluyor"
+  },
+  "keygrid_algorithm": {
+    "message": "Algoritma"
+  },
+  "keygrid_all_keys": {
+    "message": "Tümü"
+  },
+  "keygrid_creation_date_short": {
+    "message": "Oluşturulma"
+  },
+  "keygrid_default_key": {
+    "message": "Varsayılan anahtar"
+  },
+  "keygrid_default_label": {
+    "message": "Varsayılan"
+  },
+  "keygrid_delete_confirmation": {
+    "message": "Bu anahtarı silmek istediğinize emin misiniz?"
+  },
+  "keygrid_export": {
+    "message": "Dışa aktar"
+  },
+  "keygrid_export_title": {
+    "message": "Bu listedeki tüm anahtarları bir dosyaya aktarır"
+  },
+  "keygrid_generate_title": {
+    "message": "Bir anahtar üretir"
+  },
+  "keygrid_import_search_title": {
+    "message": "Dış kaynaklarda herkese açık anahtarları ara"
+  },
+  "keygrid_import_title": {
+    "message": "Bir anahtarı içe aktarır"
+  },
+  "keygrid_invalid_userid": {
+    "message": "Kullanıcı kimliği geçersiz"
+  },
+  "keygrid_key_fingerprint": {
+    "message": "PGP parmak izi"
+  },
+  "keygrid_key_length": {
+    "message": "Uzunluk"
+  },
+  "keygrid_key_not_expire": {
+    "message": "Bu anahtarın son kullanma tarihi yok"
+  },
+  "keygrid_keyid": {
+    "message": "Anahtar kimliği"
+  },
+  "keygrid_primary_key": {
+    "message": "Ana anahtar"
+  },
+  "keygrid_public_keys": {
+    "message": "Herkese açık anahtarlar"
+  },
+  "keygrid_refresh": {
+    "message": "Yenile"
+  },
+  "keygrid_refresh_title": {
+    "message": "Anahtarlığı yeniden yükler"
+  },
+  "keygrid_signer_unknown": {
+    "message": "İmzalayan bilinmiyor"
+  },
+  "keygrid_sort_type": {
+    "message": "Süzgeçler"
+  },
+  "keygrid_status_expired": {
+    "message": "süresi geçmiş"
+  },
+  "keygrid_status_invalid": {
+    "message": "geçersiz"
+  },
+  "keygrid_status_revoked": {
+    "message": "geçersiz kılınmış"
+  },
+  "keygrid_status_valid": {
+    "message": "geçerli"
+  },
+  "keygrid_subkey": {
+    "message": "Alt anahtar"
+  },
+  "keygrid_user_email": {
+    "message": "E-posta"
+  },
+  "keygrid_user_name": {
+    "message": "Ad"
+  },
+  "keygrid_user_primary": {
+    "message": "Birincil"
+  },
+  "keygrid_userid_signatures": {
+    "message": "İmzalar"
+  },
+  "keygrid_validity_status": {
+    "message": "Durum"
+  },
+  "keyring_available_settings": {
+    "message": "Kullanılabilecek ayarları şurada görebilirsiniz:"
+  },
+  "keyring_backup": {
+    "message": "Anahtarlık yedeği"
+  },
+  "keyring_confirm_deletion": {
+    "message": "$1 kimlikli anahtarlığı silmek istediğinize emin misiniz?"
+  },
+  "keyring_confirm_keys": {
+    "message": "Anahtarın içe aktarılmasını onaylayın"
+  },
+  "keyring_confirm_keys_plural": {
+    "message": "$1 anahtarın içe aktarılmasını onaylayın"
+  },
+  "keyring_generate_key": {
+    "message": "Anahtar üret"
+  },
+  "keyring_header": {
+    "message": "Anahtar yönetimi"
+  },
+  "keyring_import_description": {
+    "message": "Anahtarları dosya olarak yükleyerek ya da metin olarak yapıştırarak ekleyebilirsiniz."
+  },
+  "keyring_import_keys": {
+    "message": "Anahtarları içe aktar"
+  },
+  "keyring_import_search_description": {
+    "message": "Anahtarlığınıza eklenecek herkese açık anahtarları bulun. Mailvelope, birçok anahtar dizini tarar ve kullanılıyor olma olasılığı en yüksek olan herkese açık anahtarı önerir."
+  },
+  "keyring_main": {
+    "message": "Ana anahtarlık"
+  },
+  "keyring_private": {
+    "message": "Kişisel"
+  },
+  "keyring_public": {
+    "message": "Herkese açık"
+  },
+  "keyring_public_private": {
+    "message": "Anahtar çiftleri"
+  },
+  "keyring_remove_dialog_title": {
+    "message": "Anahtarlığı sil"
+  },
+  "keyring_setup": {
+    "message": "Kurulum"
+  },
+  "keyring_setup_generate_key": {
+    "message": "Anahtar üret"
+  },
+  "keyring_setup_generate_key_explanation": {
+    "message": "Bu eklentiyi ilk kez kullanıyorsanız ve bir anahtar çiftiniz yoksa lütfen bir tane üretin."
+  },
+  "keyring_setup_import_key": {
+    "message": "Anahtarı içe aktar"
+  },
+  "keyring_setup_import_key_explanation": {
+    "message": "Zaten başka bir aygıt üzerinde kullandığınız bir anahtar çiftiniz varsa bu anahtarları içe aktarabilirsiniz. Anahtar çiftini diğer aygıt üzerinden dışa aktardıktan sonra buradan içe aktarın."
+  },
+  "keyring_setup_no_keypair": {
+    "message": "İletileri şifreleyip çözmek ve kişileri uçtan uca şifrelenmiş iletişim kullanmaya çağırmak için bir anahtar çifti gereklidir. "
+  },
+  "keyring_setup_no_keypair_heading": {
+    "message": "Bu anahtarlıkta henüz bir anahtar çifti bulunmuyor."
+  },
+  "keyserver_additionals_label": {
+    "message": "Ek anahtar kaynakları"
+  },
+  "keyserver_autocrypt_lookup": {
+    "message": "Gelen e-postanın Autocrypt üst bilgisindeki anahtarlar kullanılsın"
+  },
+  "keyserver_key_binding_header": {
+    "message": "Anahtar algılaması"
+  },
+  "keyserver_key_binding_label": {
+    "message": "Kişilerin geçerli anahtarı belirlensin ve anahtar otomatik olarak seçilsin"
+  },
+  "keyserver_oks_lookup": {
+    "message": "Anahtarları otomatik olarak <0>keys.openpgp.org</0> üzerinde arayın "
+  },
+  "keyserver_tofu_lookup": {
+    "message": "Mailvelope anahtar sunucusu kullanılsın"
+  },
+  "keyserver_verifying_servers": {
+    "message": "E-posta doğrulaması ile anahtar sunucusu"
+  },
+  "keyserver_wkd_lookup": {
+    "message": "Anahtarlar alıcının e-posta hizmeti sağlayıcısı tarafından sorulsun (İnternet anahtar dizini)"
+  },
+  "keyusers_add_btn": {
+    "message": "Yeni ekle"
+  },
+  "keyusers_add_btn_title": {
+    "message": "Yeni bir kullanıcı kimliği ekle"
+  },
+  "keyusers_keyserver": {
+    "message": "Anahtar sunucusu"
+  },
+  "keyusers_keyserver_not": {
+    "message": "eşitlenmemiş"
+  },
+  "keyusers_keyserver_sync": {
+    "message": "eşitlenmiş"
+  },
+  "keyusers_keyserver_unverified": {
+    "message": "doğrulanmamış"
+  },
+  "keyusers_title": {
+    "message": "Atanmış kullanıcı kimlikleri"
+  },
+  "learn_more_link": {
+    "message": "Ayrıntılı bilgi alın"
+  },
+  "message_no_keys": {
+    "message": "Bu ileti için bir kişisel anahtar bulunamadı. Gerekli kişisel anahtar kimlikleri: $1"
+  },
+  "message_read_error": {
+    "message": "Bu iletinin şifresi çözülemedi: $1"
+  },
+  "nameaddrinput_error_email_exists": {
+    "message": "E-posta adresi zaten kullanılmış"
+  },
+  "nameaddrinput_error_name_empty": {
+    "message": "Lütfen bir ad yazın"
+  },
+  "notification_text_copy_to_clipboard": {
+    "message": "Metin panoya kopyalandı."
+  },
+  "options_docu": {
+    "message": "Belgeler"
+  },
+  "options_home": {
+    "message": "Ayarlar"
+  },
+  "options_title": {
+    "message": "Mailvelope ayarları"
+  },
+  "paragraph_analyticsconsent_modal": {
+    "message": "İstediğiniz zaman ayarlar bölümünden ayrılmayı seçebilirsiniz."
+  },
+  "preferred": {
+    "message": "yeğlenen"
+  },
+  "provider_gmail_auth": {
+    "message": "İzinler"
+  },
+  "provider_gmail_auth_cancel_btn": {
+    "message": "Kimlik doğrulamasını iptal et"
+  },
+  "provider_gmail_auth_readonly": {
+    "message": "e-posta okuma"
+  },
+  "provider_gmail_auth_send": {
+    "message": "e-posta gönderme"
+  },
+  "provider_gmail_auth_table_title": {
+    "message": "Google API izinleri"
+  },
+  "provider_gmail_dialog_auth_google_signin": {
+    "message": "Google ile oturum aç"
+  },
+  "provider_gmail_dialog_auth_intro": {
+    "message": "<0></0> Gmail bütünleştirmesini kullanabilmek için Mailvelope uygulamasına şu izinler verilmelidir:"
+  },
+  "provider_gmail_dialog_auth_outro": {
+    "message": "Oturum aç düğmesine tıklarsanız, Google izin verme penceresi açılır. <0></0> e-posta adresinin Gmail hesabını seçin ve yönergeleri izleyin."
+  },
+  "provider_gmail_dialog_description": {
+    "message": "Gmail API uygulamasının kullanılması Mailvelope ile Gmail arasındaki işlevselliğin artmasını sağlar ve şifrelenmiş e-postalar ile ek dosyalarının alınıp gönderilmesini kolaylaştırır."
+  },
+  "provider_gmail_dialog_gsuite_alert": {
+    "message": "Bu özellik Gmail hesapları ile ücretsiz olarak kullanılabilir. Bir Google Workspace (<0>workspace.google.com</0>) kuruluşunun bir parçası iseniz <1>Mailvelope sitesinden</1> bir lisans satın almanız gerekir."
+  },
+  "provider_gmail_dialog_privacy_policy": {
+    "message": "Lütfen gizlilik ilkemizi okuyun"
+  },
+  "provider_gmail_dialog_title": {
+    "message": "Gmail API uygulamasını kullanmak"
+  },
+  "provider_gmail_integration": {
+    "message": "Gmail API bütünleştirmesi"
+  },
+  "provider_gmail_integration_info": {
+    "message": "Gmail API uygulamasının Mailvelope tarafından kullanılabilmesi için ek izinlerin verilmesi gerekir. Gmail ile Mailvelope şifreleme özelliklerini kullanabilmeniz için sizi yönlendireceğiz. Bu işlem için Google hesabınızla oturum açmanız gerekecek."
+  },
+  "provider_gmail_integration_warning": {
+    "message": "Gmail <0></0> arama modeline izin vermiyor. Lütfen <1></1> bölümündeki ayarlara bakın."
+  },
+  "provider_gmail_licensing_dialog_business_btn_info": {
+    "message": "Tüm dünyadaki kuruluşlar ile güvenli olarak iletişim kurun"
+  },
+  "provider_gmail_licensing_dialog_business_btn_price_info": {
+    "message": "kullanıcı/ay"
+  },
+  "provider_gmail_licensing_dialog_deactivate_btn": {
+    "message": "Gmail API kullanmadan devam et"
+  },
+  "provider_gmail_licensing_dialog_para_1": {
+    "message": "Gmail API uygulamasının Google Workspace kuruluşlarında kullanılabilmesi için <0>bir ücret ödenmesi gerekir</0>."
+  },
+  "provider_gmail_licensing_dialog_para_2": {
+    "message": "Mailvelope uygulamasını Gmail ile ücretsiz olarak kullanmaya devam edebilirsiniz. Ancak <0>API kullandığınızda</0> şifrelenmiş e-postaları ve ek dosyalarını yazmak ve okumak <1>çok daha hızlı ve kolay</1> olur."
+  },
+  "provider_gmail_licensing_dialog_para_3": {
+    "message": "Etkinleştirilmiş Gmail API ile Mailvelope Business sürümünü <0>14 gün ücretsiz olarak</0> deneyin:"
+  },
+  "provider_gmail_licensing_dialog_test_btn": {
+    "message": "Gmail API uygulamasını ücretsiz olarak deneyin"
+  },
+  "provider_gmail_licensing_dialog_title": {
+    "message": "Mailvelope Business lisansı gereklidir"
+  },
+  "provider_gmail_licensing_table_caption": {
+    "message": "Bir Google Workspace (<0>workspace.google.com</0>) kuruluşu Gmail API bütünleştirmesini kullanmak için gereken lisansları <1>Mailvelope sitesinden</1> satın alabilirsiniz."
+  },
+  "provider_gmail_licensing_table_title": {
+    "message": "Mailvelope lisansı"
+  },
+  "provider_gmail_secure_forward_btn": {
+    "message": "Güvenli yönlendir"
+  },
+  "provider_gmail_secure_replyAll_btn": {
+    "message": "Tümüne güvenli yanıtla"
+  },
+  "provider_gmail_secure_reply_btn": {
+    "message": "Güvenli yanıtla"
+  },
+  "pwd_dialog_cache_pwd": {
+    "message": "Parola geçici olarak hatırlansın"
+  },
+  "pwd_dialog_cancel": {
+    "message": "Anahtarların kilidini açma işlemi iptal edildi."
+  },
+  "pwd_dialog_header": {
+    "message": "Anahtar parolasını yazın"
+  },
+  "pwd_dialog_reason_add_user": {
+    "message": "Lütfen kullanıcı kimliğini oluşturmak için anahtar parolanızı yazın."
+  },
+  "pwd_dialog_reason_create_backup": {
+    "message": "Lütfen bir kurtarma sayfası oluşturmak için anahtar parolanızı yazın."
+  },
+  "pwd_dialog_reason_create_draft": {
+    "message": "Taslağı kaydetmek için anahtar parolanızı yazın."
+  },
+  "pwd_dialog_reason_decrypt": {
+    "message": "Lütfen bu iletinin şifresini çözmek için anahtar parolanızı yazın."
+  },
+  "pwd_dialog_reason_editor": {
+    "message": "Lütfen şifrelenmiş iletişim ayarlarını güncellemek için anahtar parolanızı yazın."
+  },
+  "pwd_dialog_reason_revoke": {
+    "message": "Lütfen bu anahtarı geçersiz kılmak için anahtar parolanızı yazın."
+  },
+  "pwd_dialog_reason_revoke_user": {
+    "message": "Lütfen bu kullanıcı kimliğini geçersiz kılmak için anahtar parolanızı yazın."
+  },
+  "pwd_dialog_reason_set_exdate": {
+    "message": "Lütfen bu anahtarın son kullanma tarihini değiştirmek için anahtar parolanızı yazın."
+  },
+  "pwd_dialog_reason_sign": {
+    "message": "Lütfen bu iletiyi imzalamak için anahtar parolanızı yazın."
+  },
+  "pwd_dialog_wrong_pwd": {
+    "message": "Parola hatalı"
+  },
+  "recovery_sheet_backup_data": {
+    "message": "Verilerinizin yedekleyin"
+  },
+  "recovery_sheet_backup_local": {
+    "message": "Verilerinizi yerel olarak bilgisayarınıza da yedeklemek isterseniz bununla ilgili seçeneği $1 hesabınızın şifrelenmiş iletişim bölümünde bulabilirsiniz."
+  },
+  "recovery_sheet_backup_server": {
+    "message": "Şifrelenmiş iletişim için önemli veriler (anahtar parolası gibi) yedeklenirken, $1 sunucuları üzerine güvenlik iş ortağımız Mailvelope tarafından şifrelenerek kaydedilir. "
+  },
+  "recovery_sheet_be_aware": {
+    "message": "Lütfen unutmayın"
+  },
+  "recovery_sheet_check_settings": {
+    "message": "Lütfen şuradaki hesap ayarlarınızı denetleyin:"
+  },
+  "recovery_sheet_creation_date": {
+    "message": "Oluşturulma tarihi:"
+  },
+  "recovery_sheet_data_lost": {
+    "message": "Yedek almazsanız, anahtar parolanızı kaybetmeniz, aygıtınızın bozulması ya da tarayıcı eklentisinde sorun çıkması gibi durumlarda şifrelenmiş iletilerinizin şifresini bir daha çözemezsiniz!"
+  },
+  "recovery_sheet_encryption_note": {
+    "message": "$1 ile şifrelenmiş iletişim kullanmanın incelikleri"
+  },
+  "recovery_sheet_enter_code": {
+    "message": "Diğer bilgisayarlara kurarken şu bölümdeki ayarlarda bulunan kurtarma kodunu yazın:"
+  },
+  "recovery_sheet_explain_pgp": {
+    "message": "$1 ile şifrelenmiş iletişim PGP temeline göre geliştirilmiştir. Şifrelenmiş e-postalar göndermenizi ve alıcının iletiyi okuyabileceğinden emin olmanızı sağlar."
+  },
+  "recovery_sheet_extension_problems": {
+    "message": "tarayıcı eklentisinde çıkabilecek sorunlar nedeniyle"
+  },
+  "recovery_sheet_forgot_password": {
+    "message": "anahtarınızın parolasını unutmanız nedeniyle"
+  },
+  "recovery_sheet_further_info": {
+    "message": "$1 hesabınızın şu bölümünde ayrıntılı bilgi ve yapılandırma ayarlarını bulabilirsiniz:"
+  },
+  "recovery_sheet_header": {
+    "message": "Önemli bilgiler!"
+  },
+  "recovery_sheet_in_general": {
+    "message": "Genel olarak önemlidir"
+  },
+  "recovery_sheet_invite_contacts": {
+    "message": "$1 hesabınızın şifrelenmiş iletişim ayarlarında, başka kişileri PGP kullanarak şifrelenmiş iletişim kurmaya  çağırabilirsiniz. Daha önce çağrılmış kişiler e-posta adresinin yanındaki asma kilit simgesi ile anlaşılabilir."
+  },
+  "recovery_sheet_keep_safe": {
+    "message": "Bu belgeyi yazdırarak güvenli bir yerde saklayın ve kurtarma koduna başka hiç kimsenin erişemeyeceğinden emin olun."
+  },
+  "recovery_sheet_key_server": {
+    "message": "GMX PGP yöntemini kullanan diğer $1 kullanıcı $1 hesabınızın merkez klasöründe bulunabilir. Bu klasörde herhangi bir kayıt bulunmasını istemiyorsanız, $1 hesabı ayarlarınızdan bu özelliği devre dışı bırakabilirsiniz."
+  },
+  "recovery_sheet_mobile_devices": {
+    "message": "Mobil aygıtlarda"
+  },
+  "recovery_sheet_not_working": {
+    "message": "Şu örnekteki gibi şifrelenmiş iletişiminiz artık çalışmıyorsa:"
+  },
+  "recovery_sheet_other_computer": {
+    "message": "Farklı bir bilgisayar üzerinde"
+  },
+  "recovery_sheet_other_contacts": {
+    "message": "Diğer kişiler ile şifrelenmiş iletişim"
+  },
+  "recovery_sheet_other_devices": {
+    "message": "Diğer aygıtlarda şifrelenmiş iletişim"
+  },
+  "recovery_sheet_other_devices_setup": {
+    "message": "Diğer aygıtlar üzerine şifrelenmiş iletişim kurmak"
+  },
+  "recovery_sheet_other_problems": {
+    "message": "diğer nedenlerle"
+  },
+  "recovery_sheet_pgp_compat": {
+    "message": "Şifrelenmiş iletişim (PGP) kullanan başkaları varsa onlarla güvenli iletişim kurabilirsiniz."
+  },
+  "recovery_sheet_print_block": {
+    "message": "Lütfen bu belgeyi güvenli bir yerde saklayın!"
+  },
+  "recovery_sheet_print_button": {
+    "message": "Yazdır"
+  },
+  "recovery_sheet_print_notice": {
+    "message": "Lütfen bu belgeyi yazdırıp güvenli bir yerde saklayın!"
+  },
+  "recovery_sheet_provider_communication": {
+    "message": "Şifrelenmiş iletişim"
+  },
+  "recovery_sheet_provider_inbox": {
+    "message": "Gelen kutusu"
+  },
+  "recovery_sheet_provider_security": {
+    "message": "Güvenlik"
+  },
+  "recovery_sheet_provider_settings": {
+    "message": "Ayarlar"
+  },
+  "recovery_sheet_qr_code": {
+    "message": "QR kodu mobil aygıtınız ile tarayın."
+  },
+  "recovery_sheet_recommendation": {
+    "message": "Öneri"
+  },
+  "recovery_sheet_recover_data": {
+    "message": "Verileri kurtarmak"
+  },
+  "recovery_sheet_recovery_code": {
+    "message": "Kurtarma kodu"
+  },
+  "recovery_sheet_subtitle_receipt": {
+    "message": "Şifrelenmiş iletişim kurtarma sayfası"
+  },
+  "recovery_sheet_subtitle_recover": {
+    "message": "Şifrelenmiş iletişimi kurtar"
+  },
+  "recovery_sheet_trusted_contacts": {
+    "message": "Görüntülenen GMX kişilerinin geçerli kullanıcılar olduğundan emin olabilirsiniz. Bununla birlikte her zaman kişilerin kimliğini başka bir e-posta hizmeti sağlayıcısının e-posta adresini kullanarak doğrulamalısınız."
+  },
+  "recovery_sheet_unknown_third": {
+    "message": "Şifrelenmiş iletişimi yalnızca başkalarının erişemeyeceği güvenli aygıtlar üzerine kurun."
+  },
+  "recovery_sheet_unlock_backup": {
+    "message": "Yedeklenmiş verilerinizin şifresi yalnızca bu kurtarma sayfasındaki kurtarma kodu ile çözülebilir."
+  },
+  "reload_tab": {
+    "message": "Lütfen ayarların etkili olması için ilgili sayfaları yeniden yükleyin."
+  },
+  "restore_backup_dialog_button": {
+    "message": "Onayla"
+  },
+  "restore_backup_dialog_headline": {
+    "message": "Lütfen kurtarma kodunuzu yazın:"
+  },
+  "restore_password_dialog_button": {
+    "message": "Görüntüle"
+  },
+  "restore_password_dialog_headline": {
+    "message": "Anahtar parolanız:"
+  },
+  "security_background_color_text": {
+    "message": "2. Şimdi beğendiğiniz bir renk seçin"
+  },
+  "security_background_icons_text": {
+    "message": "1. Beğendiğiniz bir simge seçin"
+  },
+  "security_background_text": {
+    "message": "Şifrelenmiş e-postalar güvenlik arka planı kullanılarak görüntülenir. Gerçekten güvenli kılmak için arka planı kişiselleştirmelisiniz. Böylece hiç kimsenin Mailvelope arayüzünü yeniden oluşturamayacağından ve kişisel verilerinize erişemeyeceğinden emin olursunuz. "
+  },
+  "security_cache_header": {
+    "message": "Parolalar bu tarayıcı oturumunda anımsansın"
+  },
+  "security_cache_help": {
+    "message": "1 ile 999 arasında bir sayı olmalıdır"
+  },
+  "security_cache_off": {
+    "message": "Hayır."
+  },
+  "security_cache_on": {
+    "message": "Evet, şu kadar süreyle:"
+  },
+  "security_cache_time": {
+    "message": "dakika."
+  },
+  "security_display_decrypted": {
+    "message": "Şifresi çözülen iletiler şurada görüntülensin"
+  },
+  "security_display_inline": {
+    "message": "E-posta hizmeti sağlayıcının sayfasında."
+  },
+  "security_display_popup": {
+    "message": "Ayrı bir Mailvelope açılan penceresinde."
+  },
+  "security_hide_armored_head": {
+    "message": "PGP iletilerinde Mailvelope sürümü ve açıklamalar görüntülenmesin."
+  },
+  "security_log_action": {
+    "message": "İşlem"
+  },
+  "security_log_add_attachment": {
+    "message": "Dosya ekleme düğmesine tıklama"
+  },
+  "security_log_attachment_download": {
+    "message": "Ek dosya indirme"
+  },
+  "security_log_backup_create": {
+    "message": "Yedekle üzerine tıklama"
+  },
+  "security_log_backup_restore": {
+    "message": "Yedeği geri yükle üzerine tıklama"
+  },
+  "security_log_decrypt_ui": {
+    "message": "Şifreyi çöz"
+  },
+  "security_log_decryption_operation": {
+    "message": "İletinin şifresi $1 kullanılarak çözüldü"
+  },
+  "security_log_dialog_cancel": {
+    "message": "Pencerede iptal üzerine tıklandı"
+  },
+  "security_log_dialog_encrypt": {
+    "message": "Pencerede şifrele üzerine tıklandı"
+  },
+  "security_log_dialog_ok": {
+    "message": "Pencerede onayla üzerine tıklandı"
+  },
+  "security_log_dialog_sign": {
+    "message": "Pencerede oturum aç üzerine tıklandı"
+  },
+  "security_log_editor": {
+    "message": "Mailvelope düzenleyici"
+  },
+  "security_log_email_viewer": {
+    "message": "PGP e-posta şifresinin çözülmesi"
+  },
+  "security_log_encrypt_form": {
+    "message": "Şifreleme formu"
+  },
+  "security_log_encrypt_ui": {
+    "message": "Şifrele"
+  },
+  "security_log_encryption_operation": {
+    "message": "İleti $1 için şifrelenmiş"
+  },
+  "security_log_import_dialog": {
+    "message": "İçe aktarma penceresi"
+  },
+  "security_log_key_backup": {
+    "message": "Anahtar yedekleme"
+  },
+  "security_log_key_generator": {
+    "message": "Anahtar üretme"
+  },
+  "security_log_password_click": {
+    "message": "Pencerede parola alanına tıklandı"
+  },
+  "security_log_password_dialog": {
+    "message": "Parola penceresi"
+  },
+  "security_log_password_input": {
+    "message": "Pencerede parola alanına yazıldı"
+  },
+  "security_log_remove_attachment": {
+    "message": "Ek dosya silme"
+  },
+  "security_log_restore_backup_click": {
+    "message": "Pencerede yedeği geri yükle üzerine tıklandı"
+  },
+  "security_log_sign_operation": {
+    "message": "İleti şu anahtar ile imzalandı: $1"
+  },
+  "security_log_source": {
+    "message": "Kaynak"
+  },
+  "security_log_text": {
+    "message": "Güvenlik günlüğünde tüm Mailvelope bileşenlerindeki kullanıcı işlemleri görülebilir"
+  },
+  "security_log_textarea_click": {
+    "message": "Metin alanına tıklandı"
+  },
+  "security_log_textarea_input": {
+    "message": "Metin alanına yazıldı"
+  },
+  "security_log_textarea_select": {
+    "message": "Metin alanında seçim yapıldı"
+  },
+  "security_log_timestamp": {
+    "message": "Zaman damgası"
+  },
+  "security_log_viewer": {
+    "message": "Mailvelope görüntüleyici"
+  },
+  "security_openpgp_header": {
+    "message": "OpenPGP ayarları"
+  },
+  "settings_analytics": {
+    "message": "İstatistikler"
+  },
+  "settings_general": {
+    "message": "Genel"
+  },
+  "settings_keyserver": {
+    "message": "Anahtar dizinleri"
+  },
+  "settings_provider": {
+    "message": "Gmail API"
+  },
+  "settings_security": {
+    "message": "Güvenlik"
+  },
+  "settings_security_background": {
+    "message": "Güvenlik arka planı"
+  },
+  "settings_security_log": {
+    "message": "Güvenlik günlüğü"
+  },
+  "settings_watchlist": {
+    "message": "İzin verilmiş etki alanları"
+  },
+  "sign_dialog_header": {
+    "message": "İleti şu kimlikle imzalansın:"
+  },
+  "sign_error": {
+    "message": "Bu ileti imzalanamadı: $1 "
+  },
+  "signer_unknown": {
+    "message": "Bilinmiyor"
+  },
+  "text_decrypt_button": {
+    "message": "Şifreyi çöz"
+  },
+  "upload_attachment": {
+    "message": "Dosya ekle"
+  },
+  "upload_drop": {
+    "message": "Eklemek istediğiniz dosyayı sürükleyip bu alana bırakın"
+  },
+  "upload_help": {
+    "message": "Dosyayı sürükleyip bu pencereye bırakın ya da"
+  },
+  "upload_quota_exceeded_warning": {
+    "message": "Eklenebilecek dosya boyutu:"
+  },
+  "upload_quota_warning_headline": {
+    "message": "Ek dosyanın boyutu çok büyük"
+  },
+  "user_create_btn": {
+    "message": "Oluştur"
+  },
+  "user_create_title": {
+    "message": "Kullanıcı kimliği oluştur"
+  },
+  "user_keyserver_not": {
+    "message": "Kullanıcı kimliği Mailvelope anahtar sunucusu ile eşitlenmemiş."
+  },
+  "user_keyserver_remove": {
+    "message": "Kullanıcı kodunu Mailvelope anahtar sunucusundan silmek için $1 adresine bir onay e-postası gönderildi."
+  },
+  "user_keyserver_remove_btn": {
+    "message": "Kullanıcı kimliğini sil"
+  },
+  "user_keyserver_resend_confirmation_btn": {
+    "message": "Onay e-postasını yeniden gönder"
+  },
+  "user_keyserver_sync": {
+    "message": "Kullanıcı kimliği Mailvelope anahtar sunucusu ile eşitlendi."
+  },
+  "user_keyserver_unverified": {
+    "message": "Lütfen Mailvelope anahtar sunucusu ile eşitlemek için kullanıcı kimliğini onaylayın."
+  },
+  "user_keyserver_upload": {
+    "message": "Kullanıcı kodunu Mailvelope anahtar sunucusu ile eşitlemek için $1 adresine bir onay e-postası gönderildi."
+  },
+  "user_remove_btn": {
+    "message": "Sil"
+  },
+  "user_remove_btn_title": {
+    "message": "Kullanıcı kimliğini sil"
+  },
+  "user_remove_dialog_confirmation": {
+    "message": "Bu kullanıcı kimliğini anahtarınızdan silmek istediğinize emin misiniz?"
+  },
+  "user_remove_dialog_keyserver_warning": {
+    "message": "Kullanıcı kimliği Mailvelope anahtar sunucusundan da silinecek."
+  },
+  "user_remove_dialog_title": {
+    "message": "Kullanıcı kimliğini sil"
+  },
+  "user_revoke_btn": {
+    "message": "Geçersiz kıl"
+  },
+  "user_revoke_btn_title": {
+    "message": "Kullanıcı kimliğini geçersiz kıl"
+  },
+  "user_revoke_dialog_confirmation": {
+    "message": "Geçersiz kılmak istediğinizden emin misiniz?"
+  },
+  "user_revoke_dialog_description": {
+    "message": "Geçersiz kılınan kullanıcı kimliği bu anahtar için bir daha kullanılamaz."
+  },
+  "user_revoke_dialog_title": {
+    "message": "Kullanıcı kimliğini geçersiz kıl"
+  },
+  "user_title": {
+    "message": "Kullanıcı kimliği"
+  },
+  "usersignatures_title": {
+    "message": "Doğrulamalar"
+  },
+  "verify_error": {
+    "message": "Bu ileti doğrulanamadı: $1"
+  },
+  "verify_frame_help_text": {
+    "message": "İmzayı doğrulamak için tıklayın"
+  },
+  "waiting_dialog_decryption_failed": {
+    "message": "Şifre çözülemedi."
+  },
+  "watchlist_command_create": {
+    "message": "Yeni kayıt ekle"
+  },
+  "watchlist_delete_confirmation": {
+    "message": "Bu siteyi izin verilmiş etki alanları listesinden çıkarmak istediğinize emin misiniz?"
+  },
+  "watchlist_expose_api": {
+    "message": "API"
+  },
+  "watchlist_record_title": {
+    "message": "İzin verilmiş etki alanı"
+  },
+  "watchlist_remove_dialog_title": {
+    "message": "Etki alanını sil"
+  },
+  "watchlist_title_active": {
+    "message": "Etkin"
+  },
+  "watchlist_title_frame": {
+    "message": "Etki alanı biçimi"
+  },
+  "watchlist_title_https_only": {
+    "message": "Yalnızca HTTPS"
+  },
+  "watchlist_title_scan": {
+    "message": "Etkin"
+  },
+  "word_or": {
+    "message": "ya da "
+  },
+  "wrong_restore_code": {
+    "message": "Kurtarma kodu geçersiz"
+  }
+}

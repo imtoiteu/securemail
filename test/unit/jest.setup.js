@@ -1,0 +1,41 @@
+// Jest setup file - Framework essentials and browser APIs
+import '@testing-library/jest-dom';
+import './matchers/pgp-matchers';
+import './matchers/port-matchers';
+import {configure} from '@testing-library/react';
+import {setupDOMEnvironment} from './__mocks__/dom-environment';
+import {setupServiceWorkerEnvironment} from './__mocks__/service-worker-env';
+
+// Configure React Testing Library
+configure({
+  testIdAttribute: 'data-testid',
+  asyncUtilTimeout: 5000
+});
+
+// Auto-detect test type based on file path and setup appropriate environment
+const testPath = expect.getState().testPath;
+if (testPath) {
+  if (testPath.includes('/test/unit/app/') ||
+      testPath.includes('/test/unit/components/') ||
+      testPath.includes('/test/unit/content-scripts/')) {
+    // React component tests and content scripts - DOM environment with limited Chrome APIs
+    setupDOMEnvironment();
+  } else if (testPath.includes('/test/unit/controller/') ||
+             testPath.includes('/test/unit/lib/') ||
+             testPath.includes('/test/unit/modules/')) {
+    // Background script tests - Service worker environment with full Chrome APIs
+    setupServiceWorkerEnvironment();
+  }
+  // Other tests get no special environment setup
+}
+
+// Suppress console warnings for tests (can be enabled for debugging)
+const originalWarn = console.warn;
+console.warn = (...args) => {
+  // Allow specific warnings through
+  if (args[0]?.includes?.('validateDOMNesting') ||
+      args[0]?.includes?.('Warning: ReactDOM.render')) {
+    return;
+  }
+  originalWarn.apply(console, args);
+};

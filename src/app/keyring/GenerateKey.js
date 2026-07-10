@@ -1,0 +1,187 @@
+/**
+ * Copyright (C) 2016-2019 Mailvelope GmbH
+ * Licensed under the GNU Affero General Public License version 3
+ */
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom';
+import * as l10n from '../../lib/l10n';
+import {isValidAddress} from '../../lib/email';
+import {port} from '../app';
+import {KeyringOptions} from './KeyringOptions';
+import {startOfDay, addYears, getUnixTime} from 'date-fns';
+
+import NameAddrInput from './components/NameAddrInput';
+import AdvancedExpand from './components/AdvancedExpand';
+import AdvKeyGenOptions from './components/AdvKeyGenOptions';
+import DefinePassword from '../../components/util/DefinePassword';
+import Modal from '../../components/util/Modal';
+import KeyBackup from './components/KeyBackup';
+
+l10n.register([
+  'form_cancel',
+  'key_gen_error',
+  'key_gen_generate',
+  'key_gen_upload',
+  'key_gen_wait_header',
+  'key_gen_wait_info',
+  'learn_more_link'
+]);
+
+export default class GenerateKey extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = this.getInitialState();
+    this.handleChange = this.handleChange.bind(this);
+    this.handleGenerate = this.handleGenerate.bind(this);
+    this.generateKey = this.generateKey.bind(this);
+    this.closeBackupModal = this.closeBackupModal.bind(this);
+  }
+
+  componentDidMount() {
+    this.setState(this.getInitialState(this.context));
+  }
+
+  getInitialState({gnupg = false} = {}) {
+    return {
+      name: this.props.defaultName,
+      email: this.props.defaultEmail,
+      keyAlgo: gnupg ? 'default' : 'rsa',
+      keySize: '4096',
+      keyExpirationTime: gnupg ? addYears(startOfDay(new Date()), 2) : null,
+      password: '',
+      mveloKeyServerUpload: false,
+      generating: false, // key generation in progress
+      errors: {}, // form errors
+      key: null, // generated key
+      modified: false,
+      backupModalVisible: false
+    };
+  }
+
+  handleChange(event) {
+    let value;
+    const target = event.target;
+    switch (target.type) {
+      case 'checkbox':
+        value = target.checked;
+        break;
+      default:
+        value = target.value;
+    }
+    this.setState(({errors: err}) => {
+      const {[target.id]: deleted, ...errors} = err;
+      if (target.error) {
+        errors[target.id] = new Error();
+      }
+      return {[target.id]: value, errors, modified: true};
+    });
+  }
+
+  handleGenerate() {
+    const errors = {...this.state.errors};
+    const validEmail = isValidAddress(this.state.email);
+    if (!validEmail) {
+      errors.email = new Error();
+    }
+    if (!this.context.gnupg) {
+      if (!this.state.password.length) {
+        errors.password = new Error();
+      }
+    }
+    if (Object.keys(errors).length) {
+      this.setState({errors});
+      return;
+    }
+    this.setState({generating: true});
+  }
+
+  async generateKey() {
+    const parameters = {
+      keyAlgo: this.state.keyAlgo,
+      numBits: this.state.keySize,
+      passphrase: this.state.password,
+      uploadPublicKey: this.state.mveloKeyServerUpload
+    };
+    parameters.userIds = [{
+      fullName: this.state.name,
+      email: this.state.email
+    }];
+    if (this.state.keyExpirationTime) {
+      parameters.keyExpirationTime = Math.abs(getUnixTime(this.state.keyExpirationTime) - getUnixTime(startOfDay(new Date())));
+    }
+    try {
+      const newKey = await port.send('generateKey', {parameters, keyringId: this.context.keyringId});
+      if (this.props.onKeyringChange) {
+        await this.props.onKeyringChange();
+      }
+      this.setState({key: newKey, backupModalVisible: true, generating: false});
+    } catch (error) {
+      this.setState({generating: false, modified: false}, () => this.props.onNotification({id: Date.now(), header: l10n.map.key_gen_error, message: error.message, type: 'error'}));
+    }
+  }
+
+  closeBackupModal() {
+    this.setState({backupModalVisible: false}, () => {
+      if (this.props.onGenerateComplete) {
+        this.props.onGenerateComplete({key: this.state.key, uploaded: this.state.mveloKeyServerUpload});
+      }
+    });
+  }
+
+  render() {
+    return (
+      <>
+        <form className="form" autoComplete="off">
+          <NameAddrInput name={this.state.name} email={this.state.email} onChange={this.handleChange} errors={this.state.errors} />
+          <AdvancedExpand>
+            <AdvKeyGenOptions value={this.state} onChange={this.handleChange} />
+          </AdvancedExpand>
+          {!this.context.gnupg && <DefinePassword value={this.state.password} errors={this.state.errors} onChange={this.handleChange} />}
+          <div className={`form-group custom-control custom-checkbox ${this.context.demail ? 'd-none' : ''}`}>
+            <input className="custom-control-input" checked={this.state.mveloKeyServerUpload} onChange={this.handleChange} type="checkbox" id="mveloKeyServerUpload" />
+            <label className="custom-control-label" htmlFor="mveloKeyServerUpload"><span>{l10n.map.key_gen_upload}</span></label>
+          </div>
+          <div className="form-group d-flex justify-content-end">
+            <div className="btn-bar">
+              {this.props.cancelTo && <Link to={this.props.cancelTo} className="btn btn-secondary">{l10n.map.form_cancel}</Link>}
+              <button type="button" onClick={this.handleGenerate} disabled={Object.keys(this.state.errors).length || !this.state.modified} className="btn btn-primary">{l10n.map.key_gen_generate}</button>
+            </div>
+          </div>
+        </form>
+        <Modal isOpen={this.state.generating} title={l10n.map.key_gen_wait_header} onShow={this.generateKey} keyboard={false} hideFooter={true} onHide={() => this.setState({generating: false})}>
+          <>
+            <div className="progress mb-3">
+              <div className="progress-bar progress-bar-striped progress-bar-animated w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <p className="text-muted">{l10n.map.key_gen_wait_info}</p>
+          </>
+        </Modal>
+        {this.state.key && this.state.backupModalVisible && <KeyBackup
+          isOpen={this.state.backupModalVisible}
+          onClose={this.closeBackupModal.bind(this)}
+          keyId={this.state.key.keyId}
+          keyFpr={this.state.key.keyFpr}
+          keyringId={this.context.keyringId}
+        />}
+      </>
+    );
+  }
+}
+
+GenerateKey.contextType = KeyringOptions;
+
+GenerateKey.propTypes = {
+  defaultName: PropTypes.string,
+  defaultEmail: PropTypes.string,
+  onKeyringChange: PropTypes.func,
+  onGenerateComplete: PropTypes.func,
+  onNotification: PropTypes.func,
+  cancelTo: PropTypes.string
+};
+
+GenerateKey.defaultProps = {
+  defaultName: '',
+  defaultEmail: ''
+};

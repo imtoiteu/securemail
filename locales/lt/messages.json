@@ -1,0 +1,1553 @@
+{
+  "action_menu_activate_current_tab": {
+    "message": "Įgalioti šią sritį"
+  },
+  "action_menu_all_options": {
+    "message": "Visos parinktys"
+  },
+  "action_menu_configure_mailvelope": {
+    "message": "Norėdami pradėti, <0>sukonfigūruokite Mailvelope</0>!"
+  },
+  "action_menu_dashboard_description": {
+    "message": "Rodyti visas konfigūracijos parinktis."
+  },
+  "action_menu_dashboard_label": {
+    "message": "Skydelis"
+  },
+  "action_menu_file_encryption_description": {
+    "message": "Šifruoti vieną ar kelis failus."
+  },
+  "action_menu_file_encryption_label": {
+    "message": "Failų šifravimas"
+  },
+  "action_menu_help": {
+    "message": "Pagalba"
+  },
+  "action_menu_keyring_description": {
+    "message": "Tvarkyti viešuosius ir privačiuosius raktus."
+  },
+  "action_menu_keyring_label": {
+    "message": "Raktinė"
+  },
+  "action_menu_primary_menu_aria_label": {
+    "message": "Mailvelope pirminis meniu"
+  },
+  "action_menu_reload_extension_scripts": {
+    "message": "Įkelti Mailvelope iš naujo"
+  },
+  "action_menu_review_security_logs_description": {
+    "message": "Peržiūrėti su saugumu susijusius naudotojo veiksmus."
+  },
+  "action_menu_review_security_logs_label": {
+    "message": "Saugumo žurnalas"
+  },
+  "action_menu_setup_menu_aria_label": {
+    "message": "Mailvelope sąrankos meniu"
+  },
+  "action_menu_setup_start_label": {
+    "message": "Pradėkime!"
+  },
+  "alert_header_error": {
+    "message": "Klaida!"
+  },
+  "alert_header_important": {
+    "message": "Svarbu!"
+  },
+  "alert_header_notice": {
+    "message": "Turėkite omenyje:"
+  },
+  "alert_header_success": {
+    "message": "Pavyko!"
+  },
+  "alert_header_warning": {
+    "message": "Įspėjimas!"
+  },
+  "alert_invalid_domainmatchpattern_warning": {
+    "message": "Srities atitikimo šablonas yra [*.]host.name.tld[:port]."
+  },
+  "alert_no_domainmatchpattern_warning": {
+    "message": "Reikalingas bent vienas srities šablonas."
+  },
+  "analytics_consent_description": {
+    "message": "Bendrinti su Mailvelope surinktą ir anonimizuotą analitikos informaciją"
+  },
+  "analytics_consent_interstitial_Btn_Learn_More": {
+    "message": "Sužinokite daugiau"
+  },
+  "analytics_consent_interstitial_Faq": {
+    "message": "Read more about Mailvelope metrics in our FAQ."
+  },
+  "auth_domain_api_label": {
+    "message": "Leisti API"
+  },
+  "auth_domain_description": {
+    "message": "Ar norėtumėte leisti naudoti Mailvelope šioje srityje: $1?"
+  },
+  "auth_domain_headline": {
+    "message": "Įgalioti sritį"
+  },
+  "button_analyticsconsent_modal": {
+    "message": "Tęsti"
+  },
+  "change_link": {
+    "message": "Pakeisti"
+  },
+  "cleartext_read_error": {
+    "message": "Nepavyko perskaityti šio grynojo teksto laiško: $1"
+  },
+  "dashboard_link_encrypt_decrypt_files": {
+    "message": "Šifravimas"
+  },
+  "dashboard_link_manage_domains": {
+    "message": "Įgaliotos sritys"
+  },
+  "dashboard_link_manage_keys": {
+    "message": "Tvarkyti raktus"
+  },
+  "dashboard_link_view_security_log": {
+    "message": "Saugumo žurnalai"
+  },
+  "decrypt_att_frame_help_text": {
+    "message": "Spustelėkite čia, norėdami peržiūrėti laišką"
+  },
+  "decrypt_cleartext_warning": {
+    "message": "Sekantis tekstas nebuvo užšifruotas."
+  },
+  "decrypt_decrypted_files_label": {
+    "message": "Failai iššifruoti"
+  },
+  "decrypt_digital_signature": {
+    "message": "Pasirašytas"
+  },
+  "decrypt_digital_signature_failure": {
+    "message": "Parašas negalioja"
+  },
+  "decrypt_digital_signature_inconsistent": {
+    "message": "Prieštaringi parašai: laiškas ir failas pasirašyti ne tuo pačiu raktu"
+  },
+  "decrypt_digital_signature_missing": {
+    "message": "Trūksta parašo"
+  },
+  "decrypt_digital_signature_null": {
+    "message": "Nežinomas parašas"
+  },
+  "decrypt_digital_signature_null_info": {
+    "message": "Nerastas raktas, kurio ID $1."
+  },
+  "decrypt_digital_signature_null_info_short": {
+    "message": "Rastas nerastas."
+  },
+  "decrypt_digital_signature_sender_mismatch": {
+    "message": "Siuntėjo adreso neatitikimas"
+  },
+  "decrypt_digital_signature_sender_mismatch_tooltip": {
+    "message": "Šiame laiške yra skaitmeninis parašas, bet yra aptiktas neatitikimas. Laiškas buvo išsiųstas iš el. pašto adreso, kuris neatitinka pasirašiusio asmens viešojo rakto."
+  },
+  "decrypt_digital_signature_uncertain_sender": {
+    "message": "Abejotina siuntėjo tapatybė"
+  },
+  "decrypt_file_error_header": {
+    "message": "Failo $1 iššifravimas yra neįmanomas."
+  },
+  "decrypt_frame_help_text": {
+    "message": "Spustelėkite norėdami iššifruoti"
+  },
+  "decrypt_header": {
+    "message": "Iššifruoti duomenis"
+  },
+  "decrypt_header_success": {
+    "message": "Iššifravimas sėkmingas"
+  },
+  "decrypt_home": {
+    "message": "Iššifruoti"
+  },
+  "decrypt_open_viewer_btn_title": {
+    "message": "Atverti Mailvelope žiūryklėje"
+  },
+  "decrypt_show_message_btn": {
+    "message": "Rodyti laišką"
+  },
+  "decrypt_text_area_label": {
+    "message": "Tekstas, kurį iššifruoti"
+  },
+  "decrypt_text_decryption_btn": {
+    "message": "Ar norite taip pat iššifruoti tekstą?"
+  },
+  "decrypt_text_error_header": {
+    "message": "Teksto iššifravimas yra neįmanomas."
+  },
+  "dialog_cancel_btn": {
+    "message": "Atsisakyti"
+  },
+  "dialog_no_btn": {
+    "message": "Ne"
+  },
+  "dialog_no_button": {
+    "message": "Praleisti"
+  },
+  "dialog_popup_close": {
+    "message": "Užverti"
+  },
+  "dialog_save_btn": {
+    "message": "Įrašyti"
+  },
+  "dialog_yes_btn": {
+    "message": "Taip"
+  },
+  "editor_blur_warn": {
+    "message": "Įspėjimas: Tekstų redaktorius prarado fokusą."
+  },
+  "editor_encrypt_button": {
+    "message": "Šifruoti"
+  },
+  "editor_error_header": {
+    "message": "Klaida"
+  },
+  "editor_extra_key_checkbox": {
+    "message": "Pridėti papildomą raktą"
+  },
+  "editor_extra_key_help": {
+    "message": "El. laiškas bus šifruotas naudojant šį papildomą raktą"
+  },
+  "editor_header": {
+    "message": "Rašyti saugų el. laišką"
+  },
+  "editor_key_auto_sign": {
+    "message": "Ar norėtumėte pasirašinėti visus savo el. laiškus?"
+  },
+  "editor_key_auto_sign_link": {
+    "message": "Keisti nustatymus čia"
+  },
+  "editor_key_has_extra_msg": {
+    "message": "El. laiškas bus šifruotas naudojant žemiau įvestą alternatyvų raktą."
+  },
+  "editor_key_no_sign_option": {
+    "message": "Nepasirašytas"
+  },
+  "editor_key_not_found": {
+    "message": "Raktas nerastas!"
+  },
+  "editor_key_not_found_msg": {
+    "message": "Norint šifruoti, visiems gavėjams reikalingas PGP raktas. Vis dėlto, dar galite laišką pasirašyti."
+  },
+  "editor_label_attachments": {
+    "message": "Priedai"
+  },
+  "editor_label_copy_recipient": {
+    "message": "Cc"
+  },
+  "editor_label_message": {
+    "message": "Laiškas"
+  },
+  "editor_label_recipient": {
+    "message": "Gavėjas"
+  },
+  "editor_label_subject": {
+    "message": "Tema"
+  },
+  "editor_remove_upload": {
+    "message": "Šalinti"
+  },
+  "editor_sign_button": {
+    "message": "Tik pasirašyti"
+  },
+  "encrypt_change_signer_dialog_signer_label": {
+    "message": "Pasirinkti parašą"
+  },
+  "encrypt_change_signer_dialog_title": {
+    "message": "Pakeisti parašą"
+  },
+  "encrypt_download_all_button": {
+    "message": "Atsisiųsti visus"
+  },
+  "encrypt_encrypted_files_label": {
+    "message": "Šifruoti failai"
+  },
+  "encrypt_encrypted_for_label": {
+    "message": "Šifruota:"
+  },
+  "encrypt_error": {
+    "message": "Nepavyko šifruoti šio laiško: $1"
+  },
+  "encrypt_file_error_header": {
+    "message": "Failo $1 šifravimas yra neįmanomas."
+  },
+  "encrypt_frame_btn_label": {
+    "message": "Rašyti saugų el. laišką"
+  },
+  "encrypt_header": {
+    "message": "Šifruoti duomenis"
+  },
+  "encrypt_header_success": {
+    "message": "Šifravimas sėkmingas"
+  },
+  "encrypt_home": {
+    "message": "Šifruoti"
+  },
+  "encrypt_no_signer_info": {
+    "message": "Šifruoti duomenys nėra pasirašyti"
+  },
+  "encrypt_remove_signer_btn": {
+    "message": "Šalinti parašą"
+  },
+  "encrypt_signed_as_label": {
+    "message": "Pasirašė"
+  },
+  "encrypt_signer_info": {
+    "message": "Šifruoti duomenys yra pasirašyti jūsų raktu ($1)"
+  },
+  "encrypt_text_encryption_btn": {
+    "message": "Ar norite taip šifruoti tekstą?"
+  },
+  "encrypt_text_error_header": {
+    "message": "Teksto šifravimas yra neįmanomas."
+  },
+  "encrypt_upload_file_warning_too_big": {
+    "message": "Vienas iš failų yra pernelyg didelis."
+  },
+  "ext_description": {
+    "message": "Protect your email conversations and attachments on Gmail, Nextcloud, Outlook & more with PGP and end-to-end encryption."
+  },
+  "ext_name": {
+    "message": "Mailvelope - Secure your email with PGP"
+  },
+  "feature_banner_new_security_background_btn": {
+    "message": "Suasmeninti dabar"
+  },
+  "feature_banner_new_security_background_text": {
+    "message": "Padarykite Mailvelope dar saugesnę, suasmenindami savo saugumo foną."
+  },
+  "file_invalid_signed": {
+    "message": "Parašas negalioja"
+  },
+  "file_not_signed": {
+    "message": "Failas nepasirašytas"
+  },
+  "file_read_error": {
+    "message": "Nepavyko iššifruoti šio failo: $1"
+  },
+  "file_signed": {
+    "message": "Failas pasirašė $1"
+  },
+  "form_back": {
+    "message": "Atgal"
+  },
+  "form_cancel": {
+    "message": "Atsisakyt"
+  },
+  "form_confirm": {
+    "message": "Patvirtinti"
+  },
+  "form_definition_error_signature_invalid": {
+    "message": "Formos parašas negalioja."
+  },
+  "form_destination": {
+    "message": "Paskirtis"
+  },
+  "form_destination_default": {
+    "message": "Šifruoti duomenys bus grąžinti į puslapį."
+  },
+  "form_import": {
+    "message": "Importuoti"
+  },
+  "form_loading": {
+    "message": "Įkėlimo forma"
+  },
+  "form_no": {
+    "message": "Ne"
+  },
+  "form_ok": {
+    "message": "Gerai"
+  },
+  "form_recipient": {
+    "message": "Gavėjas"
+  },
+  "form_save": {
+    "message": "Įrašyti"
+  },
+  "form_sign_error_no_default_key": {
+    "message": "Raktinėje nėra jokio prieinamo privačiojo rakto, skirto pasirašyti formos turinį. Importuokite raktą arba jį sukurkite."
+  },
+  "form_submit": {
+    "message": "Siųsti"
+  },
+  "form_yes": {
+    "message": "Taip"
+  },
+  "general_default_key_always": {
+    "message": "Visada pridėti mano numatytąjį raktą į gavėjų sąrašą. (Tai jums leidžia iššifruoti išsiųstus laiškus)"
+  },
+  "general_default_key_auto_sign": {
+    "message": "Pasirašinėti visus išsiunčiamus laiškus."
+  },
+  "general_gnupg_check_availability": {
+    "message": "Leisti mums patikrinti prieinamumą"
+  },
+  "general_gnupg_not_available": {
+    "message": "GnuPG yra neprieinama"
+  },
+  "general_gnupg_prefer": {
+    "message": "Ar teikiate pirmenybę naudoti GnuPG?"
+  },
+  "general_openpgp_current": {
+    "message": "Šiuo metu naudojate"
+  },
+  "general_openpgp_prefer": {
+    "message": "Kuriai šifravimo vidinei pusei teikiate pirmenybę?"
+  },
+  "general_openpgp_preferences": {
+    "message": "OpenPGP nuostatos"
+  },
+  "general_prefer_gnupg_note": {
+    "message": "Pastaba: viešieji raktai yra sinchronizuojami tarp prieinamų raktinių. Priklausomai nuo privačiųjų raktų prieinamumo, Mailvelope gali nustelbti pageidaujamą šifravimo bibliotekos nustatymą."
+  },
+  "gmail_integration_auth_error_download": {
+    "message": "Mailvelope nėra įgaliota atsisiųsti priedų. Norėdami naudoti šią funkciją, turite suteikti Mailvelope prieigą prie Gmail API."
+  },
+  "gmail_integration_auth_error_send": {
+    "message": "Mailvelope nėra įgaliota siųsti el. laiškų. Norėdami naudoti šią funkciją, turite suteikti Mailvelope prieigą prie Gmail API."
+  },
+  "gmail_integration_quoted_mail_header_forward": {
+    "message": "---------- Persiųstas laiškas ---------\nNuo: $1\nData: $2\nTema: $3\nKam: $4"
+  },
+  "gmail_integration_quoted_mail_header_reply": {
+    "message": "Ties $1, $2 rašė:"
+  },
+  "gmail_integration_sent_success": {
+    "message": "El. laiškas buvo sėkmingai išsiųstas."
+  },
+  "gnupg_connection": {
+    "message": "GnuPG ryšys"
+  },
+  "gnupg_error_unusable_pub_key": {
+    "message": "Patikrinkite ar šie viešieji raktai yra prieinami jūsų GnuPG raktinėje ir, ar jie galioja: $1"
+  },
+  "import_frame_help_text": {
+    "message": "Spustelėkite norėdami importuoti"
+  },
+  "key_default_active_btn_title": {
+    "message": "Raktas nustatytas kaip numatytasis"
+  },
+  "key_default_disabled_btn_title": {
+    "message": "Raktas šifravimo ir pasirašymo operacijoms nebegalioja"
+  },
+  "key_default_inactive_btn_title": {
+    "message": "Nustatyti raktą kaip numatytąjį"
+  },
+  "key_export_btn": {
+    "message": "Eksportuoti"
+  },
+  "key_export_btn_title": {
+    "message": "Eksportuoti raktą"
+  },
+  "key_export_create_file": {
+    "message": "Įrašyti"
+  },
+  "key_export_dialog_copy_to_clipboard": {
+    "message": "Kopijuoti į iškarpinę"
+  },
+  "key_export_dialog_question": {
+    "message": "Kurį raktą norėtumėte eksportuoti?"
+  },
+  "key_export_dialog_title": {
+    "message": "Eksportuoti raktą"
+  },
+  "key_export_filename": {
+    "message": "Failo pavadinimas"
+  },
+  "key_export_warning_private": {
+    "message": "Šiame faile taip pat yra privatieji raktai. Laikykite failą saugioje vietoje ir nesidalinkite juo su kitais."
+  },
+  "key_gen_advanced_btn": {
+    "message": "Išplėstiniai"
+  },
+  "key_gen_demail": {
+    "message": "De-Mail adresas"
+  },
+  "key_gen_error": {
+    "message": "Klaida, generuojant raktą."
+  },
+  "key_gen_experimental": {
+    "message": "eksperimentinis"
+  },
+  "key_gen_expiration": {
+    "message": "Raktas galioja iki"
+  },
+  "key_gen_future_default": {
+    "message": "Ateities numatytasis"
+  },
+  "key_gen_generate": {
+    "message": "Generuoti"
+  },
+  "key_gen_invalid_email": {
+    "message": "Neteisingas el. pašto adresas"
+  },
+  "key_gen_key_size": {
+    "message": "Rakto dydis"
+  },
+  "key_gen_name_help": {
+    "message": "Visas rakto savininko vardas"
+  },
+  "key_gen_pwd": {
+    "message": "Įveskite slaptažodį"
+  },
+  "key_gen_pwd_empty": {
+    "message": "Slaptažodžio laukas yra tuščias"
+  },
+  "key_gen_pwd_reenter": {
+    "message": "Iš naujo įveskite slaptažodį"
+  },
+  "key_gen_pwd_unequal": {
+    "message": "Slaptažodžiai nesutampa"
+  },
+  "key_gen_success": {
+    "message": "Naujas raktas sugeneruotas ir importuotas į raktinę"
+  },
+  "key_gen_upload": {
+    "message": "Išsiųsti viešąjį raktą į Mailvelope raktų serverį (raktas bet kuriuo metu gali būti ištrintas)"
+  },
+  "key_gen_wait_header": {
+    "message": "Rakto generavimas eigoje..."
+  },
+  "key_gen_wait_info": {
+    "message": "Prašome palaukti, rakto generavimas gali užimti iki kelių minučių, priklausomai nuo įvairių faktorių, tokių kaip rakto dydis."
+  },
+  "key_import_bulk_success": {
+    "message": "Raktai sėkmingai importuoti/atnaujinti."
+  },
+  "key_import_contacts_import_btn": {
+    "message": "Importuoti raktus"
+  },
+  "key_import_default_description": {
+    "message": "Patvirtinus, šis raktas bus perduotas į vietinę raktinę:"
+  },
+  "key_import_default_description_plural": {
+    "message": "Patvirtinus, šie raktai bus perduoti į vietinę raktinę:"
+  },
+  "key_import_default_headline": {
+    "message": "Patvirtinkite raktą"
+  },
+  "key_import_error": {
+    "message": "Importavimo klaida."
+  },
+  "key_import_error_no_uid": {
+    "message": "Rakte $1 nerasta jokio galiojančio naudotojo ID"
+  },
+  "key_import_exception": {
+    "message": "Apdorojant raktus, atsirado klaidų"
+  },
+  "key_import_file_label": {
+    "message": "Pasirinkti failus"
+  },
+  "key_import_from_text_btn": {
+    "message": "Importuoti raktą iš iškarpinės"
+  },
+  "key_import_from_text_label": {
+    "message": "Tekstas iš iškarpinės"
+  },
+  "key_import_invalid_text": {
+    "message": "Nerastas teisingas rakto tekstas"
+  },
+  "key_import_invalidated_description": {
+    "message": "Įspėjimas: Šio adresato raktas nebegalioja. Šifruotas bendravimas su $1 daugiau nebeįmanomas. Turite gauti iš šio adresato dabartinį jo raktą."
+  },
+  "key_import_number_of_failed": {
+    "message": "Rakto nepavyko importuoti dėl klaidų."
+  },
+  "key_import_number_of_failed_plural": {
+    "message": "Dėl klaidų nepavyko importuoti $1 raktų"
+  },
+  "key_import_private_exists": {
+    "message": "Privačiojo rakto dalis, kuri atitinka naudotojo $2 esamą viešąjį raktą $1, buvo importuota į raktinę"
+  },
+  "key_import_private_read": {
+    "message": "Nepavyko perskaityti privačiojo rakto: $1"
+  },
+  "key_import_private_success": {
+    "message": "Naudotojo $2 privatusis raktas $1 importuotas į raktinę"
+  },
+  "key_import_private_update": {
+    "message": "Atnaujintas naudotojo $2 privatusis raktas $1"
+  },
+  "key_import_public_read": {
+    "message": "Nepavyko perskaityti viešojo rakto: $1"
+  },
+  "key_import_public_success": {
+    "message": "Naudotojo $2 viešasis raktas $1 importuotas į raktinę"
+  },
+  "key_import_public_update": {
+    "message": "Atnaujintas naudotojo $2 viešasis raktas $1"
+  },
+  "key_import_rotation_add": {
+    "message": "Pridėti į raktinę"
+  },
+  "key_import_rotation_cancel": {
+    "message": "Ne dabar"
+  },
+  "key_import_rotation_description": {
+    "message": "Jei ir toliau naudosite seną raktą, siuntėjui gali nepavykti iššifruoti jūsų laiškų. Jeigu jums kyla įtarimų, paklauskite siuntėjo, naudodami kitą bendravimo kanalą, ar siuntėjas pasikeitė raktą. Vėliau galėsite pridėti arba pašalinti raktą."
+  },
+  "key_import_rotation_headline": {
+    "message": "Siuntėjas pasirašė šį laišką nauju raktu."
+  },
+  "key_import_search_btn": {
+    "message": "Ieškoti"
+  },
+  "key_import_search_disabled": {
+    "message": "Paieška išjungta."
+  },
+  "key_import_search_disabled_descr": {
+    "message": "Aktyvuokite nustatymuose bent vieną raktų šaltinį."
+  },
+  "key_import_search_found": {
+    "message": "Raktas rastas ties:"
+  },
+  "key_import_search_found_modified": {
+    "message": "paskutinį kartą modifikuotas:"
+  },
+  "key_import_search_found_source": {
+    "message": "Šaltinis:"
+  },
+  "key_import_search_invalid": {
+    "message": "Įveskite tinkamą el. pašto adresą, rakto ID (16 skaitmenų) ar kontrolinį kodą (40 skaitmenų)"
+  },
+  "key_import_search_not_found": {
+    "message": "Raktas nėra prieinamas nei viename apieškotame raktų kataloge."
+  },
+  "key_import_search_not_found_header": {
+    "message": "Nerasta jokių raktų."
+  },
+  "key_import_search_ph": {
+    "message": "El. pašto adresas / Rakto ID / Kontrolinis kodas"
+  },
+  "key_import_too_big": {
+    "message": "Rakto tekstas, kurį bandėte importuoti, yra per ilgas, kad jį galima būtų apdoroti. Pabandykite tai padaryti mažesnėmis dalimis."
+  },
+  "key_import_unable": {
+    "message": "Nepavyko importuoti rakto dėl išimties: $1"
+  },
+  "key_keyserver_mod": {
+    "message": "Rakto duomenys Mailvelope raktų serveryje daugiau nebėra naujausi."
+  },
+  "key_keyserver_not": {
+    "message": "Raktas nėra sinchronizuotas su Mailvelope raktų serveriu."
+  },
+  "key_keyserver_remove": {
+    "message": "Galutiniam pašalinimui iš Mailvelope raktų serverio, visiems naudotojo ID buvo išsiųstas patvirtinimo el. laiškas."
+  },
+  "key_keyserver_remove_btn": {
+    "message": "Šalinti visus naudotojo ID"
+  },
+  "key_keyserver_resend_btn": {
+    "message": "Siųsti iš naujo"
+  },
+  "key_keyserver_sync": {
+    "message": "Rakto duomenys Mailvelope raktų serveryje yra naujausi."
+  },
+  "key_keyserver_update": {
+    "message": "Rakto duomenys Mailvelope raktų serveryje atnaujinti."
+  },
+  "key_keyserver_update_btn": {
+    "message": "Atnaujinti"
+  },
+  "key_keyserver_upload": {
+    "message": "Norint sinchronizuoti raktą su Mailvelope raktų serveriu, visiems naudotojo ID buvo išsiųstas patvirtinimo el. laiškas."
+  },
+  "key_keyserver_upload_btn": {
+    "message": "Sinchronizuoti"
+  },
+  "key_recovery_failed": {
+    "message": "Rakto atkūrimas iš atsarginės kopijos nepavyko."
+  },
+  "key_remove_btn": {
+    "message": "Šalinti"
+  },
+  "key_remove_btn_title": {
+    "message": "Šalinti raktą iš raktinės"
+  },
+  "key_remove_dialog_title": {
+    "message": "Šalinti raktą"
+  },
+  "key_revoke_btn": {
+    "message": "Panaikinti"
+  },
+  "key_revoke_btn_title": {
+    "message": "Panaikinti raktą"
+  },
+  "key_revoke_dialog_confirm": {
+    "message": "Ar vis dar norėtumėte panaikinti raktą?"
+  },
+  "key_revoke_dialog_description": {
+    "message": "Panaikinus raktą, jis bus visam laikui nebetinkamas naudoti."
+  },
+  "key_revoke_dialog_title": {
+    "message": "Panaikinti raktą"
+  },
+  "key_set_as_default": {
+    "message": "Nustatyti kaip numatytąjį"
+  },
+  "keybackup_failed": {
+    "message": "Rakto atsarginės kopijos kūrimas nepavyko."
+  },
+  "keybackup_restore_dialog_button": {
+    "message": "Atkurti atsarginę kopiją"
+  },
+  "keybackup_restore_dialog_description": {
+    "message": "Sukurti čia naują atkūrimo lapą, jeigu:"
+  },
+  "keybackup_restore_dialog_headline": {
+    "message": "Rekomendacija: Sukurkite atsarginę kopiją"
+  },
+  "keybackup_restore_dialog_list_1": {
+    "message": "Praradote atkūrimo lapą"
+  },
+  "keybackup_restore_dialog_list_2": {
+    "message": "Naujas atkūrimo lapas turi būti sukurtas dėl saugumo priežasčių."
+  },
+  "keybackup_setup_dialog_button": {
+    "message": "Sukurti atsarginę kopiją"
+  },
+  "keybackup_setup_dialog_description": {
+    "message": "Atsarginė kopija yra reikalinga, norint užtikrinti, kad jūsų šifruotas bendravimas:"
+  },
+  "keybackup_setup_dialog_headline": {
+    "message": "Rekomendacija: Nusistatykite atsarginę kopiją"
+  },
+  "keybackup_setup_dialog_list_1": {
+    "message": "Galės būti atkurtas duomenų praradimo atveju"
+  },
+  "keybackup_setup_dialog_list_2": {
+    "message": "Galės būti perduotas į kitus įrenginius"
+  },
+  "keybackup_waiting_description": {
+    "message": "Dokumentas su jūsų atkūrimo kodu yra ruošiamas."
+  },
+  "keybackup_waiting_headline": {
+    "message": "Kuriama atsarginė kopija!"
+  },
+  "keydetails_change_exp_date_dialog_note": {
+    "message": "Galiojimo pabaigos data taip pat yra pakeista visiems porakčiams. Negaliojantys porakčiai ar porakčiai, kurių galiojimas jau yra pasibaigęs, išliks nepaveikti."
+  },
+  "keydetails_change_exp_date_dialog_title": {
+    "message": "Pakeisti galiojimo pabaigos datą"
+  },
+  "keydetails_change_pwd_dialog_old": {
+    "message": "Senas slaptažodis"
+  },
+  "keydetails_change_pwd_dialog_title": {
+    "message": "Pakeisti slaptažodį"
+  },
+  "keydetails_creation_date": {
+    "message": "Sukurtas"
+  },
+  "keydetails_expiration_date": {
+    "message": "Nustoja galioti"
+  },
+  "keydetails_key_not_expire": {
+    "message": "niekada"
+  },
+  "keydetails_password": {
+    "message": "Slaptažodis"
+  },
+  "keydetails_title": {
+    "message": "Išsamesnė rakto informacija"
+  },
+  "keygen_dialog_password_error_length": {
+    "message": "Slaptažodyje turi būti bent $1 simboliai"
+  },
+  "keygen_dialog_prolog": {
+    "message": "Norėdami apsaugoti savo šifruotą bendravimą, priskirkite savo raktui slaptažodį:"
+  },
+  "keygen_waiting_description": {
+    "message": "Šis procesas gali užimti kelias minutes. Jūsų naršyklė gali tapti nereaguojanti. Prašome būti kantriais."
+  },
+  "keygen_waiting_headline": {
+    "message": "Nustatomas šifruotas bendravimas"
+  },
+  "keygrid_algorithm": {
+    "message": "Algoritmas"
+  },
+  "keygrid_all_keys": {
+    "message": "Visi"
+  },
+  "keygrid_creation_date_short": {
+    "message": "Sukurtas"
+  },
+  "keygrid_default_key": {
+    "message": "Numatytasis raktas"
+  },
+  "keygrid_default_label": {
+    "message": "Numatytasis"
+  },
+  "keygrid_delete_confirmation": {
+    "message": "Ar tikrai norite pašalinti šį raktą?"
+  },
+  "keygrid_export": {
+    "message": "Eksportuoti"
+  },
+  "keygrid_export_title": {
+    "message": "Eksportuoti visus raktus šiame sąraše į failą"
+  },
+  "keygrid_generate_title": {
+    "message": "Generuoti raktą"
+  },
+  "keygrid_import_search_title": {
+    "message": "Ieškoti viešųjų raktų išoriniuose šaltiniuose"
+  },
+  "keygrid_import_title": {
+    "message": "Importuoti raktą"
+  },
+  "keygrid_invalid_userid": {
+    "message": "Neteisingas naudotojo ID"
+  },
+  "keygrid_key_fingerprint": {
+    "message": "PGP kontrolinis kodas"
+  },
+  "keygrid_key_length": {
+    "message": "Ilgis"
+  },
+  "keygrid_key_not_expire": {
+    "message": "Šio rakto galiojimas nesibaigia"
+  },
+  "keygrid_keyid": {
+    "message": "Rakto ID"
+  },
+  "keygrid_primary_key": {
+    "message": "Pagrindinis raktas"
+  },
+  "keygrid_public_keys": {
+    "message": "Viešieji raktai"
+  },
+  "keygrid_refresh": {
+    "message": "Įkelti iš naujo"
+  },
+  "keygrid_refresh_title": {
+    "message": "Įkelti raktinę iš naujo"
+  },
+  "keygrid_signer_unknown": {
+    "message": "Nežinoma kas pasirašė"
+  },
+  "keygrid_sort_type": {
+    "message": "Filtrai"
+  },
+  "keygrid_status_expired": {
+    "message": "nebegaliojantis"
+  },
+  "keygrid_status_invalid": {
+    "message": "negalioja"
+  },
+  "keygrid_status_revoked": {
+    "message": "panaikintas"
+  },
+  "keygrid_status_valid": {
+    "message": "galioja"
+  },
+  "keygrid_subkey": {
+    "message": "Poraktis"
+  },
+  "keygrid_user_email": {
+    "message": "El. paštas"
+  },
+  "keygrid_user_name": {
+    "message": "Vardas"
+  },
+  "keygrid_user_primary": {
+    "message": "Pirminis"
+  },
+  "keygrid_userid_signatures": {
+    "message": "Parašai"
+  },
+  "keygrid_validity_status": {
+    "message": "Būsena"
+  },
+  "keyring_available_settings": {
+    "message": "Žiūrėkite prieinamus nustatymus ties:"
+  },
+  "keyring_backup": {
+    "message": "Raktinės atsarginė kopija"
+  },
+  "keyring_confirm_deletion": {
+    "message": "Ar norite ištrinti raktinę, kurios ID: $1?"
+  },
+  "keyring_confirm_keys": {
+    "message": "Patvirtinti raktą, kurį importuoti"
+  },
+  "keyring_confirm_keys_plural": {
+    "message": "Patvirtinti $1 raktų(-us), kuriuos importuoti"
+  },
+  "keyring_generate_key": {
+    "message": "Generuoti raktą"
+  },
+  "keyring_header": {
+    "message": "Raktų tvarkymas"
+  },
+  "keyring_import_description": {
+    "message": "Galite pridėti raktus arba kaip failą, arba kaip tekstą iš iškarpinės."
+  },
+  "keyring_import_keys": {
+    "message": "Importuoti raktus"
+  },
+  "keyring_import_search_description": {
+    "message": "Raskite viešuosius raktus, kuriuos pridėti į savo raktinę. Mailvelope peržiūri daugelį raktų katalogų ir pasiūlo viešąjį raktą, kuris veikiausiai, yra naudojamas."
+  },
+  "keyring_main": {
+    "message": "Pagrindinė raktinė"
+  },
+  "keyring_private": {
+    "message": "Privatusis"
+  },
+  "keyring_public": {
+    "message": "Viešasis"
+  },
+  "keyring_public_private": {
+    "message": "Raktų poros"
+  },
+  "keyring_remove_dialog_title": {
+    "message": "Ištrinti raktinę"
+  },
+  "keyring_setup": {
+    "message": "Sąranka"
+  },
+  "keyring_setup_generate_key": {
+    "message": "Generuoti raktą"
+  },
+  "keyring_setup_generate_key_explanation": {
+    "message": "Jeigu jūs naudojate šį plėtinį pirmą kartą ir dar neturite raktų poros, tuomet sugeneruokite ją dabar."
+  },
+  "keyring_setup_import_key": {
+    "message": "Importuoti raktą"
+  },
+  "keyring_setup_import_key_explanation": {
+    "message": "Ar jau turite raktų porą kitame įrenginyje? Jūs galite importuoti savo esamus raktus. Tiesiog, eksportuokite raktų porą iš kito įrenginio ir tuomet, importuokite ją čia."
+  },
+  "keyring_setup_no_keypair": {
+    "message": "Raktų pora yra reikalinga, norint šifruoti ir iššifruoti laiškus, o taip pat norint pakviesti savo adresatus ištisinio perdavimo šifruotam bendravimui."
+  },
+  "keyring_setup_no_keypair_heading": {
+    "message": "Šioje raktinėje kol kas nėra raktų poros."
+  },
+  "keyserver_additionals_label": {
+    "message": "Papildomų raktų šaltiniai"
+  },
+  "keyserver_autocrypt_lookup": {
+    "message": "Naudoti raktus iš Autocrypt gaunamojo el. pašto antraščių"
+  },
+  "keyserver_key_binding_header": {
+    "message": "Rakto aptikimas"
+  },
+  "keyserver_key_binding_label": {
+    "message": "Nustatyti dabartinį adresatų raktą ir automatiškai atlikti rakto pasirinkimą."
+  },
+  "keyserver_oks_lookup": {
+    "message": "Automatiškai ieškoti raktų, adresu <0>keys.openpgp.org</0>"
+  },
+  "keyserver_tofu_lookup": {
+    "message": "Naudoti Mailvelope raktų serverį"
+  },
+  "keyserver_verifying_servers": {
+    "message": "Raktų serveris su patvirtinimu el. paštu"
+  },
+  "keyserver_wkd_lookup": {
+    "message": "Užklausti raktus iš gavėjų el. pašto teikėjo (Saityno raktų katalogo)"
+  },
+  "keyusers_add_btn": {
+    "message": "Pridėti naują"
+  },
+  "keyusers_add_btn_title": {
+    "message": "Pridėti naują naudotojo ID"
+  },
+  "keyusers_keyserver": {
+    "message": "Raktų serveris"
+  },
+  "keyusers_keyserver_not": {
+    "message": "nesinchronizuotas"
+  },
+  "keyusers_keyserver_sync": {
+    "message": "sinchronizuotas"
+  },
+  "keyusers_keyserver_unverified": {
+    "message": "nepatvirtintas"
+  },
+  "keyusers_title": {
+    "message": "Priskirti naudotojo ID"
+  },
+  "learn_more_link": {
+    "message": "Sužinoti daugiau"
+  },
+  "message_no_keys": {
+    "message": "Šiam laiškui nerastas joks privatusis raktas. Reikalingi privačiojo rakto ID: $1"
+  },
+  "message_read_error": {
+    "message": "Nepavyko iššifruoti šio laiško: $1"
+  },
+  "nameaddrinput_error_email_exists": {
+    "message": "El. pašto adresas jau yra naudojamas"
+  },
+  "nameaddrinput_error_name_empty": {
+    "message": "Įveskite vardą"
+  },
+  "notification_text_copy_to_clipboard": {
+    "message": "Tekstas nukopijuotas į iškarpinę."
+  },
+  "options_docu": {
+    "message": "Dokumentacija"
+  },
+  "options_home": {
+    "message": "Parinktys"
+  },
+  "options_title": {
+    "message": "Mailvelope parinktys"
+  },
+  "preferred": {
+    "message": "pageidaujama"
+  },
+  "provider_gmail_auth": {
+    "message": "Įgaliojimai"
+  },
+  "provider_gmail_auth_cancel_btn": {
+    "message": "Nutraukti įgaliojimą"
+  },
+  "provider_gmail_auth_readonly": {
+    "message": "skaityti el. laiškus"
+  },
+  "provider_gmail_auth_send": {
+    "message": "siųsti el. laiškus"
+  },
+  "provider_gmail_auth_table_title": {
+    "message": "Google API įgaliojimai"
+  },
+  "provider_gmail_dialog_auth_google_signin": {
+    "message": "Prisijungti naudojant Google"
+  },
+  "provider_gmail_dialog_auth_intro": {
+    "message": "Norint naudoti Gmail integraciją su <0></0>, Mailvelope privalo būti suteikti šie leidimai:"
+  },
+  "provider_gmail_dialog_auth_outro": {
+    "message": "Jei spustelėsite ant prisijungimo mygtuko, bus atvertas Google įgaliojimų suteikimo langas. Pasirinkite el. pašto adreso <0></0> Gmail paskyrą ir vadovaukitės instrukcijomis."
+  },
+  "provider_gmail_dialog_description": {
+    "message": "Gmail API naudojimas išplėčia Mailveilope su Gmail funkcionalumą ir supaprastina šifruotų el. laiškų ir priedų siuntimą bei gavimą."
+  },
+  "provider_gmail_dialog_privacy_policy": {
+    "message": "Skaitykite mūsų Privatumo politiką"
+  },
+  "provider_gmail_dialog_title": {
+    "message": "Gmail API naudojimas"
+  },
+  "provider_gmail_integration": {
+    "message": "Gmail API integracija"
+  },
+  "provider_gmail_integration_info": {
+    "message": "Tam, kad gautų prieigą prie Gmail API, Mailvelope reikia papildomų leidimų. Kai tik Gmail pradėsite naudoti Mailvelope šifravimo funkcijas, būsite palydėti per įgaliojimų suteikimo procesą. Tai pareikalaus, kad prisijungtumėte prie savo Google paskyros."
+  },
+  "provider_gmail_integration_warning": {
+    "message": "Gmail nėra įgaliota naudoti paieškos šabloną <0></0>. Patikrinkite nustatymus ties <1></1>."
+  },
+  "provider_gmail_licensing_dialog_business_btn_info": {
+    "message": "Saugi komunikacija su organizacijomis visame pasaulyje"
+  },
+  "provider_gmail_licensing_dialog_business_btn_price_info": {
+    "message": "naudotojui per mėnesį"
+  },
+  "provider_gmail_licensing_dialog_deactivate_btn": {
+    "message": "Tęsti be Gmail API"
+  },
+  "provider_gmail_licensing_dialog_para_2": {
+    "message": "Galite tęsti nemokamai naudotis Mailvelope su Gmail, bet <0>naudojant API, jūsų darbo eiga</0> rašant ir skaitant šifruotus el. laiškus ir jų priedus, bus <1>žymiai greitesnė ir lengvesnė</1>."
+  },
+  "provider_gmail_licensing_dialog_para_3": {
+    "message": "<0>14 dienų nemokamai</0> išbandykite Mailvelope verslui su aktyvuotu Gmail API:"
+  },
+  "provider_gmail_licensing_dialog_test_btn": {
+    "message": "Nemokamai išbandyti Gmail API"
+  },
+  "provider_gmail_licensing_dialog_title": {
+    "message": "Reikalinga Mailvelope verslo licencija"
+  },
+  "provider_gmail_licensing_table_title": {
+    "message": "Mailvelope licencija"
+  },
+  "provider_gmail_secure_forward_btn": {
+    "message": "Saugiai persiųsti"
+  },
+  "provider_gmail_secure_replyAll_btn": {
+    "message": "Saugiai atsakyti visiems"
+  },
+  "provider_gmail_secure_reply_btn": {
+    "message": "Saugiai atsakyti"
+  },
+  "pwd_dialog_cache_pwd": {
+    "message": "Laikinai prisiminti slaptažodį"
+  },
+  "pwd_dialog_cancel": {
+    "message": "Raktų atrakinimo buvo atsisakyta."
+  },
+  "pwd_dialog_header": {
+    "message": "Įveskite rakto slaptažodį"
+  },
+  "pwd_dialog_reason_add_user": {
+    "message": "Norėdami sukurti naudotojo ID, įveskite savo rakto slaptažodį."
+  },
+  "pwd_dialog_reason_create_backup": {
+    "message": "Norėdami sukurti atkūrimo lapą, įveskite savo rakto slaptažodį."
+  },
+  "pwd_dialog_reason_create_draft": {
+    "message": "Norėdami įrašyti juodraštį, įveskite rakto slaptažodį."
+  },
+  "pwd_dialog_reason_decrypt": {
+    "message": "Norėdami iššifruoti šį laišką, įveskite savo rakto slaptažodį."
+  },
+  "pwd_dialog_reason_editor": {
+    "message": "Norėdami atnaujinti šifruoto bendravimo nustatymus, įveskite savo rakto slaptažodį."
+  },
+  "pwd_dialog_reason_revoke": {
+    "message": "Norėdami panaikinti šį raktą, įveskite savo rakto slaptažodį."
+  },
+  "pwd_dialog_reason_revoke_user": {
+    "message": "Norėdami panaikinti naudotojo ID, įveskite savo rakto slaptažodį."
+  },
+  "pwd_dialog_reason_set_exdate": {
+    "message": "Norėdami raktui nustatyti naują galiojimo pabaigos datą, įveskite savo rakto slaptažodį."
+  },
+  "pwd_dialog_reason_sign": {
+    "message": "Norėdami pasirašyti šį laišką, įveskite savo rakto slaptažodį."
+  },
+  "pwd_dialog_wrong_pwd": {
+    "message": "Neteisingas slaptažodis"
+  },
+  "recovery_sheet_backup_data": {
+    "message": "Jūsų duomenų atsarginė kopija"
+  },
+  "recovery_sheet_backup_local": {
+    "message": "Jeigu norėtumėte išskirtinai įrašyti savo duomenis savo kompiuteryje, tuomet šią parinktį rasite savo $1 paskyros šifruoto bendravimo nustatymuose. "
+  },
+  "recovery_sheet_backup_server": {
+    "message": "Norint padaryti šifruotam bendravimui svarbių duomenų (pvz., rakto slaptažodžio) atsarginę kopiją, mūsų saugumo partneris Mailvelope šifruotai įrašys duomenis mūsų $1 serveriuose."
+  },
+  "recovery_sheet_be_aware": {
+    "message": "Turėkite omenyje"
+  },
+  "recovery_sheet_check_settings": {
+    "message": "Patikrinkite nustatymus savo paskyroje, ties:"
+  },
+  "recovery_sheet_creation_date": {
+    "message": "Sukūrimo data:"
+  },
+  "recovery_sheet_data_lost": {
+    "message": "Be atsarginės kopijos, jūsų šifruoti laiškai negali būti vėl iššifruoti tuo atveju, jei prarasite rakto slaptažodį ar jei susigadins įrenginys ar atsiras problemų su naršyklės plėtiniu!"
+  },
+  "recovery_sheet_encryption_note": {
+    "message": "Šifruoto bendravimo patarimai, naudojant $1"
+  },
+  "recovery_sheet_enter_code": {
+    "message": "Diegimui kituose kompiuteriuose, įveskite atkūrimo raktą, esantį nustatymuose, ties:"
+  },
+  "recovery_sheet_explain_pgp": {
+    "message": "Šifruotas bendravimas su $1 yra PGP pagrįsta procedūra. Ji leidžia siųsti šifruotus el. laiškus ir tuo pačiu metu užtikrina, kad tik jūs ir laiško gavėjas galėtumėte perskaityti laiško turinį."
+  },
+  "recovery_sheet_extension_problems": {
+    "message": "dėl problemų su naršyklės plėtiniu"
+  },
+  "recovery_sheet_forgot_password": {
+    "message": "nes pamiršote savo rakto slaptažodį"
+  },
+  "recovery_sheet_further_info": {
+    "message": "Jūs galite rasti daugiau informacijos ir nustatymo parinkčių savo $1 paskyroje, ties"
+  },
+  "recovery_sheet_header": {
+    "message": "Svarbi informacija!"
+  },
+  "recovery_sheet_in_general": {
+    "message": "Apskritai, yra svarbu"
+  },
+  "recovery_sheet_invite_contacts": {
+    "message": "Savo $1 paskyros šifruoto bendravimo nustatymuose turite galimybę pakviesti papildomus adresatus naudotis šifruotu bendravimu per PGP. Adresatai, kurie jau buvo sėkmingai pakviesti, gali būti atpažinti iš pakabinamos spynos piktogramos, esančios šalia jų el. pašto adreso. "
+  },
+  "recovery_sheet_keep_safe": {
+    "message": "Laikykite išspausdintą šio dokumento versiją saugioje vietoje ir užtikrinkite, kad niekas kitas neturėtų prieigos prie atkūrimo kodo."
+  },
+  "recovery_sheet_key_server": {
+    "message": "Kitus $1 naudotojus, besinaudojančius GMX PGP procedūra, galima rasti tiesiogiai $1 paskyros centriniame kataloge. Jeigu šiame kataloge nenorite turėti jokių įrašų, tuomet išjunkite šią funkciją savo $1 paskyros nustatymuose."
+  },
+  "recovery_sheet_mobile_devices": {
+    "message": "Mobiliuosiuose įrenginiuose"
+  },
+  "recovery_sheet_not_working": {
+    "message": "Jeigu jūsų šifruotas bendravimas daugiau nebeveikia, pvz.,:"
+  },
+  "recovery_sheet_other_computer": {
+    "message": "Kitame kompiuteryje"
+  },
+  "recovery_sheet_other_contacts": {
+    "message": "Šifruotas bendravimas su kitais adresatais"
+  },
+  "recovery_sheet_other_devices": {
+    "message": "Šifruotas bendravimas kituose įrenginiuose"
+  },
+  "recovery_sheet_other_devices_setup": {
+    "message": "Šifruoto bendravimo nustatymas kituose įrenginiuose"
+  },
+  "recovery_sheet_other_problems": {
+    "message": "dėl kitų priežasčių"
+  },
+  "recovery_sheet_pgp_compat": {
+    "message": "Jūs galite saugiai bendrauti su kitais adresatais tuo atveju, jeigu jie taip pat naudoja šifruotą bendravimą (PGP)."
+  },
+  "recovery_sheet_print_block": {
+    "message": "Prašome laikyti šį dokumentą saugioje vietoje!"
+  },
+  "recovery_sheet_print_button": {
+    "message": "Spausdinti"
+  },
+  "recovery_sheet_print_notice": {
+    "message": "Prašome atsispausdinti šį dokumentą ir laikyti jį saugioje vietoje!"
+  },
+  "recovery_sheet_provider_communication": {
+    "message": "Šifruotas bendravimas"
+  },
+  "recovery_sheet_provider_inbox": {
+    "message": "Gauta"
+  },
+  "recovery_sheet_provider_security": {
+    "message": "Saugumas"
+  },
+  "recovery_sheet_provider_settings": {
+    "message": "Nustatymai"
+  },
+  "recovery_sheet_qr_code": {
+    "message": "Nuskenuokite QR kodą savo mobiliuoju įrenginiu."
+  },
+  "recovery_sheet_recommendation": {
+    "message": "Rekomendacija"
+  },
+  "recovery_sheet_recover_data": {
+    "message": "Duomenų atkūrimas"
+  },
+  "recovery_sheet_recovery_code": {
+    "message": "Atkūrimo kodas"
+  },
+  "recovery_sheet_subtitle_receipt": {
+    "message": "Šifruoto bendravimo atkūrimo lapas"
+  },
+  "recovery_sheet_subtitle_recover": {
+    "message": "Atkurti šifruotą bendravimą"
+  },
+  "recovery_sheet_trusted_contacts": {
+    "message": "Naudodami GMX adresatus, galite būti tikri, kad rodomi naudotojai, iš tiesų, yra patvirtinti naudotojai. Kita vertus, visada turėtumėte patikrinti adresatų, besinaudojančių kito el. pašto teikėjo adresu, tapatybę."
+  },
+  "recovery_sheet_unknown_third": {
+    "message": "Nustatykite šifruotą bendravimą tik saugiuose įrenginiuose, prie kurių pašaliniai žmonės neturi prieigos."
+  },
+  "recovery_sheet_unlock_backup": {
+    "message": "Jūsų duomenų atsarginė kopija gali būti iššifruota tik šiame atkūrimo lape esančio atkūrimo kodo pagalba."
+  },
+  "reload_tab": {
+    "message": "Norėdami, kad nustatymai įsigaliotų, įkelkite atitinkamus puslapius iš naujo."
+  },
+  "restore_backup_dialog_button": {
+    "message": "Patvirtinti"
+  },
+  "restore_backup_dialog_headline": {
+    "message": "Įveskite savo atkūrimo kodą:"
+  },
+  "restore_password_dialog_button": {
+    "message": "Rodyti"
+  },
+  "restore_password_dialog_headline": {
+    "message": "Jūsų rakto slaptažodis:"
+  },
+  "security_background_color_text": {
+    "message": "2. Pasirinkite mėgstamą spalvą"
+  },
+  "security_background_icons_text": {
+    "message": "1. Pasirinkite mėgstamą piktogramą"
+  },
+  "security_background_text": {
+    "message": "Jūsų saugumo fonas yra rodomas kiekvieno šifruoto laiško fone. Norėdami paversti jį saugiu, turėtumėti jį suasmeninti. Taip galėsite užtikrinti, kad niekas negalės atkurti ir imituoti Mailvelope sąsajos, kad pasiektų jūsų asmeninius duomenis."
+  },
+  "security_cache_header": {
+    "message": "Prisiminti slaptažodžius šiam naršyklės seansui."
+  },
+  "security_cache_help": {
+    "message": "Privalo būti skaičius tarp 1-999"
+  },
+  "security_cache_off": {
+    "message": "Ne."
+  },
+  "security_cache_on": {
+    "message": "Taip, laikyti atmintyje"
+  },
+  "security_cache_time": {
+    "message": "minučių."
+  },
+  "security_display_decrypted": {
+    "message": "Kur bus rodomi iššifruoti laiškai?"
+  },
+  "security_display_inline": {
+    "message": "El. pašto teikėjo puslapyje."
+  },
+  "security_display_popup": {
+    "message": "Atskirame Mailvelope iškylančiajame lange."
+  },
+  "security_hide_armored_head": {
+    "message": "Slėpti Mailvelope versiją ir komentarą PGP pranešimuose."
+  },
+  "security_log_action": {
+    "message": "Veiksmas"
+  },
+  "security_log_add_attachment": {
+    "message": "Paspaustas priedo pridėjimo mygtukas"
+  },
+  "security_log_attachment_download": {
+    "message": "Priedas atsisiųstas"
+  },
+  "security_log_backup_create": {
+    "message": "Spustelėjimas, siekiant sukurti atsarginę kopiją"
+  },
+  "security_log_backup_restore": {
+    "message": "Spustelėjimas, siekiant atkurti atsarginę kopiją"
+  },
+  "security_log_decrypt_ui": {
+    "message": "Iššifruoti"
+  },
+  "security_log_decryption_operation": {
+    "message": "Laiškas iššifruotas naudojant: $1"
+  },
+  "security_log_dialog_cancel": {
+    "message": "Spustelėjimas dialoge, siekiant atsisakyti"
+  },
+  "security_log_dialog_encrypt": {
+    "message": "Spustelėjimas dialoge, siekiant šifruoti"
+  },
+  "security_log_dialog_ok": {
+    "message": "Spustelėjimas dialoge, siekiant patvirtinti"
+  },
+  "security_log_dialog_sign": {
+    "message": "Spustelėjimas dialoge, siekiant pasirašyti"
+  },
+  "security_log_editor": {
+    "message": "Mailvelope redaktorius"
+  },
+  "security_log_email_viewer": {
+    "message": "Iššifruotas PGP el. laiškas"
+  },
+  "security_log_encrypt_form": {
+    "message": "Šifravimo forma"
+  },
+  "security_log_encrypt_ui": {
+    "message": "Šifruoti"
+  },
+  "security_log_encryption_operation": {
+    "message": "Laiškas buvo užšifruotas ir skirtas: $1"
+  },
+  "security_log_import_dialog": {
+    "message": "Importavimo dialogas"
+  },
+  "security_log_key_backup": {
+    "message": "Rakto atsarginė kopija"
+  },
+  "security_log_key_generator": {
+    "message": "Raktų generatorius"
+  },
+  "security_log_password_click": {
+    "message": "Spustelėjimas slaptažodžio dialoge"
+  },
+  "security_log_password_dialog": {
+    "message": "Slaptažodžio dialogas"
+  },
+  "security_log_password_input": {
+    "message": "Įvestis į slaptažodžio dialogą"
+  },
+  "security_log_remove_attachment": {
+    "message": "Priedas pašalintas"
+  },
+  "security_log_restore_backup_click": {
+    "message": "Spustelėjimas atsarginės kopijos atkūrimo dialoge"
+  },
+  "security_log_sign_operation": {
+    "message": "Laiškas buvo pasirašytas, naudojant raktą: $1"
+  },
+  "security_log_source": {
+    "message": "Šaltinis"
+  },
+  "security_log_text": {
+    "message": "Saugumo žurnalas rodo naudotojo veiksmus visuose Mailvelope komponentuose."
+  },
+  "security_log_textarea_click": {
+    "message": "Spustelėjimas teksto srityje"
+  },
+  "security_log_textarea_input": {
+    "message": "Įvestis teksto srityje"
+  },
+  "security_log_textarea_select": {
+    "message": "Žymėjimas teksto srityje"
+  },
+  "security_log_timestamp": {
+    "message": "Laiko žyma"
+  },
+  "security_log_viewer": {
+    "message": "Mailvelope žiūryklė"
+  },
+  "security_openpgp_header": {
+    "message": "OpenPGP nustatymai"
+  },
+  "settings_analytics": {
+    "message": "Analitika"
+  },
+  "settings_general": {
+    "message": "Bendra"
+  },
+  "settings_keyserver": {
+    "message": "Raktų katalogai"
+  },
+  "settings_provider": {
+    "message": "Gmail API"
+  },
+  "settings_security": {
+    "message": "Saugumas"
+  },
+  "settings_security_background": {
+    "message": "Saugumo fonas"
+  },
+  "settings_security_log": {
+    "message": "Saugumo žurnalas"
+  },
+  "settings_watchlist": {
+    "message": "Įgaliotos sritys"
+  },
+  "sign_dialog_header": {
+    "message": "Pasirašyti laišką kaip:"
+  },
+  "sign_error": {
+    "message": "Nepavyko pasirašyti šio laiško: $1"
+  },
+  "signer_unknown": {
+    "message": "Nežinoma"
+  },
+  "text_decrypt_button": {
+    "message": "Iššifruoti"
+  },
+  "upload_attachment": {
+    "message": "Pridėti failą"
+  },
+  "upload_drop": {
+    "message": "Vilkite failą čia, norėdami jį pridėti"
+  },
+  "upload_help": {
+    "message": "Vilkite failą į šį langą arba spustelėkite"
+  },
+  "upload_quota_exceeded_warning": {
+    "message": "Leidžiamas priedo dydis:"
+  },
+  "upload_quota_warning_headline": {
+    "message": "Priedas yra per didelis"
+  },
+  "user_create_btn": {
+    "message": "Sukurti"
+  },
+  "user_create_title": {
+    "message": "Sukurti naudotojo ID"
+  },
+  "user_keyserver_not": {
+    "message": "Naudotojo ID nėra sinchronizuotas su Mailvelope raktų serveriu."
+  },
+  "user_keyserver_remove": {
+    "message": "Galutiniam pašalinimui iš Mailvelope raktų serverio, į $1 buvo išsiųstas patvirtinimo el. laiškas."
+  },
+  "user_keyserver_remove_btn": {
+    "message": "Šalinti naudotojo ID"
+  },
+  "user_keyserver_resend_confirmation_btn": {
+    "message": "Siųsti patvirtinimą iš naujo"
+  },
+  "user_keyserver_sync": {
+    "message": "Naudotojo ID yra sinchronizuotas su Mailvelope raktų serveriu."
+  },
+  "user_keyserver_unverified": {
+    "message": "Patvirtinkite naudotojo ID, norėdami jį sinchronizuoti su Mailvelope raktų serveriu."
+  },
+  "user_keyserver_upload": {
+    "message": "Norint sinchronizuoti su Mailvelope raktų serveriu, buvo išsiųstas el. laiškas su patvirtinimu, adresu $1."
+  },
+  "user_remove_btn": {
+    "message": "Šalinti"
+  },
+  "user_remove_btn_title": {
+    "message": "Šalinti naudotojo ID"
+  },
+  "user_remove_dialog_confirmation": {
+    "message": "Ar norite pašalinti šį naudotojo ID iš savo rakto?"
+  },
+  "user_remove_dialog_keyserver_warning": {
+    "message": "Naudotojo ID taip pat bus pašalintas iš Mailvelope raktų serverio."
+  },
+  "user_remove_dialog_title": {
+    "message": "Šalinti naudotojo ID"
+  },
+  "user_revoke_btn": {
+    "message": "Panaikinti"
+  },
+  "user_revoke_btn_title": {
+    "message": "Panaikinti naudotojo ID"
+  },
+  "user_revoke_dialog_confirmation": {
+    "message": "Ar vis dar norėtumėte panaikinti?"
+  },
+  "user_revoke_dialog_description": {
+    "message": "Panaikinus, naudotojo ID šiam raktui liks visam laikui nebetinkamas naudoti."
+  },
+  "user_revoke_dialog_title": {
+    "message": "Panaikinti naudotojo ID"
+  },
+  "user_title": {
+    "message": "Naudotojo ID"
+  },
+  "usersignatures_title": {
+    "message": "Patvirtinimai"
+  },
+  "verify_error": {
+    "message": "Nepavyko patikrinti šio laiško: $1"
+  },
+  "verify_frame_help_text": {
+    "message": "Spustelėkite, norėdami patikrinti parašą"
+  },
+  "waiting_dialog_decryption_failed": {
+    "message": "Iššifravimas nepavyko."
+  },
+  "watchlist_command_create": {
+    "message": "Pridėti naują įrašą"
+  },
+  "watchlist_delete_confirmation": {
+    "message": "Ar tikrai norite pašalinti šią svetainę iš įgaliotų sričių sąrašo?"
+  },
+  "watchlist_expose_api": {
+    "message": "API"
+  },
+  "watchlist_record_title": {
+    "message": "Įgaliota sritis"
+  },
+  "watchlist_remove_dialog_title": {
+    "message": "Šalinti sritį"
+  },
+  "watchlist_title_active": {
+    "message": "Įgalinta"
+  },
+  "watchlist_title_frame": {
+    "message": "Srities šablonas"
+  },
+  "watchlist_title_https_only": {
+    "message": "Tik HTTPS"
+  },
+  "watchlist_title_scan": {
+    "message": "Įgalinta"
+  },
+  "watchlist_title_site": {
+    "message": "Svetainė"
+  },
+  "word_or": {
+    "message": "arba"
+  },
+  "wrong_restore_code": {
+    "message": "Neteisingas atkūrimo kodas"
+  }
+}
