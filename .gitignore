@@ -1,0 +1,6 @@
+node_modules/
+packages/core-host/dist/
+app/android/
+app/ios/
+app/.expo/
+*.log

@@ -1,0 +1,20 @@
+{
+  "name": "secure-mail-mobile",
+  "private": true,
+  "version": "0.1.0",
+  "license": "AGPL-3.0-only",
+  "workspaces": ["packages/*", "app"],
+  "engines": {"node": ">=22"},
+  "scripts": {
+    "verify:desktop": "scripts/verify-desktop-untouched.sh",
+    "build:core": "npm run build --workspace @securemail/core-host",
+    "test": "npm run verify:desktop && jest",
+    "android": "npm run android --workspace @securemail/app"
+  },
+  "devDependencies": {
+    "jest": "^30.4.2",
+    "typescript": "^5.6.0",
+    "ts-jest": "^29.2.5",
+    "@types/jest": "^29.5.13"
+  }
+}
