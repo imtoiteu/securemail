@@ -1,0 +1,23 @@
+{
+  "name": "@securemail/core-host",
+  "version": "0.1.0",
+  "private": true,
+  "license": "AGPL-3.0-only",
+  "scripts": {
+    "build": "webpack --config webpack.config.cjs --env target=web",
+    "build:test": "webpack --config webpack.config.cjs --env target=node"
+  },
+  "dependencies": {
+    "dompurify": "3.4.7",
+    "openpgp": "5.11.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.29.7",
+    "@babel/preset-env": "^7.29.7",
+    "babel-jest": "^30.4.1",
+    "babel-loader": "^10.1.1",
+    "html-webpack-plugin": "^5.6.3",
+    "webpack": "^5.107.2",
+    "webpack-cli": "^7.0.3"
+  }
+}
