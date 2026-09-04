@@ -1,4 +1,4 @@
-import * as prefs from '../../../../mailvelope/src/modules/prefs';
+import * as prefs from '../../../../../mailvelope/src/modules/prefs';
 
 export function build() {
   return {

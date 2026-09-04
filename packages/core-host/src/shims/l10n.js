@@ -28,3 +28,16 @@ export function get(id, substitutions) {
   }
   return text;
 }
+
+export function set(ids) {
+  register(ids);
+  mapToLocal();
+}
+
+let language = 'en';
+export function setLanguage(next) { language = next; }
+
+/** Desktop uses chrome.i18n.getUILanguage(); the app injects the locale instead. */
+export function localizeDateTime(date, options = {}) {
+  return date.toLocaleDateString(language, options);
+}

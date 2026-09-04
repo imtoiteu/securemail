@@ -88,6 +88,17 @@ test('l10n resolves from injected messages and falls back to the key', () => {
   expect(l10n.get('totally_missing_key')).toBe('totally_missing_key');
 });
 
+test('l10n exports every binding the bundled desktop code imports', () => {
+  const l10n = require('../src/shims/l10n.js');
+  // The desktop lib/l10n.js exports these; the controller tree is reachable
+  // from pgpModel via keyringSync -> sync.controller, so all of them are used.
+  for (const name of ['map', 'register', 'mapToLocal', 'get', 'set', 'localizeDateTime']) {
+    expect(l10n[name]).toBeDefined();
+  }
+  l10n.setLanguage('vi');
+  expect(typeof l10n.localizeDateTime(new Date('2026-09-04'))).toBe('string');
+});
+
 test('lib-mvelo exposes only what the core uses, and traps the rest', async () => {
   installChromeShim({storage: memoryBackend()});
   const mvelo = require('../src/shims/lib-mvelo.js').default;

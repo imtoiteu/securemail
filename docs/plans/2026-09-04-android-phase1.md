@@ -1391,7 +1391,7 @@ Expected: FAIL — the registry cannot resolve `./handlers/keyring`
 Create `mobile/packages/core-host/src/handlers/keyring.js`:
 
 ```js
-import {MAIN_KEYRING_ID} from '../../../../mailvelope/src/lib/constants';
+import {MAIN_KEYRING_ID} from '../../../../../mailvelope/src/lib/constants';
 
 const kid = params => params.keyringId || MAIN_KEYRING_ID;
 
@@ -1469,7 +1469,7 @@ export function build({keyring}) {
 Create `mobile/packages/core-host/src/handlers/app.js`:
 
 ```js
-import * as defaults from '../../../../mailvelope/src/modules/defaults';
+import * as defaults from '../../../../../mailvelope/src/modules/defaults';
 
 export function build({session, passphrase}) {
   return {
@@ -1502,7 +1502,7 @@ lock and an internal relock converge on identical state.
 Create `mobile/packages/core-host/src/handlers/prefs.js`:
 
 ```js
-import * as prefs from '../../../../mailvelope/src/modules/prefs';
+import * as prefs from '../../../../../mailvelope/src/modules/prefs';
 
 export function build() {
   return {
@@ -1744,7 +1744,7 @@ callers reach `pwdCache.unlock` with an explicit password anyway.
 Create `mobile/packages/core-host/src/handlers/crypto.js`:
 
 ```js
-import {MAIN_KEYRING_ID} from '../../../../mailvelope/src/lib/constants';
+import {MAIN_KEYRING_ID} from '../../../../../mailvelope/src/lib/constants';
 
 const kid = params => params.keyringId || MAIN_KEYRING_ID;
 const SOURCE = 'securemail-mobile';
@@ -1901,7 +1901,7 @@ Expected: FAIL — cannot resolve `./handlers/backup`
 Create `mobile/packages/core-host/src/handlers/backup.js`:
 
 ```js
-import {MAIN_KEYRING_ID} from '../../../../mailvelope/src/lib/constants';
+import {MAIN_KEYRING_ID} from '../../../../../mailvelope/src/lib/constants';
 
 const kid = params => params.keyringId || MAIN_KEYRING_ID;
 

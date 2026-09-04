@@ -19,8 +19,12 @@ const SWAPS = [
 const swapPlugin = new webpack.NormalModuleReplacementPlugin(/.*/, resource => {
   if (!resource.request.startsWith('.')) return;
   const resolved = path.resolve(resource.context, resource.request);
-  const withExt = path.extname(resolved) ? resolved : `${resolved}.js`;
-  const hit = SWAPS.find(([target]) => target === withExt);
+  // Do NOT use path.extname() to decide whether to append '.js':
+  // extname('lib/browser.runtime') is '.runtime', so the extension-less import
+  // '../lib/browser.runtime' would never match and the gpgme shim would be
+  // silently skipped. Test both spellings instead.
+  const candidates = [resolved, `${resolved}.js`];
+  const hit = SWAPS.find(([target]) => candidates.includes(target));
   if (hit) resource.request = hit[1];
 });
 

@@ -17,7 +17,8 @@ export default {
       testEnvironment: 'node',
       testMatch: ['<rootDir>/packages/core-host/test/**/*.test.js'],
       transform: {'\\.js$': ['babel-jest', {configFile: coreHostBabel}]},
-      transformIgnorePatterns: []
+      transformIgnorePatterns: [],
+      setupFiles: [join(root, 'packages/core-host/test/setup.js')]
     }
   ]
 };

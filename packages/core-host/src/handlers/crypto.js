@@ -1,4 +1,4 @@
-import {MAIN_KEYRING_ID} from '../../../../mailvelope/src/lib/constants';
+import {MAIN_KEYRING_ID} from '../../../../../mailvelope/src/lib/constants';
 
 const kid = params => params.keyringId || MAIN_KEYRING_ID;
 const SOURCE = 'securemail-mobile';
