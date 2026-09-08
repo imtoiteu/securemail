@@ -478,5 +478,1403 @@
   "onboarding_success_help_install": {
     "description": "Help link label",
     "message": "Hướng dẫn cài đặt"
+  },
+  "settings_language": {
+    "message": "Ngôn ngữ"
+  },
+  "settings_language_browser": {
+    "message": "Theo trình duyệt"
+  },
+  "settings_language_note": {
+    "message": "Thay đổi ngôn ngữ sẽ tải lại trang tùy chọn. Các nút Secure Mail hiển thị bên trong Gmail vẫn theo ngôn ngữ của trình duyệt."
+  },
+  "pwd_dialog_cache_pwd": {
+    "message": "Ghi nhớ mật khẩu tạm thời"
+  },
+  "pwd_dialog_cancel": {
+    "message": "Việc mở khóa đã bị hủy."
+  },
+  "pwd_dialog_header": {
+    "message": "Nhập mật khẩu khóa"
+  },
+  "pwd_dialog_reason_add_user": {
+    "message": "Vui lòng nhập mật khẩu khóa để tạo định danh người dùng."
+  },
+  "pwd_dialog_reason_create_backup": {
+    "message": "Vui lòng nhập mật khẩu khóa để tạo phiếu khôi phục."
+  },
+  "pwd_dialog_reason_create_draft": {
+    "message": "Nhập mật khẩu khóa để lưu bản nháp."
+  },
+  "pwd_dialog_reason_decrypt": {
+    "message": "Vui lòng nhập mật khẩu khóa để giải mã thư này."
+  },
+  "pwd_dialog_reason_editor": {
+    "message": "Vui lòng nhập mật khẩu khóa để cập nhật cài đặt cho liên lạc được mã hóa."
+  },
+  "pwd_dialog_reason_revoke": {
+    "message": "Vui lòng nhập mật khẩu khóa để thu hồi khóa này."
+  },
+  "pwd_dialog_reason_revoke_user": {
+    "message": "Vui lòng nhập mật khẩu khóa để thu hồi định danh người dùng."
+  },
+  "pwd_dialog_reason_set_exdate": {
+    "message": "Vui lòng nhập mật khẩu khóa để đặt ngày hết hạn mới cho khóa."
+  },
+  "pwd_dialog_reason_sign": {
+    "message": "Vui lòng nhập mật khẩu khóa để ký thư này."
+  },
+  "pwd_dialog_wrong_pwd": {
+    "message": "Sai mật khẩu"
+  },
+  "form_definition_error_signature_invalid": {
+    "message": "Chữ ký của biểu mẫu không hợp lệ."
+  },
+  "form_destination": {
+    "message": "Nơi nhận"
+  },
+  "form_destination_default": {
+    "message": "Dữ liệu đã mã hóa sẽ được trả về trang web."
+  },
+  "form_loading": {
+    "message": "Đang tải biểu mẫu"
+  },
+  "form_no": {
+    "message": "Không"
+  },
+  "form_recipient": {
+    "message": "Người nhận"
+  },
+  "form_sign_error_no_default_key": {
+    "message": "Không có khóa riêng tư nào trong chùm khóa để ký nội dung biểu mẫu. Vui lòng nhập hoặc tạo một khóa."
+  },
+  "form_submit": {
+    "message": "Gửi"
+  },
+  "form_yes": {
+    "message": "Có"
+  },
+  "alert_header_important": {
+    "message": "Quan trọng!"
+  },
+  "alert_header_notice": {
+    "message": "Lưu ý:"
+  },
+  "alert_invalid_domainmatchpattern_warning": {
+    "message": "Mẫu tên miền phải có dạng [*.]host.name.tld[:port]."
+  },
+  "alert_no_domainmatchpattern_warning": {
+    "message": "Cần ít nhất một mẫu tên miền."
+  },
+  "general_default_key_always": {
+    "message": "Luôn thêm khóa mặc định của tôi vào danh sách người nhận. (Nhờ đó bạn có thể giải mã thư đã gửi)"
+  },
+  "general_default_key_auto_sign": {
+    "message": "Ký tất cả thư gửi đi."
+  },
+  "general_gnupg_check_availability": {
+    "message": "Cho phép kiểm tra tình trạng sẵn có"
+  },
+  "general_gnupg_installed_question": {
+    "message": "Bạn đã cài GnuPG chưa? Nếu chưa, <0>tải về tại đây</0>. Để kiểm tra lại, <1>khởi động lại Secure Mail</1>. Nếu bạn chắc chắn đã cài, vui lòng làm theo <2>trang wiki này</2> để đảm bảo đã thiết lập đúng."
+  },
+  "general_gnupg_not_available": {
+    "message": "GnuPG không khả dụng"
+  },
+  "general_gnupg_prefer": {
+    "message": "Bạn muốn ưu tiên dùng GnuPG?"
+  },
+  "general_openpgp_current": {
+    "message": "Bạn đang sử dụng"
+  },
+  "general_openpgp_prefer": {
+    "message": "Bạn muốn ưu tiên bộ máy mã hóa nào?"
+  },
+  "general_openpgp_preferences": {
+    "message": "Tùy chọn OpenPGP"
+  },
+  "general_prefer_gnupg_note": {
+    "message": "Lưu ý: khóa công khai được đồng bộ giữa các chùm khóa hiện có. Tùy theo khóa riêng tư nào sẵn có, Secure Mail sẽ chọn bộ máy mã hóa phù hợp."
+  },
+  "settings_analytics": {
+    "message": "Thống kê"
+  },
+  "settings_general": {
+    "message": "Chung"
+  },
+  "settings_keyserver": {
+    "message": "Thư mục khóa"
+  },
+  "settings_provider": {
+    "message": "Gmail API"
+  },
+  "settings_security": {
+    "message": "Bảo mật"
+  },
+  "settings_security_background": {
+    "message": "Nền bảo mật"
+  },
+  "settings_security_log": {
+    "message": "Nhật ký bảo mật"
+  },
+  "settings_watchlist": {
+    "message": "Tên miền được phép"
+  },
+  "keyring_backup": {
+    "message": "Sao lưu chùm khóa"
+  },
+  "keyring_confirm_deletion": {
+    "message": "Bạn có muốn xóa chùm khóa có ID: $1?"
+  },
+  "keyring_confirm_keys_plural": {
+    "message": "Xác nhận nhập $1 khóa"
+  },
+  "keyring_generate_key": {
+    "message": "Tạo khóa"
+  },
+  "keyring_import_keys": {
+    "message": "Nhập khóa"
+  },
+  "keyring_main": {
+    "message": "Chùm khóa chính"
+  },
+  "keyring_private": {
+    "message": "Riêng tư"
+  },
+  "keyring_public": {
+    "message": "Công khai"
+  },
+  "keyring_public_private": {
+    "message": "Cặp khóa"
+  },
+  "keyring_remove_dialog_title": {
+    "message": "Xóa chùm khóa"
+  },
+  "keyring_setup": {
+    "message": "Thiết lập"
+  },
+  "keydetails_change_exp_date_dialog_note": {
+    "message": "Ngày hết hạn cũng được thay đổi cho tất cả khóa phụ. Các khóa phụ không hợp lệ hoặc đã hết hạn vẫn giữ nguyên."
+  },
+  "keydetails_change_exp_date_dialog_title": {
+    "message": "Đổi ngày hết hạn"
+  },
+  "keydetails_change_pwd_dialog_old": {
+    "message": "Mật khẩu cũ"
+  },
+  "keydetails_change_pwd_dialog_title": {
+    "message": "Đổi mật khẩu"
+  },
+  "keydetails_creation_date": {
+    "message": "Ngày tạo"
+  },
+  "keydetails_expiration_date": {
+    "message": "Hết hạn"
+  },
+  "keydetails_key_not_expire": {
+    "message": "không bao giờ"
+  },
+  "keydetails_password": {
+    "message": "Mật khẩu"
+  },
+  "keydetails_title": {
+    "message": "Chi tiết khóa"
+  },
+  "keygrid_all_keys": {
+    "message": "Tất cả"
+  },
+  "keygrid_creation_date_short": {
+    "message": "Ngày tạo"
+  },
+  "keygrid_default_key": {
+    "message": "Khóa mặc định"
+  },
+  "keygrid_delete_confirmation": {
+    "message": "Bạn có chắc muốn xóa khóa này?"
+  },
+  "keygrid_export": {
+    "message": "Xuất"
+  },
+  "keygrid_export_title": {
+    "message": "Xuất tất cả khóa trong danh sách ra tệp"
+  },
+  "keygrid_generate_title": {
+    "message": "Tạo một khóa"
+  },
+  "keygrid_import_search_title": {
+    "message": "Tìm khóa công khai từ nguồn bên ngoài"
+  },
+  "keygrid_import_title": {
+    "message": "Nhập một khóa"
+  },
+  "keygrid_invalid_userid": {
+    "message": "Định danh người dùng không hợp lệ"
+  },
+  "keygrid_key_fingerprint": {
+    "message": "Dấu vân tay PGP"
+  },
+  "keygrid_key_length": {
+    "message": "Độ dài"
+  },
+  "keygrid_keyid": {
+    "message": "Mã khóa"
+  },
+  "keygrid_primary_key": {
+    "message": "Khóa chính"
+  },
+  "keygrid_public_keys": {
+    "message": "Khóa công khai"
+  },
+  "keygrid_refresh": {
+    "message": "Làm mới"
+  },
+  "keygrid_refresh_title": {
+    "message": "Tải lại chùm khóa"
+  },
+  "keygrid_signer_unknown": {
+    "message": "Người ký không xác định"
+  },
+  "decrypt_att_frame_help_text": {
+    "message": "Nhấn vào đây để xem thư"
+  },
+  "decrypt_cleartext_warning": {
+    "message": "Đoạn văn bản sau đây KHÔNG được mã hóa."
+  },
+  "decrypt_decrypted_files_label": {
+    "message": "Tệp đã giải mã"
+  },
+  "decrypt_digital_signature": {
+    "message": "Đã ký"
+  },
+  "decrypt_digital_signature_failure": {
+    "message": "Chữ ký không hợp lệ"
+  },
+  "decrypt_digital_signature_inconsistent": {
+    "message": "Chữ ký không nhất quán: thư và tệp không được ký bằng cùng một khóa"
+  },
+  "decrypt_digital_signature_missing": {
+    "message": "Thiếu chữ ký"
+  },
+  "decrypt_digital_signature_null": {
+    "message": "Chữ ký không xác định"
+  },
+  "decrypt_digital_signature_null_info": {
+    "message": "Không tìm thấy khóa có mã $1."
+  },
+  "decrypt_digital_signature_null_info_short": {
+    "message": "Không tìm thấy khóa."
+  },
+  "decrypt_digital_signature_sender_mismatch": {
+    "message": "Địa chỉ người gửi không khớp"
+  },
+  "decrypt_digital_signature_sender_mismatch_tooltip": {
+    "message": "Thư này có chữ ký số nhưng phát hiện không khớp. Thư được gửi từ một địa chỉ email khác với địa chỉ trong khóa đã ký."
+  },
+  "decrypt_digital_signature_uncertain_sender": {
+    "message": "Danh tính người gửi chưa chắc chắn"
+  },
+  "decrypt_file_error_header": {
+    "message": "Không thể giải mã tệp $1."
+  },
+  "decrypt_frame_help_text": {
+    "message": "Nhấn để giải mã"
+  },
+  "decrypt_header": {
+    "message": "Giải mã dữ liệu"
+  },
+  "decrypt_header_success": {
+    "message": "Giải mã thành công"
+  },
+  "decrypt_no_popup_error": {
+    "message": "Secure Mail không mở được cửa sổ giải mã. Hãy kiểm tra cài đặt chặn cửa sổ bật lên của trình duyệt rồi thử lại."
+  },
+  "decrypt_open_viewer_btn_title": {
+    "message": "Mở trong trình xem Secure Mail"
+  },
+  "decrypt_show_message_btn": {
+    "message": "Xem thư"
+  },
+  "decrypt_text_area_label": {
+    "message": "Văn bản cần giải mã"
+  },
+  "decrypt_text_decryption_btn": {
+    "message": "Bạn có muốn giải mã một đoạn văn bản không?"
+  },
+  "decrypt_text_error_header": {
+    "message": "Không thể giải mã đoạn văn bản này."
+  },
+  "encrypt_change_signer_dialog_signer_label": {
+    "message": "Chọn chữ ký"
+  },
+  "encrypt_change_signer_dialog_title": {
+    "message": "Đổi chữ ký"
+  },
+  "encrypt_download_all_button": {
+    "message": "Tải tất cả"
+  },
+  "encrypt_encrypted_files_label": {
+    "message": "Tệp đã mã hóa"
+  },
+  "encrypt_encrypted_for_label": {
+    "message": "Mã hóa cho"
+  },
+  "encrypt_error": {
+    "message": "Không thể mã hóa thư này: $1"
+  },
+  "encrypt_file_error_header": {
+    "message": "Không thể mã hóa tệp $1."
+  },
+  "encrypt_frame_btn_label": {
+    "message": "Soạn thư bảo mật"
+  },
+  "encrypt_header": {
+    "message": "Mã hóa dữ liệu"
+  },
+  "encrypt_header_success": {
+    "message": "Mã hóa thành công"
+  },
+  "encrypt_no_signer_info": {
+    "message": "Dữ liệu đã mã hóa không được ký"
+  },
+  "encrypt_remove_signer_btn": {
+    "message": "Bỏ chữ ký"
+  },
+  "encrypt_signed_as_label": {
+    "message": "Ký bởi"
+  },
+  "encrypt_signer_info": {
+    "message": "Dữ liệu đã mã hóa được ký bằng khóa của bạn ($1)"
+  },
+  "encrypt_text_encryption_btn": {
+    "message": "Bạn có muốn mã hóa một đoạn văn bản không?"
+  },
+  "encrypt_text_error_header": {
+    "message": "Không thể mã hóa đoạn văn bản này."
+  },
+  "encrypt_upload_file_warning_too_big": {
+    "message": "Một trong các tệp có dung lượng quá lớn."
+  },
+  "editor_blur_warn": {
+    "message": "Cảnh báo: trình soạn thảo đã mất tiêu điểm."
+  },
+  "editor_encrypt_button": {
+    "message": "Mã hóa"
+  },
+  "editor_error_header": {
+    "message": "Lỗi"
+  },
+  "editor_extra_key_checkbox": {
+    "message": "Thêm khóa phụ"
+  },
+  "editor_extra_key_help": {
+    "message": "Thư sẽ được mã hóa thêm bằng khóa này"
+  },
+  "editor_header": {
+    "message": "Soạn thư bảo mật"
+  },
+  "editor_key_auto_sign": {
+    "message": "Bạn có muốn ký tất cả thư của mình không?"
+  },
+  "editor_key_auto_sign_link": {
+    "message": "Thay đổi cài đặt tại đây"
+  },
+  "editor_key_has_extra_msg": {
+    "message": "Thư sẽ được mã hóa bằng khóa thay thế nhập bên dưới."
+  },
+  "editor_key_no_sign_option": {
+    "message": "Không ký"
+  },
+  "editor_key_not_found": {
+    "message": "Không tìm thấy khóa!"
+  },
+  "editor_key_not_found_msg": {
+    "message": "Mọi người nhận đều cần có khóa PGP để mã hóa. Tuy vậy bạn vẫn có thể ký thư."
+  },
+  "editor_label_attachments": {
+    "message": "Tệp đính kèm"
+  },
+  "editor_label_copy_recipient": {
+    "message": "Cc"
+  },
+  "editor_label_message": {
+    "message": "Nội dung"
+  },
+  "editor_label_recipient": {
+    "message": "Người nhận"
+  },
+  "editor_label_subject": {
+    "message": "Tiêu đề"
+  },
+  "editor_remove_upload": {
+    "message": "Xóa"
+  },
+  "editor_sign_button": {
+    "message": "Chỉ ký"
+  },
+  "key_default_active_btn_title": {
+    "message": "Khóa đang được đặt làm khóa mặc định"
+  },
+  "key_default_disabled_btn_title": {
+    "message": "Khóa không hợp lệ cho việc mã hóa và ký"
+  },
+  "key_default_inactive_btn_title": {
+    "message": "Đặt làm khóa mặc định"
+  },
+  "key_export_btn": {
+    "message": "Xuất"
+  },
+  "key_export_btn_title": {
+    "message": "Xuất khóa"
+  },
+  "key_export_create_file": {
+    "message": "Lưu"
+  },
+  "key_export_dialog_copy_to_clipboard": {
+    "message": "Sao chép"
+  },
+  "key_export_dialog_question": {
+    "message": "Bạn muốn xuất khóa nào?"
+  },
+  "key_export_dialog_title": {
+    "message": "Xuất khóa"
+  },
+  "key_export_filename": {
+    "message": "Tên tệp"
+  },
+  "key_export_warning_private": {
+    "message": "Tệp này có chứa cả khóa riêng tư. Hãy cất giữ tệp ở nơi an toàn và tuyệt đối không chia sẻ cho người khác."
+  },
+  "key_gen_demail": {
+    "message": "Địa chỉ De-Mail"
+  },
+  "key_import_bulk_success": {
+    "message": "Đã nhập/cập nhật khóa thành công."
+  },
+  "key_import_contacts_import_btn": {
+    "message": "Nhập khóa"
+  },
+  "key_import_default_headline": {
+    "message": "Xác nhận khóa"
+  },
+  "key_import_error_no_uid": {
+    "message": "Không tìm thấy định danh người dùng hợp lệ trong khóa $1"
+  },
+  "key_import_invalidated_description": {
+    "message": "Cảnh báo: khóa của liên hệ này đã hết hạn. Không thể tiếp tục liên lạc mã hóa với $1"
+  },
+  "key_import_number_of_failed": {
+    "message": "Một khóa không nhập được do lỗi."
+  },
+  "key_import_number_of_failed_plural": {
+    "message": "$1 khóa không nhập được do lỗi."
+  },
+  "key_import_private_exists": {
+    "message": "Đã nhập phần khóa riêng tư khớp với khóa công khai $1 của người dùng $2 vào chùm khóa"
+  },
+  "key_import_private_read": {
+    "message": "Không đọc được khóa riêng tư: $1"
+  },
+  "key_import_private_success": {
+    "message": "Đã nhập khóa riêng tư $1 của người dùng $2 vào chùm khóa"
+  },
+  "key_import_private_update": {
+    "message": "Đã cập nhật khóa riêng tư $1 của người dùng $2"
+  },
+  "key_import_public_read": {
+    "message": "Không đọc được khóa công khai: $1"
+  },
+  "key_import_public_success": {
+    "message": "Đã nhập khóa công khai $1 của người dùng $2 vào chùm khóa"
+  },
+  "key_import_public_update": {
+    "message": "Đã cập nhật khóa công khai $1 của người dùng $2"
+  },
+  "key_import_rotation_add": {
+    "message": "Thêm vào chùm khóa"
+  },
+  "key_import_rotation_cancel": {
+    "message": "Để sau"
+  },
+  "key_import_rotation_description": {
+    "message": "Nếu bạn tiếp tục dùng khóa cũ, người gửi có thể không giải mã được thư của bạn. Nếu bạn chắc chắn khóa mới là của người gửi, hãy thêm vào chùm khóa."
+  },
+  "key_import_rotation_headline": {
+    "message": "Người gửi đã ký thư này bằng một khóa mới."
+  },
+  "key_import_search_btn": {
+    "message": "Tìm"
+  },
+  "key_import_search_disabled": {
+    "message": "Chức năng tìm kiếm đang tắt."
+  },
+  "key_import_search_disabled_descr": {
+    "message": "Hãy bật ít nhất một nguồn khóa trong phần cài đặt."
+  },
+  "key_import_search_found": {
+    "message": "Tìm thấy khóa tại:"
+  },
+  "key_import_search_found_modified": {
+    "message": "chỉnh sửa lần cuối:"
+  },
+  "key_import_search_found_source": {
+    "message": "Nguồn:"
+  },
+  "key_import_search_invalid": {
+    "message": "Nhập địa chỉ email, mã khóa (16 ký tự) hoặc dấu vân tay (40 ký tự) hợp lệ"
+  },
+  "key_import_search_not_found": {
+    "message": "Không tìm thấy khóa trong bất kỳ thư mục khóa nào đã tra cứu."
+  },
+  "key_import_search_not_found_header": {
+    "message": "Không tìm thấy khóa."
+  },
+  "key_import_search_ph": {
+    "message": "Địa chỉ email / Mã khóa / Dấu vân tay"
+  },
+  "key_import_too_big": {
+    "message": "Nội dung khóa bạn muốn nhập quá dài. Hãy thử chia thành nhiều phần nhỏ hơn."
+  },
+  "key_import_unable": {
+    "message": "Không nhập được khóa do lỗi: $1"
+  },
+  "key_keyserver_mod": {
+    "message": "Dữ liệu khóa trên Mailvelope key server không còn cập nhật."
+  },
+  "key_keyserver_not": {
+    "message": "Khóa chưa được đồng bộ với Mailvelope key server."
+  },
+  "key_keyserver_remove": {
+    "message": "Một email xác nhận đã được gửi tới tất cả định danh người dùng để gỡ bỏ hoàn toàn khỏi Mailvelope key server."
+  },
+  "key_keyserver_remove_btn": {
+    "message": "Gỡ tất cả định danh người dùng"
+  },
+  "key_keyserver_resend_btn": {
+    "message": "Gửi lại"
+  },
+  "key_keyserver_sync": {
+    "message": "Dữ liệu khóa trên Mailvelope key server đã được cập nhật."
+  },
+  "key_keyserver_update": {
+    "message": "Dữ liệu khóa trên Mailvelope key server đã được cập nhật."
+  },
+  "key_keyserver_update_btn": {
+    "message": "Cập nhật"
+  },
+  "key_keyserver_upload": {
+    "message": "Để đồng bộ khóa với Mailvelope key server, một email xác nhận đã được gửi tới tất cả định danh người dùng."
+  },
+  "key_keyserver_upload_btn": {
+    "message": "Đồng bộ"
+  },
+  "key_recovery_failed": {
+    "message": "Khôi phục khóa từ bản sao lưu thất bại."
+  },
+  "key_remove_btn": {
+    "message": "Xóa"
+  },
+  "key_remove_btn_title": {
+    "message": "Xóa khóa khỏi chùm khóa"
+  },
+  "key_remove_dialog_title": {
+    "message": "Xóa khóa"
+  },
+  "key_revoke_btn": {
+    "message": "Thu hồi"
+  },
+  "key_revoke_btn_title": {
+    "message": "Thu hồi khóa"
+  },
+  "key_revoke_dialog_confirm": {
+    "message": "Bạn vẫn muốn thu hồi khóa này?"
+  },
+  "key_revoke_dialog_description": {
+    "message": "Sau khi thu hồi, khóa sẽ vĩnh viễn không dùng được nữa."
+  },
+  "key_revoke_dialog_title": {
+    "message": "Thu hồi khóa"
+  },
+  "key_set_as_default": {
+    "message": "Đặt làm mặc định"
+  },
+  "recovery_sheet_backup_data": {
+    "message": "Sao lưu dữ liệu của bạn"
+  },
+  "recovery_sheet_backup_local": {
+    "message": "Nếu bạn chỉ muốn lưu dữ liệu ngay trên máy tính của mình, bạn sẽ tìm thấy tùy chọn này trong phần cài đặt liên lạc mã hóa của tài khoản $1."
+  },
+  "recovery_sheet_backup_server": {
+    "message": "Để sao lưu những dữ liệu quan trọng cho liên lạc mã hóa (ví dụ mật khẩu khóa), dữ liệu sẽ được lưu ở dạng đã mã hóa trên máy chủ $1 bởi đối tác bảo mật Mailvelope."
+  },
+  "recovery_sheet_be_aware": {
+    "message": "Xin lưu ý"
+  },
+  "recovery_sheet_check_settings": {
+    "message": "Vui lòng kiểm tra cài đặt trong tài khoản của bạn tại:"
+  },
+  "recovery_sheet_creation_date": {
+    "message": "Ngày tạo:"
+  },
+  "recovery_sheet_data_lost": {
+    "message": "Nếu không có bản sao lưu, các thư đã mã hóa của bạn sẽ KHÔNG THỂ giải mã lại được nếu bạn mất mật khẩu khóa."
+  },
+  "recovery_sheet_encryption_note": {
+    "message": "Hướng dẫn liên lạc mã hóa với $1"
+  },
+  "recovery_sheet_enter_code": {
+    "message": "Để cài đặt trên máy tính khác, hãy nhập mã khôi phục trong phần cài đặt tại:"
+  },
+  "recovery_sheet_explain_pgp": {
+    "message": "Liên lạc mã hóa với $1 dựa trên quy trình PGP. Nó cho phép bạn gửi thư đã mã hóa mà chỉ người nhận mới đọc được."
+  },
+  "recovery_sheet_extension_problems": {
+    "message": "do trục trặc với tiện ích trình duyệt"
+  },
+  "recovery_sheet_forgot_password": {
+    "message": "do bạn quên mật khẩu khóa"
+  },
+  "recovery_sheet_further_info": {
+    "message": "Bạn có thể tìm thêm thông tin và tùy chọn cài đặt trong tài khoản $1 tại"
+  },
+  "recovery_sheet_header": {
+    "message": "Thông tin quan trọng!"
+  },
+  "recovery_sheet_in_general": {
+    "message": "Nhìn chung, điều quan trọng là"
+  },
+  "recovery_sheet_invite_contacts": {
+    "message": "Trong phần cài đặt liên lạc mã hóa của tài khoản $1, bạn có thể mời các liên hệ khác cùng sử dụng."
+  },
+  "recovery_sheet_keep_safe": {
+    "message": "Hãy cất bản in của tài liệu này ở nơi an toàn và bảo đảm không ai khác tiếp cận được mã khôi phục."
+  },
+  "recovery_sheet_key_server": {
+    "message": "Những người dùng $1 khác đang dùng quy trình PGP của GMX có thể được tìm thấy trực tiếp trong một thư mục tập trung."
+  },
+  "recovery_sheet_mobile_devices": {
+    "message": "Trên thiết bị di động"
+  },
+  "recovery_sheet_not_working": {
+    "message": "Nếu liên lạc mã hóa của bạn không còn hoạt động, ví dụ:"
+  },
+  "recovery_sheet_other_computer": {
+    "message": "Trên một máy tính khác"
+  },
+  "recovery_sheet_other_contacts": {
+    "message": "Liên lạc mã hóa với các liên hệ khác"
+  },
+  "recovery_sheet_other_devices": {
+    "message": "Liên lạc mã hóa trên thiết bị khác"
+  },
+  "recovery_sheet_other_devices_setup": {
+    "message": "Thiết lập liên lạc mã hóa trên thiết bị khác"
+  },
+  "recovery_sheet_other_problems": {
+    "message": "vì lý do khác"
+  },
+  "recovery_sheet_pgp_compat": {
+    "message": "Bạn có thể liên lạc an toàn với các liên hệ khác nếu họ cũng dùng liên lạc mã hóa."
+  },
+  "recovery_sheet_print_block": {
+    "message": "Vui lòng cất giữ tài liệu này ở nơi an toàn!"
+  },
+  "recovery_sheet_print_button": {
+    "message": "In"
+  },
+  "recovery_sheet_print_notice": {
+    "message": "Vui lòng in tài liệu này và cất giữ ở nơi an toàn!"
+  },
+  "recovery_sheet_provider_communication": {
+    "message": "Liên lạc mã hóa"
+  },
+  "recovery_sheet_provider_inbox": {
+    "message": "Hộp thư đến"
+  },
+  "recovery_sheet_provider_security": {
+    "message": "Bảo mật"
+  },
+  "recovery_sheet_provider_settings": {
+    "message": "Cài đặt"
+  },
+  "recovery_sheet_qr_code": {
+    "message": "Quét mã QR bằng thiết bị di động của bạn."
+  },
+  "recovery_sheet_recommendation": {
+    "message": "Khuyến nghị"
+  },
+  "recovery_sheet_recover_data": {
+    "message": "Khôi phục dữ liệu"
+  },
+  "recovery_sheet_recovery_code": {
+    "message": "Mã khôi phục"
+  },
+  "recovery_sheet_subtitle_receipt": {
+    "message": "Phiếu khôi phục cho liên lạc mã hóa"
+  },
+  "recovery_sheet_subtitle_recover": {
+    "message": "Khôi phục liên lạc mã hóa"
+  },
+  "recovery_sheet_trusted_contacts": {
+    "message": "Với các liên hệ GMX, bạn có thể yên tâm rằng những người dùng hiển thị là người dùng hợp lệ. Tuy vậy bạn vẫn nên tự kiểm chứng."
+  },
+  "recovery_sheet_unknown_third": {
+    "message": "Chỉ thiết lập liên lạc mã hóa trên các thiết bị an toàn mà người lạ không thể truy cập."
+  },
+  "recovery_sheet_unlock_backup": {
+    "message": "Bản sao lưu dữ liệu của bạn chỉ có thể giải mã bằng mã khôi phục trên phiếu khôi phục này."
+  },
+  "keybackup_failed": {
+    "message": "Tạo bản sao lưu khóa thất bại."
+  },
+  "keybackup_restore_dialog_button": {
+    "message": "Khôi phục bản sao lưu"
+  },
+  "keybackup_restore_dialog_description": {
+    "message": "Hãy tạo phiếu khôi phục mới tại đây, nếu:"
+  },
+  "keybackup_restore_dialog_headline": {
+    "message": "Khuyến nghị: Tạo bản sao lưu"
+  },
+  "keybackup_restore_dialog_list_1": {
+    "message": "Bạn đã làm mất phiếu khôi phục."
+  },
+  "keybackup_restore_dialog_list_2": {
+    "message": "Cần tạo phiếu khôi phục mới vì lý do an toàn."
+  },
+  "keybackup_setup_dialog_button": {
+    "message": "Tạo bản sao lưu"
+  },
+  "keybackup_setup_dialog_description": {
+    "message": "Bản sao lưu là cần thiết để bảo đảm liên lạc mã hóa của bạn:"
+  },
+  "keybackup_setup_dialog_headline": {
+    "message": "Khuyến nghị: Thiết lập sao lưu"
+  },
+  "keybackup_setup_dialog_list_1": {
+    "message": "Có thể khôi phục khi mất dữ liệu"
+  },
+  "keybackup_setup_dialog_list_2": {
+    "message": "Có thể chuyển sang thiết bị khác"
+  },
+  "keybackup_waiting_description": {
+    "message": "Đang chuẩn bị tài liệu chứa mã khôi phục của bạn."
+  },
+  "keybackup_waiting_headline": {
+    "message": "Đang tạo bản sao lưu!"
+  },
+  "user_create_btn": {
+    "message": "Tạo"
+  },
+  "user_create_title": {
+    "message": "Tạo định danh người dùng"
+  },
+  "user_keyserver_not": {
+    "message": "Định danh người dùng chưa được đồng bộ với Mailvelope key server."
+  },
+  "user_keyserver_remove": {
+    "message": "Một email xác nhận đã được gửi tới $1 để gỡ bỏ hoàn toàn khỏi Mailvelope key server."
+  },
+  "user_keyserver_remove_btn": {
+    "message": "Gỡ định danh người dùng"
+  },
+  "user_keyserver_resend_confirmation_btn": {
+    "message": "Gửi lại xác nhận"
+  },
+  "user_keyserver_sync": {
+    "message": "Định danh người dùng đã được đồng bộ với Mailvelope key server."
+  },
+  "user_keyserver_unverified": {
+    "message": "Vui lòng xác nhận định danh người dùng để đồng bộ với Mailvelope key server."
+  },
+  "user_keyserver_upload": {
+    "message": "Để đồng bộ, một email xác nhận đã được gửi tới $1."
+  },
+  "user_remove_btn": {
+    "message": "Xóa"
+  },
+  "user_remove_btn_title": {
+    "message": "Xóa định danh người dùng"
+  },
+  "user_remove_dialog_confirmation": {
+    "message": "Bạn có muốn xóa định danh người dùng này khỏi khóa của mình?"
+  },
+  "user_remove_dialog_keyserver_warning": {
+    "message": "Định danh người dùng cũng sẽ bị gỡ khỏi Mailvelope key server."
+  },
+  "user_remove_dialog_title": {
+    "message": "Xóa định danh người dùng"
+  },
+  "user_revoke_btn": {
+    "message": "Thu hồi"
+  },
+  "user_revoke_btn_title": {
+    "message": "Thu hồi định danh người dùng"
+  },
+  "user_revoke_dialog_confirmation": {
+    "message": "Bạn vẫn muốn thu hồi?"
+  },
+  "user_revoke_dialog_description": {
+    "message": "Sau khi thu hồi, định danh người dùng của khóa này sẽ vĩnh viễn không dùng được nữa."
+  },
+  "user_revoke_dialog_title": {
+    "message": "Thu hồi định danh người dùng"
+  },
+  "user_title": {
+    "message": "Định danh người dùng"
+  },
+  "security_background_color_text": {
+    "message": "2. Bây giờ hãy chọn một màu bạn thích"
+  },
+  "security_background_icons_text": {
+    "message": "1. Chọn một biểu tượng bạn thích"
+  },
+  "security_background_text": {
+    "message": "Nền bảo mật được hiển thị phía sau mọi thư đã mã hóa. Để thực sự an toàn, hãy chọn tổ hợp mà chỉ bạn nhận ra."
+  },
+  "security_cache_header": {
+    "message": "Ghi nhớ mật khẩu trong phiên làm việc này của trình duyệt."
+  },
+  "security_cache_help": {
+    "message": "Phải là số từ 1 đến 999"
+  },
+  "security_cache_off": {
+    "message": "Không."
+  },
+  "security_cache_on": {
+    "message": "Có, giữ trong bộ nhớ trong"
+  },
+  "security_cache_time": {
+    "message": "phút."
+  },
+  "security_display_decrypted": {
+    "message": "Thư đã giải mã được hiển thị ở đâu?"
+  },
+  "security_display_inline": {
+    "message": "Ngay trên trang của nhà cung cấp email."
+  },
+  "security_display_popup": {
+    "message": "Trong cửa sổ Secure Mail riêng."
+  },
+  "security_hide_armored_head": {
+    "message": "Ẩn phiên bản và chú thích Secure Mail trong thư PGP."
+  },
+  "security_openpgp_header": {
+    "message": "Cài đặt OpenPGP"
+  },
+  "security_log_action": {
+    "message": "Hành động"
+  },
+  "security_log_add_attachment": {
+    "message": "Đã nhấn nút thêm tệp đính kèm"
+  },
+  "security_log_attachment_download": {
+    "message": "Đã tải tệp đính kèm"
+  },
+  "security_log_auth_domain_dialog": {
+    "message": "Hộp thoại cấp quyền tên miền"
+  },
+  "security_log_backup_create": {
+    "message": "Nhấn để tạo bản sao lưu"
+  },
+  "security_log_backup_restore": {
+    "message": "Nhấn để khôi phục bản sao lưu"
+  },
+  "security_log_decrypt_ui": {
+    "message": "Giải mã"
+  },
+  "security_log_decryption_operation": {
+    "message": "Thư đã được giải mã bằng: $1"
+  },
+  "security_log_dialog_cancel": {
+    "message": "Nhấn hủy trong hộp thoại"
+  },
+  "security_log_dialog_encrypt": {
+    "message": "Nhấn mã hóa trong hộp thoại"
+  },
+  "security_log_dialog_ok": {
+    "message": "Nhấn xác nhận trong hộp thoại"
+  },
+  "security_log_dialog_sign": {
+    "message": "Nhấn ký trong hộp thoại"
+  },
+  "security_log_editor": {
+    "message": "Trình soạn thảo Secure Mail"
+  },
+  "security_log_email_viewer": {
+    "message": "Thư PGP đã giải mã"
+  },
+  "security_log_encrypt_form": {
+    "message": "Biểu mẫu mã hóa"
+  },
+  "security_log_encrypt_ui": {
+    "message": "Mã hóa"
+  },
+  "security_log_encryption_operation": {
+    "message": "Thư đã được mã hóa cho: $1"
+  },
+  "security_log_import_dialog": {
+    "message": "Hộp thoại nhập khóa"
+  },
+  "security_log_key_backup": {
+    "message": "Sao lưu khóa"
+  },
+  "security_log_key_generator": {
+    "message": "Bộ tạo khóa"
+  },
+  "security_log_password_click": {
+    "message": "Nhấn trong hộp thoại mật khẩu"
+  },
+  "security_log_password_dialog": {
+    "message": "Hộp thoại mật khẩu"
+  },
+  "security_log_password_input": {
+    "message": "Nhập liệu trong hộp thoại mật khẩu"
+  },
+  "security_log_remove_attachment": {
+    "message": "Đã xóa tệp đính kèm"
+  },
+  "security_log_restore_backup_click": {
+    "message": "Nhấn trong hộp thoại khôi phục sao lưu"
+  },
+  "security_log_sign_operation": {
+    "message": "Thư đã được ký bằng khóa: $1"
+  },
+  "security_log_source": {
+    "message": "Nguồn"
+  },
+  "security_log_text": {
+    "message": "Nhật ký bảo mật ghi lại thao tác của người dùng trong tất cả thành phần của Secure Mail."
+  },
+  "security_log_textarea_click": {
+    "message": "Nhấn trong vùng văn bản"
+  },
+  "security_log_textarea_input": {
+    "message": "Nhập liệu trong vùng văn bản"
+  },
+  "security_log_textarea_select": {
+    "message": "Bôi chọn trong vùng văn bản"
+  },
+  "security_log_timestamp": {
+    "message": "Thời điểm"
+  },
+  "security_log_viewer": {
+    "message": "Trình xem Secure Mail"
+  },
+  "keyserver_additionals_label": {
+    "message": "Nguồn khóa bổ sung"
+  },
+  "keyserver_autocrypt_lookup": {
+    "message": "Dùng khóa từ tiêu đề Autocrypt của thư đến"
+  },
+  "keyserver_key_binding_header": {
+    "message": "Nhận diện khóa"
+  },
+  "keyserver_key_binding_label": {
+    "message": "Tự động xác định khóa hiện tại của liên hệ và chọn khóa"
+  },
+  "keyserver_oks_lookup": {
+    "message": "Tự động tìm khóa trên <0>keys.openpgp.org</0>"
+  },
+  "keyserver_tofu_lookup": {
+    "message": "Dùng Mailvelope key server"
+  },
+  "keyserver_verifying_servers": {
+    "message": "Máy chủ khóa có xác minh email"
+  },
+  "keyserver_wkd_lookup": {
+    "message": "Tra cứu khóa từ nhà cung cấp email của người nhận (Web Key Directory)"
+  },
+  "watchlist_command_create": {
+    "message": "Thêm mục mới"
+  },
+  "watchlist_delete_confirmation": {
+    "message": "Bạn có chắc muốn gỡ trang này khỏi danh sách tên miền được phép?"
+  },
+  "watchlist_expose_api": {
+    "message": "API"
+  },
+  "watchlist_record_title": {
+    "message": "Tên miền được phép"
+  },
+  "watchlist_remove_dialog_title": {
+    "message": "Gỡ tên miền"
+  },
+  "watchlist_title_active": {
+    "message": "Bật"
+  },
+  "watchlist_title_frame": {
+    "message": "Mẫu tên miền"
+  },
+  "watchlist_title_https_only": {
+    "message": "Chỉ HTTPS"
+  },
+  "watchlist_title_scan": {
+    "message": "Bật"
+  },
+  "watchlist_title_site": {
+    "message": "Trang"
+  },
+  "auth_domain_api_label": {
+    "message": "Cho phép API"
+  },
+  "auth_domain_description": {
+    "message": "Bạn có muốn cho phép sử dụng Secure Mail cho tên miền $1?"
+  },
+  "auth_domain_headline": {
+    "message": "Cấp quyền cho tên miền"
+  },
+  "button_analyticsconsent_modal": {
+    "message": "Tiếp tục"
+  },
+  "change_link": {
+    "message": "Thay đổi"
+  },
+  "cleartext_read_error": {
+    "message": "Không đọc được thư dạng văn bản thuần này: $1"
+  },
+  "dialog_cancel_btn": {
+    "message": "Hủy"
+  },
+  "dialog_popup_close": {
+    "message": "Đóng"
+  },
+  "dialog_save_btn": {
+    "message": "Lưu"
+  },
+  "feature_banner_new_security_background_btn": {
+    "message": "Cá nhân hóa ngay"
+  },
+  "feature_banner_new_security_background_text": {
+    "message": "Tăng mức an toàn cho Secure Mail bằng cách cá nhân hóa nền bảo mật của bạn."
+  },
+  "file_invalid_signed": {
+    "message": "Chữ ký không hợp lệ"
+  },
+  "file_not_signed": {
+    "message": "Tệp không được ký"
+  },
+  "file_read_error": {
+    "message": "Không giải mã được tệp này: $1"
+  },
+  "file_signed": {
+    "message": "Tệp được ký bởi $1"
+  },
+  "gmail_integration_auth_error_download": {
+    "message": "Secure Mail chưa được cấp quyền tải tệp đính kèm. Bạn cần cấp cho Secure Mail quyền truy cập Gmail."
+  },
+  "gmail_integration_auth_error_send": {
+    "message": "Secure Mail chưa được cấp quyền gửi thư. Bạn cần cấp cho Secure Mail quyền truy cập Gmail."
+  },
+  "gmail_integration_quoted_mail_header_forward": {
+    "message": "---------- Thư chuyển tiếp ---------\nTừ: $1\nNgày: $2\nTiêu đề: $3\nĐến: $4\n"
+  },
+  "gmail_integration_quoted_mail_header_reply": {
+    "message": "Vào $1, $2 đã viết:"
+  },
+  "gmail_integration_sent_success": {
+    "message": "Thư đã được gửi thành công."
+  },
+  "gnupg_error_unusable_pub_key": {
+    "message": "Vui lòng kiểm tra các khóa công khai sau có trong chùm khóa GnuPG của bạn và còn hợp lệ hay không: $1"
+  },
+  "header_analyticsconsent_modal": {
+    "message": "Cảm ơn bạn đã hỗ trợ!"
+  },
+  "import_frame_help_text": {
+    "message": "Nhấn để nhập khóa"
+  },
+  "keygen_dialog_password_error_length": {
+    "message": "Mật khẩu phải có ít nhất $1 ký tự"
+  },
+  "keygen_dialog_prolog": {
+    "message": "Vui lòng đặt mật khẩu cho khóa của bạn để bảo vệ liên lạc mã hóa:"
+  },
+  "keygen_waiting_description": {
+    "message": "Quá trình này có thể mất vài phút. Trình duyệt có thể tạm thời không phản hồi. Vui lòng kiên nhẫn chờ."
+  },
+  "keygen_waiting_headline": {
+    "message": "Đang thiết lập liên lạc mã hóa"
+  },
+  "keygrid_sort_type": {
+    "message": "Bộ lọc"
+  },
+  "keygrid_status_expired": {
+    "message": "đã hết hạn"
+  },
+  "keygrid_status_invalid": {
+    "message": "không hợp lệ"
+  },
+  "keygrid_status_revoked": {
+    "message": "đã thu hồi"
+  },
+  "keygrid_status_valid": {
+    "message": "hợp lệ"
+  },
+  "keygrid_subkey": {
+    "message": "Khóa phụ"
+  },
+  "keygrid_user_primary": {
+    "message": "Chính"
+  },
+  "keygrid_userid_signatures": {
+    "message": "Chữ ký"
+  },
+  "keygrid_validity_status": {
+    "message": "Trạng thái"
+  },
+  "keyusers_add_btn": {
+    "message": "Thêm mới"
+  },
+  "keyusers_add_btn_title": {
+    "message": "Thêm một định danh người dùng"
+  },
+  "keyusers_keyserver": {
+    "message": "Máy chủ khóa"
+  },
+  "keyusers_keyserver_not": {
+    "message": "chưa đồng bộ"
+  },
+  "keyusers_keyserver_sync": {
+    "message": "đã đồng bộ"
+  },
+  "keyusers_keyserver_unverified": {
+    "message": "chưa xác minh"
+  },
+  "keyusers_title": {
+    "message": "Định danh người dùng đã gán"
+  },
+  "message_no_keys": {
+    "message": "Không tìm thấy khóa riêng tư cho thư này. Cần khóa riêng tư có mã: $1"
+  },
+  "message_read_error": {
+    "message": "Không giải mã được thư này: $1"
+  },
+  "notification_text_copy_to_clipboard": {
+    "message": "Đã sao chép văn bản."
+  },
+  "paragraph_analyticsconsent_modal": {
+    "message": "Bạn có thể tắt bất cứ lúc nào trong phần cài đặt."
+  },
+  "preferred": {
+    "message": "ưu tiên"
+  },
+  "provider_analytics_consent": {
+    "message": "Đồng ý thống kê"
+  },
+  "provider_gmail_auth": {
+    "message": "Quyền đã cấp"
+  },
+  "provider_gmail_auth_cancel_btn": {
+    "message": "Thu hồi quyền"
+  },
+  "provider_gmail_auth_readonly": {
+    "message": "đọc thư"
+  },
+  "provider_gmail_auth_send": {
+    "message": "gửi thư"
+  },
+  "provider_gmail_auth_table_title": {
+    "message": "Quyền Google API"
+  },
+  "provider_gmail_dialog_auth_google_signin": {
+    "message": "Đăng nhập bằng Google"
+  },
+  "provider_gmail_dialog_auth_intro": {
+    "message": "Để dùng tích hợp Gmail cho <0></0>, cần cấp các quyền sau:"
+  },
+  "provider_gmail_dialog_auth_outro": {
+    "message": "Khi bạn nhấn nút đăng nhập, một cửa sổ cấp quyền của Google sẽ mở ra. Hãy chọn tài khoản Gmail ứng với địa chỉ <0></0> và làm theo hướng dẫn."
+  },
+  "provider_gmail_dialog_description": {
+    "message": "Dùng Gmail API mở rộng khả năng của Secure Mail với Gmail và giúp việc gửi, đọc thư mã hóa thuận tiện hơn."
+  },
+  "provider_gmail_dialog_gsuite_alert": {
+    "message": "Tính năng này miễn phí với tài khoản Gmail. Nếu bạn thuộc một tổ chức Google Workspace (<0>workspace.google.com</0>), bạn cần mua giấy phép từ <1>trang web Mailvelope</1>."
+  },
+  "provider_gmail_dialog_privacy_policy": {
+    "message": "Vui lòng đọc Chính sách quyền riêng tư của chúng tôi"
+  },
+  "provider_gmail_dialog_title": {
+    "message": "Sử dụng Gmail API"
+  },
+  "provider_gmail_integration": {
+    "message": "Tích hợp Gmail API"
+  },
+  "provider_gmail_integration_info": {
+    "message": "Secure Mail cần thêm quyền để truy cập Gmail API. Ngay khi bạn sử dụng chức năng tương ứng, bạn sẽ được yêu cầu cấp quyền."
+  },
+  "provider_gmail_integration_warning": {
+    "message": "Gmail chưa được cấp quyền với mẫu tìm kiếm <0></0>. Vui lòng kiểm tra cài đặt trong <1>Tên miền được phép</1>."
+  },
+  "analytics_consent_description": {
+    "message": "Chia sẻ thông tin thống kê tổng hợp và ẩn danh với Secure Mail."
+  },
+  "analytics_consent_disabled_tooltip": {
+    "message": "Bạn chỉ có thể bật thống kê khi cài đặt và nếu được chọn ngẫu nhiên."
+  },
+  "analytics_consent_interstitial_Btn_Learn_More": {
+    "message": "Tìm hiểu thêm"
+  },
+  "analytics_consent_interstitial_Faq": {
+    "message": " Đọc thêm về số liệu Secure Mail trong phần Hỏi đáp."
+  },
+  "analytics_consent_interstitial_We_Collect_Minimal_Data": {
+    "message": "Secure Mail chỉ đếm những bước giúp bạn tiến gần hơn tới việc dùng nó với dịch vụ email của mình. Nó không thu thập nội dung thư của bạn."
+  },
+  "analytics_consent_interstitial_We_Collect_Minimal_Data_Title": {
+    "message": "Chúng tôi thu thập rất ít dữ liệu"
+  },
+  "analytics_consent_interstitial_We_Respect_your_Choice": {
+    "message": "Nếu bạn chọn không tham gia, không có gì được ghi lại. Nếu bạn đồng ý, bạn có thể tắt bất cứ lúc nào."
+  },
+  "analytics_consent_interstitial_We_Respect_your_Choice_Title": {
+    "message": "Chúng tôi tôn trọng lựa chọn của bạn"
+  },
+  "analytics_consent_interstitial_Your_Privacy_is_Preserved_Pt1": {
+    "message": "Secure Mail sử dụng"
+  },
+  "analytics_consent_interstitial_Your_Privacy_is_Preserved_Pt2": {
+    "message": "lưu trữ dữ liệu an toàn mà không gắn với thông tin nhận dạng. Ngoài ra, bạn có thể tắt bất cứ lúc nào."
+  },
+  "analytics_consent_interstitial_Your_Privacy_is_Preserved_Title": {
+    "message": "Quyền riêng tư của bạn được giữ gìn"
+  },
+  "analytics_consent_interstitial_learn_more": {
+    "message": "Tìm hiểu vì sao số liệu là an toàn"
+  },
+  "analytics_consent_interstitial_message": {
+    "message": "Secure Mail đang mời 1% người dùng mới đóng góp số liệu ẩn danh. Nếu bạn đồng ý, Secure Mail sẽ chỉ ghi nhận các bước sử dụng cơ bản."
+  },
+  "analytics_interstitial_header": {
+    "message": "Giúp chúng tôi cải thiện?"
+  },
+  "provider_gmail_licensing_dialog_business_btn_info": {
+    "message": "Liên lạc an toàn với các tổ chức trên toàn thế giới"
+  },
+  "provider_gmail_licensing_dialog_business_btn_price_info": {
+    "message": "mỗi người dùng/tháng"
+  },
+  "provider_gmail_licensing_dialog_deactivate_btn": {
+    "message": "Tiếp tục mà không dùng Gmail API"
+  },
+  "provider_gmail_licensing_dialog_para_1": {
+    "message": "Việc sử dụng Gmail API trong các tổ chức Google Workspace <0>có thu phí</0>."
+  },
+  "provider_gmail_licensing_dialog_para_2": {
+    "message": "Bạn vẫn có thể dùng Secure Mail với Gmail miễn phí, nhưng <0>khi dùng API, quy trình</0> soạn và đọc thư mã hóa cùng tệp đính kèm sẽ <1>nhanh và dễ hơn nhiều</1>."
+  },
+  "provider_gmail_licensing_dialog_para_3": {
+    "message": "Dùng thử Mailvelope Business kèm Gmail API <0>miễn phí 14 ngày</0>:"
+  },
+  "provider_gmail_licensing_dialog_test_btn": {
+    "message": "Dùng thử Gmail API miễn phí"
+  },
+  "provider_gmail_licensing_dialog_title": {
+    "message": "Cần giấy phép Mailvelope Business"
+  },
+  "provider_gmail_licensing_table_caption": {
+    "message": "Giấy phép sử dụng tích hợp Gmail API trong Google Workspace (<0>workspace.google.com</0>) có thể mua từ <1>trang web Mailvelope</1>."
+  },
+  "provider_gmail_licensing_table_title": {
+    "message": "Giấy phép Mailvelope"
+  },
+  "provider_gmail_mismatch_cancel_btn": {
+    "message": "Hủy"
+  },
+  "provider_gmail_mismatch_intro": {
+    "message": "Secure Mail cần một tài khoản Gmail khác với tài khoản mà Google đã cấp quyền."
+  },
+  "provider_gmail_mismatch_label_actual": {
+    "message": "Đã cấp quyền"
+  },
+  "provider_gmail_mismatch_label_expected": {
+    "message": "Cần dùng"
+  },
+  "provider_gmail_mismatch_retry_btn": {
+    "message": "Thử lại"
+  },
+  "provider_gmail_mismatch_step1": {
+    "message": "Nhấn \"Thử lại\" bên dưới để mở lại màn hình chọn tài khoản của Google."
+  },
+  "provider_gmail_mismatch_step2": {
+    "message": "Chọn <0></0>. Nếu không thấy trong danh sách, hãy chọn \"Sử dụng tài khoản khác\" và đăng nhập."
+  },
+  "provider_gmail_mismatch_title": {
+    "message": "Đã cấp quyền cho sai tài khoản Google"
+  },
+  "provider_gmail_mismatch_why_body": {
+    "message": "Chrome có thể đang đăng nhập bằng một tài khoản Google mặc định khác, hoặc bạn đã chọn tài khoản khác ở lần cấp quyền trước."
+  },
+  "provider_gmail_mismatch_why_summary": {
+    "message": "Vì sao lại xảy ra điều này?"
+  },
+  "provider_gmail_secure_forward_btn": {
+    "message": "Chuyển tiếp bảo mật"
+  },
+  "provider_gmail_secure_replyAll_btn": {
+    "message": "Trả lời tất cả bảo mật"
+  },
+  "provider_gmail_secure_reply_btn": {
+    "message": "Trả lời bảo mật"
+  },
+  "reload_tab": {
+    "message": "Vui lòng tải lại các trang liên quan để cài đặt có hiệu lực."
+  },
+  "restore_backup_dialog_button": {
+    "message": "Xác nhận"
+  },
+  "restore_backup_dialog_headline": {
+    "message": "Vui lòng nhập mã khôi phục của bạn:"
+  },
+  "restore_password_dialog_button": {
+    "message": "Hiện"
+  },
+  "restore_password_dialog_headline": {
+    "message": "Mật khẩu khóa của bạn:"
+  },
+  "sign_dialog_header": {
+    "message": "Ký thư với tư cách:"
+  },
+  "sign_error": {
+    "message": "Không ký được thư này: $1"
+  },
+  "signer_unknown": {
+    "message": "Không xác định"
+  },
+  "text_decrypt_button": {
+    "message": "Giải mã"
+  },
+  "upload_attachment": {
+    "message": "Thêm tệp"
+  },
+  "upload_drop": {
+    "message": "Thả tệp vào vùng này để đính kèm"
+  },
+  "upload_help": {
+    "message": "Kéo tệp vào cửa sổ này hoặc"
+  },
+  "upload_quota_exceeded_warning": {
+    "message": "Dung lượng đính kèm cho phép:"
+  },
+  "upload_quota_warning_headline": {
+    "message": "Tệp đính kèm quá lớn"
+  },
+  "usersignatures_title": {
+    "message": "Xác minh"
+  },
+  "verify_error": {
+    "message": "Không xác minh được thư này: $1"
+  },
+  "verify_frame_help_text": {
+    "message": "Nhấn để xác minh chữ ký"
+  },
+  "waiting_dialog_decryption_failed": {
+    "message": "Giải mã thất bại."
+  },
+  "word_or": {
+    "message": "hoặc"
+  },
+  "wrong_restore_code": {
+    "message": "Mã khôi phục không hợp lệ"
   }
 }

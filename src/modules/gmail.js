@@ -4,18 +4,16 @@
  */
 
 import mvelo from '../lib/lib-mvelo';
+import {CLIENT_SECRET} from './oauth.local';
 import {MvError, deDup, str2ab, ab2hex} from '../lib/util';
 import {getUUID, base64EncodeUrl, base64DecodeUrl, byteCount, dataURL2str} from '../lib/util';
 import {ERROR_GMAIL_ACCOUNT_MISMATCH} from '../lib/constants';
 import {buildMailWithHeader, parseSignedMessage} from './mime';
 
 const CLIENT_ID = chrome.runtime.getManifest().oauth2.client_id;
-// Internal Secure Mail OAuth client (imtoiteu project), replacing the
-// upstream Mailvelope credentials that shipped with the fork snapshot.
-// Not confidential: it ships in the bundle and any user can read it. Google
-// requires it because a chromiumapp.org redirect can only be registered on a
-// Web application client. PKCE is what actually protects this flow.
-const CLIENT_SECRET = process.env.SECUREMAIL_OAUTH_SECRET;
+// Kept out of version control: this repository is public and GitHub secret
+// scanning would cause Google to auto-revoke the client. See
+// oauth.local.example.js for how to create it.
 const GOOGLE_API_HOST = 'https://accounts.google.com';
 const GOOGLE_OAUTH_STORE = 'mvelo.oauth.gmail';
 export const GMAIL_SCOPE_USER_EMAIL = 'https://www.googleapis.com/auth/userinfo.email';

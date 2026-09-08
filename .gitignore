@@ -114,3 +114,6 @@ logs/
 *.swp
 *.swo
 /releases/
+
+# Local OAuth client secret — never commit (public repository)
+src/modules/oauth.local.js

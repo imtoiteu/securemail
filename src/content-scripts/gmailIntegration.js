@@ -150,7 +150,7 @@ export default class GmailIntegration {
     editorBtn.style.marginRight = '10px';
     editorBtn.tabIndex = 0;
     editorBtn.type = 'button';
-    editorBtn.dataset.tooltip = 'Mailvelope Editor';
+    editorBtn.dataset.tooltip = 'Secure Mail Editor';
     editorBtn.style.backgroundColor = gmailStyle.backgroundColor;
     editorBtn.style.borderRadius = '50%';
     editorBtn.style.boxShadow = gmailStyle.boxShadow;
