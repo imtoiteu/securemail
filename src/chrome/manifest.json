@@ -39,7 +39,7 @@
     "*://*/*"
   ],
   "oauth2": {
-    "client_id": "119074447949-cvf898un7sfnv2ib7r4hvunqd56jm4c4.apps.googleusercontent.com",
+    "client_id": "490225026961-r7qrhsqgmci2hodo6j5hhqvrb78df8kj.apps.googleusercontent.com",
     "scopes":[
       "https://www.googleapis.com/auth/userinfo.email",
       "https://www.googleapis.com/auth/gmail.readonly",

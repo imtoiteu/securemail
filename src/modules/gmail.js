@@ -10,7 +10,12 @@ import {ERROR_GMAIL_ACCOUNT_MISMATCH} from '../lib/constants';
 import {buildMailWithHeader, parseSignedMessage} from './mime';
 
 const CLIENT_ID = chrome.runtime.getManifest().oauth2.client_id;
-const CLIENT_SECRET = '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';
+// Internal Secure Mail OAuth client (imtoiteu project), replacing the
+// upstream Mailvelope credentials that shipped with the fork snapshot.
+// Not confidential: it ships in the bundle and any user can read it. Google
+// requires it because a chromiumapp.org redirect can only be registered on a
+// Web application client. PKCE is what actually protects this flow.
+const CLIENT_SECRET = process.env.SECUREMAIL_OAUTH_SECRET;
 const GOOGLE_API_HOST = 'https://accounts.google.com';
 const GOOGLE_OAUTH_STORE = 'mvelo.oauth.gmail';
 export const GMAIL_SCOPE_USER_EMAIL = 'https://www.googleapis.com/auth/userinfo.email';
