@@ -8,7 +8,6 @@ import {getUUID} from '../lib/util';
 import {SubController, reloadFrames, setAppDataSlot} from './sub.controller';
 import * as prefs from '../modules/prefs';
 import {hasAnyPrivateKey} from '../modules/keyring';
-import {shouldSeeConsentDialog} from '../lib/analytics';
 
 export default class MenuController extends SubController {
   constructor(port) {
@@ -75,10 +74,8 @@ export default class MenuController extends SubController {
   }
 
   analyticsConsent() {
-    if (shouldSeeConsentDialog()) {
-      this.openApp('/analytics-consent');
-    } else {
-      this.openApp('/onboarding');
-    }
+    // Telemetry and its consent interstitial were removed (see lib/analytics.js).
+    // The port message is kept so the popup's existing call still resolves.
+    this.openApp('/onboarding');
   }
 }

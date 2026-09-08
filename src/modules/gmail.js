@@ -5,7 +5,7 @@
 
 import mvelo from '../lib/lib-mvelo';
 import {CLIENT_SECRET} from './oauth.local';
-import {MvError, deDup, str2ab, ab2hex} from '../lib/util';
+import {MvError, deDup, str2ab} from '../lib/util';
 import {getUUID, base64EncodeUrl, base64DecodeUrl, byteCount, dataURL2str} from '../lib/util';
 import {ERROR_GMAIL_ACCOUNT_MISMATCH} from '../lib/constants';
 import {buildMailWithHeader, parseSignedMessage} from './mime';
@@ -20,7 +20,6 @@ export const GMAIL_SCOPE_USER_EMAIL = 'https://www.googleapis.com/auth/userinfo.
 export const GMAIL_SCOPE_READONLY = 'https://www.googleapis.com/auth/gmail.readonly';
 export const GMAIL_SCOPE_SEND = 'https://www.googleapis.com/auth/gmail.send';
 const GMAIL_SCOPES_DEFAULT = ['openid', GMAIL_SCOPE_USER_EMAIL];
-const MVELO_BILLING_API_HOST = 'https://license.mailvelope.com';
 
 export const MAIL_QUOTA = 25 * 1024 * 1024;
 
@@ -170,58 +169,29 @@ function checkStoredToken(storedData) {
   return storedData.access_token && (storedData.access_token_exp  >= new Date().getTime());
 }
 
-function validateLicense(storedData) {
-  const date = new Date();
-  return Boolean(storedData.mvelo_license_issued) && (new Date(date.getUTCFullYear(), date.getUTCMonth()).getTime() === storedData.mvelo_license_issued);
-}
-
-export async function checkLicense({email, legacyGsuite}) {
-  const storedAuthData = await mvelo.storage.get(GOOGLE_OAUTH_STORE);
-  const storedData = storedAuthData[email];
-  if (!storedData.gsuite) {
-    return;
-  }
-  if (legacyGsuite && storedData.legacyGsuite) {
-    return;
-  }
-  if (validateLicense(storedData)) {
-    return;
-  }
-  const {gsuite, gmail_account_id} = storedData;
-  let valid = false;
-  try {
-    await requestLicense(gsuite, gmail_account_id);
-    valid = true;
-  } catch (e) {
-    if (!legacyGsuite) {
-      throw new MvError(`Mailvelope Business license required to use this feature. ${e.message}`, 'GSUITE_LICENSING_ERROR');
-    }
-  } finally {
-    await storeAuthData(email, {...buildLicenseData(valid), legacyGsuite});
-  }
-}
-
-async function requestLicense(domain, gmail_account_id) {
-  const ab = str2ab(gmail_account_id);
-  const abHash = await crypto.subtle.digest('SHA-256', ab);
-  const hexHash = ab2hex(abHash);
-  const url = `${MVELO_BILLING_API_HOST}/api/v1/getLicense`;
-  const data = {
-    domain,
-    user: hexHash
-  };
-  const result = await fetch(url, {
-    method: 'POST',
-    body: JSON.stringify(data),
-    mode: 'cors',
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  });
-  if (result.status !== 200) {
-    const reply = await result.text();
-    throw new Error(reply);
-  }
+/**
+ * Secure Mail removes the upstream Google Workspace licence check.
+ *
+ * Upstream Mailvelope gated Workspace ("hd" claim) accounts behind a
+ * commercial licence: it POSTed the Workspace domain and a SHA-256 of the
+ * Google account id to the vendor licence endpoint and refused to
+ * decrypt when that call failed. Two reasons that cannot ship here:
+ *
+ *  - Data sovereignty. It sends an organisational identifier and a stable
+ *    per-user pseudonym to a third party on every authorisation. Secure Mail
+ *    is deployed on the premise that no message data and no participant
+ *    metadata leaves the organisation.
+ *  - Availability. An organisation on a Workspace domain — the normal case
+ *    for a unit account — would be unable to read its own mail whenever that
+ *    third-party endpoint is unreachable or the licence lapses. Cryptographic
+ *    availability must not depend on an external commercial service.
+ *
+ * The function is kept (callers in gmail.controller.js and
+ * gmailDecrypt.controller.js still invoke it) but is now a no-op, so no
+ * network request and no account identifier ever leaves the extension.
+ */
+export async function checkLicense() {
+  return;
 }
 
 export async function authorize(email, legacyGsuite, scopes = chrome.runtime.getManifest().oauth2.scopes, {forcePicker = false} = {}) {
@@ -392,24 +362,6 @@ function buildAuthMeta(token) {
   };
   if (token.refresh_token) {
     data.refresh_token = token.refresh_token;
-  }
-  if (token.hd) {
-    data.gsuite = token.hd;
-    data.gmail_account_id = token.sub;
-    if (token.legacyGsuite) {
-      data.legacyGsuite = token.legacyGsuite;
-    }
-  }
-  return data;
-}
-
-function buildLicenseData(valid) {
-  const data = {
-    mvelo_license_issued: 0
-  };
-  if (valid) {
-    const date = new Date();
-    data.mvelo_license_issued = new Date(date.getUTCFullYear(), date.getUTCMonth()).getTime();
   }
   return data;
 }

@@ -342,7 +342,7 @@ describe('ActionMenuWrapper tests', () => {
         });
 
         const helpLink = screen.getByTitle(l10n.map.action_menu_help);
-        expect(helpLink).toHaveAttribute('href', 'https://www.mailvelope.com/faq');
+        expect(helpLink).toHaveAttribute('href', 'https://github.com/imtoiteu/securemail/tree/internal-stable-v1/docs/internal');
         expect(helpLink).toHaveAttribute('target', '_blank');
       });
     });
@@ -357,7 +357,7 @@ describe('ActionMenuWrapper tests', () => {
 
         const logo = container.querySelector('img[alt=""]');
         expect(logo).toBeInTheDocument();
-        expect(logo).toHaveAttribute('src', '../../img/Mailvelope/logo.svg');
+        expect(logo).toHaveAttribute('src', '../../img/secure-mail/icon.svg');
       });
 
       it('should render all main sections', async () => {

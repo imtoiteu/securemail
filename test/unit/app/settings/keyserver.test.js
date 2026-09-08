@@ -360,7 +360,7 @@ describe('KeyServer tests', () => {
 
       it('should render learn more links', () => {
         const {container} = setup();
-        const learnMoreLinks = container.querySelectorAll('a[href*="mailvelope.com/faq"]');
+        const learnMoreLinks = container.querySelectorAll(`a[href*="imtoiteu/securemail"]`);
         expect(learnMoreLinks).toHaveLength(4);
       });
     });

@@ -18,7 +18,6 @@ import './Provider.scss';
 
 const GMAIL_SCOPE_READONLY = 'https://www.googleapis.com/auth/gmail.readonly';
 const GMAIL_SCOPE_SEND = 'https://www.googleapis.com/auth/gmail.send';
-const MV_PRODUCT_PAGE_URL = 'https://mailvelope.com/google-workspace?referrer=mailvelope-extension';
 
 l10n.register([
   'alert_header_important',
@@ -38,22 +37,11 @@ l10n.register([
   'provider_gmail_dialog_auth_intro',
   'provider_gmail_dialog_auth_outro',
   'provider_gmail_dialog_description',
-  'provider_gmail_dialog_gsuite_alert',
   'provider_gmail_dialog_privacy_policy',
   'provider_gmail_dialog_title',
   'provider_gmail_integration',
   'provider_gmail_integration_info',
   'provider_gmail_integration_warning',
-  'provider_gmail_licensing_dialog_business_btn_info',
-  'provider_gmail_licensing_dialog_business_btn_price_info',
-  'provider_gmail_licensing_dialog_deactivate_btn',
-  'provider_gmail_licensing_dialog_para_1',
-  'provider_gmail_licensing_dialog_para_2',
-  'provider_gmail_licensing_dialog_para_3',
-  'provider_gmail_licensing_dialog_test_btn',
-  'provider_gmail_licensing_dialog_title',
-  'provider_gmail_licensing_table_caption',
-  'provider_gmail_licensing_table_title',
   'provider_gmail_mismatch_cancel_btn',
   'provider_gmail_mismatch_intro',
   'provider_gmail_mismatch_label_actual',
@@ -85,7 +73,6 @@ export default class Provider extends React.Component {
       mismatch: null
     };
     this.handleGmailSwitch = this.handleGmailSwitch.bind(this);
-    this.handleTestAPI = this.handleTestAPI.bind(this);
     this.handleMismatchRetry = this.handleMismatchRetry.bind(this);
     this.handleMismatchCancel = this.handleMismatchCancel.bind(this);
   }
@@ -95,28 +82,9 @@ export default class Provider extends React.Component {
     if (/\/auth$/.test(this.props.location.pathname)) {
       const data = await getAppDataSlot();
       this.openOAuthDialog(data);
-    } else if (/\/license$/.test(this.props.location.pathname)) {
-      let {email} = await getAppDataSlot() || {};
-      if (email) {
-        sessionStorage.setItem('license-email', email);
-      } else {
-        email = sessionStorage.getItem('license-email');
-      }
-      this.checkLicense(email);
     }
   }
 
-  async checkLicense(email) {
-    if (!email) {
-      return;
-    }
-    try {
-      await port.send('check-license', {email});
-      await this.loadAuthorisations();
-    } catch (error) {
-      this.setState({showLicenseModal: true});
-    }
-  }
 
   openOAuthDialog({email, legacyGsuite, scopes, gmailCtrlId}) {
     this.setState({showAuthModal: true, email, legacyGsuite, scopes, gmailCtrlId});
@@ -208,10 +176,6 @@ export default class Provider extends React.Component {
     await this.loadAuthorisations();
   }
 
-  handleTestAPI() {
-    this.setState({showLicenseModal: false});
-    window.open(`${MV_PRODUCT_PAGE_URL}&plan=mailvelope-business`, '_blank', 'noreferrer');
-  }
 
   handleGmailSwitch({target}) {
     this.setState({[target.name]: target.checked}, () => this.handleSave());
@@ -246,14 +210,6 @@ export default class Provider extends React.Component {
       >
         <>
           <p><span>{l10n.map.provider_gmail_dialog_description}</span> <a href="https://github.com/imtoiteu/securemail/tree/internal-stable-v1/docs/internal" target="_blank" rel="noopener noreferrer">{l10n.map.learn_more_link}</a></p>
-          {!this.state.legacyGsuite &&
-            <Alert type="warning" header={l10n.map.alert_header_notice}>
-              <Trans id={l10n.map.provider_gmail_dialog_gsuite_alert} components={[
-                <a key="0" href="https://workspace.google.com" target="_blank" rel="noopener noreferrer"></a>,
-                <a key="1" href={MV_PRODUCT_PAGE_URL} target="_blank" rel="noopener noreferrer"></a>
-              ]} />
-            </Alert>
-          }
           <p><Trans id={l10n.map.provider_gmail_dialog_auth_intro} components={[<strong key="0">{this.state.email}</strong>]} /></p>
           <ul>
             {this.state.scopes.map((entry, index) =>
@@ -334,55 +290,8 @@ export default class Provider extends React.Component {
     );
   }
 
-  licenseModal() {
-    return (
-      <Modal
-        isOpen={this.state.showLicenseModal}
-        toggle={() => this.setState(prevState => ({showLicenseModal: !prevState.showLicenseModal}))}
-        size="large"
-        title={l10n.map.provider_gmail_licensing_dialog_title}
-        footer={
-          <div className="modal-footer">
-            <button type="button" onClick={() => this.setState({showLicenseModal: false, gmail_integration: false}, () => this.handleSave())} className="btn btn-secondary flex-grow-1">{l10n.map.provider_gmail_licensing_dialog_deactivate_btn}</button>
-            <button type="button" className="btn btn-primary flex-grow-1" onClick={this.handleTestAPI}>{l10n.map.provider_gmail_licensing_dialog_test_btn}</button>
-          </div>
-        }
-      >
-        <div className="licensing-dialog">
-          <p>
-            <Trans id={l10n.map.provider_gmail_licensing_dialog_para_1} components={[
-              <strong key="0"></strong>
-            ]} />
-          </p>
-          <p>
-            <Trans id={l10n.map.provider_gmail_licensing_dialog_para_2} components={[
-              <strong key="0"></strong>, <strong key="1"></strong>
-            ]} />
-          </p>
-          <p>
-            <Trans id={l10n.map.provider_gmail_licensing_dialog_para_3} components={[
-              <strong key="0"></strong>
-            ]} />
-          </p>
-          <a className="btn btn-light d-flex align-items-center justify-content-between" href={MV_PRODUCT_PAGE_URL} target="_blank" rel="noopener noreferrer">
-            <img className="mr-2" src="../img/Mailvelope/product-business.svg" role="presentation" />
-            <div className="d-flex flex-column align-items-start mr-2">
-              <h3>Business</h3>
-              <span className="text-muted">{l10n.map.provider_gmail_licensing_dialog_business_btn_info}</span>
-            </div>
-            <div className="d-flex flex-column justify-content-center align-items-center mr-2">
-              <span className="price-tag">3 &euro;</span>
-              <span className="price-info text-muted">{l10n.map.provider_gmail_licensing_dialog_business_btn_price_info}</span>
-            </div>
-            <span className="icon icon-arrow-right"></span>
-          </a>
-        </div>
-      </Modal>
-    );
-  }
 
   render() {
-    const gmail_authorized_gsuite = this.state.gmail_authorized_emails.filter(entry => entry.gsuite);
     return (
       <div id="provider">
         <h2 className="mb-4">{l10n.map.settings_provider}</h2>
@@ -430,54 +339,10 @@ export default class Provider extends React.Component {
                 </tbody>
               </table>
             </div>
-            {gmail_authorized_gsuite.length > 0 && (
-              <>
-                <p className="lead mt-3">{l10n.map.provider_gmail_licensing_table_title}</p>
-                <div className="table-responsive">
-                  <table className="table table-provider table-custom mb-0">
-                    <caption>
-                      <Trans id={l10n.map.provider_gmail_licensing_table_caption} components={[
-                        <a key="0" href="https://workspace.google.com" target="_blank" rel="noopener noreferrer"></a>,
-                        <a key="1" href={MV_PRODUCT_PAGE_URL} target="_blank" rel="noopener noreferrer"></a>
-                      ]} />
-                    </caption>
-                    <thead>
-                      <tr>
-                        <th>{l10n.map.keygrid_user_email}</th>
-                        <th className="text-center">{l10n.map.watchlist_title_scan}</th>
-                        <th></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {gmail_authorized_gsuite.map((entry, index) =>
-                        <tr key={index}>
-                          <td>{entry.email}</td>
-                          {entry.mvelo_license_issued ? (
-                            <td className="text-center"><span className="badge badge-pill badge-success">Mailvelope Business</span></td>
-                          ) : (
-                            entry.legacyGsuite ? (
-                              <td className="text-center"><span className="badge badge-pill badge-success">G Suite legacy free</span></td>
-                            ) : (
-                              <td className="text-center"><span className="icon icon-marker text-danger" aria-hidden="true"></span></td>
-                            )
-                          )}
-                          <td className="text-center">
-                            <div className="actions">
-                              <button type="button" onClick={() => this.checkLicense(entry.email)} className="btn btn-sm btn-secondary" disabled={entry.mvelo_license_issued || entry.legacyGsuite ? true : ''}>{l10n.map.keygrid_refresh}</button>
-                            </div>
-                          </td>
-                        </tr>
-                      )}
-                    </tbody>
-                  </table>
-                </div>
-              </>
-            )}
           </div>
         </form>
         {this.authModal()}
         {this.mismatchModal()}
-        {this.licenseModal()}
       </div>
     );
   }

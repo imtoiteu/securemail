@@ -1,169 +1,59 @@
 /**
  * Copyright (C) 2022 Mailvelope GmbH
+ * Copyright (C) 2026 Secure Mail (internal customisation)
  * Licensed under the GNU Affero General Public License version 3
+ *
+ * Telemetry removed.
+ *
+ * Upstream Mailvelope bundles the Clean Insights SDK and, when the build-time
+ * flag `ciActive` is set, reports onboarding milestones to an external metrics
+ * server. The flag ships false, but the SDK, the campaign definitions and the
+ * server URL are all present in the compiled bundle, and the consent
+ * interstitial invites the user to turn reporting on.
+ *
+ * Secure Mail is deployed on the premise that nothing about who uses it, when,
+ * or what they do with it reaches a third party. A disabled-by-default switch
+ * is not the same guarantee as absent code: it can be flipped by a later
+ * upstream merge, and an auditor cannot distinguish "off" from "not there"
+ * without reading the source. The dependency is therefore removed outright, so
+ * `npm ls clean-insights-sdk` reports nothing and no metrics endpoint appears
+ * in any built artefact. `scripts/verify-no-external-endpoints.sh` enforces
+ * this on every build.
+ *
+ * The module keeps its original export surface so the call sites in
+ * pgpModel.js, app.controller.js, menu.controller.js and background.js stay
+ * untouched; every entry point is now inert.
  */
-
-import {BrowserStore, CleanInsights, ConsentState} from 'clean-insights-sdk';
 
 export const ONBOARDING_CAMPAIGN = 'onboarding';
 export const BEGIN = 'Load Extension';
 export const ADD_KEY = 'Added Key';
 export const COMMUNICATION = 'Communication';
+
+/**
+ * Kept because pgpModel.js compares message senders against it. It is a
+ * plain constant, never contacted.
+ */
 export const KEYSERVER_ADDRESS = 'noreply@mailvelope.com';
 
-const ciActive = false;
-
-const TRACKTYPES = {
-  FIRST_PER_ACTION: 'first per action',
-  FIRST_PER_NAME: 'first per name',
-};
-
-const ONBOARDING_CATEGORY = 'onboarding';
-const ONBOARDING_STEPS = [
-  {
-    name: BEGIN,
-    trackType: TRACKTYPES.FIRST_PER_ACTION,
-  },
-  {
-    name: ADD_KEY,
-    trackType: TRACKTYPES.FIRST_PER_ACTION,
-  },
-  {
-    name: COMMUNICATION,
-    trackType: TRACKTYPES.FIRST_PER_NAME,
-  },
-];
-
-const SELECTED_FOR_EXPERIMENT_KEY = 'Selected for Onboarding Experiment';
-const PERCENT_OF_ONBOARDERS_TO_PROMPT = 1;
-
-// Add basic K:V storage so we can keep timestamps and deduplicate actions.
-class BrowserStoreWithKV extends BrowserStore {
-  constructor() {
-    super();
-    const data = this.load();
-    if (data && data.kv) {
-      this.kv = data.kv;
-    } else {
-      this.kv = {};
-    }
-  }
-
-  set(key, value) {
-    this.kv[key] = value;
-  }
-
-  get(key) {
-    return this.kv[key];
-  }
-}
-
-let store;
-let ci;
-
-export function initAnalytics() {
-  if (!ciActive) {
-    return;
-  }
-  store = new BrowserStoreWithKV();
-  ci = new CleanInsights({
-    'server': 'https://metrics.cleaninsights.org/cleaninsights.php',
-    'siteId': 22,
-    'persistEveryNTimes': 1,
-    'campaigns': {
-      [ONBOARDING_CAMPAIGN]: {
-        'start': '2024-03-01T00:00:00-00:00',
-        'end': '2024-12-31T23:59:59-00:00',
-        'aggregationPeriodLength': 1, // days
-        'numberOfPeriods': 30,
-      },
-    }
-  }, store);
-  // By calling this when the extension is initialized, we can make sure we flush the last events out.
-  ci.persistAndSend();
-}
+export function initAnalytics() {}
 
 export function binInto10sIncrements(milliseconds) {
   return Math.floor(milliseconds / (10 * 1000)) * 10;
 }
 
-function getStep(action) {
-  return ONBOARDING_STEPS.find(step => step.name === action);
-}
+export function recordOnboardingStep() {}
 
-function getPrecedingStep(action) {
-  const index = ONBOARDING_STEPS.indexOf(getStep(action));
-  return index > 0 ? ONBOARDING_STEPS[index - 1] : null;
-}
-
-/* Record that an onboarding step was completed and how long it's been since the first time the
- * previous action was completed.
- *
- * Pre-requisite actions are listed in ONBOARDING_STEPS.  Names capture the specific mechanism
- * used to perform the action e.g. "Generate" or "Import".  The same action will be recorded once
- * for each unique name.
- */
-export function recordOnboardingStep(action, name) {
-  if (!ciActive) {
-    return;
-  }
-  const this_step_performed_at = Date.now();
-  const last_step = getPrecedingStep(action);
-  const last_step_timestamp = last_step && store.get(last_step.name);
-  let elapsed = null;
-  if (last_step_timestamp) {
-    elapsed = (this_step_performed_at - last_step_timestamp);  // Report seconds, not milliseconds.
-    elapsed = binInto10sIncrements(elapsed);
-  }
-  if (store.get(action) === undefined) {
-    // Save the timestamp of the first time this action was performed.
-    store.set(action, this_step_performed_at);
-  } else if (getStep(action).trackType === TRACKTYPES.FIRST_PER_ACTION) {
-    return;
-  }
-  // Never record a category, action, name tuple more than once.
-  const can_tuple = [ONBOARDING_CATEGORY, action, name];
-  if (!store.get(can_tuple)) {
-    ci.measureEvent(ONBOARDING_CATEGORY, action, ONBOARDING_CAMPAIGN, name, elapsed);
-    store.set(can_tuple, true);
-    ci.persist();
-  }
-}
-
-/* Decide once whether the user is selected for the experiment.  If they're selected and
- * haven't yet responded to the consent dialog, show it.
- */
+/** Never show the consent interstitial: there is nothing to consent to. */
 export function shouldSeeConsentDialog() {
-  if (!ciActive) {
-    return;
-  }
-  let selected = store.get(SELECTED_FOR_EXPERIMENT_KEY);
-  if (selected === undefined) {
-    selected = Math.random() < (PERCENT_OF_ONBOARDERS_TO_PROMPT / 100);
-    store.set(SELECTED_FOR_EXPERIMENT_KEY, selected);
-    ci.persist();
-  }
-  const hasResponded = ci.stateOfCampaign(ONBOARDING_CAMPAIGN) !== ConsentState.unknown;
-  return selected && !hasResponded;
+  return false;
 }
 
-export function denyCampaign(campaignId) {
-  if (!ciActive) {
-    return;
-  }
-  return ci.denyCampaign(campaignId);
+export function denyCampaign() {}
+
+/** Reported as denied so any surviving UI renders the "off" state. */
+export function isCampaignCurrentlyGranted() {
+  return false;
 }
 
-export function isCampaignCurrentlyGranted(campaignId) {
-  if (!ciActive) {
-    return;
-  }
-  return ci.isCampaignCurrentlyGranted(campaignId);
-}
-
-export function grantCampaign(campaignId) {
-  if (!ciActive) {
-    return;
-  }
-  return ci.grantCampaign(campaignId);
-}
+export function grantCampaign() {}

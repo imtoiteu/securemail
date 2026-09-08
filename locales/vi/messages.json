@@ -33,7 +33,7 @@
   },
   "action_menu_keyring_description": {
     "description": "Keyring description in the action menu",
-    "message": "Quản lý khóa công khai và khóa bí mật."
+    "message": "Quản lý khóa công khai và khóa riêng tư."
   },
   "action_menu_keyring_label": {
     "description": "Keyring label in the action menu",
@@ -249,15 +249,15 @@
   },
   "keybackup_backup_description": {
     "description": "A hint about the importance of a private key backup.",
-    "message": "Bản sao lưu giúp khôi phục email mã hóa nếu bạn mất thiết bị, cài lại trình duyệt hoặc gỡ tiện ích. Nếu mất khóa bí mật và không có bản sao lưu, email đã mã hóa trước đó có thể không đọc lại được."
+    "message": "Bản sao lưu giúp khôi phục email mã hóa nếu bạn mất thiết bị, cài lại trình duyệt hoặc gỡ tiện ích. Nếu mất khóa riêng tư và không có bản sao lưu, email đã mã hóa trước đó có thể không đọc lại được."
   },
   "keybackup_backup_store_location": {
     "description": "A hint how to store the key.",
-    "message": "Lưu tệp này ở nơi an toàn — ví dụ USB cất riêng hoặc trình quản lý mật khẩu. Không chia sẻ khóa bí mật với bất kỳ ai, kể cả quản trị viên."
+    "message": "Lưu tệp này ở nơi an toàn — ví dụ USB cất riêng hoặc trình quản lý mật khẩu. Không chia sẻ khóa riêng tư với bất kỳ ai, kể cả quản trị viên."
   },
   "keybackup_dialog_headline": {
     "description": "Title of the dialog recommending a private key backup after key creation.",
-    "message": "Sao lưu khóa bí mật của bạn"
+    "message": "Sao lưu khóa riêng tư của bạn"
   },
   "keybackup_done_button": {
     "description": "Button that closes the backup dialog after the file is downloaded.",
@@ -357,7 +357,7 @@
   },
   "onboarding_create_key_hint": {
     "description": "A hint for create new key screen",
-    "message": "Tạo cặp khóa PGP mới để mã hóa email của bạn. Lưu ý: không chia sẻ khóa bí mật (private key) với bất kỳ ai, kể cả quản trị viên."
+    "message": "Tạo cặp khóa PGP mới để mã hóa email của bạn. Lưu ý: không chia sẻ khóa riêng tư (private key) với bất kỳ ai, kể cả quản trị viên."
   },
   "onboarding_faq_backup": {
     "description": "FAQ question: How can I export or backup my keypair?",
@@ -401,7 +401,7 @@
   },
   "onboarding_setup_alert": {
     "description": "Setup alert message in onboarding",
-    "message": "Tiếp theo, hãy thiết lập khóa. Việc này mất khoảng 5 phút. Lưu ý: quản trị viên chỉ quản lý khóa công khai (public key) và fingerprint, không giữ khóa bí mật của bạn."
+    "message": "Tiếp theo, hãy thiết lập khóa. Việc này mất khoảng 5 phút. Lưu ý: quản trị viên chỉ quản lý khóa công khai và dấu vân tay (fingerprint) của khóa, không giữ khóa riêng tư của bạn."
   },
   "onboarding_skip": {
     "description": "Skip button in onboarding",
@@ -417,7 +417,7 @@
   },
   "onboarding_success_created_key_text": {
     "description": "Instructions for users who created a new key",
-    "message": "Nếu bạn đã tải khóa lên máy chủ khóa, hãy kiểm tra hộp thư để xác minh địa chỉ email.\nQuan trọng: hãy sao lưu khóa bí mật ngay (Quản lý khóa > Xuất). Nếu mất khóa bí mật và không có bản sao lưu, email đã mã hóa trước đó có thể không đọc lại được."
+    "message": "Hãy sao lưu khóa riêng tư ngay và cất bản sao lưu ở nơi an toàn (Quản lý khóa > Xuất). Nếu mất khóa riêng tư mà không có bản sao lưu, các email đã mã hóa trước đó sẽ không đọc lại được.\nNếu bạn đã tải khóa lên máy chủ khóa, hãy kiểm tra hộp thư để xác minh địa chỉ email.\nHãy gửi khóa công khai và dấu vân tay (fingerprint) của khóa cho quản trị viên qua một kênh đã được xác thực."
   },
   "onboarding_success_created_key_title": {
     "description": "Title for created key section on success screen",
@@ -768,7 +768,7 @@
     "message": "Địa chỉ người gửi không khớp"
   },
   "decrypt_digital_signature_sender_mismatch_tooltip": {
-    "message": "Thư này có chữ ký số nhưng phát hiện không khớp. Thư được gửi từ một địa chỉ email khác với địa chỉ trong khóa đã ký."
+    "message": "Thư này có chữ ký số nhưng phát hiện không khớp. Thư được gửi từ một địa chỉ email khác với địa chỉ trong khóa công khai của người ký."
   },
   "decrypt_digital_signature_uncertain_sender": {
     "message": "Danh tính người gửi chưa chắc chắn"
@@ -1149,7 +1149,7 @@
     "message": "Hãy cất bản in của tài liệu này ở nơi an toàn và bảo đảm không ai khác tiếp cận được mã khôi phục."
   },
   "recovery_sheet_key_server": {
-    "message": "Những người dùng $1 khác đang dùng quy trình PGP của GMX có thể được tìm thấy trực tiếp trong một thư mục tập trung."
+    "message": "Những người dùng $1 khác đang dùng quy trình PGP của GMX có thể được tìm thấy trực tiếp trong một thư mục tập trung trong tài khoản $1 của bạn. Nếu bạn không muốn có mục nào trong thư mục này, hãy tắt chức năng đó trong phần cài đặt tài khoản $1."
   },
   "recovery_sheet_mobile_devices": {
     "message": "Trên thiết bị di động"
@@ -1215,7 +1215,7 @@
     "message": "Khôi phục liên lạc mã hóa"
   },
   "recovery_sheet_trusted_contacts": {
-    "message": "Với các liên hệ GMX, bạn có thể yên tâm rằng những người dùng hiển thị là người dùng hợp lệ. Tuy vậy bạn vẫn nên tự kiểm chứng."
+    "message": "Với các liên hệ GMX, bạn có thể yên tâm rằng những người dùng hiển thị là người dùng hợp lệ. Tuy vậy, với liên hệ dùng địa chỉ email của nhà cung cấp khác, bạn phải luôn tự xác minh danh tính của họ."
   },
   "recovery_sheet_unknown_third": {
     "message": "Chỉ thiết lập liên lạc mã hóa trên các thiết bị an toàn mà người lạ không thể truy cập."
