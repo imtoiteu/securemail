@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const DESKTOP = path.resolve(__dirname, '../../../mailvelope/src');
 const DESKTOP_MODULES = path.resolve(__dirname, '../../../mailvelope/node_modules');
 const SHIMS = path.resolve(__dirname, 'src/shims');
+const BRIDGE = path.resolve(__dirname, '../bridge/src');
 
 // Swap the four Chrome-bound desktop modules for mobile shims.
 // Matching is on the RESOLVED absolute path, so relative imports inside the
@@ -42,7 +43,7 @@ module.exports = (env = {}) => {
       clean: false
     },
     resolve: {
-      extensions: ['.js', '.json'],
+      extensions: ['.js', '.ts', '.json'],
       // Resolve third-party deps from the desktop's FROZEN node_modules so the
       // mobile core runs the exact same openpgp 5.11.3 and friends the desktop
       // extension was built and audited against. Read-only; nothing is written.
@@ -54,6 +55,12 @@ module.exports = (env = {}) => {
         include: [path.resolve(__dirname, 'src'), DESKTOP],
         loader: 'babel-loader',
         options: {babelrc: false, configFile: false, presets: []}
+      }, {
+        // @securemail/bridge is TypeScript and shared with the app.
+        test: /\.ts$/,
+        include: [BRIDGE],
+        loader: 'babel-loader',
+        options: {babelrc: false, configFile: false, presets: ['@babel/preset-typescript']}
       }]
     },
     plugins: [

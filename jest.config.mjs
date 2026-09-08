@@ -13,6 +13,12 @@ export default {
       testMatch: ['<rootDir>/packages/bridge/test/**/*.test.ts']
     },
     {
+      displayName: 'app',
+      preset: 'ts-jest',
+      testEnvironment: 'node',
+      testMatch: ['<rootDir>/app/test/**/*.test.ts']
+    },
+    {
       displayName: 'core-host',
       testEnvironment: 'node',
       testMatch: ['<rootDir>/packages/core-host/test/**/*.test.js'],
