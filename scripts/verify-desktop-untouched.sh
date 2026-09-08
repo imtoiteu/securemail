@@ -1,11 +1,16 @@
 #!/usr/bin/env bash
 # Asserts the desktop Chrome extension has not been modified.
+#
+# The baseline is deliberately updated ONLY for changes the user has explicitly
+# authorised. It moved once, on 2026-09-08, from a2bf3bca (v0.1.3) to the
+# oauth-fix-stable-id branch, for the requested redirect_uri_mismatch fix.
+# Any other drift is a bug and this script must fail.
 # REPO_ROOT is the parent of mobile/ — not this script's directory.
 set -euo pipefail
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$HERE/../.." && pwd)"
 DESKTOP="$REPO_ROOT/mailvelope"
-RELEASE="$DESKTOP/releases/secure-mail-v0.1.3-restored-pink"
+RELEASE="$DESKTOP/releases/secure-mail-v0.1.4-oauth-fix"
 fail() { echo "DESKTOP ISOLATION VIOLATED: $1" >&2; exit 1; }
 
 [ -d "$DESKTOP" ] || fail "missing $DESKTOP"
