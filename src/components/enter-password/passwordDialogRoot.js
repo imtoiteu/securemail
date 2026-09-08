@@ -21,7 +21,7 @@ function init() {
   const query = new URLSearchParams(document.location.search);
   // component id
   const id = query.get('id') || '';
-  addDocumentTitle(`Mailvelope - ${l10n.map.pwd_dialog_header}`);
+  addDocumentTitle(`Secure Mail - ${l10n.map.pwd_dialog_header}`);
   // component used as a container (client API)
   const root = document.createElement('div');
   ReactDOM.render(<PasswordDialog id={id} />, document.body.appendChild(root));

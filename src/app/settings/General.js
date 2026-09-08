@@ -22,7 +22,10 @@ l10n.register([
   'general_openpgp_preferences',
   'general_prefer_gnupg_note',
   'keygrid_default_key',
-  'settings_general'
+  'settings_general',
+  'settings_language',
+  'settings_language_browser',
+  'settings_language_note'
 ]);
 
 export default class General extends React.Component {
@@ -35,7 +38,9 @@ export default class General extends React.Component {
       modified: false,
       nativeMessaging: true
     };
+    this.state.locale = l10n.getLocale();
     this.handleCheck = this.handleCheck.bind(this);
+    this.handleLocaleChange = this.handleLocaleChange.bind(this);
     this.handleSave = this.handleSave.bind(this);
     this.handleCancel = this.handleCancel.bind(this);
   }
@@ -79,6 +84,16 @@ export default class General extends React.Component {
     this.setState(prevState => ({prefer_gnupg, modified: prevState.modified || prevState.prefer_gnupg !== prefer_gnupg}));
   }
 
+  /**
+   * Every component reads l10n.map at module load, so the simplest correct way
+   * to apply a new language is to reload the options page. A settings change
+   * is an explicit user action, so a reload here is not surprising.
+   */
+  handleLocaleChange(event) {
+    l10n.setLocale(event.target.value);
+    location.reload();
+  }
+
   requestNativeMessagingPermission() {
     chrome.permissions.request({permissions: ['nativeMessaging']}, nativeMessaging => this.setState({nativeMessaging}));
   }
@@ -88,6 +103,15 @@ export default class General extends React.Component {
       <div id="general">
         <h2 className="mb-4">{l10n.map.settings_general}</h2>
         <form>
+          <div className="form-group mb-4">
+            <h3>{l10n.map.settings_language}</h3>
+            <select className="custom-select w-auto" id="locale" name="locale" value={this.state.locale} onChange={this.handleLocaleChange}>
+              <option value="">{l10n.map.settings_language_browser}</option>
+              <option value="en">English</option>
+              <option value="vi">Tiếng Việt</option>
+            </select>
+            <small className="form-text text-muted">{l10n.map.settings_language_note}</small>
+          </div>
           <div className="form-group mb-4">
             <h3>{l10n.map.keygrid_default_key}</h3>
             <div className="custom-control custom-checkbox">

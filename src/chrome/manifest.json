@@ -6,6 +6,7 @@
   "homepage_url": "https://github.com/imtoiteu/securemail",
   "author": "imtoiteu",
   "manifest_version": 3,
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAs4dI2/GrANThYjQK8HCzs10iw2QzHOWYPQeuayKOTh58VFW+xJ42vxyptNARhSs6zsCOZZe6QMBReIpxfejXJbLYshNdLczqeKupfm9K4EtXi7Tr/tGtWQG7oz4g0xjYrkTcl8hiyDliSBLD+VP/93DbSxEqVZ7v14yDB17zPmZ6F6bc4XsGUc6k/RDT5p9VYYcQmeax5JcWT/ZojKdSZHlH5UFmF3/4V0MgVK52cH0M2mrBHOVruOnIk6mWlrep+4qMEKuIdEwT4776u0ivPMxAmZ8mppHoVLDhauum0wU/dSM1ZsIC3ZjEhnNLKJ9DGWK99D2Z8g+26OAvd92CeQIDAQAB",
   "minimum_chrome_version": "122",
   "action": {
     "default_icon": {
@@ -38,7 +39,7 @@
     "*://*/*"
   ],
   "oauth2": {
-    "client_id": "119074447949-cvf898un7sfnv2ib7r4hvunqd56jm4c4.apps.googleusercontent.com",
+    "client_id": "490225026961-r7qrhsqgmci2hodo6j5hhqvrb78df8kj.apps.googleusercontent.com",
     "scopes":[
       "https://www.googleapis.com/auth/userinfo.email",
       "https://www.googleapis.com/auth/gmail.readonly",
