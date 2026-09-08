@@ -10,7 +10,7 @@ set -euo pipefail
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$HERE/../.." && pwd)"
 DESKTOP="$REPO_ROOT/mailvelope"
-RELEASE="$DESKTOP/releases/secure-mail-v0.1.5-own-oauth-client"
+RELEASE="$DESKTOP/releases/secure-mail-v0.1.6-gmail-icon"
 fail() { echo "DESKTOP ISOLATION VIOLATED: $1" >&2; exit 1; }
 
 [ -d "$DESKTOP" ] || fail "missing $DESKTOP"
