@@ -1,39 +1,47 @@
 KIỂM CHỨNG SỐ LIỆU TRONG HỒ SƠ
 ============================================================================================
-Nội dung kiểm tra                                         Hồ sơ nêu           Thực tế              
---------------------------------------------------------------------------------------------
-ĐẠT Số mục dịch tiếng Việt = số mục tiếng Anh             586                 586 / 586           
-ĐẠT Số ngôn ngữ (15 kế thừa + tiếng Việt)                 16                  16                  
-ĐẠT Số dòng tệp danh mục tiếng Việt                       1.880               1880                
-ĐẠT Kiểm toán bản dịch: 0 lỗi chặn                        0                   0                   
-ĐẠT Độ phủ bản dịch 100%                                  100                 100                 
-ĐẠT Kiểm thử bản máy tính                                 449/449             449/449             
-ĐẠT Kiểm thử bản di động                                  68/68               68/68               
-ĐẠT Liên thông với GnuPG                                  8/8                 8/8                 
-ĐẠT Phiên bản GnuPG dùng để đối chứng                     GnuPG 2.4.4         gpg (GnuPG) 2.4.4   
-ĐẠT Kiểm toán bề mặt mạng                                 PASS 4/4            4 PASS              
-ĐẠT Điểm cuối "cleaninsights" vắng mặt trong gói phát hành0 tệp               0 tệp               
-ĐẠT Điểm cuối "license.mailvelope.com" vắng mặt trong gói phát hành0 tệp               0 tệp               
-ĐẠT Điểm cuối "mailvelope.com/google-workspace" vắng mặt trong gói phát hành0 tệp               0 tệp               
-ĐẠT Thư viện mật mã đo đúng phiên bản đóng gói            openpgp 5.11.3      openpgp 5.11.3      
-ĐẠT Phiên bản openpgp trong package.json khớp số liệu đo  5.11.3              5.11.3              
-ĐẠT Gói phụ thuộc đo lường từ xa đã gỡ khỏi package.json  không có            không có            
-ĐẠT Thời gian mã hóa 1 KB                                 14.9 ms             14.9 ms             
-ĐẠT Thời gian mã hóa 10 KB                                16.3 ms             16.3 ms             
-ĐẠT Thời gian mã hóa 100 KB                               34.0 ms             34 ms               
-ĐẠT Thời gian mã hóa 1 MB                                 115.1 ms            115.1 ms            
-ĐẠT Thời gian mã hóa 5 MB                                 403.5 ms            403.5 ms            
-ĐẠT Sinh khóa RSA-4096 qua giao diện thật                 10.237 ms và 8.116  10237 và 8116 ms    
-ĐẠT Mã định danh tiện ích                                 ihhialmbgcagicfabjk khóa manifest dài 3 
-ĐẠT Manifest của bản phát hành có khai báo khóa cố định   có                  có                  
-ĐẠT Mã băm SHA-256 của gói phát hành                      775bed7407df03b9c1f 775bed7407df03b9c1f 
-ĐẠT Số tệp trong gói phát hành                            161                 161                 
-ĐẠT Kịch bản kiểm chứng: 5 tệp                            637 dòng            637 dòng            
-ĐẠT Kịch bản chụp ảnh tài liệu: 2 tệp                     275 dòng            275 dòng            
-ĐẠT Số tệp dự án di động                                  52                  52                  
-ĐẠT Tài liệu vận hành tiếng Việt                          9                   9                   
-ĐẠT Tệp biểu tượng nhận diện                              11                  11                  
-ĐẠT Mọi hình được viện dẫn đều tồn tại                    0 thiếu             0 thiếu             
-ĐẠT Mỗi sơ đồ có đủ 3 định dạng (.drawio/.svg/.png)       7 bộ                svg 7, png 7, drawi 
+Nội dung kiểm tra                                       Hồ sơ nêu          Thực tế                
+------------------------------------------------------------------------------------------------
+ĐẠT Số mục dịch tiếng Việt = số mục tiếng Anh           586                586 / 586          
+ĐẠT Số ngôn ngữ (15 kế thừa + tiếng Việt)               16                 16                 
+ĐẠT Số dòng tệp danh mục tiếng Việt                     1.880              1880                 (chỉ đo, hồ sơ không nêu)
+ĐẠT Kiểm toán bản dịch: 0 lỗi chặn                      0                  0                  
+ĐẠT Độ phủ bản dịch 100%                                100                100                
+ĐẠT Kiểm thử bản máy tính                               449/449            449/449            
+ĐẠT Kiểm thử bản di động                                68/68              68/68              
+ĐẠT Liên thông với GnuPG                                8/8                8/8                
+ĐẠT Phiên bản GnuPG dùng để đối chứng                   GnuPG 2.4.4        gpg (GnuPG) 2.4.4  
+ĐẠT Kiểm toán bề mặt mạng                               PASS 4/4           4 PASS             
+ĐẠT Điểm cuối "cleaninsights" vắng mặt trong gói phát hành0 tệp              0 tệp              
+ĐẠT Điểm cuối "license.mailvelope.com" vắng mặt trong gói phát hành0 tệp              0 tệp              
+ĐẠT Điểm cuối "mailvelope.com/google-workspace" vắng mặt trong gói phát hành0 tệp              0 tệp              
+ĐẠT Thư viện mật mã đo đúng phiên bản đóng gói          openpgp 5.11.3     openpgp 5.11.3     
+ĐẠT Phiên bản openpgp trong package.json khớp số liệu đo5.11.3             5.11.3             
+ĐẠT Gói phụ thuộc đo lường từ xa đã gỡ khỏi package.jsonkhông có           không có           
+ĐẠT Thời gian mã hóa 1 KB                               14.9 ms            14.9 ms            
+ĐẠT Thời gian mã hóa 10 KB                              16.3 ms            16.3 ms            
+ĐẠT Thời gian mã hóa 100 KB                             34.0 ms            34 ms              
+ĐẠT Thời gian mã hóa 1 MB                               115.1 ms           115.1 ms           
+ĐẠT Thời gian mã hóa 5 MB                               403.5 ms           403.5 ms           
+ĐẠT Sinh khóa RSA-4096 qua giao diện thật               10.237 ms và 8.116 10237 và 8116 ms   
+ĐẠT Mã định danh tiện ích                               ihhialmbgcagicfabj khóa manifest dài  
+ĐẠT Manifest của bản phát hành có khai báo khóa cố định có                 có                 
+ĐẠT Mã băm SHA-256 của gói phát hành                    775bed7407df03b9c1 775bed7407df03b9c1 
+ĐẠT Số tệp trong gói phát hành                          161                161                
+ĐẠT Kịch bản kiểm chứng: 5 tệp                          637 dòng           637 dòng           
+ĐẠT Kịch bản chụp ảnh tài liệu: 2 tệp                   275 dòng           275 dòng             (chỉ đo, hồ sơ không nêu)
+ĐẠT Số tệp dự án di động                                52                 52                   (chỉ đo, hồ sơ không nêu)
+ĐẠT Tài liệu vận hành tiếng Việt                        9                  9                  
+ĐẠT Tệp biểu tượng nhận diện                            11                 11                   (chỉ đo, hồ sơ không nêu)
+ĐẠT Số màn hình thiết kế giao diện Android              12                 12                 
+ĐẠT Bản ghép trình bày thiết kế Android                 2                  2                  
+ĐẠT Số phương thức trong hợp đồng RPC di động           22 + 5 chiều ngược 27                 
+ĐẠT Lõi mật mã chạy trong Chromium (engine Android WebView)16/16              16/16              
+ĐẠT Engine dùng để chạy lõi di động                     Chromium 149       Chrome/149.0.7827. 
+ĐẠT 01 có quốc hiệu và khối chữ ký theo mẫu             có                 có                 
+ĐẠT 02 có quốc hiệu và khối chữ ký theo mẫu             có                 có                 
+ĐẠT 03 có quốc hiệu và khối chữ ký theo mẫu             có                 có                 
+ĐẠT Mọi hình được viện dẫn đều tồn tại                  0 thiếu            0 thiếu            
+ĐẠT Mỗi sơ đồ có đủ 3 định dạng (.drawio/.svg/.png)     7 bộ               svg 7, png 7, draw 
 ============================================================================================
-33 phép kiểm tra, 33 đạt, 0 sai
+41 phép kiểm tra, 41 đạt, 0 sai

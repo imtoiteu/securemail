@@ -10,9 +10,9 @@ import os
 import re
 import sys
 
-DOCS = ['00-TOM-TAT-SANG-KIEN.md', '01-DON-DANG-KY-SANG-KIEN.md',
-        '02-THUYET-MINH-SANG-KIEN.md', '03-PHU-LUC-KY-THUAT.md',
-        '04-DU-KIEN-HIEU-QUA.md']
+DOCS = ['00-BIA-HO-SO.md', '00-TOM-TAT-SANG-KIEN.md', '01-DON-DANG-KY-SANG-KIEN.md',
+        '02-THUYET-MINH-SANG-KIEN.md', '03-DU-KIEN-HIEU-QUA.md',
+        'PL-PHU-LUC-KY-THUAT.md']
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 problems = []
 
@@ -20,12 +20,16 @@ problems = []
 # from the main document can be resolved.
 APPENDIX_SECTIONS = set(re.findall(
     r'^#{1,4}\s+([A-Z]\.?\d*(?:\.\d+)*)\.',
-    open(os.path.join(ROOT, '03-PHU-LUC-KY-THUAT.md'), encoding='utf-8').read(), re.M))
+    open(os.path.join(ROOT, 'PL-PHU-LUC-KY-THUAT.md'), encoding='utf-8').read(), re.M))
 
 
 def check(doc):
     path = os.path.join(ROOT, doc)
     text = open(path, encoding='utf-8').read()
+    if '{{t:' in text or '{{f:' in text:
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        from build_docx import resolve_refs
+        text = resolve_refs(text)
 
     # --- tables ---------------------------------------------------------
     caps = re.findall(r'^\^table:\s*(?:Bảng|Bảng)\s*([A-Z]?\.?\d+(?:\.\d+)?)\.', text, re.M)
@@ -63,12 +67,19 @@ def check(doc):
 
     # --- section references --------------------------------------------
     secs = set()
-    for m in re.finditer(r'^#{1,4}\s+(?:PHẦN\s+[IVX]+\.\s*)?([A-Z]?\.?\d+(?:\.\d+)*)\.', text, re.M):
+    for m in re.finditer(r'^#{1,6}\s+(?:PHẦN\s+[IVX]+\.\s*)?([A-Za-z]?\.?\d+(?:\.[A-Za-z0-9]+)*)[\.\)]', text, re.M):
         secs.add(m.group(1))
+    # "### a) Nguyên lý" style sub-sections, referenced as "mục 4.đ".
+    for m in re.finditer(r'^#{1,6}\s+([a-zđ])\)', text, re.M):
+        parent = None
+        for mm in re.finditer(r'^##\s+(\d+)\.', text[:m.start()], re.M):
+            parent = mm.group(1)
+        if parent:
+            secs.add(f'{parent}.{m.group(1)}')
     # A reference preceded by "Phụ lục kỹ thuật," points into the appendix
     # document, so resolve it against that document's sections instead.
     cross = set(re.findall(r'Phụ lục kỹ thuật,\s*mục\s+([A-Z]?\.?\d+(?:\.\d+)*)', text))
-    srefs = set(re.findall(r'[Mm]ục\s+([A-Z]?\.?\d+(?:\.\d+)*)', text)) - cross
+    srefs = set(re.findall(r'[Mm]ục\s+([A-Za-z]?\.?\d+(?:\.[A-Za-zđ0-9]+)*)', text)) - cross
     for r in sorted(srefs - secs):
         problems.append(f'{doc}: tham chiếu "mục {r}" nhưng không có mục đó')
     for r in sorted(cross - APPENDIX_SECTIONS):

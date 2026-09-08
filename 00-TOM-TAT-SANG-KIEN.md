@@ -2,8 +2,8 @@
 title: Secure Mail
 subtitle: Tóm tắt sáng kiến dành cho Hội đồng
 kind: TÓM TẮT SÁNG KIẾN
-org_top: [TÊN CƠ QUAN CHỦ QUẢN]
-org: [TÊN ĐƠN VỊ]
+org_top: TỔNG CỤC II
+org: HỌC VIỆN KHOA HỌC QUÂN SỰ
 author: [Họ và tên tác giả]
 header: Tóm tắt sáng kiến — Secure Mail
 footer: Secure Mail
@@ -14,7 +14,7 @@ cover: no
 
 **Tên sáng kiến:** Secure Mail — Giải pháp mã hóa đầu cuối thư điện tử trên nền Gmail, bản địa hóa tiếng Việt, phục vụ giảng dạy và công tác bảo đảm an toàn thông tin
 
-**Tác giả:** [Họ và tên] — Giảng viên An toàn thông tin trên không gian mạng, [Tên đơn vị]
+**Tác giả:** [Họ và tên] — Giảng viên An toàn thông tin trên không gian mạng, [Khoa/Phòng] — Học viện Khoa học Quân sự
 
 **Lĩnh vực:** Công nghệ thông tin — An toàn thông tin
 

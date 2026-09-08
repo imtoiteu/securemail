@@ -1,0 +1,430 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Secure Mail — thiết kế giao diện Android</title>
+<style>
+:root{
+  --pri:#1d4ed8; --pri-c:#dbeafe; --on-pri:#fff;
+  --amber:#f59e0b; --ok:#15803d; --ok-c:#dcfce7;
+  --err:#b91c1c; --err-c:#fee2e2; --warn-c:#fef3c7; --warn-s:#b45309;
+  --surf:#ffffff; --surf-2:#f8fafc; --surf-3:#f1f5f9;
+  --on:#0f172a; --on-2:#475569; --on-3:#94a3b8; --out:#e2e8f0;
+  --r:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased}
+body{background:#e9edf3;font-family:'Roboto','Noto Sans',system-ui,sans-serif;padding:40px;display:flex;flex-wrap:wrap;gap:44px}
+.screen{width:393px;height:852px;background:var(--surf);border-radius:34px;overflow:hidden;
+  display:flex;flex-direction:column;position:relative;box-shadow:0 2px 18px rgba(15,23,42,.13)}
+
+/* ---- status bar ---- */
+.sb{height:34px;flex:0 0 34px;display:flex;align-items:center;justify-content:space-between;
+  padding:0 22px;font-size:13px;font-weight:600;color:var(--on);letter-spacing:.2px}
+.sb .ic{display:flex;gap:5px;align-items:center}
+.sb svg{display:block}
+
+/* ---- app bar ---- */
+.ab{flex:0 0 auto;padding:10px 16px 12px;display:flex;align-items:center;gap:14px;background:var(--surf)}
+.ab h1{font-size:21px;font-weight:600;color:var(--on);letter-spacing:-.2px}
+.ab .sub{font-size:12.5px;color:var(--on-2);margin-top:2px}
+.ab-icon{width:24px;height:24px;flex:0 0 24px;color:var(--on)}
+.ab-sp{margin-left:auto;display:flex;gap:18px}
+
+/* ---- body ---- */
+.bd{flex:1;overflow:hidden;padding:0 16px}
+.bd.pad{padding-top:6px}
+.bd.center{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 30px}
+
+/* ---- type ---- */
+.lbl{font-size:11.5px;font-weight:700;color:var(--on-2);letter-spacing:.7px;text-transform:uppercase;margin:18px 0 9px}
+.lbl:first-child{margin-top:10px}
+p{font-size:14px;line-height:1.55;color:var(--on-2)}
+.h2{font-size:24px;font-weight:600;color:var(--on);line-height:1.28;letter-spacing:-.3px}
+.mono{font-family:'Roboto Mono','DejaVu Sans Mono',monospace}
+
+/* ---- components ---- */
+.card{background:var(--surf-2);border:1px solid var(--out);border-radius:var(--r);padding:14px 15px;margin-bottom:11px}
+.row{display:flex;align-items:center;gap:13px}
+.av{width:42px;height:42px;flex:0 0 42px;border-radius:12px;background:var(--pri-c);color:var(--pri);
+  display:flex;align-items:center;justify-content:center}
+.av.g{background:var(--ok-c);color:var(--ok)} .av.a{background:var(--warn-c);color:var(--warn-s)}
+.t1{font-size:15px;font-weight:600;color:var(--on);line-height:1.3}
+.t2{font-size:12.5px;color:var(--on-2);margin-top:3px;line-height:1.35}
+.chip{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;padding:3px 9px;
+  border-radius:99px;background:var(--pri-c);color:var(--pri);letter-spacing:.2px}
+.chip.g{background:var(--ok-c);color:var(--ok)} .chip.a{background:var(--warn-c);color:var(--warn-s)}
+.chip.e{background:var(--err-c);color:var(--err)}
+
+.field{border:1.5px solid var(--out);border-radius:13px;padding:11px 14px;margin-bottom:11px;background:var(--surf)}
+.field .fl{font-size:11.5px;color:var(--on-2);font-weight:600}
+.field .fv{font-size:15px;color:var(--on);margin-top:3px}
+.field .fv.ph{color:var(--on-3)}
+.field.foc{border-color:var(--pri);border-width:2px;padding:10px 13px}
+.field.foc .fl{color:var(--pri)}
+
+.btn{height:50px;border-radius:99px;background:var(--pri);color:var(--on-pri);display:flex;align-items:center;
+  justify-content:center;gap:9px;font-size:15.5px;font-weight:600;letter-spacing:.1px}
+.btn.out{background:transparent;border:1.5px solid var(--out);color:var(--pri)}
+.btn.gh{background:var(--surf-3);color:var(--on)}
+.btn.sm{height:40px;font-size:14px;padding:0 18px}
+
+.note{border-radius:13px;padding:12px 14px;font-size:12.8px;line-height:1.5;display:flex;gap:10px;margin-bottom:12px}
+.note.i{background:var(--pri-c);color:#1e3a8a} .note.w{background:var(--warn-c);color:#78350f}
+.note.g{background:var(--ok-c);color:#052e16} .note.e{background:var(--err-c);color:#450a0a}
+.note svg{flex:0 0 18px;margin-top:1px}
+
+.fab{position:absolute;right:20px;bottom:96px;width:60px;height:60px;border-radius:19px;background:var(--pri);
+  color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 5px 14px rgba(29,78,216,.36)}
+
+.nav{flex:0 0 74px;border-top:1px solid var(--out);display:flex;background:var(--surf);padding-top:9px}
+.nav div{flex:1;display:flex;flex-direction:column;align-items:center;gap:5px;font-size:11.5px;
+  color:var(--on-2);font-weight:500}
+.nav div.on{color:var(--pri);font-weight:700}
+.nav .pill{width:60px;height:30px;border-radius:99px;display:flex;align-items:center;justify-content:center;margin-bottom:-3px}
+.nav div.on .pill{background:var(--pri-c)}
+
+.sheet{position:absolute;left:0;right:0;bottom:0;background:var(--surf);border-radius:26px 26px 0 0;
+  padding:12px 20px 26px;box-shadow:0 -6px 26px rgba(15,23,42,.17)}
+.grab{width:34px;height:4px;border-radius:99px;background:var(--out);margin:0 auto 16px}
+.scrim{position:absolute;inset:0;background:rgba(15,23,42,.42)}
+
+.code{background:#0f172a;color:#cbd5e1;border-radius:13px;padding:12px 13px;font-size:9.6px;line-height:1.55;
+  overflow:hidden;font-family:'Roboto Mono','DejaVu Sans Mono',monospace;word-break:break-all}
+.code .hd{color:#7dd3fc}
+.logo{width:76px;height:76px;border-radius:21px;background:var(--pri);display:flex;align-items:center;
+  justify-content:center;box-shadow:0 6px 18px rgba(29,78,216,.3)}
+.dots{display:flex;gap:11px;justify-content:center;margin:22px 0 6px}
+.dots i{width:15px;height:15px;border-radius:99px;background:var(--pri)}
+.dots i.o{background:var(--out)}
+.kbd{flex:0 0 auto;background:var(--surf-3);padding:8px 6px 14px;display:grid;
+  grid-template-columns:repeat(3,1fr);gap:7px}
+.kbd b{height:46px;border-radius:11px;background:var(--surf);display:flex;align-items:center;
+  justify-content:center;font-size:20px;font-weight:500;color:var(--on)}
+.kbd b.f{background:transparent}
+.sw{width:46px;height:27px;border-radius:99px;background:var(--pri);position:relative;flex:0 0 46px}
+.sw::after{content:'';position:absolute;width:21px;height:21px;border-radius:99px;background:#fff;top:3px;right:3px}
+.sw.off{background:var(--out)} .sw.off::after{left:3px;right:auto}
+.cap{position:absolute;left:0;right:0;bottom:0;background:#0f172a;color:#fff;font-size:11px;
+  padding:6px 12px;font-weight:600;letter-spacing:.3px;text-align:center}
+</style>
+
+<script>
+const I = {
+  back:'<svg class="ab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>',
+  more:'<svg class="ab-icon" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.9"/><circle cx="12" cy="12" r="1.9"/><circle cx="12" cy="19" r="1.9"/></svg>',
+  search:'<svg class="ab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>',
+  key:'<svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="7.5" cy="15.5" r="4.5"/><path d="M10.7 12.3L20 3M17 6l2.5 2.5M14 9l2.5 2.5"/></svg>',
+  lock:'<svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="10.5" width="16" height="11" rx="2.5"/><path d="M8 10.5V7a4 4 0 018 0v3.5"/></svg>',
+  mail:'<svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3 7l9 6 9-6"/></svg>',
+  unlock:'<svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="10.5" width="16" height="11" rx="2.5"/><path d="M8 10.5V7a4 4 0 017.5-2"/></svg>',
+  check:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>',
+  info:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9.2"/><path d="M12 11v5.5M12 7.8v.1"/></svg>',
+  warn:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5L22 20H2L12 3.5z"/><path d="M12 10v4M12 17.2v.1"/></svg>',
+  shield:'<svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 2.5l8 3.2v6c0 5-3.4 9.2-8 10.3-4.6-1.1-8-5.3-8-10.3v-6l8-3.2z"/></svg>',
+  plus:'<svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>',
+  chev:'<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2.2" stroke-linecap="round"><path d="M9 5l7 7-7 7"/></svg>',
+  gear:'<svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2.3"/><circle cx="9" cy="17" r="2.3"/></svg>',
+  fp:'<svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 3a8.5 8.5 0 00-8.5 8.5v2M20.5 13.5v-2A8.5 8.5 0 0016 4.2"/><path d="M7.5 11.5a4.5 4.5 0 019 0v3a12 12 0 01-.8 4.3"/><path d="M12 11.5v4a16 16 0 01-1 5.5"/><path d="M4.5 18a14 14 0 001-4.5"/></svg>',
+  down:'<svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v13M6.5 11l5.5 5.5 5.5-5.5M4 20.5h16"/></svg>',
+  share:'<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5.5" r="2.7"/><circle cx="6" cy="12" r="2.7"/><circle cx="18" cy="18.5" r="2.7"/><path d="M8.4 10.7l7.2-3.9M8.4 13.3l7.2 3.9"/></svg>',
+};
+function sb(){return `<div class="sb"><span>09:41</span><span class="ic">
+<svg width="17" height="12" viewBox="0 0 17 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx=".7"/><rect x="4.6" y="5.5" width="3" height="6.5" rx=".7"/><rect x="9.2" y="3" width="3" height="9" rx=".7"/><rect x="13.8" y="0" width="3" height="12" rx=".7"/></svg>
+<svg width="16" height="12" viewBox="0 0 16 12" fill="currentColor"><path d="M8 11.2l2.3-2.9a3.7 3.7 0 00-4.6 0L8 11.2z"/><path d="M8 6.4c1.5 0 2.9.5 4 1.4l1.5-1.9A9 9 0 008 4a9 9 0 00-5.5 1.9L4 7.8a6.4 6.4 0 014-1.4z" opacity=".85"/><path d="M8 2.2c2.4 0 4.6.8 6.4 2.2L16 2.5A11.6 11.6 0 008 0 11.6 11.6 0 000 2.5l1.6 1.9A10.2 10.2 0 018 2.2z" opacity=".6"/></svg>
+<svg width="23" height="12" viewBox="0 0 23 12" fill="none"><rect x=".7" y=".7" width="19" height="10.6" rx="2.9" stroke="currentColor" stroke-width="1.3"/><rect x="2.4" y="2.4" width="13.6" height="7.2" rx="1.7" fill="currentColor"/><path d="M21.3 4.3v3.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+</span></div>`;}
+function nav(on){const it=[['Chùm khóa',I.key],['Mã hóa',I.lock],['Giải mã',I.mail],['Cài đặt',I.gear]];
+  return `<div class="nav">${it.map((x,i)=>`<div class="${i===on?'on':''}"><span class="pill">${x[1]}</span>${x[0]}</div>`).join('')}</div>`;}
+</script>
+
+<div id="root"></div>
+<script>
+const S = [];
+const add = (id, html) => S.push({id, html});
+
+/* 01 — khóa ứng dụng */
+add('m01-khoa-ung-dung', `${sb()}
+<div class="bd center" style="flex:1">
+  <div class="logo">
+    <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linejoin="round">
+      <rect x="2.5" y="5" width="19" height="14" rx="2.6"/><path d="M3 7.6l9 6 9-6"/></svg>
+  </div>
+  <div class="h2" style="margin-top:26px">Secure Mail</div>
+  <p style="margin-top:10px">Nhập cụm mật khẩu để mở khóa chùm khóa trên thiết bị này.</p>
+  <div class="dots"><i></i><i></i><i></i><i></i><i></i><i class="o"></i></div>
+  <div style="color:var(--pri);margin-top:20px">${I.fp}</div>
+  <p style="font-size:13px;margin-top:8px">Hoặc dùng vân tay</p>
+</div>
+<div class="kbd">
+  ${[1,2,3,4,5,6,7,8,9].map(n=>`<b>${n}</b>`).join('')}
+  <b class="f"></b><b>0</b><b class="f" style="font-size:15px;color:var(--on-2)">Xóa</b>
+</div>`);
+
+/* 02 — onboarding */
+add('m02-thiet-lap-ban-dau', `${sb()}
+<div class="bd" style="padding-top:26px">
+  <div class="logo" style="width:60px;height:60px;border-radius:17px">
+    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linejoin="round">
+      <rect x="2.5" y="5" width="19" height="14" rx="2.6"/><path d="M3 7.6l9 6 9-6"/></svg></div>
+  <div class="h2" style="margin-top:22px">Thiết lập Secure Mail</div>
+  <p style="margin-top:9px">Ba bước để bắt đầu trao đổi thư mã hóa đầu cuối.</p>
+  <div class="card" style="margin-top:22px"><div class="row">
+    <div class="av g">${I.check}</div><div style="flex:1">
+    <div class="t1">1. Đặt cụm mật khẩu thiết bị</div>
+    <div class="t2">Bảo vệ chùm khóa lưu trên máy</div></div></div></div>
+  <div class="card" style="border-color:var(--pri);border-width:1.5px"><div class="row">
+    <div class="av">${I.key}</div><div style="flex:1">
+    <div class="t1">2. Tạo cặp khóa của bạn</div>
+    <div class="t2">RSA-4096 — sinh ngay trên thiết bị</div></div>${I.chev}</div></div>
+  <div class="card"><div class="row">
+    <div class="av" style="background:var(--surf-3);color:var(--on-3)">${I.share}</div><div style="flex:1">
+    <div class="t1" style="color:var(--on-2)">3. Nộp khóa công khai</div>
+    <div class="t2">Gửi cho quản trị viên qua kênh đã xác thực</div></div></div></div>
+  <div class="note w" style="margin-top:14px">${I.warn}<div>
+    <b>Khóa riêng tư không bao giờ rời khỏi thiết bị này.</b> Quản trị viên chỉ quản lý khóa công khai và
+    dấu vân tay. Không ai được yêu cầu bạn nộp khóa riêng tư.</div></div>
+  <div class="btn" style="margin-top:8px">Tạo cặp khóa</div>
+</div>`);
+
+/* 03 — tạo khóa */
+add('m03-tao-khoa', `${sb()}
+<div class="ab">${I.back}<div><h1>Tạo cặp khóa</h1></div></div>
+<div class="bd pad">
+  <div class="lbl">Định danh người dùng</div>
+  <div class="field"><div class="fl">Họ và tên</div><div class="fv">Nguyễn Văn A</div></div>
+  <div class="field foc"><div class="fl">Email</div><div class="fv">giangvien.a@donvi.test</div></div>
+  <div class="lbl">Cụm mật khẩu bảo vệ khóa riêng tư</div>
+  <div class="field"><div class="fl">Nhập cụm mật khẩu</div><div class="fv mono">••••••••••••••••</div></div>
+  <div class="field"><div class="fl">Nhập lại</div><div class="fv mono">••••••••••••••••</div></div>
+  <div class="row" style="margin:4px 2px 0"><div style="flex:1">
+    <div class="t1" style="font-size:13.5px">Thuật toán</div>
+    <div class="t2">RSA-4096 (khuyến nghị)</div></div><span class="chip">MẶC ĐỊNH</span></div>
+  <div class="note i" style="margin-top:18px">${I.info}<div>
+    Cặp khóa được sinh hoàn toàn trên thiết bị bằng bộ sinh số ngẫu nhiên của hệ điều hành.
+    Quá trình mất khoảng 8–12 giây.</div></div>
+  <div class="btn">${I.key} Tạo khóa</div>
+</div>`);
+
+/* 04 — chùm khóa */
+add('m04-chum-khoa', `${sb()}
+<div class="ab"><div style="flex:1"><h1>Chùm khóa</h1><div class="sub">3 khóa • 1 khóa riêng tư</div></div>
+  <div class="ab-sp">${I.search}${I.more}</div></div>
+<div class="bd pad">
+  <div class="lbl">Khóa của tôi</div>
+  <div class="card"><div class="row"><div class="av">${I.key}</div><div style="flex:1">
+    <div class="t1">Nguyễn Văn A <span class="chip" style="margin-left:5px">MẶC ĐỊNH</span></div>
+    <div class="t2">giangvien.a@donvi.test</div>
+    <div class="t2 mono" style="color:var(--on-3);font-size:11px">12F2 ABE9 0B2E C9E7</div></div>${I.chev}</div></div>
+  <div class="lbl">Khóa công khai của liên hệ</div>
+  <div class="card"><div class="row"><div class="av g">${I.check}</div><div style="flex:1">
+    <div class="t1">Trần Thị B</div><div class="t2">hocvien.b@donvi.test</div>
+    <div class="t2 mono" style="color:var(--on-3);font-size:11px">9F06 A5AB 35C5 697A</div></div>${I.chev}</div></div>
+  <div class="card"><div class="row"><div class="av a">${I.warn}</div><div style="flex:1">
+    <div class="t1">Lê Văn C</div><div class="t2">canbo.c@donvi.test</div>
+    <div style="margin-top:6px"><span class="chip a">CHƯA ĐỐI CHIẾU VÂN TAY</span></div></div>${I.chev}</div></div>
+</div>
+<div class="fab">${I.plus}</div>
+${nav(0)}`);
+
+/* 05 — chi tiết khóa */
+add('m05-chi-tiet-khoa', `${sb()}
+<div class="ab">${I.back}<div style="flex:1"><h1>Chi tiết khóa</h1></div><div class="ab-sp">${I.more}</div></div>
+<div class="bd pad">
+  <div class="row" style="margin:4px 2px 16px"><div class="av" style="width:52px;height:52px;flex:0 0 52px">${I.key}</div>
+    <div><div class="t1" style="font-size:17px">Trần Thị B</div>
+    <div class="t2">hocvien.b@donvi.test</div></div></div>
+  <div class="lbl">Dấu vân tay (fingerprint)</div>
+  <div class="card mono" style="font-size:13.5px;letter-spacing:1.4px;line-height:1.9;color:var(--on);text-align:center">
+    9F06 A5AB 35C5 697A<br>D41B 8E22 7C90 3FA5<br>16BD 04E7</div>
+  <div class="note g">${I.check}<div>
+    <b>Đã đối chiếu ngày 05/9/2026.</b> Dấu vân tay được xác nhận trực tiếp qua kênh nội bộ.</div></div>
+  <div class="lbl">Thông số</div>
+  <div class="card" style="padding:0">
+    ${[['Thuật toán','RSA 4096 bit'],['Ngày tạo','05/09/2026'],['Hạn dùng','Không giới hạn'],
+       ['Khóa phụ','1 khóa mã hóa'],['Trạng thái','Hợp lệ']].map((r,i)=>
+      `<div class="row" style="padding:11px 15px;${i?'border-top:1px solid var(--out)':''}">
+        <div class="t2" style="flex:1;margin:0">${r[0]}</div>
+        <div class="t1" style="font-size:13.5px">${r[1]}</div></div>`).join('')}
+  </div>
+  <div class="row" style="gap:10px;margin-top:14px">
+    <div class="btn out sm" style="flex:1">${I.share} Chia sẻ</div>
+    <div class="btn gh sm" style="flex:1">${I.down} Xuất</div></div>
+</div>`);
+
+/* 06 — nhập khóa */
+add('m06-nhap-khoa', `${sb()}
+<div class="ab">${I.back}<div><h1>Nhập khóa công khai</h1></div></div>
+<div class="bd pad">
+  <div class="card" style="border-color:var(--pri);border-width:1.5px"><div class="row">
+    <div class="av">${I.down}</div><div style="flex:1"><div class="t1">Từ tệp trên máy</div>
+    <div class="t2">Chọn tệp .asc hoặc .gpg do quản trị viên phát hành</div></div>${I.chev}</div></div>
+  <div class="card"><div class="row"><div class="av">${I.share}</div><div style="flex:1">
+    <div class="t1">Dán khối văn bản</div><div class="t2">Dán trực tiếp khối BEGIN PGP PUBLIC KEY BLOCK</div></div>${I.chev}</div></div>
+  <div class="card"><div class="row"><div class="av">${I.shield}</div><div style="flex:1">
+    <div class="t1">Quét mã QR</div><div class="t2">Đối chiếu dấu vân tay trực tiếp giữa hai thiết bị</div></div>${I.chev}</div></div>
+  <div class="lbl">Xem trước</div>
+  <div class="code"><span class="hd">-----BEGIN PGP PUBLIC KEY BLOCK-----</span><br>
+    Version: Secure Mail v0.3.0<br><br>
+    mQINBGb2K1kBEADQxV8sJmYq3nR7pL2wZ4vT9cH1aB6dE0fG5hJ8kM3nP7qS<br>
+    2tU4vW6xY9zA1bC3dE5fG7hJ9kL0mN2pQ4rS6tU8vW0xY2zA4bC6dE8fG1h<br>
+    J3kL5mN7pQ9rS1tU3vW5xY7zA9bC1dE3fG5hJ7kL9mN1pQ3rS5tU7vW9xY…<br>
+    <span class="hd">-----END PGP PUBLIC KEY BLOCK-----</span></div>
+  <div class="note w">${I.warn}<div>
+    Sau khi nhập, <b>bắt buộc đối chiếu dấu vân tay</b> với chủ khóa qua kênh đã xác thực trước khi
+    dùng để gửi thư.</div></div>
+  <div class="btn">Nhập và đối chiếu</div>
+</div>`);
+
+/* 07 — soạn thư */
+add('m07-soan-thu-ma-hoa', `${sb()}
+<div class="ab">${I.back}<div style="flex:1"><h1>Soạn thư mã hóa</h1></div></div>
+<div class="bd pad">
+  <div class="field"><div class="fl">Người nhận</div>
+    <div style="margin-top:7px;display:flex;gap:6px;flex-wrap:wrap">
+      <span class="chip g">${I.check} Trần Thị B</span>
+      <span class="chip g">${I.check} Lê Thị D</span></div></div>
+  <div class="field"><div class="fl">Tiêu đề (không được mã hóa)</div>
+    <div class="fv">Trao đổi nghiệp vụ</div></div>
+  <div class="note w" style="margin-top:2px">${I.warn}<div>
+    Tiêu đề thư đi kèm ở dạng rõ theo giao thức thư điện tử. <b>Không đặt nội dung nhạy cảm ở đây.</b></div></div>
+  <div class="field foc" style="min-height:132px"><div class="fl">Nội dung</div>
+    <div class="fv" style="line-height:1.55;font-size:14.5px">Kính gửi đồng chí,<br><br>
+      Nội dung trao đổi được bảo vệ bằng mã hóa đầu cuối theo chuẩn OpenPGP.</div></div>
+  <div class="card"><div class="row"><div class="av a">${I.lock}</div><div style="flex:1">
+    <div class="t1">Ký bằng khóa của tôi</div><div class="t2">giangvien.a@donvi.test</div></div>
+    <div class="sw"></div></div></div>
+  <div class="row" style="gap:10px;margin-top:6px">
+    <div class="btn gh sm" style="flex:0 0 108px">Đính kèm</div>
+    <div class="btn" style="flex:1;height:46px">${I.lock} Mã hóa</div></div>
+</div>`);
+
+/* 08 — kết quả mã hóa */
+add('m08-ket-qua-ma-hoa', `${sb()}
+<div class="ab">${I.back}<div style="flex:1"><h1>Đã mã hóa</h1></div></div>
+<div class="bd pad">
+  <div class="note g">${I.check}<div><b>Mã hóa thành công trong 38 ms.</b>
+    Nội dung đã được ký bằng khóa riêng tư của bạn và mã hóa cho 2 người nhận.</div></div>
+  <div class="lbl">Khối bản mã</div>
+  <div class="code" style="line-height:1.6"><span class="hd">-----BEGIN PGP MESSAGE-----</span><br>
+    Version: Secure Mail v0.3.0<br>
+    Comment: https://github.com/imtoiteu/securemail<br><br>
+    hQIMA7xK9pQ2vN4mAQ//WzY8dR3fH6jL0nP4sV7yB1eG5hK9mQ2tW6xZ0aC3<br>
+    dF8gJ1lN5pS9uX2yA4bE7hK0mP3rV6wZ9cF2iL5oR8tW1zD4gJ7kN0qT3vY<br>
+    6bE9hL2oS5uX8aD1fI4kO7rU0xC3gJ6mP9sV2yB5eH8lN1pT4wZ7dG0jM3q<br>
+    R6uY9bF2iL5oS8vX1aE4hK7nQ0tW3zC6gJ9mP2rV5yB8eH1lO4pS7uX0aD…<br>
+    <span class="hd">-----END PGP MESSAGE-----</span></div>
+  <div class="row" style="gap:10px;margin-top:14px">
+    <div class="btn out sm" style="flex:1">Sao chép</div>
+    <div class="btn sm" style="flex:1.4">${I.share} Gửi qua ứng dụng thư</div></div>
+  <div class="note i" style="margin-top:14px">${I.info}<div>
+    Bản mã này đọc được bằng bất kỳ phần mềm OpenPGP nào — Secure Mail trên máy tính, GnuPG,
+    hoặc phần mềm tương thích khác.</div></div>
+</div>`);
+
+/* 09 — giải mã */
+add('m09-giai-ma', `${sb()}
+<div class="ab"><div style="flex:1"><h1>Giải mã</h1><div class="sub">Từ Trần Thị B</div></div>
+  <div class="ab-sp">${I.more}</div></div>
+<div class="bd pad">
+  <div class="note g">${I.check}<div>
+    <b>Chữ ký hợp lệ.</b> Thư đúng là của <b>Trần Thị B</b> &lt;hocvien.b@donvi.test&gt;,
+    khóa đã được đối chiếu dấu vân tay. Nội dung không bị sửa đổi.</div></div>
+  <div class="lbl">Nội dung đã giải mã</div>
+  <div class="card" style="background:var(--surf);border-color:var(--out)">
+    <p style="color:var(--on);font-size:14.5px;line-height:1.62">Kính gửi đồng chí,<br><br>
+      Tài liệu nghiệp vụ đã được gửi kèm theo thư này. Đề nghị đồng chí kiểm tra và
+      phản hồi trước ngày 15/9.<br><br>Trân trọng.</p></div>
+  <div class="lbl">Tệp đính kèm</div>
+  <div class="card"><div class="row"><div class="av">${I.down}</div><div style="flex:1">
+    <div class="t1">bao-cao-nghiep-vu.pdf</div>
+    <div class="t2">1,4 MB • đã giải mã và kiểm tra toàn vẹn</div></div>${I.chev}</div></div>
+  <div class="card" style="background:var(--surf-3)"><div class="row">
+    <div class="t2" style="flex:1;margin:0">Giải mã trong <b style="color:var(--on)">24 ms</b> ·
+      xác minh chữ ký <b style="color:var(--on)">RSA-4096</b></div></div></div>
+</div>
+${nav(2)}`);
+
+/* 10 — nhập cụm mật khẩu */
+add('m10-nhap-cum-mat-khau', `${sb()}
+<div class="ab"><div style="flex:1"><h1>Giải mã</h1></div></div>
+<div class="bd pad" style="opacity:.5">
+  <div class="lbl">Thư đến</div>
+  <div class="card"><div class="row"><div class="av">${I.mail}</div><div style="flex:1">
+    <div class="t1">Trần Thị B</div><div class="t2">Khối OpenPGP — 2,1 KB</div></div></div></div>
+</div>
+<div class="scrim"></div>
+<div class="sheet">
+  <div class="grab"></div>
+  <div class="row" style="margin-bottom:14px"><div class="av a">${I.unlock}</div><div style="flex:1">
+    <div class="t1" style="font-size:16.5px">Mở khóa khóa riêng tư</div>
+    <div class="t2">giangvien.a@donvi.test</div></div></div>
+  <div class="field foc"><div class="fl">Cụm mật khẩu</div>
+    <div class="fv mono">••••••••••••••</div></div>
+  <div class="card" style="margin-bottom:14px"><div class="row">
+    <div style="flex:1"><div class="t1" style="font-size:13.5px">Ghi nhớ trong phiên này</div>
+      <div class="t2">Tự xóa sau 30 phút không dùng</div></div><div class="sw"></div></div></div>
+  <div class="row" style="gap:10px">
+    <div class="btn gh" style="flex:1">Hủy</div>
+    <div class="btn" style="flex:1.5">${I.unlock} Mở khóa</div></div>
+</div>`);
+
+/* 11 — sao lưu */
+add('m11-sao-luu-khoi-phuc', `${sb()}
+<div class="ab">${I.back}<div><h1>Sao lưu &amp; khôi phục</h1></div></div>
+<div class="bd pad">
+  <div class="note e">${I.warn}<div>
+    <b>Mất khóa riêng tư mà không có bản sao lưu là mất vĩnh viễn.</b> Không ai — kể cả quản trị viên —
+    khôi phục lại được thư đã mã hóa trước đó.</div></div>
+  <div class="lbl">Sao lưu</div>
+  <div class="card" style="border-color:var(--pri);border-width:1.5px"><div class="row">
+    <div class="av">${I.down}</div><div style="flex:1"><div class="t1">Tạo tệp sao lưu</div>
+    <div class="t2">Khóa riêng tư được mã hóa bằng cụm mật khẩu riêng cho bản sao lưu</div></div>${I.chev}</div></div>
+  <div class="card"><div class="row"><div class="av a">${I.shield}</div><div style="flex:1">
+    <div class="t1">In phiếu khôi phục</div>
+    <div class="t2">Bản in giấy chứa mã khôi phục, cất ở nơi an toàn</div></div>${I.chev}</div></div>
+  <div class="lbl">Khôi phục</div>
+  <div class="card"><div class="row"><div class="av" style="background:var(--surf-3);color:var(--on-2)">${I.key}</div>
+    <div style="flex:1"><div class="t1">Khôi phục từ tệp sao lưu</div>
+    <div class="t2">Nhập lại khóa riêng tư trên thiết bị mới</div></div>${I.chev}</div></div>
+  <div class="lbl">Lần sao lưu gần nhất</div>
+  <div class="card" style="background:var(--surf-3)"><div class="row">
+    <div class="av g">${I.check}</div><div style="flex:1"><div class="t1">08/09/2026, 09:14</div>
+    <div class="t2">secure-mail-backup-20260908.asc</div></div></div></div>
+</div>`);
+
+/* 12 — cài đặt */
+add('m12-cai-dat', `${sb()}
+<div class="ab"><div style="flex:1"><h1>Cài đặt</h1></div></div>
+<div class="bd pad">
+  <div class="lbl">Bảo mật</div>
+  <div class="card" style="padding:0">
+    ${[['Khóa ứng dụng bằng vân tay','Mở nhanh không cần gõ lại',1],
+       ['Tự khóa khi rời ứng dụng','Khóa lại sau 30 giây',1],
+       ['Xóa bộ nhớ đệm cụm mật khẩu','Sau 30 phút không dùng',1],
+       ['Chặn chụp màn hình','Ẩn nội dung khi chuyển ứng dụng',0]].map((r,i)=>
+      `<div class="row" style="padding:13px 15px;${i?'border-top:1px solid var(--out)':''}">
+        <div style="flex:1"><div class="t1" style="font-size:14px">${r[0]}</div>
+        <div class="t2">${r[1]}</div></div><div class="sw ${r[2]?'':'off'}"></div></div>`).join('')}
+  </div>
+  <div class="lbl">Thư mục khóa</div>
+  <div class="card"><div class="row"><div style="flex:1">
+    <div class="t1" style="font-size:14px">Tra cứu máy chủ khóa bên ngoài</div>
+    <div class="t2">Tắt — khóa công khai do quản trị viên đơn vị phân phối</div></div>
+    <span class="chip g">${I.check} TẮT</span></div></div>
+  <div class="lbl">Chung</div>
+  <div class="card" style="padding:0">
+    ${[['Ngôn ngữ','Tiếng Việt'],['Thuật toán mặc định','RSA-4096'],
+       ['Ký thư gửi đi','Luôn ký']].map((r,i)=>
+      `<div class="row" style="padding:13px 15px;${i?'border-top:1px solid var(--out)':''}">
+        <div class="t1" style="flex:1;font-size:14px">${r[0]}</div>
+        <div class="t2" style="margin:0">${r[1]}</div>${I.chev}</div>`).join('')}
+  </div>
+  <div class="card" style="background:var(--surf-3);margin-top:14px"><div class="row">
+    <div class="av g">${I.shield}</div><div style="flex:1">
+    <div class="t1" style="font-size:13.5px">Không có đo lường từ xa</div>
+    <div class="t2">Ứng dụng không gửi dữ liệu sử dụng tới bất kỳ máy chủ nào</div></div></div></div>
+</div>
+${nav(3)}`);
+
+document.getElementById('root').innerHTML =
+  S.map(s=>`<div class="screen" id="${s.id}">${s.html}</div>`).join('');
+window.__SCREENS__ = S.map(s=>s.id);
+</script>

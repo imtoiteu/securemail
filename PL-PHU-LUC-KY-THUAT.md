@@ -2,14 +2,14 @@
 title: Phụ lục kỹ thuật
 subtitle: Toàn văn kết quả kiểm thử, đo đạc và kiểm toán — kèm hướng dẫn tái lập
 kind: PHỤ LỤC KỸ THUẬT
-org_top: [TÊN CƠ QUAN CHỦ QUẢN]
-org: [TÊN ĐƠN VỊ]
+org_top: TỔNG CỤC II
+org: HỌC VIỆN KHOA HỌC QUÂN SỰ
 author: [Họ và tên tác giả]
 header: Phụ lục kỹ thuật — Secure Mail
 footer: Secure Mail — Phụ lục kỹ thuật
 cover_image: assets/diagrams/h6-quy-trinh-kiem-chung.png
 cover_rows: Thuộc hồ sơ|Sáng kiến Secure Mail;;Phiên bản sản phẩm|Secure Mail v0.3.0;;Ngày thực hiện đo|08/9/2026;;Môi trường đo|AMD EPYC 4 nhân, 7,8 GB RAM, Linux
-place_date: [Địa danh], tháng 9 năm 2026
+place_date: Hà Nội, ngày ..... tháng ..... năm 2026
 ---
 
 {{TOC}}
@@ -108,6 +108,72 @@ Kịch bản kiểm tra ba điều: cây làm việc của kho bản máy tính 
 
 Trong quá trình xây dựng hồ sơ này, kịch bản đã **từ chối** ngay khi bản máy tính được sửa để gỡ bỏ thư viện đo lường và cơ chế kiểm tra giấy phép — đúng như thiết kế. Mốc ghim chỉ được cập nhật cho những thay đổi đã được chủ động quyết định, và mỗi lần cập nhật đều được ghi lại trong chính kịch bản.
 
+### A.3.2. Kiểm thử lõi mật mã trong Chromium — engine của Android System WebView
+
+Đây là bằng chứng gần thiết bị Android nhất có thể thu được mà không cần máy thật. **WebView
+trên Android là Chromium**; kiến trúc trình bày tại Bản thuyết minh (mục 3, phần b, tiểu mục 6) nạp lõi mật mã vào
+chính WebView đó. Phép thử này nạp **đúng gói bundle mà ứng dụng Android sẽ nạp** vào
+Chromium Chrome/149.0.7827.22 và chạy trọn vòng đời qua hợp đồng RPC.
+
+**Lệnh chạy lại:**
+
+```
+cd mobile
+npm run build:core
+node test/webview-chromium.mjs
+```
+
+Gói bundle được phục vụ qua HTTP để **chính sách CSP của trang có hiệu lực đúng như trong ứng
+dụng** (`default-src 'none'; script-src 'self'; connect-src 'none'`); nạp qua `file://` sẽ nới
+lỏng CSP và làm phép thử mất giá trị.
+
+^table: Bảng A.2. Kết quả chạy lõi mật mã trong Chromium
+| Phép thử | Chi tiết | Kết quả |
+| --- | --- | --- |
+| Bundle nạp được trong Chromium | window.SecureMailCore hiện diện sau khi trang tải xong | **PASS** |
+| Năng lực nền tảng đầy đủ | crypto.subtle, getRandomValues, TextEncoder, ReadableStream đều có | **PASS** |
+| Khởi tạo lõi mật mã trong WebView | createCore trả về API sẵn sàng | **PASS** |
+| Sinh cặp khóa RSA-4096 trong WebView | hoàn tất sau 2327 ms | **PASS** |
+| Sinh cặp khóa thứ hai | hoàn tất sau 2342 ms | **PASS** |
+| Liệt kê chùm khóa | 2 khóa trong chùm khóa | **PASS** |
+| Đọc chi tiết khóa | dấu vân tay 1D91CF0F823843AC… | **PASS** |
+| Xuất khóa công khai | khối BEGIN PGP PUBLIC KEY BLOCK hợp lệ | **PASS** |
+| Mã hóa kèm ký số | 209 ms, khối bản mã 2629 byte | **PASS** |
+| Giải mã và xác minh chữ ký | 549 ms, bản rõ đúng từng ký tự, tiếng Việt nguyên vẹn | **PASS** |
+| Chữ ký được xác minh hợp lệ | 1 chữ ký hợp lệ | **PASS** |
+| Khóa sinh trong WebView đọc được bằng thư viện độc lập | OpenPGP.js chạy trong Node phân tích đúng khóa và khớp dấu vân tay | **PASS** |
+| Bản mã sinh trong WebView là OpenPGP chuẩn | thư viện độc lập phân tích được khối và thấy đúng 2 khóa người nhận | **PASS** |
+| Khóa lại ứng dụng | app.lock trả về thành công | **PASS** |
+| Sau khi khóa vẫn giải mã được khi cung cấp lại cụm mật khẩu | bộ nhớ đệm bị xóa, lõi yêu cầu lại cụm mật khẩu qua bridge | **PASS** |
+| Đọc tùy chọn | prefs.get trả về cấu hình | **PASS** |
+| **Tổng** | | **16/16 ĐẠT** |
+
+^table: Bảng A.3. Thời gian đo được trong Chromium
+| Thao tác | Thời gian |
+| --- | --- |
+| Sinh cặp khóa RSA-4096, lần 1 | 2,327 ms |
+| Sinh cặp khóa RSA-4096, lần 2 | 2,342 ms |
+| Mã hóa kèm ký số cho 2 người nhận | 209 ms |
+| Giải mã kèm xác minh chữ ký | 549 ms |
+
+**Phép thử này chứng minh điều gì.** Lõi mật mã của bản di động — bao gồm chùm khóa, sinh
+khóa, mã hóa, ký, giải mã, xác minh, khóa lại và tùy chọn — hoạt động đúng trên engine mà
+Android sử dụng, với chính gói bundle sẽ được đóng vào ứng dụng. Hai phép thử liên thông
+trong bảng dùng một thư viện OpenPGP **độc lập chạy ngoài WebView** làm trọng tài, nên kết
+quả không tự quy chiếu.
+
+**Phép thử này KHÔNG chứng minh điều gì.** Nó không phủ tầng giao diện React Native, Android
+Keystore, quyền truy cập tệp, hành vi khi hệ điều hành thu hồi bộ nhớ, và khác biệt giữa các
+phiên bản Android. Những phần đó nằm trong ma trận kiểm thử trên thiết bị tại mục G và
+**chưa được thực hiện** — hồ sơ không khẳng định chúng.
+
+**Ba khiếm khuyết mà phép thử này phát hiện trong quá trình xây dựng**, đều đã được xử lý và
+ghi lại vì chúng cho thấy phép thử có tác dụng thật: hợp đồng của bộ cung cấp cụm mật khẩu
+trả về `{password, cache}` chứ không phải chuỗi — trả sai kiểu khiến vòng lặp mở khóa quay
+vô hạn thay vì báo lỗi; `keyring.exportKeys` nhận tham số `fingerprints` và trả `{armored}`;
+và bản rõ trả về là chuỗi byte UTF-8 kèm xuống dòng CRLF theo RFC 4880, nên một phép so sánh
+chỉ áp dụng một trong hai phép biến đổi sẽ báo sai.
+
 ## A.4. Kiểm toán bản dịch tiếng Việt
 
 **Lệnh chạy lại:**
@@ -140,7 +206,7 @@ Hai giá trị được báo là "chưa dịch" là `Gmail API` và `Copyright �
 
 Ghi lại đầy đủ, vì việc một quy trình tự tìm ra lỗi là bằng chứng quy trình đó hoạt động.
 
-^table: Bảng A.2. Các lỗi bản dịch được phát hiện và cách xử lý
+^table: Bảng A.4. Các lỗi bản dịch được phát hiện và cách xử lý
 | Mã chuỗi | Lỗi | Mức độ | Xử lý |
 | --- | --- | --- | --- |
 | `onboarding_success_created_key_text` | Bản dịch **bỏ mất câu yêu cầu gửi khóa công khai và dấu vân tay cho quản trị viên qua kênh đã xác thực** — tức bỏ mất chính bước bảo đảm tính xác thực của khóa | Ảnh hưởng an toàn | Dịch lại đầy đủ cả ba câu |
@@ -207,7 +273,7 @@ Bề mặt mạng thật của một chương trình là **tập hợp các đi�
 
 ### A.5.2. Đối chiếu trước và sau
 
-^table: Bảng A.3. Số lần xuất hiện của các điểm cuối bên thứ ba trong gói đã biên dịch
+^table: Bảng A.5. Số lần xuất hiện của các điểm cuối bên thứ ba trong gói đã biên dịch
 | Chuỗi tìm kiếm | Bản trước cải tạo | Bản v0.3.0 |
 | --- | --- | --- |
 | `cleaninsights` | 9 | **0** |
@@ -388,6 +454,10 @@ npx puppeteer browsers install chrome
 node scripts/capture-screenshots.mjs
 node scripts/capture-workflow.mjs
 
+# 5b. Dựng lại thiết kế giao diện Android
+cd ../docs-sangkien/tools/mobile-ui
+node capture.mjs && python3 compose.py
+
 # 6. Kiểm thử bản di động
 cd ../mobile
 npm ci
@@ -430,9 +500,150 @@ Toàn văn kết quả: `assets/measurements/claims-audit.txt` và `assets/measu
 
 **Vì sao đưa việc này vào hồ sơ.** Một tài liệu dài, nhiều số liệu, qua nhiều lần sửa thì gần như chắc chắn có chỗ lệch: một bảng được cập nhật mà đoạn văn nhắc tới nó thì không, một hình được đánh số lại mà tham chiếu thì quên. Những lỗi đó nhỏ nhưng làm hỏng lòng tin vào toàn bộ phần còn lại. Cách xử lý ở đây giống hệt cách xử lý các khẳng định về an toàn trong sản phẩm: **biến việc kiểm tra thành một lệnh chạy được, thay vì dựa vào việc đọc kỹ.**
 
-# F. TỆP DỮ LIỆU KÈM THEO
+# F. DANH MỤC CHỨC NĂNG ĐẦY ĐỦ
 
-^table: Bảng F.1. Tệp kết quả gốc kèm theo hồ sơ
+Bản thuyết minh nêu bảng tổng hợp (51 chức năng, 5 nhóm). Phụ lục này liệt kê chi tiết từng chức năng, để Hội đồng thấy đầy đủ phạm vi sản phẩm bàn giao.
+
+Cột "Nguồn gốc": **LK** = linh kiện sẵn có, giữ nguyên; **TK** = tác giả thiết kế lại; **XM** = tác giả xây dựng mới.
+
+^table: Bảng F.1. Nhóm quản lý khóa (14 chức năng)
+| Chức năng | Mô tả | Nguồn gốc |
+| --- | --- | --- |
+| Tạo cặp khóa | RSA-2048/4096 hoặc ECC; đặt cụm mật khẩu, hạn dùng; sinh hoàn toàn trên máy người dùng | LK |
+| Nhập khóa | Từ tệp hoặc dán khối văn bản; nhận cả khóa công khai và khóa riêng tư | LK |
+| Xuất khóa | Xuất khóa công khai để nộp cho quản trị viên; xuất khóa riêng tư để sao lưu | LK |
+| Xóa khóa | Gỡ khóa khỏi chùm khóa | LK |
+| Đặt khóa mặc định | Khóa dùng để ký và tự thêm vào danh sách người nhận | LK |
+| Xem chi tiết khóa | Định danh, dấu vân tay, thuật toán, độ dài, ngày tạo, hạn dùng, khóa phụ, trạng thái | LK |
+| Đổi cụm mật khẩu khóa | Đổi mật khẩu bảo vệ khóa riêng tư mà không đổi khóa | LK |
+| Sửa hạn dùng khóa | Gia hạn hoặc đặt lại thời hạn | LK |
+| Thu hồi khóa | Phát hành chứng chỉ thu hồi khi khóa bị lộ hoặc hết vai trò | LK |
+| Thêm định danh người dùng | Nhiều địa chỉ email trên cùng một khóa | LK |
+| Thu hồi định danh người dùng | Gỡ một địa chỉ khỏi khóa | LK |
+| Kiểm tra cụm mật khẩu | Xác nhận người dùng còn nhớ mật khẩu khóa | LK |
+| Tra khóa từ thư mục bên ngoài | Bốn cơ chế (máy chủ khóa, WKD, Autocrypt) — **chuyển sang tắt mặc định** | TK |
+| Quy trình phân phối khóa nội bộ | Danh mục khóa công khai do quản trị viên phát hành, kèm mẫu CSV và tài liệu quy trình | **XM** |
+
+^table: Bảng F.2. Nhóm mã hóa và giải mã (9 chức năng)
+| Chức năng | Mô tả | Nguồn gốc |
+| --- | --- | --- |
+| Mã hóa thư | Khóa phiên AES-256, bọc bằng khóa công khai của từng người nhận | LK |
+| Giải mã thư | Mở khóa riêng tư, khôi phục khóa phiên, kiểm tra toàn vẹn | LK |
+| Ký số | Ký bằng khóa riêng tư người gửi; mặc định bật | LK |
+| Xác minh chữ ký | Hiển thị rõ ba trạng thái: hợp lệ, không hợp lệ, không có chữ ký | LK |
+| Mã hóa tệp đính kèm | Xử lý tệp nhị phân, tối đa ~18 MB sau khi giãn nở (hạn mức Gmail) | LK |
+| Giải mã tệp đính kèm | Kèm kiểm tra toàn vẹn | LK |
+| Chữ ký tách rời | Ký một tệp mà không thay đổi nội dung tệp | LK |
+| Cảnh báo khóa hết hạn hoặc bị thu hồi | Chặn việc vô tình gửi cho một khóa không còn hợp lệ | LK |
+| Chuỗi phiên bản trên khối bản mã | Đổi sang nhận diện của sản phẩm | TK |
+
+^table: Bảng F.3. Nhóm tích hợp thư điện tử (9 chức năng)
+| Chức năng | Mô tả | Nguồn gốc |
+| --- | --- | --- |
+| Tích hợp Gmail qua giao diện web | Chèn nút mã hóa, khung soạn thảo cách ly, khung đọc cách ly | LK |
+| Tích hợp Gmail qua API | Đọc và gửi thư mã hóa trực tiếp qua Gmail API | LK |
+| Hỗ trợ 14 nhà cung cấp webmail khác | Outlook, Yahoo, Zoho, mailbox.org, Posteo, GMX, WEB.DE, mail.ru… | LK |
+| Danh sách tên miền được phép | Quản trị viên thêm hoặc bớt trang web được phép tích hợp | LK |
+| Giao diện lập trình cho trang web | Ứng dụng web gọi được chức năng mã hóa của tiện ích | LK |
+| Xác thực OAuth 2.0 với Gmail | **Bổ sung PKCE S256 và định danh tiện ích cố định** | TK |
+| Chọn tài khoản khi đăng nhập | **Sửa lỗi tự động dùng tài khoản đang đăng nhập trong trình duyệt** | TK |
+| Hỗ trợ tài khoản Google Workspace | **Gỡ cơ chế kiểm tra giấy phép thương mại vốn chặn loại tài khoản này** | TK |
+| Biểu mẫu mã hóa | Trang web thu thập dữ liệu đã mã hóa sẵn phía người dùng | TK |
+
+^table: Bảng F.4. Nhóm an toàn và vận hành (13 chức năng)
+| Chức năng | Mô tả | Nguồn gốc |
+| --- | --- | --- |
+| Sao lưu khóa riêng tư | Tệp sao lưu được mã hóa bằng cụm mật khẩu riêng | LK |
+| Khôi phục từ bản sao lưu | Đưa khóa trở lại trên thiết bị mới | LK |
+| Phiếu khôi phục | Bản in giấy chứa mã khôi phục, cất giữ ngoài máy tính | LK |
+| Bộ nhớ đệm cụm mật khẩu | Bật mặc định, **tự xóa sau 30 phút** không sử dụng | LK |
+| Nền bảo mật chống giả mạo | Hoa văn nền do người dùng cá nhân hóa, giúp nhận ra hộp thoại giả | LK |
+| Nhật ký bảo mật | Ghi lại các thao tác mật mã đã thực hiện trên máy | LK |
+| Ẩn tiêu đề khối bản mã | Tùy chọn không để lộ phiên bản phần mềm trong bản mã | LK |
+| Hỗ trợ GnuPG cục bộ | Dùng chùm khóa GnuPG của hệ điều hành | LK |
+| Đo lường từ xa | **Đã gỡ bỏ hoàn toàn khỏi mã nguồn** | TK |
+| Kiểm toán bề mặt mạng | Kịch bản kiểm tra gói phát hành không chứa điểm cuối đã gỡ | **XM** |
+| Kiểm chứng liên thông | Kịch bản trao đổi thư hai chiều với GnuPG | **XM** |
+| Đo hiệu năng | Kịch bản đo thời gian sinh khóa, mã hóa, giải mã, độ giãn nở | **XM** |
+| Niêm phong bản phát hành | Mã băm SHA-256 cho gói cài đặt và cho từng tệp | **XM** |
+
+^table: Bảng F.5. Nhóm giao diện và ngôn ngữ (6 chức năng)
+| Chức năng | Mô tả | Nguồn gốc |
+| --- | --- | --- |
+| Giao diện tiếng Việt | 586/586 chuỗi, độ phủ 100%, thuật ngữ chuẩn hóa | **XM** |
+| Bộ chọn ngôn ngữ trong ứng dụng | Theo trình duyệt / English / Tiếng Việt | **XM** |
+| Kiểm toán chất lượng bản dịch | Kịch bản kiểm tra độ phủ, ô thay thế, thẻ đánh dấu, nhất quán thuật ngữ | **XM** |
+| Cảnh báo an toàn trong giao diện | Ba nguyên tắc cốt lõi hiển thị tại màn hình thiết lập, bằng tiếng Việt | **XM** |
+| 14 ngôn ngữ kế thừa | Vẫn hoạt động qua cơ chế đa ngữ của trình duyệt | LK |
+| Nhận diện sản phẩm | Biểu tượng, tên, màu sắc riêng ở toàn bộ điểm hiển thị | TK |
+
+# G. MA TRẬN KIỂM THỬ ỨNG DỤNG ANDROID
+
+Phần nền tảng của bản di động đã được kiểm thử tự động (68/68 đạt, mục A.3). Phần **giao diện chạy trên thiết bị Android thật** là công việc của giai đoạn 2. Ma trận dưới đây được lập sẵn để việc kiểm thử đó có căn cứ và có thể bàn giao cho người khác thực hiện.
+
+**Cách dùng bảng.** Cột *Trạng thái* hiện ghi `CHỜ` cho mọi phép thử chưa thực hiện trên thiết bị. Sau khi chạy, người kiểm thử điền `ĐẠT` hoặc `KHÔNG ĐẠT` kèm ghi chú. Hồ sơ **không ghi sẵn kết quả cho phép thử chưa chạy**: một bảng kết quả không có thật sẽ phá vỡ chính nguyên tắc kiểm chứng được mà toàn bộ sáng kiến dựa trên đó.
+
+**Thiết bị đề xuất:** tối thiểu hai máy — một máy Android 10–12 và một máy Android 13 trở lên — để phủ được khác biệt về Android Keystore và về quyền truy cập tệp.
+
+^table: Bảng G.1. Ma trận kiểm thử chức năng trên thiết bị Android
+| Mã | Phép thử | Tiêu chí đạt | Trạng thái |
+| --- | --- | --- | --- |
+| A-01 | Cài đặt và khởi chạy lần đầu | Ứng dụng khởi chạy, hiển thị màn hình thiết lập bằng tiếng Việt | CHỜ |
+| A-02 | Đặt cụm mật khẩu thiết bị | Chấp nhận cụm mật khẩu hợp lệ, từ chối cụm quá ngắn | CHỜ |
+| A-03 | Sinh cặp khóa RSA-4096 | Hoàn tất, khóa xuất hiện trong chùm khóa; ghi lại thời gian thực tế | CHỜ |
+| A-04 | Hiển thị dấu vân tay khóa | Dấu vân tay khớp với giá trị hiển thị trên bản máy tính cho cùng một khóa | CHỜ |
+| A-05 | Nhập khóa công khai từ tệp | Khóa được nhập, hiển thị nhãn "chưa đối chiếu vân tay" | CHỜ |
+| A-06 | Đánh dấu đã đối chiếu vân tay | Nhãn chuyển sang trạng thái đã xác nhận | CHỜ |
+| A-07 | Mã hóa thư cho một người nhận | Sinh khối bản mã hợp lệ | CHỜ |
+| A-08 | Mã hóa thư cho nhiều người nhận | Mọi người nhận đều giải mã được | CHỜ |
+| A-09 | Ký thư khi gửi | Người nhận xác minh được chữ ký | CHỜ |
+| A-10 | Giải mã thư nhận được | Bản rõ đúng, tiếng Việt có dấu nguyên vẹn | CHỜ |
+| A-11 | Hiển thị trạng thái chữ ký hợp lệ | Hiển thị đúng tên và địa chỉ người ký | CHỜ |
+| A-12 | Hiển thị trạng thái chữ ký không hợp lệ | Cảnh báo rõ ràng, không hiển thị như thư hợp lệ | CHỜ |
+| A-13 | Mã hóa và giải mã tệp đính kèm | Tệp khôi phục đúng từng byte | CHỜ |
+| A-14 | Sao lưu khóa riêng tư | Tạo được tệp sao lưu, mã hóa bằng cụm mật khẩu riêng | CHỜ |
+| A-15 | Khôi phục trên thiết bị thứ hai | Khóa hoạt động, giải mã được thư cũ | CHỜ |
+| A-16 | Xuất khóa công khai và chia sẻ | Chia sẻ được qua trình chia sẻ của Android | CHỜ |
+
+^table: Bảng G.2. Ma trận kiểm thử an toàn trên thiết bị
+| Mã | Phép thử | Tiêu chí đạt | Trạng thái |
+| --- | --- | --- | --- |
+| S-01 | Khóa ứng dụng khi chuyển sang ứng dụng khác | Yêu cầu mở khóa lại khi quay lại | CHỜ |
+| S-02 | Mở khóa bằng vân tay | Hoạt động; khi vân tay không khớp thì lùi về cụm mật khẩu | CHỜ |
+| S-03 | Tự xóa bộ nhớ đệm cụm mật khẩu | Sau thời gian cấu hình, yêu cầu nhập lại | CHỜ |
+| S-04 | Chặn chụp màn hình | Nội dung bị ẩn trong danh sách ứng dụng gần đây | CHỜ |
+| S-05 | Khóa riêng tư trong kho dữ liệu | Tệp trên máy không đọc được bằng công cụ duyệt tệp | CHỜ |
+| S-06 | Hộp thoại cụm mật khẩu là thành phần gốc | Không phải nội dung web trong WebView | CHỜ |
+| S-07 | Ứng dụng không phát sinh kết nối ngoài dự kiến | Bắt gói tin: không có kết nối nào ngoài Gmail API | CHỜ |
+| S-08 | Từ chối bản mã bị sửa | Sửa một ký tự → báo lỗi, không trả về bản rõ sai | CHỜ |
+
+^table: Bảng G.3. Ma trận kiểm thử liên thông giữa các nền tảng
+| Mã | Phép thử | Tiêu chí đạt | Trạng thái |
+| --- | --- | --- | --- |
+| L-01 | Android mã hóa → bản máy tính giải mã | Bản rõ đúng, chữ ký hợp lệ | CHỜ |
+| L-02 | Bản máy tính mã hóa → Android giải mã | Bản rõ đúng, chữ ký hợp lệ | CHỜ |
+| L-03 | Android mã hóa → GnuPG giải mã | Bản rõ đúng, GnuPG báo chữ ký hợp lệ | CHỜ |
+| L-04 | GnuPG mã hóa → Android giải mã | Bản rõ đúng, chữ ký xác minh được | CHỜ |
+| L-05 | Khóa sinh trên Android dùng được trên máy tính | Nhập và dùng bình thường | CHỜ |
+| L-06 | Bản sao lưu từ máy tính khôi phục được trên Android | Khóa hoạt động sau khôi phục | CHỜ |
+
+^table: Bảng G.4. Ma trận kiểm thử hiệu năng và tương thích
+| Mã | Phép thử | Chỉ tiêu tham chiếu | Trạng thái |
+| --- | --- | --- | --- |
+| P-01 | Thời gian sinh khóa RSA-4096 trên thiết bị | So với 8–10 giây đo trên máy tính | CHỜ |
+| P-02 | Thời gian mã hóa một bức thư ~5 KB | So với 36 ms đo trên máy tính | CHỜ |
+| P-03 | Thời gian giải mã một bức thư ~5 KB | So với 19 ms đo trên máy tính | CHỜ |
+| P-04 | Mã hóa tệp đính kèm 5 MB | Ghi lại thời gian và mức tiêu thụ bộ nhớ | CHỜ |
+| P-05 | Hoạt động trên Android 10–12 | Không lỗi ở Keystore và quyền truy cập tệp | CHỜ |
+| P-06 | Hoạt động trên Android 13 trở lên | Không lỗi ở quyền thông báo và quyền tệp | CHỜ |
+| P-07 | Hoạt động khi xoay màn hình | Không mất dữ liệu đang nhập | CHỜ |
+| P-08 | Hoạt động khi hết bộ nhớ và bị hệ điều hành thu hồi | Khôi phục đúng trạng thái, yêu cầu mở khóa lại | CHỜ |
+
+**Tổng cộng 38 phép thử.** Sau khi thực hiện, kết quả được tổng hợp bổ sung vào mục này và vào Bảng *Kết quả các bộ kiểm thử tự động* của Bản thuyết minh.
+
+# H. TỆP DỮ LIỆU KÈM THEO
+
+^table: Bảng H.1. Tệp kết quả gốc kèm theo hồ sơ
 | Tệp | Nội dung |
 | --- | --- |
 | `assets/measurements/crypto-benchmark.json` | Toàn bộ số liệu hiệu năng, kèm cấu hình máy đo và từng lần đo |
@@ -444,11 +655,14 @@ Toàn văn kết quả: `assets/measurements/claims-audit.txt` và `assets/measu
 | `assets/measurements/translation-audit.txt` | Toàn văn kết quả kiểm toán bản dịch |
 | `assets/measurements/desktop-tests.txt` | Kết quả kiểm thử bản máy tính |
 | `assets/measurements/mobile-tests.txt` | Kết quả kiểm thử bản di động |
+| `assets/measurements/webview-chromium.json` | Kết quả chạy lõi mật mã trong Chromium |
 | `assets/measurements/claims-audit.txt` | Kết quả tự kiểm chứng 33 số liệu của hồ sơ |
 | `assets/measurements/consistency-audit.txt` | Kết quả kiểm tra đánh số và tham chiếu chéo |
 | `assets/diagrams/*.drawio` | Sơ đồ nguồn, mở và sửa được bằng diagrams.net |
 | `assets/diagrams/*.svg` | Sơ đồ dạng vector |
 | `assets/diagrams/*.png` | Sơ đồ dạng ảnh, dùng để nhúng vào tài liệu |
-| `assets/screenshots/*.png` | Ảnh chụp giao diện |
+| `assets/screenshots/*.png` | Ảnh chụp giao diện của bản máy tính |
+| `assets/mobile-design/*.png` | 12 thiết kế màn hình ứng dụng Android và 2 bản ghép trình bày |
+| `tools/mobile-ui/` | Mã nguồn thiết kế giao diện Android và kịch bản dựng lại ảnh |
 
 Mỗi sơ đồ có đủ **ba định dạng từ cùng một nguồn định nghĩa** (`tools/make_diagrams.py`), nên tệp sửa được và ảnh xuất bản không bao giờ lệch nhau. Nếu cần chỉnh sửa một hình, mở tệp `.drawio` tương ứng bằng diagrams.net.

@@ -32,9 +32,11 @@ ALL_DOCS = '\n'.join(
 checks, failures = [], 0
 
 
-def record(name, expected, actual, ok):
+def record(name, expected, actual, ok, cited=True):
+    """`cited=False` marks a figure that is measured and recorded here but is
+    no longer quoted in the dossier text, so only the measurement is asserted."""
     global failures
-    checks.append((name, expected, actual, ok))
+    checks.append((name, expected, actual, ok, cited))
     if not ok:
         failures += 1
 
@@ -64,8 +66,8 @@ record('Số ngôn ngữ (15 kế thừa + tiếng Việt)', '16', str(len(local
 
 record('Số dòng tệp danh mục tiếng Việt', '1.880',
        str(count_lines(os.path.join(MAILVELOPE, 'locales/vi/messages.json'))),
-       count_lines(os.path.join(MAILVELOPE, 'locales/vi/messages.json')) == 1880
-       and '1.880' in ALL_DOCS)
+       count_lines(os.path.join(MAILVELOPE, 'locales/vi/messages.json')) == 1880,
+       cited=False)
 
 ta = json.load(open(os.path.join(MEAS, 'translation-audit.json'), encoding='utf-8'))
 record('Kiểm toán bản dịch: 0 lỗi chặn', '0',
@@ -155,18 +157,51 @@ record('Kịch bản kiểm chứng: 5 tệp', '637 dòng', f'{total} dòng',
 cap = sum(count_lines(os.path.join(MAILVELOPE, f'scripts/capture-{n}.mjs'))
           for n in ['screenshots', 'workflow'])
 record('Kịch bản chụp ảnh tài liệu: 2 tệp', '275 dòng', f'{cap} dòng',
-       cap == 275 and '275' in ALL_DOCS)
+       cap == 275, cited=False)
 
 mobile_files = subprocess.run(['git', '-C', MOBILE, 'ls-files'],
                               capture_output=True, text=True).stdout.split()
 record('Số tệp dự án di động', '52', str(len(mobile_files)),
-       len(mobile_files) == 52 and '52 tệp' in ALL_DOCS)
+       len(mobile_files) == 52, cited=False)
 
 n_docs = len(os.listdir(os.path.join(MAILVELOPE, 'docs/internal')))
 record('Tài liệu vận hành tiếng Việt', '9', str(n_docs), n_docs == 9 and 'chín tài liệu' in ALL_DOCS.lower())
 
 n_icons = len(os.listdir(os.path.join(MAILVELOPE, 'src/img/secure-mail')))
-record('Tệp biểu tượng nhận diện', '11', str(n_icons), n_icons == 11 and '11 tệp' in ALL_DOCS)
+record('Tệp biểu tượng nhận diện', '11', str(n_icons), n_icons == 11, cited=False)
+
+# --- 7b. mobile interface design ------------------------------------------
+mobile_design = os.path.join(DOSSIER, 'assets', 'mobile-design')
+screens = [f for f in os.listdir(mobile_design)
+           if f.startswith('m') and f.endswith('.png')]
+record('Số màn hình thiết kế giao diện Android', '12', str(len(screens)),
+       len(screens) == 12 and '12 màn hình' in ALL_DOCS)
+
+sheets = [f for f in os.listdir(mobile_design) if f.startswith('sheet-')]
+record('Bản ghép trình bày thiết kế Android', '2', str(len(sheets)), len(sheets) == 2)
+
+rpc = open(os.path.join(MOBILE, 'packages/bridge/src/methods.ts'), encoding='utf-8').read()
+n_rpc = len(re.findall(r"^\s+\w+: '", rpc, re.M))
+record('Số phương thức trong hợp đồng RPC di động', '22 + 5 chiều ngược',
+       str(n_rpc), n_rpc == 27 and '22 phương thức' in ALL_DOCS)
+
+# --- 7b2. crypto core running on the Android WebView engine ---------------
+wv_path = os.path.join(MEAS, 'webview-chromium.json')
+wv = json.load(open(wv_path, encoding='utf-8'))
+wv_pass = sum(1 for r in wv['results'] if r['result'] == 'PASS')
+record('Lõi mật mã chạy trong Chromium (engine Android WebView)', '16/16',
+       f"{wv_pass}/{len(wv['results'])}",
+       wv_pass == len(wv['results']) == 16 and '16/16' in ALL_DOCS)
+record('Engine dùng để chạy lõi di động', 'Chromium 149', wv['engine'],
+       'Chrome/149' in wv['engine'])
+
+# --- 7c. dossier structure matches the official template ------------------
+for f in ['01-DON-DANG-KY-SANG-KIEN.md', '02-THUYET-MINH-SANG-KIEN.md',
+          '03-DU-KIEN-HIEU-QUA.md']:
+    body = open(os.path.join(DOSSIER, f), encoding='utf-8').read()
+    record(f'{f[:2]} có quốc hiệu và khối chữ ký theo mẫu', 'có',
+           'có' if '{{QUOCHIEU}}' in body and '{{SIGNATURE' in body else 'thiếu',
+           '{{QUOCHIEU}}' in body and '{{SIGNATURE' in body)
 
 # --- 8. assets referenced by the documents --------------------------------
 missing = [rel for rel in re.findall(r'^!fig\[.*?\]\((.*?)\)', ALL_DOCS, re.M)
@@ -184,11 +219,12 @@ record('Mỗi sơ đồ có đủ 3 định dạng (.drawio/.svg/.png)', f'{len(
 # --- report ---------------------------------------------------------------
 print('KIỂM CHỨNG SỐ LIỆU TRONG HỒ SƠ')
 print('=' * 92)
-print(f'{"Nội dung kiểm tra":<58}{"Hồ sơ nêu":<20}{"Thực tế":<20} ')
-print('-' * 92)
-for name, expected, actual, ok in checks:
+print(f'{"Nội dung kiểm tra":<56}{"Hồ sơ nêu":<19}{"Thực tế":<19}{"":<4}')
+print('-' * 96)
+for name, expected, actual, ok, cited in checks:
     mark = 'ĐẠT ' if ok else 'SAI '
-    print(f'{mark}{name:<54}{str(expected)[:19]:<20}{str(actual)[:19]:<20}')
+    tag = '' if cited else '  (chỉ đo, hồ sơ không nêu)'
+    print(f'{mark}{name:<52}{str(expected)[:18]:<19}{str(actual)[:18]:<19}{tag}')
 print('=' * 92)
 print(f'{len(checks)} phép kiểm tra, {len(checks) - failures} đạt, {failures} sai')
 sys.exit(1 if failures else 0)

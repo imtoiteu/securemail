@@ -1,0 +1,20 @@
+Chromium: Chrome/149.0.7827.22 
+
+  PASS  Bundle nạp được trong Chromium — window.SecureMailCore hiện diện sau khi trang tải xong
+  PASS  Năng lực nền tảng đầy đủ — crypto.subtle, getRandomValues, TextEncoder, ReadableStream đều có
+  PASS  Khởi tạo lõi mật mã trong WebView — createCore trả về API sẵn sàng
+  PASS  Sinh cặp khóa RSA-4096 trong WebView — hoàn tất sau 2327 ms
+  PASS  Sinh cặp khóa thứ hai — hoàn tất sau 2342 ms
+  PASS  Liệt kê chùm khóa — 2 khóa trong chùm khóa
+  PASS  Đọc chi tiết khóa — dấu vân tay 1D91CF0F823843AC…
+  PASS  Xuất khóa công khai — khối BEGIN PGP PUBLIC KEY BLOCK hợp lệ
+  PASS  Mã hóa kèm ký số — 209 ms, khối bản mã 2629 byte
+  PASS  Giải mã và xác minh chữ ký — 549 ms, bản rõ đúng từng ký tự, tiếng Việt nguyên vẹn
+  PASS  Chữ ký được xác minh hợp lệ — 1 chữ ký hợp lệ
+  PASS  Khóa sinh trong WebView đọc được bằng thư viện độc lập — OpenPGP.js chạy trong Node phân tích đúng khóa và khớp dấu vân tay
+  PASS  Bản mã sinh trong WebView là OpenPGP chuẩn — thư viện độc lập phân tích được khối và thấy đúng 2 khóa người nhận
+  PASS  Khóa lại ứng dụng — app.lock trả về thành công
+  PASS  Sau khi khóa vẫn giải mã được khi cung cấp lại cụm mật khẩu — bộ nhớ đệm bị xóa, lõi yêu cầu lại cụm mật khẩu qua bridge
+  PASS  Đọc tùy chọn — prefs.get trả về cấu hình
+
+ALL PASS -> /root/imtoiteu/company-secure-mail/docs-sangkien/assets/measurements/webview-chromium.json

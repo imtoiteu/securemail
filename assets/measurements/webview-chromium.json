@@ -1,0 +1,94 @@
+{
+  "generatedAt": "2026-09-08T16:31:39.183Z",
+  "engine": "Chrome/149.0.7827.22",
+  "note": "Lõi mật mã của bản di động chạy trong Chromium — cùng họ engine với Android System WebView. Không bao gồm tầng giao diện React Native, Android Keystore và hành vi đặc thù thiết bị (xem Phụ lục kỹ thuật, mục G).",
+  "timings": {
+    "keygenRsa4096Ms": 2327,
+    "keygenRsa4096SecondMs": 2342,
+    "encryptSignMs": 209,
+    "decryptVerifyMs": 549
+  },
+  "results": [
+    {
+      "check": "Bundle nạp được trong Chromium",
+      "detail": "window.SecureMailCore hiện diện sau khi trang tải xong",
+      "result": "PASS"
+    },
+    {
+      "check": "Năng lực nền tảng đầy đủ",
+      "detail": "crypto.subtle, getRandomValues, TextEncoder, ReadableStream đều có",
+      "result": "PASS"
+    },
+    {
+      "check": "Khởi tạo lõi mật mã trong WebView",
+      "detail": "createCore trả về API sẵn sàng",
+      "result": "PASS"
+    },
+    {
+      "check": "Sinh cặp khóa RSA-4096 trong WebView",
+      "detail": "hoàn tất sau 2327 ms",
+      "result": "PASS"
+    },
+    {
+      "check": "Sinh cặp khóa thứ hai",
+      "detail": "hoàn tất sau 2342 ms",
+      "result": "PASS"
+    },
+    {
+      "check": "Liệt kê chùm khóa",
+      "detail": "2 khóa trong chùm khóa",
+      "result": "PASS"
+    },
+    {
+      "check": "Đọc chi tiết khóa",
+      "detail": "dấu vân tay 1D91CF0F823843AC…",
+      "result": "PASS"
+    },
+    {
+      "check": "Xuất khóa công khai",
+      "detail": "khối BEGIN PGP PUBLIC KEY BLOCK hợp lệ",
+      "result": "PASS"
+    },
+    {
+      "check": "Mã hóa kèm ký số",
+      "detail": "209 ms, khối bản mã 2629 byte",
+      "result": "PASS"
+    },
+    {
+      "check": "Giải mã và xác minh chữ ký",
+      "detail": "549 ms, bản rõ đúng từng ký tự, tiếng Việt nguyên vẹn",
+      "result": "PASS"
+    },
+    {
+      "check": "Chữ ký được xác minh hợp lệ",
+      "detail": "1 chữ ký hợp lệ",
+      "result": "PASS"
+    },
+    {
+      "check": "Khóa sinh trong WebView đọc được bằng thư viện độc lập",
+      "detail": "OpenPGP.js chạy trong Node phân tích đúng khóa và khớp dấu vân tay",
+      "result": "PASS"
+    },
+    {
+      "check": "Bản mã sinh trong WebView là OpenPGP chuẩn",
+      "detail": "thư viện độc lập phân tích được khối và thấy đúng 2 khóa người nhận",
+      "result": "PASS"
+    },
+    {
+      "check": "Khóa lại ứng dụng",
+      "detail": "app.lock trả về thành công",
+      "result": "PASS"
+    },
+    {
+      "check": "Sau khi khóa vẫn giải mã được khi cung cấp lại cụm mật khẩu",
+      "detail": "bộ nhớ đệm bị xóa, lõi yêu cầu lại cụm mật khẩu qua bridge",
+      "result": "PASS"
+    },
+    {
+      "check": "Đọc tùy chọn",
+      "detail": "prefs.get trả về cấu hình",
+      "result": "PASS"
+    }
+  ],
+  "summary": "ALL PASS"
+}

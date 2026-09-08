@@ -2,15 +2,19 @@
 title: Dự kiến hiệu quả khi đưa vào ứng dụng
 subtitle: Căn cứ, giả thiết và cách đo — thay cho xác nhận hiệu quả đã thực hiện
 kind: DỰ KIẾN HIỆU QUẢ
-org_top: [TÊN CƠ QUAN CHỦ QUẢN]
-org: [TÊN ĐƠN VỊ]
+org_top: TỔNG CỤC II
+org: HỌC VIỆN KHOA HỌC QUÂN SỰ
 author: [Họ và tên tác giả]
 header: Dự kiến hiệu quả — Secure Mail
 footer: Secure Mail — Dự kiến hiệu quả
 cover_image: assets/diagrams/h7-pham-vi-du-lieu.png
 cover_rows: Thuộc hồ sơ|Sáng kiến Secure Mail;;Loại tài liệu|Dự kiến hiệu quả khi đưa vào ứng dụng;;Trạng thái triển khai|Chưa triển khai diện rộng
-place_date: [Địa danh], tháng 9 năm 2026
+place_date: Hà Nội, ngày ..... tháng ..... năm 2026
 ---
+
+{{QUOCHIEU}}
+
+# DỰ KIẾN HIỆU QUẢ KHI ĐƯA VÀO ỨNG DỤNG TRONG THỰC TIỄN
 
 {{TOC}}
 
@@ -158,7 +162,7 @@ Phạm vi áp dụng được đề xuất: thông tin cần bảo vệ nhưng *
 | --- | --- |
 | Quy mô | `[… người dùng]` |
 | Thời gian | `[… tháng]` |
-| Đơn vị thực hiện | `[Tên đơn vị]` |
+| Đơn vị thực hiện | `[Khoa/Phòng] — Học viện Khoa học Quân sự` |
 | Chuẩn bị | Cử và tập huấn quản trị viên khóa; ban hành quy chế sử dụng; lập danh mục khóa công khai của đơn vị |
 | Đào tạo | Một buổi tập huấn cho người dùng: sinh khóa, sao lưu khóa, nhập khóa người nhận, gửi và đọc thư mã hóa, nhận biết chữ ký không hợp lệ |
 | Số liệu thu thập | Toàn bộ chỉ tiêu tại Bảng 4 và các chỉ tiêu tại mục 5.2 |
@@ -174,4 +178,4 @@ Sáng kiến đã hoàn thành phần sản phẩm và phần kiểm chứng k�
 
 Đó là phần hiệu quả không phụ thuộc vào số lượng người dùng, và là phần mà tác giả đề nghị Hội đồng xem xét trước.
 
-{{SIGNATURE}}
+{{SIGNATURE:CÁN BỘ THỰC HIỆN|(Ký, ghi rõ họ tên)||THỦ TRƯỞNG ĐƠN VỊ CHỦ TRÌ THỰC HIỆN|(Ký, đóng dấu)}}

@@ -19,7 +19,18 @@ Supported Markdown subset
     ```code```              monospace block
     <!--pagebreak-->        hard page break
     {{TOC}}                 table of contents field
-    {{SIGNATURE}}           two-column signature block
+    {{SIGNATURE:left|right}} two-column signature block, labels from the template
+    {{QUOCHIEU}}            the standard two-column administrative letterhead
+    {{BIA}}                 dossier cover page (from front-matter fields)
+
+Cross-references
+    ^table: {{t:key}} Caption      declares table "key"; renders "Bảng N. Caption"
+    !fig[{{f:key}} Caption](path)  declares figure "key"; renders "Hình N. Caption"
+    {{t:key}} / {{f:key}}          anywhere else renders "Bảng N" / "Hình N"
+
+Numbers are assigned in document order at build time, so inserting a table or
+figure renumbers every reference to it automatically. Hand-written "Bảng 15"
+survives editing only until something is inserted above it; keys do not.
 """
 import os
 import re
@@ -242,6 +253,11 @@ class Builder:
             c.paragraph_format.space_before = Pt(10)
             c.paragraph_format.space_after = Pt(3)
             add_runs(c, caption, size=Pt(11.5), colour=MUTED, base_italic=True)
+        # Markdown requires a header row, but a two-column key/value table is
+        # often written with it blank. Drop it rather than render an empty band.
+        headerless = not any(c.strip() for c in rows[0])
+        if headerless:
+            rows = rows[1:]
         t = self.doc.add_table(rows=len(rows), cols=len(rows[0]))
         t.style = 'Table Grid'
         t.alignment = WD_TABLE_ALIGNMENT.CENTER
@@ -254,8 +270,9 @@ class Builder:
                 p.paragraph_format.space_before = Pt(2)
                 p.paragraph_format.line_spacing_rule = WD_LINE_SPACING.SINGLE
                 p.alignment = WD_ALIGN_PARAGRAPH.LEFT
-                add_runs(p, cell, size=Pt(11.5), base_bold=(ri == 0))
-                if ri == 0:
+                add_runs(p, cell, size=Pt(11.5),
+                         base_bold=(ri == 0 and not headerless))
+                if ri == 0 and not headerless:
                     _shade(tc._tc.get_or_add_tcPr(), 'E2E8F0')
         self.doc.add_paragraph().paragraph_format.space_after = Pt(6)
         return t
@@ -275,22 +292,105 @@ class Builder:
         add_runs(note, '(Mở tệp trong Word và nhấn Ctrl+A rồi F9 để cập nhật mục lục và số trang)',
                  size=Pt(10), colour=MUTED, base_italic=True)
 
-    def signature(self):
+    def quochieu(self):
+        """The two-column letterhead every Vietnamese administrative document
+        opens with: issuing body on the left, national heading on the right."""
+        m = self.meta
         t = self.doc.add_table(rows=1, cols=2)
         t.alignment = WD_TABLE_ALIGNMENT.CENTER
-        for ci, (title, name) in enumerate([
-                ('XÁC NHẬN CỦA ĐƠN VỊ', '[Ký, ghi rõ họ tên, đóng dấu]'),
-                ('TÁC GIẢ SÁNG KIẾN', self.meta.get('author', '[Họ và tên]'))]):
+        t.autofit = False
+        lay = OxmlElement('w:tblLayout')
+        lay.set(qn('w:type'), 'fixed')
+        t._tbl.tblPr.append(lay)
+        # Width must be set on the grid columns as well; setting it only on the
+        # cells leaves the renderer free to re-fit and wrap the heading.
+        for col, w in ((t.columns[0], Cm(6.3)), (t.columns[1], Cm(9.7))):
+            col.width = w
+        for cell, w in ((t.cell(0, 0), Cm(6.3)), (t.cell(0, 1), Cm(9.7))):
+            cell.width = w
+        left = [m.get('org_top', ''), m.get('org', '')]
+        right = ['CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM', 'Độc lập - Tự do - Hạnh phúc']
+        for ci, block in enumerate((left, right)):
+            c = t.cell(0, ci)
+            c.paragraphs[0].text = ''
+            for li, line in enumerate([x for x in block if x]):
+                p = c.paragraphs[0] if li == 0 else c.add_paragraph()
+                p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+                p.paragraph_format.space_after = Pt(0)
+                p.paragraph_format.line_spacing_rule = WD_LINE_SPACING.SINGLE
+                # The national heading is the longest line and must stay on
+                # one line, so it is set a shade smaller than the motto.
+                size = Pt(10.5) if ci == 0 else (Pt(10) if li == 0 else Pt(11.5))
+                add_runs(p, line, size=size, base_bold=(li > 0 or ci == 0))
+            u = c.add_paragraph()
+            u.alignment = WD_ALIGN_PARAGRAPH.CENTER
+            u.paragraph_format.space_after = Pt(0)
+            add_runs(u, '─────────' if ci == 0 else '─────────────────', colour=MUTED)
+        p = self.doc.add_paragraph()
+        p.alignment = WD_ALIGN_PARAGRAPH.RIGHT
+        p.paragraph_format.space_before = Pt(6)
+        add_runs(p, m.get('place_date', ''), base_italic=True)
+
+    def bia(self):
+        """Cover sheet of the whole dossier, in the layout the template uses."""
+        m = self.meta
+        for line in (m.get('org_top', ''), m.get('org', '')):
+            if not line:
+                continue
+            p = self.doc.add_paragraph()
+            p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+            p.paragraph_format.space_after = Pt(2)
+            add_runs(p, line, size=Pt(13), base_bold=True)
+        for _ in range(6):
+            self.doc.add_paragraph()
+        p = self.doc.add_paragraph()
+        p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        p.paragraph_format.space_after = Pt(18)
+        add_runs(p, 'HỒ SƠ', size=Pt(34), base_bold=True)
+        p = self.doc.add_paragraph()
+        p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        p.paragraph_format.space_after = Pt(6)
+        add_runs(p, 'SÁNG KIẾN CẢI TIẾN KỸ THUẬT', size=Pt(15), colour=MUTED, base_bold=True)
+        p = self.doc.add_paragraph()
+        p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        add_runs(p, m['title'].upper(), size=Pt(21), colour=ACCENT, base_bold=True)
+        if m.get('subtitle'):
+            p = self.doc.add_paragraph()
+            p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+            p.paragraph_format.space_before = Pt(8)
+            add_runs(p, m['subtitle'], size=Pt(13), colour=MUTED, base_italic=True)
+        for _ in range(7):
+            self.doc.add_paragraph()
+        rows = [r.split('|') for r in m.get('cover_rows', '').split(';;') if r.strip()]
+        for k, v in rows:
+            p = self.doc.add_paragraph()
+            p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+            p.paragraph_format.space_after = Pt(3)
+            add_runs(p, f'{k.strip()}: ', base_bold=True)
+            add_runs(p, v.strip())
+        for _ in range(4):
+            self.doc.add_paragraph()
+        p = self.doc.add_paragraph()
+        p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        add_runs(p, m.get('place_date', ''), size=Pt(13), base_bold=True)
+
+    def signature(self, left=None, right=None):
+        left = left or 'TÁC GIẢ SÁNG KIẾN|(Ký, ghi rõ họ tên)'
+        right = right or 'CHỈ HUY ĐƠN VỊ|(Ký, đóng dấu)'
+        t = self.doc.add_table(rows=1, cols=2)
+        t.alignment = WD_TABLE_ALIGNMENT.CENTER
+        for ci, (title, name) in enumerate([tuple(left.split('|')), tuple(right.split('|'))]):
             c = t.cell(0, ci)
             c.paragraphs[0].text = ''
             p = c.paragraphs[0]
             p.alignment = WD_ALIGN_PARAGRAPH.CENTER
             add_runs(p, title, base_bold=True)
-            for _ in range(4):
+            p1 = c.add_paragraph()
+            p1.alignment = WD_ALIGN_PARAGRAPH.CENTER
+            p1.paragraph_format.space_after = Pt(0)
+            add_runs(p1, name, base_italic=True)
+            for _ in range(5):
                 c.add_paragraph()
-            p2 = c.add_paragraph()
-            p2.alignment = WD_ALIGN_PARAGRAPH.CENTER
-            add_runs(p2, name, base_bold=True)
 
     # ------------------------------------------------------------- cover ---
     def cover(self):
@@ -355,8 +455,45 @@ class Builder:
 
 
 # ------------------------------------------------------------------ parse ---
+REF = re.compile(r'\{\{([tf]):([a-z0-9-]+)\}\}')
+
+
+def resolve_refs(text):
+    """Assign numbers to keyed tables and figures in document order, then
+    substitute every reference. Returns the text with plain numbers."""
+    tables, figures = {}, {}
+    for m in re.finditer(r'^\^table:\s*\{\{t:([a-z0-9-]+)\}\}', text, re.M):
+        tables.setdefault(m.group(1), len(tables) + 1)
+    for m in re.finditer(r'^!fig\[\{\{f:([a-z0-9-]+)\}\}', text, re.M):
+        figures.setdefault(m.group(1), len(figures) + 1)
+
+    unknown = set()
+
+    def sub(m):
+        kind, key = m.group(1), m.group(2)
+        table = tables if kind == 't' else figures
+        word = 'Bảng' if kind == 't' else 'Hình'
+        if key not in table:
+            unknown.add(f'{kind}:{key}')
+            return f'[{word} ?{key}]'
+        return f'{word} {table[key]}'
+
+    # A reference in caption position takes a full stop, matching the way
+    # captions read elsewhere: "Bảng 3. Caption".
+    text = re.sub(r'^(\^table:\s*)\{\{t:([a-z0-9-]+)\}\}',
+                  lambda m: m.group(1) + sub(REF.match('{{t:%s}}' % m.group(2))) + '.',
+                  text, flags=re.M)
+    text = re.sub(r'^(!fig\[)\{\{f:([a-z0-9-]+)\}\}',
+                  lambda m: m.group(1) + sub(REF.match('{{f:%s}}' % m.group(2))) + '.',
+                  text, flags=re.M)
+    text = REF.sub(sub, text)
+    if unknown:
+        print('  WARNING: tham chiếu tới mục không tồn tại:', ', '.join(sorted(unknown)))
+    return text
+
+
 def parse(md_path, assets_root):
-    text = open(md_path, encoding='utf-8').read()
+    text = resolve_refs(open(md_path, encoding='utf-8').read())
     meta = {}
     if text.startswith('---\n'):
         fm, text = text[4:].split('\n---\n', 1)
@@ -382,8 +519,14 @@ def parse(md_path, assets_root):
 
         if s == '{{TOC}}':
             b.toc(); b.pagebreak(); i += 1; continue
-        if s == '{{SIGNATURE}}':
-            b.signature(); i += 1; continue
+        if s.startswith('{{SIGNATURE'):
+            m = re.match(r'\{\{SIGNATURE(?::(.*?)\|\|(.*?))?\}\}$', s)
+            b.signature(m.group(1) if m else None, m.group(2) if m else None)
+            i += 1; continue
+        if s == '{{QUOCHIEU}}':
+            b.quochieu(); i += 1; continue
+        if s == '{{BIA}}':
+            b.bia(); i += 1; continue
         if s == '<!--pagebreak-->':
             b.pagebreak(); i += 1; continue
         if not s:
@@ -411,6 +554,8 @@ def parse(md_path, assets_root):
             rows, cap = [], None
             if i and lines[i - 1].strip().startswith('^table:'):
                 cap = lines[i - 1].strip()[7:].strip()
+                if cap and not cap[0].isupper() and not cap.startswith('Bảng'):
+                    cap = cap[0].upper() + cap[1:]
             while i < len(lines) and lines[i].strip().startswith('|'):
                 cells = [c.strip() for c in lines[i].strip().strip('|').split('|')]
                 if not all(re.fullmatch(r':?-{2,}:?', c) for c in cells):
