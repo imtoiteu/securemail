@@ -1,0 +1,6 @@
+# Build by-products of the diagram and document toolchain
+__pycache__/
+*.pyc
+
+# LibreOffice lock files
+.~lock.*#

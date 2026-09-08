@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="securemail-dossier" type="device">
+  <diagram name="Kiến trúc phiên bản di động: tái sử dụng nguyên vẹn lõi mật mã đã kiểm chứng" id="h5-kien-truc-mobile">
+    <mxGraphModel dx="1180" dy="1020" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Kiến trúc phiên bản di động: tái sử dụng nguyên vẹn lõi mật mã đã kiểm chứng" parent="1" vertex="1" style="text;html=1;align=center;fontSize=18;fontStyle=1;">
+          <mxGeometry x="0" y="8" width="1180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bnd" value="Ứng dụng Android" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#1d4ed8;dashed=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontStyle=1;fontColor=#1d4ed8;">
+          <mxGeometry x="30" y="90" width="740" height="720" as="geometry" />
+        </mxCell>
+        <mxCell id="ui" value="&lt;b&gt;Giao diện gốc React Native&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px&quot;&gt;Thiết kế cho màn hình cảm ứng, không thu nhỏ giao diện máy tính&lt;/font&gt;" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fe;strokeColor=#1d4ed8;">
+          <mxGeometry x="60" y="150" width="300" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="bridge" value="&lt;b&gt;Cầu RPC có kiểu&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px&quot;&gt;Gói tin {id, method, params} → {id, ok, result | error}&#10;Có timeout và lan truyền lỗi sập&lt;/font&gt;" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#1e3a8a;fontStyle=1;">
+          <mxGeometry x="60" y="350" width="300" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="store" value="&lt;b&gt;Kho dữ liệu mã hóa&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px&quot;&gt;DEK bọc bằng Android Keystore, dữ liệu AES-256-GCM, tệp lưu dạng khối mờ&lt;/font&gt;" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#b45309;">
+          <mxGeometry x="60" y="570" width="300" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="wv" value="&lt;b&gt;WebView ẩn — &amp;quot;core host&amp;quot;&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px&quot;&gt;Nạp nguyên vẹn mailvelope/src/modules/*&#10;OpenPGP.js 5.11.3, DOMPurify&#10;Chromium: cùng họ engine với bản máy tính&lt;/font&gt;" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#1e3a8a;fontStyle=1;">
+          <mxGeometry x="420" y="300" width="320" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="shim" value="&lt;b&gt;Lớp đệm thay thế API của Chrome&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px&quot;&gt;chrome.storage, chrome.alarms, chrome.identity chuyển tiếp qua cầu RPC&lt;/font&gt;" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fe;strokeColor=#1d4ed8;">
+          <mxGeometry x="420" y="570" width="320" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="desk" value="&lt;b&gt;Tiện ích trên máy tính (chỉ đọc)&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px&quot;&gt;Không sửa một dòng nào. Kiểm chứng bằng verify-desktop-untouched.sh: so khớp mã băm SHA-256 của 161 tệp&lt;/font&gt;" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#64748b;dashed=1;">
+          <mxGeometry x="820" y="150" width="320" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="gold" value="&lt;b&gt;Phép thử đối chứng và liên thông&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px&quot;&gt;68/68 phép thử đạt. Bản mã sinh trên di động giải mã được bằng thư viện độc lập, và ngược lại&lt;/font&gt;" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#15803d;">
+          <mxGeometry x="820" y="420" width="320" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="note5" value="Lý do dùng WebView thay vì chạy thư viện mật mã trên engine JavaScript của React Native: giữ nguyên hành vi mật mã đã được kiểm chứng, tránh phải tự bổ sung Web Crypto, Web Streams và TextEncoder — những thứ không xác nhận đúng được nếu không có thiết bị thật." parent="1" vertex="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cbd5e1;fontStyle=2;">
+          <mxGeometry x="30" y="840" width="1120" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" value="" parent="1" edge="1" source="ui" target="bridge" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="gọi hàm mật mã" parent="1" edge="1" source="bridge" target="wv" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="" parent="1" edge="1" source="wv" target="shim" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="lưu trữ" parent="1" edge="1" source="shim" target="store" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="" parent="1" edge="1" source="bridge" target="store" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="mã nguồn dùng lại" parent="1" edge="1" source="desk" target="wv" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="kiểm chứng" parent="1" edge="1" source="gold" target="wv" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

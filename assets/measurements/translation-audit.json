@@ -1,0 +1,58 @@
+{
+  "generatedAt": "2026-09-08T09:45:24.524Z",
+  "counts": {
+    "englishKeys": 586,
+    "vietnameseKeys": 586,
+    "coveragePercent": 100,
+    "keysOnlyInVietnamese": 0
+  },
+  "otherLocales": {
+    "ar": 531,
+    "de": 579,
+    "en": 586,
+    "es": 489,
+    "fr": 534,
+    "he": 507,
+    "id": 531,
+    "ja": 528,
+    "km": 512,
+    "lt": 517,
+    "my": 512,
+    "pt_BR": 531,
+    "ru": 530,
+    "tr": 533,
+    "uk": 534,
+    "vi": 586
+  },
+  "blocking": {
+    "missingKeys": 0,
+    "placeholderMismatches": 0,
+    "markupMismatches": 0
+  },
+  "acceptedExceptions": {
+    "keyring": [
+      "action_menu_keyring_label",
+      "keybackup_load_error"
+    ]
+  },
+  "advisory": {
+    "untranslatedValues": 2,
+    "glossaryDeviations": 0
+  },
+  "details": {
+    "missing": [],
+    "placeholderMismatch": [],
+    "markupMismatch": [],
+    "untranslated": [
+      {
+        "key": "settings_provider",
+        "value": "Gmail API"
+      },
+      {
+        "key": "footer_copyright",
+        "value": "Copyright © Tracy Tran"
+      }
+    ],
+    "glossary": []
+  }
+}

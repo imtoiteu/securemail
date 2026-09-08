@@ -1,0 +1,41 @@
+Secure Mail — network-surface audit of releases/secure-mail-v0.3.0-hardened/extension
+======================================================================
+
+[1] Forbidden endpoints (must be absent)
+----------------------------------------------------------------------
+  PASS  cleaninsights                            0 occurrences
+  PASS  metrics.cleaninsights.org                0 occurrences
+  PASS  license.mailvelope.com                   0 occurrences
+  PASS  mailvelope.com/google-workspace          0 occurrences
+
+[2] Network call sites in the source (complete list)
+----------------------------------------------------------------------
+  Every outbound request the extension can make originates in one of the
+  modules below. Grepping the minified bundle for URLs is misleading: most
+  hits are documentation links inside third-party library messages, which
+  are never fetched. The authoritative surface is the set of call sites.
+
+    src/controller/app.controller.js
+    src/lib/svg-file-parser.js
+    src/modules/gmail.js
+    src/modules/mveloKeyServer.js
+    src/modules/openpgpKeyServer.js
+    src/modules/wkdLocate.js
+
+  Resolved hosts and their status:
+
+    accounts.google.com          Gmail sign-in            ENABLED  (feature in use)
+    oauth2.googleapis.com        OAuth token exchange     ENABLED  (feature in use)
+    www.googleapis.com           Gmail API + userinfo     ENABLED  (feature in use)
+    keys.mailvelope.com          public key server        DISABLED by default
+    keys.openpgp.org             public key server        DISABLED by default
+    <recipient domain> (WKD)     key lookup by domain     DISABLED by default
+    chrome-extension://<id>/...  bundled SVG assets       local only, never remote
+
+  The four DISABLED lookups are switched off in src/res/defaults.json
+  (mvelo_tofu_lookup, oks_lookup, wkd_lookup, autocrypt_lookup) and can be
+  re-enabled by an administrator; they are shown unchecked in the Key
+  Directories settings pane.
+
+======================================================================
+RESULT: PASS — no removed endpoint is present in releases/secure-mail-v0.3.0-hardened/extension.

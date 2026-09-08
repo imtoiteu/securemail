@@ -1,0 +1,50 @@
+{
+  "generatedAt": "2026-09-08T09:45:23.965Z",
+  "gnupg": "gpg (GnuPG) 2.4.4",
+  "openpgpjs": "openpgp 5.11.3",
+  "payload": "UTF-8 Vietnamese text with diacritics",
+  "keyType": "RSA-4096 on both sides",
+  "results": [
+    {
+      "check": "Key import (Secure Mail -> GnuPG)",
+      "detail": "GnuPG accepted the RSA-4096 public key produced by OpenPGP.js",
+      "result": "PASS"
+    },
+    {
+      "check": "Key import (GnuPG -> Secure Mail)",
+      "detail": "OpenPGP.js parsed the GnuPG key, fingerprint D35D0816317DC81A…",
+      "result": "PASS"
+    },
+    {
+      "check": "A. Confidentiality (Secure Mail -> GnuPG)",
+      "detail": "GnuPG recovered the plaintext byte-for-byte, diacritics intact",
+      "result": "PASS"
+    },
+    {
+      "check": "A. Authenticity (Secure Mail -> GnuPG)",
+      "detail": "GnuPG reported GOODSIG for the Secure Mail signature",
+      "result": "PASS"
+    },
+    {
+      "check": "B. Confidentiality (GnuPG -> Secure Mail)",
+      "detail": "OpenPGP.js recovered the plaintext byte-for-byte, diacritics intact",
+      "result": "PASS"
+    },
+    {
+      "check": "B. Authenticity (GnuPG -> Secure Mail)",
+      "detail": "OpenPGP.js verified the GnuPG signature against the imported public key",
+      "result": "PASS"
+    },
+    {
+      "check": "C. Detached signature (Secure Mail -> GnuPG)",
+      "detail": "GnuPG verified a detached signature produced by Secure Mail",
+      "result": "PASS"
+    },
+    {
+      "check": "D. Integrity (tampered ciphertext)",
+      "detail": "A single flipped character in the ciphertext is rejected, not silently mis-decrypted",
+      "result": "PASS"
+    }
+  ],
+  "summary": "ALL PASS"
+}

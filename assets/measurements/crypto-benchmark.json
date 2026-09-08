@@ -1,0 +1,104 @@
+{
+  "generatedAt": "2026-09-08T09:10:19.961Z",
+  "library": "openpgp 5.11.3",
+  "host": {
+    "cpu": "AMD EPYC Processor (with IBPB)",
+    "cores": 4,
+    "memoryGB": 7.8,
+    "node": "v22.23.1",
+    "platform": "Linux 6.8.0-139-generic"
+  },
+  "note": "Median of repeated runs, single-threaded, wall clock in milliseconds.",
+  "keyGeneration": {
+    "RSA-2048": {
+      "runs": 3,
+      "samples": [
+        564.2,
+        428.2,
+        362.4
+      ],
+      "medianMs": 428.2
+    },
+    "RSA-4096": {
+      "runs": 3,
+      "samples": [
+        3153.1,
+        1707.7,
+        2784.7
+      ],
+      "medianMs": 2784.7
+    },
+    "ECC-Curve25519": {
+      "runs": 5,
+      "samples": [
+        347.7,
+        253.6,
+        306.1,
+        318.3,
+        246.8
+      ],
+      "medianMs": 306.1
+    }
+  },
+  "messageOperations": {
+    "1 KB": {
+      "plaintextBytes": 1024,
+      "ciphertextArmoredBytes": 3042,
+      "expansionPercent": 197.1,
+      "encryptSignMedianMs": 14.9,
+      "decryptVerifyMedianMs": 19.2,
+      "encryptThroughputMBps": 0.07,
+      "decryptThroughputMBps": 0.05,
+      "runs": 7
+    },
+    "10 KB": {
+      "plaintextBytes": 10240,
+      "ciphertextArmoredBytes": 15543,
+      "expansionPercent": 51.8,
+      "encryptSignMedianMs": 16.3,
+      "decryptVerifyMedianMs": 14.7,
+      "encryptThroughputMBps": 0.6,
+      "decryptThroughputMBps": 0.66,
+      "runs": 7
+    },
+    "100 KB": {
+      "plaintextBytes": 102400,
+      "ciphertextArmoredBytes": 140471,
+      "expansionPercent": 37.2,
+      "encryptSignMedianMs": 34,
+      "decryptVerifyMedianMs": 46.9,
+      "encryptThroughputMBps": 2.87,
+      "decryptThroughputMBps": 2.08,
+      "runs": 5
+    },
+    "1 MB": {
+      "plaintextBytes": 1048576,
+      "ciphertextArmoredBytes": 1423065,
+      "expansionPercent": 35.7,
+      "encryptSignMedianMs": 115.1,
+      "decryptVerifyMedianMs": 25.9,
+      "encryptThroughputMBps": 8.69,
+      "decryptThroughputMBps": 38.61,
+      "runs": 5
+    },
+    "5 MB": {
+      "plaintextBytes": 5242880,
+      "ciphertextArmoredBytes": 7108680,
+      "expansionPercent": 35.6,
+      "encryptSignMedianMs": 403.5,
+      "decryptVerifyMedianMs": 86.7,
+      "encryptThroughputMBps": 12.39,
+      "decryptThroughputMBps": 57.67,
+      "runs": 3
+    },
+    "Typical e-mail body (Vietnamese, UTF-8)": {
+      "plaintextBytes": 3340,
+      "ciphertextArmoredBytes": 6271,
+      "expansionPercent": 87.8,
+      "encryptSignMedianMs": 36.3,
+      "decryptVerifyMedianMs": 19.4,
+      "runs": 7,
+      "note": "Compressible text, so the armored expansion is far lower than the random-byte cases."
+    }
+  }
+}

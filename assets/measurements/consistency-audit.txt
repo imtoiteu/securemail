@@ -1,0 +1,9 @@
+00-TOM-TAT-SANG-KIEN.md: 0 bảng, 0 hình, 10 mục đánh số
+   (bảng không đánh số: Bảng tóm tắt hiện trạng)
+   (bảng không đánh số: Bảng kết quả chính)
+01-DON-DANG-KY-SANG-KIEN.md: 0 bảng, 0 hình, 6 mục đánh số
+02-THUYET-MINH-SANG-KIEN.md: 17 bảng, 12 hình, 66 mục đánh số
+03-PHU-LUC-KY-THUAT.md: 8 bảng, 3 hình, 21 mục đánh số
+04-DU-KIEN-HIEU-QUA.md: 5 bảng, 0 hình, 15 mục đánh số
+
+Không phát hiện vấn đề về đánh số và tham chiếu.

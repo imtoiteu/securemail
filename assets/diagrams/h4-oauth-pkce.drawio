@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="securemail-dossier" type="device">
+  <diagram name="Xác thực Gmail API: định danh tiện ích cố định kết hợp PKCE (RFC 7636)" id="h4-oauth-pkce">
+    <mxGraphModel dx="1180" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Xác thực Gmail API: định danh tiện ích cố định kết hợp PKCE (RFC 7636)" parent="1" vertex="1" style="text;html=1;align=center;fontSize=18;fontStyle=1;">
+          <mxGeometry x="0" y="8" width="1180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ext" value="&lt;b&gt;Tiện ích Secure Mail&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px&quot;&gt;Mã định danh cố định:&#10;ihhialmbgcagicfabjkijpbppggbnebe&#10;(dẫn xuất từ khóa công khai khai báo trong manifest)&lt;/font&gt;" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#1e3a8a;fontStyle=1;">
+          <mxGeometry x="40" y="110" width="300" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="v" value="&lt;b&gt;Sinh code_verifier&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px&quot;&gt;32 byte ngẫu nhiên từ crypto.getRandomValues&lt;/font&gt;" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fe;strokeColor=#1d4ed8;">
+          <mxGeometry x="40" y="340" width="300" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="c" value="&lt;b&gt;Tính code_challenge&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px&quot;&gt;BASE64URL(SHA-256(verifier)), method = S256&lt;/font&gt;" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fe;strokeColor=#1d4ed8;">
+          <mxGeometry x="40" y="530" width="300" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="redir" value="&lt;b&gt;Chuyển hướng nội bộ trình duyệt&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px&quot;&gt;https://&amp;lt;mã định danh&amp;gt;.chromiumapp.org/&#10;Chrome chặn nội bộ, địa chỉ này không bao giờ ra Internet&lt;/font&gt;" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fe;strokeColor=#1d4ed8;">
+          <mxGeometry x="420" y="110" width="320" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="g1" value="&lt;b&gt;Màn hình đăng nhập Google&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px&quot;&gt;accounts.google.com — nhận code_challenge&lt;/font&gt;" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#64748b;dashed=1;">
+          <mxGeometry x="420" y="400" width="320" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="g2" value="&lt;b&gt;Điểm cấp token của Google&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px&quot;&gt;oauth2.googleapis.com/token&#10;đối chiếu verifier với challenge&lt;/font&gt;" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#64748b;dashed=1;">
+          <mxGeometry x="420" y="610" width="320" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="tok" value="&lt;b&gt;Access token và refresh token&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px&quot;&gt;Lưu cục bộ trong tiện ích&lt;/font&gt;" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#b45309;">
+          <mxGeometry x="420" y="830" width="320" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="atk" value="&lt;b&gt;Kẻ tấn công chặn được mã ủy quyền&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px&quot;&gt;Không có code_verifier nên không đổi được mã lấy token&lt;/font&gt;" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#b91c1c;">
+          <mxGeometry x="820" y="400" width="320" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="why" value="&lt;b&gt;Vì sao cần cả hai biện pháp&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px&quot;&gt;Không khai báo khóa trong manifest thì Chrome sinh mã định danh theo đường dẫn cài đặt, nên mỗi máy có một URI chuyển hướng khác nhau và không đăng ký trước được — đây là nguyên nhân lỗi redirect_uri_mismatch.&#10;&#10;Bí mật client không thể giữ kín trong một tiện ích trình duyệt. PKCE mới là biện pháp thực sự bảo vệ luồng này. Bản gốc Mailvelope 6.3.0 không có PKCE.&lt;/font&gt;" parent="1" vertex="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cbd5e1;fontStyle=2;">
+          <mxGeometry x="820" y="620" width="320" height="410" as="geometry" />
+        </mxCell>
+        <mxCell id="note4" value="Mã nguồn: src/modules/gmail.js (hàm getAuthCode và getAuthTokens). Khóa công khai cố định: src/chrome/manifest.json, trường &quot;key&quot;." parent="1" vertex="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cbd5e1;fontStyle=2;">
+          <mxGeometry x="40" y="1070" width="1100" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" value="" parent="1" edge="1" source="ext" target="v" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" parent="1" edge="1" source="v" target="c" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="gửi challenge" parent="1" edge="1" source="c" target="g1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="trả mã ủy quyền" parent="1" edge="1" source="g1" target="redir" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="" parent="1" edge="1" source="redir" target="ext" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="mã kèm verifier" parent="1" edge="1" source="ext" target="g2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="" parent="1" edge="1" source="g2" target="tok" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="mã bị chặn" parent="1" edge="1" source="g1" target="atk" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;strokeColor=#b91c1c;fontColor=#b91c1c;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,11 @@
+English keys      : 586
+Vietnamese keys   : 586
+Coverage          : 100%
+Missing           : 0
+Placeholder errors: 0
+Markup errors     : 0
+Untranslated      : 2
+Glossary deviations: 0
+
+Other locales: {"ar":531,"de":579,"en":586,"es":489,"fr":534,"he":507,"id":531,"ja":528,"km":512,"lt":517,"my":512,"pt_BR":531,"ru":530,"tr":533,"uk":534,"vi":586}
+wrote /root/imtoiteu/company-secure-mail/docs-sangkien/assets/measurements/translation-audit.json

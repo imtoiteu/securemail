@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="securemail-dossier" type="device">
+  <diagram name="Hai mô hình phân phối khóa công khai" id="h3-mo-hinh-tin-cay">
+    <mxGraphModel dx="1180" dy="1030" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Hai mô hình phân phối khóa công khai" parent="1" vertex="1" style="text;html=1;align=center;fontSize=18;fontStyle=1;">
+          <mxGeometry x="0" y="8" width="1180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bA" value="A. Mô hình mặc định của Mailvelope: tra cứu máy chủ khóa công cộng" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#b91c1c;dashed=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontStyle=1;fontColor=#b91c1c;">
+          <mxGeometry x="30" y="90" width="1120" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="bB" value="B. Mô hình khép kín của Secure Mail (cấu hình mặc định)" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#1d4ed8;dashed=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontStyle=1;fontColor=#1d4ed8;">
+          <mxGeometry x="30" y="450" width="1120" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="a_u1" value="Người dùng A" parent="1" vertex="1" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0f172a;">
+          <mxGeometry x="70" y="160" width="220" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="a_ks" value="&lt;b&gt;Máy chủ khóa công cộng đặt ở nước ngoài&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px&quot;&gt;keys.mailvelope.com&#10;keys.openpgp.org&#10;Web Key Directory&lt;/font&gt;" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#b91c1c;">
+          <mxGeometry x="460" y="140" width="260" height="161" as="geometry" />
+        </mxCell>
+        <mxCell id="a_u2" value="Người dùng B" parent="1" vertex="1" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0f172a;">
+          <mxGeometry x="890" y="160" width="220" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="a_note" value="Mỗi lần tra cứu để lộ &quot;ai đang chuẩn bị liên lạc với ai&quot; cho một bên thứ ba ngoài tầm kiểm soát. Tin cậy theo kiểu TOFU: không có thẩm quyền nào xác nhận khóa đó thực sự thuộc về ai." parent="1" vertex="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cbd5e1;fontStyle=2;">
+          <mxGeometry x="70" y="300" width="1040" height="89" as="geometry" />
+        </mxCell>
+        <mxCell id="b_u1" value="Người dùng A" parent="1" vertex="1" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0f172a;">
+          <mxGeometry x="70" y="520" width="220" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="b_admin" value="&lt;b&gt;Quản trị viên khóa của đơn vị&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px&quot;&gt;Giữ danh mục khóa công khai và dấu vân tay đã đối chiếu&lt;/font&gt;" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#15803d;">
+          <mxGeometry x="460" y="500" width="260" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="b_u2" value="Người dùng B" parent="1" vertex="1" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0f172a;">
+          <mxGeometry x="890" y="520" width="220" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="b_note" value="Khóa công khai và dấu vân tay được phân phát qua kênh nội bộ đã xác thực. Không có truy vấn nào rời khỏi đơn vị. Trách nhiệm xác nhận danh tính thuộc về tổ chức." parent="1" vertex="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cbd5e1;fontStyle=2;">
+          <mxGeometry x="70" y="665" width="1040" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="cfg" value="&lt;b&gt;Cấu hình kiểm chứng được trong src/res/defaults.json&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px&quot;&gt;mvelo_tofu_lookup = false   •   oks_lookup = false   •   wkd_lookup = false   •   autocrypt_lookup = false   •   tự động tải khóa lên máy chủ = tắt&#10;&#10;Cả bốn cơ chế tra cứu bên ngoài đều tắt mặc định. Quản trị viên vẫn bật lại được nếu đơn vị tự vận hành máy chủ khóa nội bộ.&lt;/font&gt;" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fe;strokeColor=#1d4ed8;">
+          <mxGeometry x="30" y="800" width="1120" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" value="tra cứu khóa của B" parent="1" edge="1" source="a_u1" target="a_ks" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#b91c1c;fontColor=#b91c1c;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="tải khóa lên" parent="1" edge="1" source="a_u2" target="a_ks" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#b91c1c;fontColor=#b91c1c;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="nhận khóa công khai" parent="1" edge="1" source="b_u1" target="b_admin" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="nộp khóa công khai" parent="1" edge="1" source="b_u2" target="b_admin" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

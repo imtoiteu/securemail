@@ -1,0 +1,20 @@
+{
+  "capturedAt": "2026-09-08T09:08:25.201Z",
+  "chrome": "Chrome/149.0.7827.22",
+  "note": "Wall-clock milliseconds measured in headless Chrome on the build VPS. Key generation is RSA-4096 (the product default) performed by OpenPGP.js in the extension.",
+  "timings": {
+    "keygen_rsa4096_own_ms": 10237,
+    "keygen_rsa4096_peer_ms": 8116
+  },
+  "screenshots": [
+    "wf-01-key-generate-form.vi.png",
+    "wf-02-key-generated.vi.png",
+    "wf-03-keyring.vi.png",
+    "wf-04-key-details.vi.png",
+    "wf-05-encrypt.vi.png",
+    "wf-06-decrypt.vi.png",
+    "wf-07-settings-security.vi.png",
+    "wf-08-security-log.vi.png",
+    "wf-09-dashboard.vi.png"
+  ]
+}

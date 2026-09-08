@@ -1,0 +1,16 @@
+GnuPG home: /tmp/sm-interop-BkNMRr
+gpg (GnuPG) 2.4.4 / openpgp 5.11.3 
+
+gpg: key B1A8FA76FC3F0D74: public key "Secure Mail User <securemail@donvi.test>" imported
+gpg: Total number processed: 1
+gpg:               imported: 1
+  PASS  Key import (Secure Mail -> GnuPG) — GnuPG accepted the RSA-4096 public key produced by OpenPGP.js
+  PASS  Key import (GnuPG -> Secure Mail) — OpenPGP.js parsed the GnuPG key, fingerprint D35D0816317DC81A…
+  PASS  A. Confidentiality (Secure Mail -> GnuPG) — GnuPG recovered the plaintext byte-for-byte, diacritics intact
+  PASS  A. Authenticity (Secure Mail -> GnuPG) — GnuPG reported GOODSIG for the Secure Mail signature
+  PASS  B. Confidentiality (GnuPG -> Secure Mail) — OpenPGP.js recovered the plaintext byte-for-byte, diacritics intact
+  PASS  B. Authenticity (GnuPG -> Secure Mail) — OpenPGP.js verified the GnuPG signature against the imported public key
+  PASS  C. Detached signature (Secure Mail -> GnuPG) — GnuPG verified a detached signature produced by Secure Mail
+  PASS  D. Integrity (tampered ciphertext) — A single flipped character in the ciphertext is rejected, not silently mis-decrypted
+
+ALL PASS -> /root/imtoiteu/company-secure-mail/docs-sangkien/assets/measurements/interop-gnupg.json

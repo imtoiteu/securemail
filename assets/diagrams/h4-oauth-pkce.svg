@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="1200" viewBox="0 0 1180 1200" font-family="'Segoe UI','Noto Sans',Arial,Helvetica,sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/></marker><marker id="arrow-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#b91c1c"/></marker></defs>
+<rect width="1180" height="1200" fill="#ffffff"/>
+<text x="590.0" y="44" text-anchor="middle" font-size="28.5" font-weight="600" fill="#0f172a">Xác thực Gmail API: định danh tiện ích cố định kết hợp PKCE (RFC 7636)</text>
+<rect x="40" y="110" width="300" height="190" rx="8" fill="#dbeafe" stroke="#1e3a8a" stroke-width="1.6"/>
+<text x="190.0" y="167.0" text-anchor="middle" font-size="20.25" font-weight="600" fill="#0f172a">Tiện ích Secure Mail</text>
+<text x="190.0" y="193.2" text-anchor="middle" font-size="17.2" fill="#475569">Mã định danh cố định:</text>
+<text x="190.0" y="215.3" text-anchor="middle" font-size="17.2" fill="#475569">ihhialmbgcagicfabjkijpbppggbnebe</text>
+<text x="190.0" y="237.4" text-anchor="middle" font-size="17.2" fill="#475569">(dẫn xuất từ khóa công khai</text>
+<text x="190.0" y="259.5" text-anchor="middle" font-size="17.2" fill="#475569">khai báo trong manifest)</text>
+<rect x="40" y="340" width="300" height="150" rx="8" fill="#e8f0fe" stroke="#1d4ed8" stroke-width="1.6"/>
+<text x="190.0" y="399.0" text-anchor="middle" font-size="20.25" font-weight="500" fill="#0f172a">Sinh code_verifier</text>
+<text x="190.0" y="425.3" text-anchor="middle" font-size="17.2" fill="#475569">32 byte ngẫu nhiên từ</text>
+<text x="190.0" y="447.4" text-anchor="middle" font-size="17.2" fill="#475569">crypto.getRandomValues</text>
+<rect x="40" y="530" width="300" height="150" rx="8" fill="#e8f0fe" stroke="#1d4ed8" stroke-width="1.6"/>
+<text x="190.0" y="589.0" text-anchor="middle" font-size="20.25" font-weight="500" fill="#0f172a">Tính code_challenge</text>
+<text x="190.0" y="615.3" text-anchor="middle" font-size="17.2" fill="#475569">BASE64URL(SHA-256(verifier)),</text>
+<text x="190.0" y="637.4" text-anchor="middle" font-size="17.2" fill="#475569">method = S256</text>
+<rect x="420" y="110" width="320" height="190" rx="8" fill="#e8f0fe" stroke="#1d4ed8" stroke-width="1.6"/>
+<text x="580.0" y="155.3" text-anchor="middle" font-size="20.25" font-weight="500" fill="#0f172a">Chuyển hướng nội bộ trình</text>
+<text x="580.0" y="178.6" text-anchor="middle" font-size="20.25" font-weight="500" fill="#0f172a">duyệt</text>
+<text x="580.0" y="204.8" text-anchor="middle" font-size="17.2" fill="#475569">https://&lt;mã định</text>
+<text x="580.0" y="226.9" text-anchor="middle" font-size="17.2" fill="#475569">danh&gt;.chromiumapp.org/</text>
+<text x="580.0" y="249.0" text-anchor="middle" font-size="17.2" fill="#475569">Chrome chặn nội bộ, địa chỉ</text>
+<text x="580.0" y="271.1" text-anchor="middle" font-size="17.2" fill="#475569">này không bao giờ ra Internet</text>
+<rect x="420" y="400" width="320" height="150" rx="8" fill="#f1f5f9" stroke="#64748b" stroke-width="1.6" stroke-dasharray="7 5"/>
+<text x="580.0" y="459.0" text-anchor="middle" font-size="20.25" font-weight="500" fill="#334155">Màn hình đăng nhập Google</text>
+<text x="580.0" y="485.3" text-anchor="middle" font-size="17.2" fill="#475569">accounts.google.com — nhận</text>
+<text x="580.0" y="507.4" text-anchor="middle" font-size="17.2" fill="#475569">code_challenge</text>
+<rect x="420" y="610" width="320" height="160" rx="8" fill="#f1f5f9" stroke="#64748b" stroke-width="1.6" stroke-dasharray="7 5"/>
+<text x="580.0" y="663.0" text-anchor="middle" font-size="20.25" font-weight="500" fill="#334155">Điểm cấp token của Google</text>
+<text x="580.0" y="689.3" text-anchor="middle" font-size="17.2" fill="#475569">oauth2.googleapis.com/token</text>
+<text x="580.0" y="711.3" text-anchor="middle" font-size="17.2" fill="#475569">đối chiếu verifier với</text>
+<text x="580.0" y="733.4" text-anchor="middle" font-size="17.2" fill="#475569">challenge</text>
+<rect x="420" y="830" width="320" height="140" rx="8" fill="#fef3c7" stroke="#b45309" stroke-width="1.6"/>
+<text x="580.0" y="883.5" text-anchor="middle" font-size="20.25" font-weight="500" fill="#0f172a">Access token và refresh</text>
+<text x="580.0" y="906.7" text-anchor="middle" font-size="20.25" font-weight="500" fill="#0f172a">token</text>
+<text x="580.0" y="933.0" text-anchor="middle" font-size="17.2" fill="#475569">Lưu cục bộ trong tiện ích</text>
+<rect x="820" y="400" width="320" height="170" rx="8" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.6"/>
+<text x="980.0" y="457.4" text-anchor="middle" font-size="20.25" font-weight="500" fill="#450a0a">Kẻ tấn công chặn được mã</text>
+<text x="980.0" y="480.7" text-anchor="middle" font-size="20.25" font-weight="500" fill="#450a0a">ủy quyền</text>
+<text x="980.0" y="506.9" text-anchor="middle" font-size="17.2" fill="#475569">Không có code_verifier nên</text>
+<text x="980.0" y="529.0" text-anchor="middle" font-size="17.2" fill="#475569">không đổi được mã lấy token</text>
+<rect x="820" y="620" width="320" height="410" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="980.0" y="653.9" text-anchor="middle" font-size="20.25" font-weight="500" fill="#475569">Vì sao cần cả hai biện</text>
+<text x="980.0" y="677.1" text-anchor="middle" font-size="20.25" font-weight="500" fill="#475569">pháp</text>
+<text x="980.0" y="703.4" text-anchor="middle" font-size="17.2" fill="#475569">Không khai báo khóa trong</text>
+<text x="980.0" y="725.5" text-anchor="middle" font-size="17.2" fill="#475569">manifest thì Chrome sinh mã</text>
+<text x="980.0" y="747.6" text-anchor="middle" font-size="17.2" fill="#475569">định danh theo đường dẫn cài</text>
+<text x="980.0" y="769.6" text-anchor="middle" font-size="17.2" fill="#475569">đặt, nên mỗi máy có một URI</text>
+<text x="980.0" y="791.7" text-anchor="middle" font-size="17.2" fill="#475569">chuyển hướng khác nhau và</text>
+<text x="980.0" y="813.8" text-anchor="middle" font-size="17.2" fill="#475569">không đăng ký trước được — đây</text>
+<text x="980.0" y="835.9" text-anchor="middle" font-size="17.2" fill="#475569">là nguyên nhân lỗi</text>
+<text x="980.0" y="858.0" text-anchor="middle" font-size="17.2" fill="#475569">redirect_uri_mismatch.</text>
+<text x="980.0" y="880.0" text-anchor="middle" font-size="17.2" fill="#475569"></text>
+<text x="980.0" y="902.1" text-anchor="middle" font-size="17.2" fill="#475569">Bí mật client không thể giữ</text>
+<text x="980.0" y="924.2" text-anchor="middle" font-size="17.2" fill="#475569">kín trong một tiện ích trình</text>
+<text x="980.0" y="946.3" text-anchor="middle" font-size="17.2" fill="#475569">duyệt. PKCE mới là biện pháp</text>
+<text x="980.0" y="968.4" text-anchor="middle" font-size="17.2" fill="#475569">thực sự bảo vệ luồng này. Bản</text>
+<text x="980.0" y="990.4" text-anchor="middle" font-size="17.2" fill="#475569">gốc Mailvelope 6.3.0 không có</text>
+<text x="980.0" y="1012.5" text-anchor="middle" font-size="17.2" fill="#475569">PKCE.</text>
+<rect x="40" y="1070" width="1100" height="90" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="590.0" y="1112.0" text-anchor="middle" font-size="20.25" font-weight="500" fill="#475569">Mã nguồn: src/modules/gmail.js (hàm getAuthCode và getAuthTokens). Khóa công khai cố định:</text>
+<text x="590.0" y="1135.2" text-anchor="middle" font-size="20.25" font-weight="500" fill="#475569">src/chrome/manifest.json, trường &quot;key&quot;.</text>
+<line x1="190.0" y1="300" x2="190.0" y2="340" stroke="#334155" stroke-width="1.7" marker-end="url(#arrow)"/>
+<line x1="190.0" y1="490" x2="190.0" y2="530" stroke="#334155" stroke-width="1.7" marker-end="url(#arrow)"/>
+<line x1="340" y1="605.0" x2="420" y2="475.0" stroke="#334155" stroke-width="1.7" marker-end="url(#arrow)"/>
+<rect x="313.3" y="519.3" width="133.3" height="20.7" rx="3" fill="#ffffff" fill-opacity="0.92"/>
+<text x="380.0" y="534.0" text-anchor="middle" font-size="17.2" fill="#334155">gửi challenge</text>
+<line x1="580.0" y1="400" x2="580.0" y2="300" stroke="#334155" stroke-width="1.7" marker-end="url(#arrow)"/>
+<rect x="503.8" y="329.3" width="152.3" height="20.7" rx="3" fill="#ffffff" fill-opacity="0.92"/>
+<text x="580.0" y="344.0" text-anchor="middle" font-size="17.2" fill="#334155">trả mã ủy quyền</text>
+<line x1="420" y1="205.0" x2="340" y2="205.0" stroke="#334155" stroke-width="1.7" marker-end="url(#arrow)"/>
+<line x1="190.0" y1="300" x2="580.0" y2="610" stroke="#334155" stroke-width="1.7" marker-end="url(#arrow)"/>
+<rect x="308.8" y="434.3" width="152.3" height="20.7" rx="3" fill="#ffffff" fill-opacity="0.92"/>
+<text x="385.0" y="449.0" text-anchor="middle" font-size="17.2" fill="#334155">mã kèm verifier</text>
+<line x1="580.0" y1="770" x2="580.0" y2="830" stroke="#334155" stroke-width="1.7" marker-end="url(#arrow)"/>
+<line x1="740" y1="475.0" x2="820" y2="485.0" stroke="#b91c1c" stroke-width="1.7" stroke-dasharray="6 4" marker-end="url(#arrow-r)"/>
+<rect x="727.6" y="459.3" width="104.9" height="20.7" rx="3" fill="#ffffff" fill-opacity="0.92"/>
+<text x="780.0" y="474.0" text-anchor="middle" font-size="17.2" fill="#b91c1c">mã bị chặn</text>
+</svg>
