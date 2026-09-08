@@ -25,17 +25,31 @@ export function makePassphraseProvider({requestPassphrase}) {
       return {key, password: undefined};
     }
     const {userId} = await getUserInfo(key, {allowInvalid: true});
-    const {password, cache} = await requestPassphrase({
-      keyId: key.getKeyID().toHex().toUpperCase(),
-      userId,
-      reason,
-      cache: prefs.prefs.security.password_cache
-    });
-    if (typeof cache === 'boolean' && cache !== prefs.prefs.security.password_cache) {
-      await prefs.update({security: {password_cache: cache}});
+    const keyId = key.getKeyID().toHex().toUpperCase();
+
+    // The desktop PwdController does NOT abort on a wrong passphrase: onOk()
+    // emits 'wrong-password' and leaves the dialog open so the user can retry
+    // (pwd.controller.js:56). Rejecting here instead would surface a typo as a
+    // generic ENCRYPT_ERROR, because pgpModel.encryptMessage rewraps everything
+    // except PWD_DIALOG_CANCEL. So loop until the key unlocks or the user
+    // cancels — cancellation is the app's job, signalled by PWD_DIALOG_CANCEL.
+    let wrongPassword = false;
+    for (;;) {
+      const {password, cache} = await requestPassphrase({
+        keyId, userId, reason, wrongPassword,
+        cache: prefs.prefs.security.password_cache
+      });
+      if (typeof cache === 'boolean' && cache !== prefs.prefs.security.password_cache) {
+        await prefs.update({security: {password_cache: cache}});
+      }
+      try {
+        const unlocked = await pwdCache.unlock({key, password, noCache});
+        return {key: unlocked, password};
+      } catch (e) {
+        if (e.code !== 'WRONG_PASSWORD') throw e;
+        wrongPassword = true;
+      }
     }
-    const unlocked = await pwdCache.unlock({key, password, noCache});
-    return {key: unlocked, password};
   }
 
   return {

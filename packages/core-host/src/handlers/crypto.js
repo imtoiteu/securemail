@@ -41,8 +41,13 @@ export function build({pgpModel, passphrase}) {
       senderAddress: params.senderAddress
     }),
 
-    'crypto.encryptFile': async params => ({
-      encryptedFile: await pgpModel.encryptFile({
+    // pgpModel.encryptFile returns a bare armored string, but pgpModel.decryptFile
+    // expects {content: dataURL, name}. Map between the two here, at the bridge
+    // boundary, rather than making callers know the asymmetry.
+    // The '.asc' suffix matters: decryptFile falls back to name.slice(0, -4) when
+    // the message carries no embedded filename (pgpModel.js:528).
+    'crypto.encryptFile': async params => {
+      const armored = await pgpModel.encryptFile({
         plainFile: params.plainFile,
         keyringId: kid(params),
         unlockKey,
@@ -50,13 +55,27 @@ export function build({pgpModel, passphrase}) {
         signingKeyFpr: params.signingKeyFpr,
         armor: params.armor ?? true,
         uiLogSource: SOURCE
-      })
-    }),
+      });
+      return {
+        encryptedFile: {
+          name: `${params.plainFile.name}.asc`,
+          content: `data:application/pgp-encrypted;base64,${btoa(armored)}`
+        }
+      };
+    },
 
-    'crypto.decryptFile': async params => pgpModel.decryptFile({
-      encryptedFile: params.encryptedFile,
-      unlockKey,
-      uiLogSource: SOURCE
-    })
+    // Returns {data, signatures, filename} with data as a JS binary string.
+    'crypto.decryptFile': async params => {
+      const result = await pgpModel.decryptFile({
+        encryptedFile: params.encryptedFile,
+        unlockKey,
+        uiLogSource: SOURCE
+      });
+      return {
+        name: result.filename,
+        content: `data:application/octet-stream;base64,${btoa(result.data)}`,
+        signatures: result.signatures
+      };
+    }
   };
 }
