@@ -21,6 +21,36 @@ const MVELO_BILLING_API_HOST = 'https://license.mailvelope.com';
 
 export const MAIL_QUOTA = 25 * 1024 * 1024;
 
+/**
+ * PKCE (RFC 7636) for the authorization-code flow.
+ *
+ * A browser extension cannot keep CLIENT_SECRET secret: it ships in the
+ * bundle and anyone can read it. Google still requires the secret at the
+ * token endpoint because a redirect to https://<id>.chromiumapp.org/ can
+ * only be registered on a "Web application" client, which Google treats as
+ * confidential. PKCE is therefore the control that actually protects this
+ * flow: the authorization code is bound to a one-time verifier that never
+ * leaves this extension, so an intercepted code cannot be redeemed.
+ */
+function base64UrlEncode(buffer) {
+  let str = '';
+  const bytes = new Uint8Array(buffer);
+  for (const byte of bytes) {
+    str += String.fromCharCode(byte);
+  }
+  return btoa(str).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+}
+
+function createCodeVerifier() {
+  // RFC 7636 requires 43-128 chars; 32 random bytes base64url-encode to 43.
+  return base64UrlEncode(crypto.getRandomValues(new Uint8Array(32)));
+}
+
+async function createCodeChallenge(codeVerifier) {
+  const digest = await crypto.subtle.digest('SHA-256', str2ab(codeVerifier));
+  return base64UrlEncode(digest);
+}
+
 export async function getMessage({msgId, email, accessToken, format = 'full', metaHeaders = []}) {
   const options = {
     method: 'GET',
@@ -203,7 +233,7 @@ export async function authorize(email, legacyGsuite, scopes = chrome.runtime.get
       {intendedEmail: email, actualEmail: userInfo.email}
     );
   }
-  let auth = await getAuthCode(email, scopes);
+  let auth = await getAuthCode(email, scopes, forcePicker ? 'select_account' : undefined);
   if (!auth.code) {
     throw new MvError('Authorization failed!', 'GOOGLE_OAUTH_ERROR');
   }
@@ -211,7 +241,7 @@ export async function authorize(email, legacyGsuite, scopes = chrome.runtime.get
     // re-authorize with consent as without prompt the refresh token is empty
     auth = await getAuthCode(email, scopes, 'consent');
   }
-  const tokens = await getAuthTokens(auth.code);
+  const tokens = await getAuthTokens(auth.code, auth.codeVerifier);
   await storeAuthData(email, buildAuthMeta({...userInfo, ...tokens, legacyGsuite}));
   return tokens.access_token;
 }
@@ -235,16 +265,24 @@ export async function unauthorize(email) {
 async function getAuthCode(email, scopes = chrome.runtime.getManifest().oauth2.scopes, prompt) {
   const redirectURL = chrome.identity.getRedirectURL();
   const state = getUUID();
+  const codeVerifier = createCodeVerifier();
   const auth_params = {
     access_type: 'offline',
     client_id: CLIENT_ID,
+    code_challenge: await createCodeChallenge(codeVerifier),
+    code_challenge_method: 'S256',
     include_granted_scopes: true,
-    login_hint: email,
     redirect_uri: redirectURL,
     response_type: 'code',
     scope: scopes.join(' '),
     state
   };
+  // login_hint pins the request to one account and makes Google skip its
+  // chooser. Omit it when the picker was explicitly requested, otherwise the
+  // hint and prompt=select_account contradict each other.
+  if (email && prompt !== 'select_account') {
+    auth_params.login_hint = email;
+  }
   if (prompt) {
     auth_params.prompt = prompt;
   }
@@ -256,7 +294,8 @@ async function getAuthCode(email, scopes = chrome.runtime.getManifest().oauth2.s
   }
   return {
     code: search.get('code'),
-    prompt: search.get('prompt')
+    prompt: search.get('prompt'),
+    codeVerifier
   };
 }
 
@@ -282,11 +321,12 @@ async function getAuthToken(email, scopes = chrome.runtime.getManifest().oauth2.
   return search.get('access_token');
 }
 
-async function getAuthTokens(authCode) {
+async function getAuthTokens(authCode, codeVerifier) {
   const url = 'https://oauth2.googleapis.com/token';
   const params = {
     client_id: CLIENT_ID,
     code: authCode,
+    code_verifier: codeVerifier,
     client_secret: CLIENT_SECRET,
     grant_type: 'authorization_code',
     redirect_uri: chrome.identity.getRedirectURL()
