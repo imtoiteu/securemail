@@ -5,6 +5,7 @@ import {setMessages} from './shims/l10n';
 import * as pgpModel from '../../../../mailvelope/src/modules/pgpModel';
 import * as keyring from '../../../../mailvelope/src/modules/keyring';
 import * as pwdCache from '../../../../mailvelope/src/modules/pwdCache';
+import {config as pgpConfig} from 'openpgp';
 import {buildRegistry} from './registry';
 import {makePassphraseProvider} from './passphrase';
 
@@ -53,6 +54,13 @@ export async function createCore({storage, requestPassphrase, log = () => {}, ma
 
   await pgpModel.init();
   await keyring.init();
+
+  // pgpModel.initOpenPGP() sets versionString from defaults.getVersion(), which
+  // reads res/defaults.json — whose "version" is the '@@mvelo_version'
+  // placeholder that grunt-replace substitutes during the DESKTOP build only.
+  // Without this, every armored block the mobile core emits would carry the
+  // literal 'Secure Mail v@@mvelo_version' in its Version header.
+  pgpConfig.versionString = `Secure Mail Mobile v${manifest.version}`;
 
   const session = makeSession();
   const passphrase = makePassphraseProvider({requestPassphrase});
